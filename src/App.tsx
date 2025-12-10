@@ -3,7 +3,7 @@ function App() {
 
   return (
     <>
-      hello
+      Edit this file to start building your app!
     </>
   );
 }
