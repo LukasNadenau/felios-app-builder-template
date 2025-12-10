@@ -1,0 +1,35 @@
+import data from '../data/Mitarbeiter.json';
+
+export interface Stundenprofil {
+  Monday: number;
+  Tuesday: number;
+  Wednesday: number;
+  Thursday: number;
+  Friday: number;
+  Saturday: number;
+  Sunday: number;
+}
+
+export interface Mitarbeiter {
+  id: number;
+  name: string;
+  stundenprofil: Stundenprofil;
+  stundenprofilUeberstunden: Stundenprofil;
+}
+
+export const mitarbeiterService = {
+  getAll: async (): Promise<Mitarbeiter[]> => {
+    return new Promise((resolve) => {
+      setTimeout(() => resolve(data as Mitarbeiter[]), 100);
+    });
+  },
+
+  getById: async (id: number): Promise<Mitarbeiter | undefined> => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        const item = data.find((item) => item.id === id);
+        resolve(item as Mitarbeiter | undefined);
+      }, 100);
+    });
+  },
+};

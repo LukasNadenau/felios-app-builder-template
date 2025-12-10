@@ -1,0 +1,38 @@
+import data from '../data/Ressource.json';
+
+export interface Tageskapazitaet {
+  Monday: number;
+  Tuesday: number;
+  Wednesday: number;
+  Thursday: number;
+  Friday: number;
+  Saturday: number;
+  Sunday: number;
+}
+
+export interface Ressource {
+  id: number;
+  bezeichnung: string;
+  anzahlPlaetze: number;
+  parallelitaetsfaktor: number;
+  usesGemeinsameBearbeitung: boolean;
+  tageskapazitaet: Tageskapazitaet;
+  tageskapazitaetMax: Tageskapazitaet;
+}
+
+export const ressourceService = {
+  getAll: async (): Promise<Ressource[]> => {
+    return new Promise((resolve) => {
+      setTimeout(() => resolve(data as Ressource[]), 100);
+    });
+  },
+
+  getById: async (id: number): Promise<Ressource | undefined> => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        const item = data.find((item) => item.id === id);
+        resolve(item as Ressource | undefined);
+      }, 100);
+    });
+  },
+};

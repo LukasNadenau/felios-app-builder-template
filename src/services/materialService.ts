@@ -1,0 +1,25 @@
+import data from '../data/Material.json';
+
+export interface Material {
+  id: number;
+  bezeichnung: string;
+  einheit: string;
+  wiederbeschaffungszeit: number;
+}
+
+export const materialService = {
+  getAll: async (): Promise<Material[]> => {
+    return new Promise((resolve) => {
+      setTimeout(() => resolve(data as Material[]), 100);
+    });
+  },
+
+  getById: async (id: number): Promise<Material | undefined> => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        const item = data.find((item) => item.id === id);
+        resolve(item as Material | undefined);
+      }, 100);
+    });
+  },
+};

@@ -1,0 +1,38 @@
+import data from '../data/Schichtmodell.json';
+
+export interface Schichtmodell {
+  id: number;
+  typ: string;
+  bezeichnung: string;
+  kuerzel: string;
+  start: string;
+  ende: string;
+  pause: number;
+  dauer: number;
+}
+
+export const schichtmodellService = {
+  getAll: async (): Promise<Schichtmodell[]> => {
+    return new Promise((resolve) => {
+      setTimeout(() => resolve(data as Schichtmodell[]), 100);
+    });
+  },
+
+  getById: async (id: number): Promise<Schichtmodell | undefined> => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        const item = data.find((item) => item.id === id);
+        resolve(item as Schichtmodell | undefined);
+      }, 100);
+    });
+  },
+
+  getByTyp: async (typ: string): Promise<Schichtmodell[]> => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        const items = data.filter((item) => item.typ === typ);
+        resolve(items as Schichtmodell[]);
+      }, 100);
+    });
+  },
+};

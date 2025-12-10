@@ -1,0 +1,23 @@
+import data from '../data/Tag.json';
+
+export interface Tag {
+  index: number;
+  datum: string;
+}
+
+export const tagService = {
+  getAll: async (): Promise<Tag[]> => {
+    return new Promise((resolve) => {
+      setTimeout(() => resolve(data as Tag[]), 100);
+    });
+  },
+
+  getByIndex: async (index: number): Promise<Tag | undefined> => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        const item = data.find((item) => item.index === index);
+        resolve(item as Tag | undefined);
+      }, 100);
+    });
+  },
+};
