@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "bezeichnung": "Dichtung Dunkles Olivgrün 214",
+    "einheit": "Stk",
+    "wiederbeschaffungszeit": 24
+  },
+  {
+    "id": 2,
+    "bezeichnung": "Platte Biskuit 350",
+    "einheit": "kg",
+    "wiederbeschaffungszeit": 5
+  },
+  {
+    "id": 3,
+    "bezeichnung": "Lager Helles Seegrün 204",
+    "einheit": "Pkg",
+    "wiederbeschaffungszeit": 24
+  },
+  {
+    "id": 4,
+    "bezeichnung": "Kabel Chiffongelb 189",
+    "einheit": "Liter",
+    "wiederbeschaffungszeit": 14
+  },
+  {
+    "id": 5,
+    "bezeichnung": "Blech Elfenbein 130",
+    "einheit": "Stk",
+    "wiederbeschaffungszeit": 7
+  },
+  {
+    "id": 6,
+    "bezeichnung": "Mutter Dunkles Schiefergrau 617",
+    "einheit": "Liter",
+    "wiederbeschaffungszeit": 1
+  },
+  {
+    "id": 7,
+    "bezeichnung": "Kabel Dunkelkhaki 303",
+    "einheit": "Pkg",
+    "wiederbeschaffungszeit": 21
+  },
+  {
+    "id": 8,
+    "bezeichnung": "Lager Dunkelcyan 658",
+    "einheit": "m²",
+    "wiederbeschaffungszeit": 8
+  },
+  {
+    "id": 9,
+    "bezeichnung": "Platine Rosa 703",
+    "einheit": "m",
+    "wiederbeschaffungszeit": 26
+  },
+  {
+    "id": 10,
+    "bezeichnung": "Zahnrad Mandelweiß 106",
+    "einheit": "kg",
+    "wiederbeschaffungszeit": 23
+  },
+  {
+    "id": 11,
+    "bezeichnung": "Gehäuse Schwarz 448",
+    "einheit": "m",
+    "wiederbeschaffungszeit": 5
+  },
+  {
+    "id": 12,
+    "bezeichnung": "Mutter Dunkle Goldrutenfarbe 881",
+    "einheit": "m",
+    "wiederbeschaffungszeit": 4
+  },
+  {
+    "id": 13,
+    "bezeichnung": "Profil Indischrot 489",
+    "einheit": "Stk",
+    "wiederbeschaffungszeit": 12
+  },
+  {
+    "id": 14,
+    "bezeichnung": "Zahnrad Lavendel 452",
+    "einheit": "Liter",
+    "wiederbeschaffungszeit": 9
+  },
+  {
+    "id": 15,
+    "bezeichnung": "Welle Petrol 144",
+    "einheit": "Pkg",
+    "wiederbeschaffungszeit": 15
+  },
+  {
+    "id": 16,
+    "bezeichnung": "Kabel Biskuit 227",
+    "einheit": "m²",
+    "wiederbeschaffungszeit": 3
+  },
+  {
+    "id": 17,
+    "bezeichnung": "Kabel Grau 400",
+    "einheit": "Pkg",
+    "wiederbeschaffungszeit": 20
+  },
+  {
+    "id": 18,
+    "bezeichnung": "Zahnrad Peru 470",
+    "einheit": "Liter",
+    "wiederbeschaffungszeit": 7
+  },
+  {
+    "id": 19,
+    "bezeichnung": "Lager Indigo 171",
+    "einheit": "Stk",
+    "wiederbeschaffungszeit": 22
+  },
+  {
+    "id": 20,
+    "bezeichnung": "Mutter Königsblau 891",
+    "einheit": "m",
+    "wiederbeschaffungszeit": 3
+  },
+  {
+    "id": 21,
+    "bezeichnung": "Zahnrad Helles Himmelblau 338",
+    "einheit": "Stk",
+    "wiederbeschaffungszeit": 13
+  },
+  {
+    "id": 22,
+    "bezeichnung": "Platte Antikweiß 564",
+    "einheit": "Pkg",
+    "wiederbeschaffungszeit": 27
+  },
+  {
+    "id": 23,
+    "bezeichnung": "Rohr Trübes Grau 266",
+    "einheit": "m",
+    "wiederbeschaffungszeit": 12
+  },
+  {
+    "id": 24,
+    "bezeichnung": "Mutter Rosa 786",
+    "einheit": "m",
+    "wiederbeschaffungszeit": 23
+  },
+  {
+    "id": 25,
+    "bezeichnung": "Dichtung Mittleres Türkis 763",
+    "einheit": "Stk",
+    "wiederbeschaffungszeit": 20
+  },
+  {
+    "id": 26,
+    "bezeichnung": "Dichtung Helles Himmelblau 275",
+    "einheit": "Liter",
+    "wiederbeschaffungszeit": 24
+  },
+  {
+    "id": 27,
+    "bezeichnung": "Mutter Tiefes Himmelblau 267",
+    "einheit": "m²",
+    "wiederbeschaffungszeit": 13
+  },
+  {
+    "id": 28,
+    "bezeichnung": "Platte Indischrot 755",
+    "einheit": "Pkg",
+    "wiederbeschaffungszeit": 18
+  },
+  {
+    "id": 29,
+    "bezeichnung": "Mutter Mittleres Frühlingsgrün 801",
+    "einheit": "m",
+    "wiederbeschaffungszeit": 27
+  },
+  {
+    "id": 30,
+    "bezeichnung": "Welle Dunkelkhaki 894",
+    "einheit": "Stk",
+    "wiederbeschaffungszeit": 8
+  }
+]

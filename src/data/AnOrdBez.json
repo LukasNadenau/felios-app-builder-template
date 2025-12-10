@@ -1,0 +1,1232 @@
+[
+  {
+    "id": 1,
+    "quelleId": 1,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 2,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 2,
+    "quelleId": 2,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 3,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 3,
+    "quelleId": 3,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 4,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 4,
+    "quelleId": 4,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 5,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 1,
+    "abstandExakt": true
+  },
+  {
+    "id": 5,
+    "quelleId": 6,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 7,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 6,
+    "quelleId": 7,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 8,
+    "zielElement": "Arbeitsgang",
+    "typ": "AnfangAnfang",
+    "abstand": 3,
+    "abstandExakt": true
+  },
+  {
+    "id": 7,
+    "quelleId": 8,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 9,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 1,
+    "abstandExakt": true
+  },
+  {
+    "id": 8,
+    "quelleId": 10,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 11,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 9,
+    "quelleId": 11,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 12,
+    "zielElement": "Arbeitsgang",
+    "typ": "AnfangAnfang",
+    "abstand": 3,
+    "abstandExakt": true
+  },
+  {
+    "id": 10,
+    "quelleId": 12,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 13,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 3,
+    "abstandExakt": false
+  },
+  {
+    "id": 11,
+    "quelleId": 13,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 14,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeEnde",
+    "abstand": 3,
+    "abstandExakt": false
+  },
+  {
+    "id": 12,
+    "quelleId": 14,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 15,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 13,
+    "quelleId": 16,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 17,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 2,
+    "abstandExakt": true
+  },
+  {
+    "id": 14,
+    "quelleId": 17,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 18,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 15,
+    "quelleId": 18,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 19,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 16,
+    "quelleId": 20,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 21,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 1,
+    "abstandExakt": false
+  },
+  {
+    "id": 17,
+    "quelleId": 21,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 22,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 1,
+    "abstandExakt": false
+  },
+  {
+    "id": 18,
+    "quelleId": 22,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 23,
+    "zielElement": "Arbeitsgang",
+    "typ": "AnfangEnde",
+    "abstand": 2,
+    "abstandExakt": false
+  },
+  {
+    "id": 19,
+    "quelleId": 23,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 24,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeEnde",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 20,
+    "quelleId": 24,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 25,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 21,
+    "quelleId": 26,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 27,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 22,
+    "quelleId": 27,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 28,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 23,
+    "quelleId": 28,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 29,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 24,
+    "quelleId": 29,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 30,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 1,
+    "abstandExakt": true
+  },
+  {
+    "id": 25,
+    "quelleId": 30,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 31,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 26,
+    "quelleId": 31,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 32,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 27,
+    "quelleId": 33,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 34,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 28,
+    "quelleId": 34,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 35,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 29,
+    "quelleId": 35,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 36,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 30,
+    "quelleId": 36,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 37,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 31,
+    "quelleId": 37,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 38,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 32,
+    "quelleId": 38,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 39,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 33,
+    "quelleId": 40,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 41,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 3,
+    "abstandExakt": false
+  },
+  {
+    "id": 34,
+    "quelleId": 41,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 42,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 2,
+    "abstandExakt": false
+  },
+  {
+    "id": 35,
+    "quelleId": 42,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 43,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 36,
+    "quelleId": 43,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 44,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 3,
+    "abstandExakt": false
+  },
+  {
+    "id": 37,
+    "quelleId": 44,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 45,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 2,
+    "abstandExakt": false
+  },
+  {
+    "id": 38,
+    "quelleId": 46,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 47,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 39,
+    "quelleId": 47,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 48,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 40,
+    "quelleId": 48,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 49,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 3,
+    "abstandExakt": false
+  },
+  {
+    "id": 41,
+    "quelleId": 49,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 50,
+    "zielElement": "Arbeitsgang",
+    "typ": "AnfangEnde",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 42,
+    "quelleId": 51,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 52,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 43,
+    "quelleId": 52,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 53,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 44,
+    "quelleId": 53,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 54,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 45,
+    "quelleId": 54,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 55,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 46,
+    "quelleId": 56,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 57,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeEnde",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 47,
+    "quelleId": 57,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 58,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 48,
+    "quelleId": 58,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 59,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 1,
+    "abstandExakt": false
+  },
+  {
+    "id": 49,
+    "quelleId": 60,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 61,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 50,
+    "quelleId": 61,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 62,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 51,
+    "quelleId": 62,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 63,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 52,
+    "quelleId": 61,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 63,
+    "zielElement": "Arbeitsgang",
+    "typ": "AnfangAnfang",
+    "abstand": 4,
+    "abstandExakt": false
+  },
+  {
+    "id": 53,
+    "quelleId": 64,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 65,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeEnde",
+    "abstand": 2,
+    "abstandExakt": false
+  },
+  {
+    "id": 54,
+    "quelleId": 65,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 66,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 55,
+    "quelleId": 66,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 67,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 56,
+    "quelleId": 67,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 68,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 57,
+    "quelleId": 69,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 70,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 58,
+    "quelleId": 70,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 71,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 59,
+    "quelleId": 71,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 72,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 1,
+    "abstandExakt": false
+  },
+  {
+    "id": 60,
+    "quelleId": 73,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 74,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 61,
+    "quelleId": 74,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 75,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 62,
+    "quelleId": 76,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 77,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 63,
+    "quelleId": 77,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 78,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeEnde",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 64,
+    "quelleId": 78,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 79,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 65,
+    "quelleId": 79,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 80,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 66,
+    "quelleId": 80,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 81,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 67,
+    "quelleId": 82,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 83,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 68,
+    "quelleId": 83,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 84,
+    "zielElement": "Arbeitsgang",
+    "typ": "AnfangEnde",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 69,
+    "quelleId": 84,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 85,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 70,
+    "quelleId": 85,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 86,
+    "zielElement": "Arbeitsgang",
+    "typ": "AnfangAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 71,
+    "quelleId": 86,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 87,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 72,
+    "quelleId": 88,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 89,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 2,
+    "abstandExakt": true
+  },
+  {
+    "id": 73,
+    "quelleId": 89,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 90,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 74,
+    "quelleId": 90,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 91,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 1,
+    "abstandExakt": true
+  },
+  {
+    "id": 75,
+    "quelleId": 91,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 92,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 76,
+    "quelleId": 92,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 93,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 1,
+    "abstandExakt": true
+  },
+  {
+    "id": 77,
+    "quelleId": 94,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 95,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 78,
+    "quelleId": 95,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 96,
+    "zielElement": "Arbeitsgang",
+    "typ": "AnfangAnfang",
+    "abstand": 3,
+    "abstandExakt": true
+  },
+  {
+    "id": 79,
+    "quelleId": 97,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 98,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 80,
+    "quelleId": 98,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 99,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 81,
+    "quelleId": 99,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 100,
+    "zielElement": "Arbeitsgang",
+    "typ": "AnfangEnde",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 82,
+    "quelleId": 100,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 101,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 83,
+    "quelleId": 101,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 102,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 84,
+    "quelleId": 102,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 103,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeEnde",
+    "abstand": 3,
+    "abstandExakt": false
+  },
+  {
+    "id": 85,
+    "quelleId": 104,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 105,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 86,
+    "quelleId": 105,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 106,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 87,
+    "quelleId": 106,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 107,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 88,
+    "quelleId": 107,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 108,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 89,
+    "quelleId": 108,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 109,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 90,
+    "quelleId": 109,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 110,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 91,
+    "quelleId": 111,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 112,
+    "zielElement": "Arbeitsgang",
+    "typ": "AnfangAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 92,
+    "quelleId": 112,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 113,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 3,
+    "abstandExakt": true
+  },
+  {
+    "id": 93,
+    "quelleId": 113,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 114,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeEnde",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 94,
+    "quelleId": 114,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 115,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 95,
+    "quelleId": 115,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 116,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 96,
+    "quelleId": 116,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 117,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 97,
+    "quelleId": 118,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 119,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 98,
+    "quelleId": 119,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 120,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 99,
+    "quelleId": 120,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 121,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 100,
+    "quelleId": 118,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 121,
+    "zielElement": "Arbeitsgang",
+    "typ": "AnfangEnde",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 101,
+    "quelleId": 122,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 123,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 102,
+    "quelleId": 123,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 124,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 103,
+    "quelleId": 125,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 126,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 1,
+    "abstandExakt": false
+  },
+  {
+    "id": 104,
+    "quelleId": 126,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 127,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 105,
+    "quelleId": 127,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 128,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 106,
+    "quelleId": 128,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 129,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 1,
+    "abstandExakt": true
+  },
+  {
+    "id": 107,
+    "quelleId": 129,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 130,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 108,
+    "quelleId": 130,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 131,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 109,
+    "quelleId": 132,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 133,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 1,
+    "abstandExakt": true
+  },
+  {
+    "id": 110,
+    "quelleId": 133,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 134,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 111,
+    "quelleId": 135,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 136,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 112,
+    "quelleId": 136,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 137,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 113,
+    "quelleId": 137,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 138,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 114,
+    "quelleId": 139,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 140,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 115,
+    "quelleId": 140,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 141,
+    "zielElement": "Arbeitsgang",
+    "typ": "AnfangAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 116,
+    "quelleId": 141,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 142,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 117,
+    "quelleId": 142,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 143,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 118,
+    "quelleId": 143,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 144,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeEnde",
+    "abstand": 0,
+    "abstandExakt": true
+  },
+  {
+    "id": 119,
+    "quelleId": 145,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 146,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeEnde",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 120,
+    "quelleId": 146,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 147,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 121,
+    "quelleId": 148,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 149,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 122,
+    "quelleId": 149,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 150,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": false
+  },
+  {
+    "id": 123,
+    "quelleId": 150,
+    "quelleElement": "Arbeitsgang",
+    "zielId": 151,
+    "zielElement": "Arbeitsgang",
+    "typ": "EndeAnfang",
+    "abstand": 0,
+    "abstandExakt": true
+  }
+]

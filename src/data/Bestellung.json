@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "materialId": 14,
+    "verfuegbarTag": 25,
+    "menge": 22,
+    "fix": false
+  },
+  {
+    "id": 2,
+    "materialId": 27,
+    "verfuegbarTag": 8,
+    "menge": 136,
+    "fix": true
+  },
+  {
+    "id": 3,
+    "materialId": 16,
+    "verfuegbarTag": 7,
+    "menge": 500,
+    "fix": false
+  },
+  {
+    "id": 4,
+    "materialId": 27,
+    "verfuegbarTag": 1,
+    "menge": 430,
+    "fix": false
+  },
+  {
+    "id": 5,
+    "materialId": 17,
+    "verfuegbarTag": 25,
+    "menge": 131,
+    "fix": true
+  },
+  {
+    "id": 6,
+    "materialId": 25,
+    "verfuegbarTag": 19,
+    "menge": 327,
+    "fix": false
+  },
+  {
+    "id": 7,
+    "materialId": 25,
+    "verfuegbarTag": 3,
+    "menge": 330,
+    "fix": false
+  },
+  {
+    "id": 8,
+    "materialId": 19,
+    "verfuegbarTag": 3,
+    "menge": 53,
+    "fix": true
+  },
+  {
+    "id": 9,
+    "materialId": 30,
+    "verfuegbarTag": 1,
+    "menge": 203,
+    "fix": false
+  },
+  {
+    "id": 10,
+    "materialId": 29,
+    "verfuegbarTag": 27,
+    "menge": 365,
+    "fix": true
+  },
+  {
+    "id": 11,
+    "materialId": 26,
+    "verfuegbarTag": 4,
+    "menge": 41,
+    "fix": false
+  },
+  {
+    "id": 12,
+    "materialId": 2,
+    "verfuegbarTag": 9,
+    "menge": 322,
+    "fix": false
+  },
+  {
+    "id": 13,
+    "materialId": 3,
+    "verfuegbarTag": 3,
+    "menge": 356,
+    "fix": true
+  },
+  {
+    "id": 14,
+    "materialId": 18,
+    "verfuegbarTag": 1,
+    "menge": 160,
+    "fix": false
+  },
+  {
+    "id": 15,
+    "materialId": 13,
+    "verfuegbarTag": 3,
+    "menge": 326,
+    "fix": false
+  },
+  {
+    "id": 16,
+    "materialId": 8,
+    "verfuegbarTag": 27,
+    "menge": 316,
+    "fix": true
+  },
+  {
+    "id": 17,
+    "materialId": 15,
+    "verfuegbarTag": 12,
+    "menge": 247,
+    "fix": false
+  },
+  {
+    "id": 18,
+    "materialId": 29,
+    "verfuegbarTag": 19,
+    "menge": 327,
+    "fix": true
+  },
+  {
+    "id": 19,
+    "materialId": 11,
+    "verfuegbarTag": 20,
+    "menge": 490,
+    "fix": true
+  },
+  {
+    "id": 20,
+    "materialId": 15,
+    "verfuegbarTag": 16,
+    "menge": 178,
+    "fix": true
+  }
+]

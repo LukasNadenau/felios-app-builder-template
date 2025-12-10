@@ -1,0 +1,2772 @@
+[
+  {
+    "id": 1,
+    "matBewegungArt": "Zugang",
+    "materialId": 14,
+    "menge": 22,
+    "upoTyp": "BestellPos",
+    "upoId": 1,
+    "tag": 25,
+    "fix": false
+  },
+  {
+    "id": 2,
+    "matBewegungArt": "Zugang",
+    "materialId": 27,
+    "menge": 136,
+    "upoTyp": "BestellPos",
+    "upoId": 2,
+    "tag": 8,
+    "fix": true
+  },
+  {
+    "id": 3,
+    "matBewegungArt": "Zugang",
+    "materialId": 16,
+    "menge": 500,
+    "upoTyp": "BestellPos",
+    "upoId": 3,
+    "tag": 7,
+    "fix": false
+  },
+  {
+    "id": 4,
+    "matBewegungArt": "Zugang",
+    "materialId": 27,
+    "menge": 430,
+    "upoTyp": "BestellPos",
+    "upoId": 4,
+    "tag": 1,
+    "fix": false
+  },
+  {
+    "id": 5,
+    "matBewegungArt": "Zugang",
+    "materialId": 17,
+    "menge": 131,
+    "upoTyp": "BestellPos",
+    "upoId": 5,
+    "tag": 25,
+    "fix": true
+  },
+  {
+    "id": 6,
+    "matBewegungArt": "Zugang",
+    "materialId": 25,
+    "menge": 327,
+    "upoTyp": "BestellPos",
+    "upoId": 6,
+    "tag": 19,
+    "fix": false
+  },
+  {
+    "id": 7,
+    "matBewegungArt": "Zugang",
+    "materialId": 25,
+    "menge": 330,
+    "upoTyp": "BestellPos",
+    "upoId": 7,
+    "tag": 3,
+    "fix": false
+  },
+  {
+    "id": 8,
+    "matBewegungArt": "Zugang",
+    "materialId": 19,
+    "menge": 53,
+    "upoTyp": "BestellPos",
+    "upoId": 8,
+    "tag": 3,
+    "fix": true
+  },
+  {
+    "id": 9,
+    "matBewegungArt": "Zugang",
+    "materialId": 30,
+    "menge": 203,
+    "upoTyp": "BestellPos",
+    "upoId": 9,
+    "tag": 1,
+    "fix": false
+  },
+  {
+    "id": 10,
+    "matBewegungArt": "Zugang",
+    "materialId": 29,
+    "menge": 365,
+    "upoTyp": "BestellPos",
+    "upoId": 10,
+    "tag": 27,
+    "fix": true
+  },
+  {
+    "id": 11,
+    "matBewegungArt": "Zugang",
+    "materialId": 26,
+    "menge": 41,
+    "upoTyp": "BestellPos",
+    "upoId": 11,
+    "tag": 4,
+    "fix": false
+  },
+  {
+    "id": 12,
+    "matBewegungArt": "Zugang",
+    "materialId": 2,
+    "menge": 322,
+    "upoTyp": "BestellPos",
+    "upoId": 12,
+    "tag": 9,
+    "fix": false
+  },
+  {
+    "id": 13,
+    "matBewegungArt": "Zugang",
+    "materialId": 3,
+    "menge": 356,
+    "upoTyp": "BestellPos",
+    "upoId": 13,
+    "tag": 3,
+    "fix": true
+  },
+  {
+    "id": 14,
+    "matBewegungArt": "Zugang",
+    "materialId": 18,
+    "menge": 160,
+    "upoTyp": "BestellPos",
+    "upoId": 14,
+    "tag": 1,
+    "fix": false
+  },
+  {
+    "id": 15,
+    "matBewegungArt": "Zugang",
+    "materialId": 13,
+    "menge": 326,
+    "upoTyp": "BestellPos",
+    "upoId": 15,
+    "tag": 3,
+    "fix": false
+  },
+  {
+    "id": 16,
+    "matBewegungArt": "Zugang",
+    "materialId": 8,
+    "menge": 316,
+    "upoTyp": "BestellPos",
+    "upoId": 16,
+    "tag": 27,
+    "fix": true
+  },
+  {
+    "id": 17,
+    "matBewegungArt": "Zugang",
+    "materialId": 15,
+    "menge": 247,
+    "upoTyp": "BestellPos",
+    "upoId": 17,
+    "tag": 12,
+    "fix": false
+  },
+  {
+    "id": 18,
+    "matBewegungArt": "Zugang",
+    "materialId": 29,
+    "menge": 327,
+    "upoTyp": "BestellPos",
+    "upoId": 18,
+    "tag": 19,
+    "fix": true
+  },
+  {
+    "id": 19,
+    "matBewegungArt": "Zugang",
+    "materialId": 11,
+    "menge": 490,
+    "upoTyp": "BestellPos",
+    "upoId": 19,
+    "tag": 20,
+    "fix": true
+  },
+  {
+    "id": 20,
+    "matBewegungArt": "Zugang",
+    "materialId": 15,
+    "menge": 178,
+    "upoTyp": "BestellPos",
+    "upoId": 20,
+    "tag": 16,
+    "fix": true
+  },
+  {
+    "id": 21,
+    "matBewegungArt": "Abgang",
+    "materialId": 1,
+    "menge": 18,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 2,
+    "tag": 6,
+    "fix": false
+  },
+  {
+    "id": 22,
+    "matBewegungArt": "Abgang",
+    "materialId": 22,
+    "menge": 14,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 3,
+    "tag": 91,
+    "fix": false
+  },
+  {
+    "id": 23,
+    "matBewegungArt": "Abgang",
+    "materialId": 28,
+    "menge": 19,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 3,
+    "tag": 91,
+    "fix": false
+  },
+  {
+    "id": 24,
+    "matBewegungArt": "Abgang",
+    "materialId": 9,
+    "menge": 16,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 4,
+    "tag": 27,
+    "fix": false
+  },
+  {
+    "id": 25,
+    "matBewegungArt": "Abgang",
+    "materialId": 1,
+    "menge": 19,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 4,
+    "tag": 27,
+    "fix": false
+  },
+  {
+    "id": 26,
+    "matBewegungArt": "Abgang",
+    "materialId": 13,
+    "menge": 13,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 5,
+    "tag": 57,
+    "fix": false
+  },
+  {
+    "id": 27,
+    "matBewegungArt": "Abgang",
+    "materialId": 19,
+    "menge": 11,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 5,
+    "tag": 57,
+    "fix": false
+  },
+  {
+    "id": 28,
+    "matBewegungArt": "Abgang",
+    "materialId": 4,
+    "menge": 7,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 6,
+    "tag": 76,
+    "fix": false
+  },
+  {
+    "id": 29,
+    "matBewegungArt": "Abgang",
+    "materialId": 23,
+    "menge": 11,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 6,
+    "tag": 76,
+    "fix": false
+  },
+  {
+    "id": 30,
+    "matBewegungArt": "Abgang",
+    "materialId": 11,
+    "menge": 10,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 7,
+    "tag": 94,
+    "fix": false
+  },
+  {
+    "id": 31,
+    "matBewegungArt": "Abgang",
+    "materialId": 6,
+    "menge": 12,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 7,
+    "tag": 94,
+    "fix": false
+  },
+  {
+    "id": 32,
+    "matBewegungArt": "Abgang",
+    "materialId": 20,
+    "menge": 14,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 7,
+    "tag": 94,
+    "fix": false
+  },
+  {
+    "id": 33,
+    "matBewegungArt": "Abgang",
+    "materialId": 28,
+    "menge": 18,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 8,
+    "tag": 95,
+    "fix": false
+  },
+  {
+    "id": 34,
+    "matBewegungArt": "Abgang",
+    "materialId": 26,
+    "menge": 7,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 8,
+    "tag": 95,
+    "fix": false
+  },
+  {
+    "id": 35,
+    "matBewegungArt": "Abgang",
+    "materialId": 3,
+    "menge": 10,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 8,
+    "tag": 95,
+    "fix": false
+  },
+  {
+    "id": 36,
+    "matBewegungArt": "Abgang",
+    "materialId": 19,
+    "menge": 8,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 9,
+    "tag": 67,
+    "fix": false
+  },
+  {
+    "id": 37,
+    "matBewegungArt": "Abgang",
+    "materialId": 13,
+    "menge": 20,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 9,
+    "tag": 67,
+    "fix": false
+  },
+  {
+    "id": 38,
+    "matBewegungArt": "Abgang",
+    "materialId": 4,
+    "menge": 9,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 11,
+    "tag": 73,
+    "fix": false
+  },
+  {
+    "id": 39,
+    "matBewegungArt": "Abgang",
+    "materialId": 19,
+    "menge": 3,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 11,
+    "tag": 73,
+    "fix": false
+  },
+  {
+    "id": 40,
+    "matBewegungArt": "Abgang",
+    "materialId": 11,
+    "menge": 19,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 11,
+    "tag": 73,
+    "fix": false
+  },
+  {
+    "id": 41,
+    "matBewegungArt": "Abgang",
+    "materialId": 12,
+    "menge": 3,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 13,
+    "tag": 88,
+    "fix": false
+  },
+  {
+    "id": 42,
+    "matBewegungArt": "Abgang",
+    "materialId": 17,
+    "menge": 10,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 14,
+    "tag": 88,
+    "fix": false
+  },
+  {
+    "id": 43,
+    "matBewegungArt": "Abgang",
+    "materialId": 26,
+    "menge": 14,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 14,
+    "tag": 88,
+    "fix": false
+  },
+  {
+    "id": 44,
+    "matBewegungArt": "Abgang",
+    "materialId": 7,
+    "menge": 13,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 15,
+    "tag": 14,
+    "fix": false
+  },
+  {
+    "id": 45,
+    "matBewegungArt": "Abgang",
+    "materialId": 14,
+    "menge": 9,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 15,
+    "tag": 14,
+    "fix": false
+  },
+  {
+    "id": 46,
+    "matBewegungArt": "Abgang",
+    "materialId": 22,
+    "menge": 18,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 16,
+    "tag": 73,
+    "fix": false
+  },
+  {
+    "id": 47,
+    "matBewegungArt": "Abgang",
+    "materialId": 25,
+    "menge": 6,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 16,
+    "tag": 73,
+    "fix": false
+  },
+  {
+    "id": 48,
+    "matBewegungArt": "Abgang",
+    "materialId": 28,
+    "menge": 16,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 18,
+    "tag": 90,
+    "fix": false
+  },
+  {
+    "id": 49,
+    "matBewegungArt": "Abgang",
+    "materialId": 6,
+    "menge": 7,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 18,
+    "tag": 90,
+    "fix": false
+  },
+  {
+    "id": 50,
+    "matBewegungArt": "Abgang",
+    "materialId": 19,
+    "menge": 15,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 18,
+    "tag": 90,
+    "fix": false
+  },
+  {
+    "id": 51,
+    "matBewegungArt": "Abgang",
+    "materialId": 18,
+    "menge": 14,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 19,
+    "tag": 61,
+    "fix": false
+  },
+  {
+    "id": 52,
+    "matBewegungArt": "Abgang",
+    "materialId": 26,
+    "menge": 19,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 19,
+    "tag": 61,
+    "fix": false
+  },
+  {
+    "id": 53,
+    "matBewegungArt": "Abgang",
+    "materialId": 20,
+    "menge": 2,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 19,
+    "tag": 61,
+    "fix": false
+  },
+  {
+    "id": 54,
+    "matBewegungArt": "Abgang",
+    "materialId": 15,
+    "menge": 8,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 20,
+    "tag": 91,
+    "fix": false
+  },
+  {
+    "id": 55,
+    "matBewegungArt": "Abgang",
+    "materialId": 5,
+    "menge": 5,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 20,
+    "tag": 91,
+    "fix": false
+  },
+  {
+    "id": 56,
+    "matBewegungArt": "Abgang",
+    "materialId": 21,
+    "menge": 7,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 24,
+    "tag": 81,
+    "fix": false
+  },
+  {
+    "id": 57,
+    "matBewegungArt": "Abgang",
+    "materialId": 21,
+    "menge": 9,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 26,
+    "tag": 54,
+    "fix": false
+  },
+  {
+    "id": 58,
+    "matBewegungArt": "Abgang",
+    "materialId": 6,
+    "menge": 20,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 26,
+    "tag": 54,
+    "fix": false
+  },
+  {
+    "id": 59,
+    "matBewegungArt": "Abgang",
+    "materialId": 4,
+    "menge": 5,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 27,
+    "tag": 27,
+    "fix": false
+  },
+  {
+    "id": 60,
+    "matBewegungArt": "Abgang",
+    "materialId": 26,
+    "menge": 10,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 28,
+    "tag": 94,
+    "fix": false
+  },
+  {
+    "id": 61,
+    "matBewegungArt": "Abgang",
+    "materialId": 14,
+    "menge": 2,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 29,
+    "tag": 6,
+    "fix": false
+  },
+  {
+    "id": 62,
+    "matBewegungArt": "Abgang",
+    "materialId": 21,
+    "menge": 7,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 29,
+    "tag": 6,
+    "fix": false
+  },
+  {
+    "id": 63,
+    "matBewegungArt": "Abgang",
+    "materialId": 29,
+    "menge": 6,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 29,
+    "tag": 6,
+    "fix": false
+  },
+  {
+    "id": 64,
+    "matBewegungArt": "Abgang",
+    "materialId": 9,
+    "menge": 9,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 30,
+    "tag": 20,
+    "fix": false
+  },
+  {
+    "id": 65,
+    "matBewegungArt": "Abgang",
+    "materialId": 21,
+    "menge": 2,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 31,
+    "tag": 64,
+    "fix": false
+  },
+  {
+    "id": 66,
+    "matBewegungArt": "Abgang",
+    "materialId": 2,
+    "menge": 3,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 33,
+    "tag": 29,
+    "fix": false
+  },
+  {
+    "id": 67,
+    "matBewegungArt": "Abgang",
+    "materialId": 28,
+    "menge": 14,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 34,
+    "tag": 61,
+    "fix": false
+  },
+  {
+    "id": 68,
+    "matBewegungArt": "Abgang",
+    "materialId": 3,
+    "menge": 12,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 34,
+    "tag": 61,
+    "fix": false
+  },
+  {
+    "id": 69,
+    "matBewegungArt": "Abgang",
+    "materialId": 13,
+    "menge": 5,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 35,
+    "tag": 6,
+    "fix": false
+  },
+  {
+    "id": 70,
+    "matBewegungArt": "Abgang",
+    "materialId": 24,
+    "menge": 4,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 36,
+    "tag": 33,
+    "fix": false
+  },
+  {
+    "id": 71,
+    "matBewegungArt": "Abgang",
+    "materialId": 17,
+    "menge": 17,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 36,
+    "tag": 33,
+    "fix": false
+  },
+  {
+    "id": 72,
+    "matBewegungArt": "Abgang",
+    "materialId": 30,
+    "menge": 19,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 36,
+    "tag": 33,
+    "fix": false
+  },
+  {
+    "id": 73,
+    "matBewegungArt": "Abgang",
+    "materialId": 8,
+    "menge": 20,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 39,
+    "tag": 40,
+    "fix": false
+  },
+  {
+    "id": 74,
+    "matBewegungArt": "Abgang",
+    "materialId": 11,
+    "menge": 19,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 40,
+    "tag": 92,
+    "fix": false
+  },
+  {
+    "id": 75,
+    "matBewegungArt": "Abgang",
+    "materialId": 27,
+    "menge": 13,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 40,
+    "tag": 92,
+    "fix": false
+  },
+  {
+    "id": 76,
+    "matBewegungArt": "Abgang",
+    "materialId": 6,
+    "menge": 7,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 44,
+    "tag": 16,
+    "fix": false
+  },
+  {
+    "id": 77,
+    "matBewegungArt": "Abgang",
+    "materialId": 28,
+    "menge": 2,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 46,
+    "tag": 85,
+    "fix": false
+  },
+  {
+    "id": 78,
+    "matBewegungArt": "Abgang",
+    "materialId": 19,
+    "menge": 16,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 46,
+    "tag": 85,
+    "fix": false
+  },
+  {
+    "id": 79,
+    "matBewegungArt": "Abgang",
+    "materialId": 4,
+    "menge": 14,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 47,
+    "tag": 43,
+    "fix": false
+  },
+  {
+    "id": 80,
+    "matBewegungArt": "Abgang",
+    "materialId": 11,
+    "menge": 16,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 47,
+    "tag": 43,
+    "fix": false
+  },
+  {
+    "id": 81,
+    "matBewegungArt": "Abgang",
+    "materialId": 18,
+    "menge": 8,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 47,
+    "tag": 43,
+    "fix": false
+  },
+  {
+    "id": 82,
+    "matBewegungArt": "Abgang",
+    "materialId": 12,
+    "menge": 1,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 51,
+    "tag": 68,
+    "fix": false
+  },
+  {
+    "id": 83,
+    "matBewegungArt": "Abgang",
+    "materialId": 27,
+    "menge": 20,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 51,
+    "tag": 68,
+    "fix": false
+  },
+  {
+    "id": 84,
+    "matBewegungArt": "Abgang",
+    "materialId": 10,
+    "menge": 2,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 51,
+    "tag": 68,
+    "fix": false
+  },
+  {
+    "id": 85,
+    "matBewegungArt": "Abgang",
+    "materialId": 23,
+    "menge": 8,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 53,
+    "tag": 9,
+    "fix": false
+  },
+  {
+    "id": 86,
+    "matBewegungArt": "Abgang",
+    "materialId": 10,
+    "menge": 12,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 54,
+    "tag": 40,
+    "fix": false
+  },
+  {
+    "id": 87,
+    "matBewegungArt": "Abgang",
+    "materialId": 21,
+    "menge": 4,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 54,
+    "tag": 40,
+    "fix": false
+  },
+  {
+    "id": 88,
+    "matBewegungArt": "Abgang",
+    "materialId": 28,
+    "menge": 15,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 55,
+    "tag": 68,
+    "fix": false
+  },
+  {
+    "id": 89,
+    "matBewegungArt": "Abgang",
+    "materialId": 30,
+    "menge": 10,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 56,
+    "tag": 95,
+    "fix": false
+  },
+  {
+    "id": 90,
+    "matBewegungArt": "Abgang",
+    "materialId": 9,
+    "menge": 3,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 56,
+    "tag": 95,
+    "fix": false
+  },
+  {
+    "id": 91,
+    "matBewegungArt": "Abgang",
+    "materialId": 30,
+    "menge": 15,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 59,
+    "tag": 31,
+    "fix": false
+  },
+  {
+    "id": 92,
+    "matBewegungArt": "Abgang",
+    "materialId": 14,
+    "menge": 9,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 60,
+    "tag": 5,
+    "fix": false
+  },
+  {
+    "id": 93,
+    "matBewegungArt": "Abgang",
+    "materialId": 26,
+    "menge": 3,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 60,
+    "tag": 5,
+    "fix": false
+  },
+  {
+    "id": 94,
+    "matBewegungArt": "Abgang",
+    "materialId": 2,
+    "menge": 16,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 60,
+    "tag": 5,
+    "fix": false
+  },
+  {
+    "id": 95,
+    "matBewegungArt": "Abgang",
+    "materialId": 30,
+    "menge": 11,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 61,
+    "tag": 30,
+    "fix": false
+  },
+  {
+    "id": 96,
+    "matBewegungArt": "Abgang",
+    "materialId": 27,
+    "menge": 14,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 61,
+    "tag": 30,
+    "fix": false
+  },
+  {
+    "id": 97,
+    "matBewegungArt": "Abgang",
+    "materialId": 3,
+    "menge": 20,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 65,
+    "tag": 40,
+    "fix": false
+  },
+  {
+    "id": 98,
+    "matBewegungArt": "Abgang",
+    "materialId": 12,
+    "menge": 18,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 65,
+    "tag": 40,
+    "fix": false
+  },
+  {
+    "id": 99,
+    "matBewegungArt": "Abgang",
+    "materialId": 14,
+    "menge": 11,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 65,
+    "tag": 40,
+    "fix": false
+  },
+  {
+    "id": 100,
+    "matBewegungArt": "Abgang",
+    "materialId": 25,
+    "menge": 2,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 66,
+    "tag": 77,
+    "fix": false
+  },
+  {
+    "id": 101,
+    "matBewegungArt": "Abgang",
+    "materialId": 21,
+    "menge": 15,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 67,
+    "tag": 69,
+    "fix": false
+  },
+  {
+    "id": 102,
+    "matBewegungArt": "Abgang",
+    "materialId": 7,
+    "menge": 10,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 69,
+    "tag": 26,
+    "fix": false
+  },
+  {
+    "id": 103,
+    "matBewegungArt": "Abgang",
+    "materialId": 21,
+    "menge": 11,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 69,
+    "tag": 26,
+    "fix": false
+  },
+  {
+    "id": 104,
+    "matBewegungArt": "Abgang",
+    "materialId": 6,
+    "menge": 8,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 70,
+    "tag": 75,
+    "fix": false
+  },
+  {
+    "id": 105,
+    "matBewegungArt": "Abgang",
+    "materialId": 25,
+    "menge": 20,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 71,
+    "tag": 29,
+    "fix": false
+  },
+  {
+    "id": 106,
+    "matBewegungArt": "Abgang",
+    "materialId": 5,
+    "menge": 14,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 71,
+    "tag": 29,
+    "fix": false
+  },
+  {
+    "id": 107,
+    "matBewegungArt": "Abgang",
+    "materialId": 28,
+    "menge": 11,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 71,
+    "tag": 29,
+    "fix": false
+  },
+  {
+    "id": 108,
+    "matBewegungArt": "Abgang",
+    "materialId": 5,
+    "menge": 19,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 72,
+    "tag": 89,
+    "fix": false
+  },
+  {
+    "id": 109,
+    "matBewegungArt": "Abgang",
+    "materialId": 9,
+    "menge": 11,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 72,
+    "tag": 89,
+    "fix": false
+  },
+  {
+    "id": 110,
+    "matBewegungArt": "Abgang",
+    "materialId": 6,
+    "menge": 10,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 72,
+    "tag": 89,
+    "fix": false
+  },
+  {
+    "id": 111,
+    "matBewegungArt": "Abgang",
+    "materialId": 12,
+    "menge": 13,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 73,
+    "tag": 99,
+    "fix": false
+  },
+  {
+    "id": 112,
+    "matBewegungArt": "Abgang",
+    "materialId": 6,
+    "menge": 13,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 73,
+    "tag": 99,
+    "fix": false
+  },
+  {
+    "id": 113,
+    "matBewegungArt": "Abgang",
+    "materialId": 30,
+    "menge": 18,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 76,
+    "tag": 92,
+    "fix": false
+  },
+  {
+    "id": 114,
+    "matBewegungArt": "Abgang",
+    "materialId": 8,
+    "menge": 15,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 77,
+    "tag": 82,
+    "fix": false
+  },
+  {
+    "id": 115,
+    "matBewegungArt": "Abgang",
+    "materialId": 30,
+    "menge": 7,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 77,
+    "tag": 82,
+    "fix": false
+  },
+  {
+    "id": 116,
+    "matBewegungArt": "Abgang",
+    "materialId": 3,
+    "menge": 9,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 77,
+    "tag": 82,
+    "fix": false
+  },
+  {
+    "id": 117,
+    "matBewegungArt": "Abgang",
+    "materialId": 20,
+    "menge": 20,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 79,
+    "tag": 27,
+    "fix": false
+  },
+  {
+    "id": 118,
+    "matBewegungArt": "Abgang",
+    "materialId": 14,
+    "menge": 9,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 79,
+    "tag": 27,
+    "fix": false
+  },
+  {
+    "id": 119,
+    "matBewegungArt": "Abgang",
+    "materialId": 6,
+    "menge": 4,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 80,
+    "tag": 13,
+    "fix": false
+  },
+  {
+    "id": 120,
+    "matBewegungArt": "Abgang",
+    "materialId": 19,
+    "menge": 1,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 80,
+    "tag": 13,
+    "fix": false
+  },
+  {
+    "id": 121,
+    "matBewegungArt": "Abgang",
+    "materialId": 27,
+    "menge": 16,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 82,
+    "tag": 21,
+    "fix": false
+  },
+  {
+    "id": 122,
+    "matBewegungArt": "Abgang",
+    "materialId": 22,
+    "menge": 4,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 82,
+    "tag": 21,
+    "fix": false
+  },
+  {
+    "id": 123,
+    "matBewegungArt": "Abgang",
+    "materialId": 7,
+    "menge": 9,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 83,
+    "tag": 100,
+    "fix": false
+  },
+  {
+    "id": 124,
+    "matBewegungArt": "Abgang",
+    "materialId": 13,
+    "menge": 14,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 84,
+    "tag": 13,
+    "fix": false
+  },
+  {
+    "id": 125,
+    "matBewegungArt": "Abgang",
+    "materialId": 5,
+    "menge": 7,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 84,
+    "tag": 13,
+    "fix": false
+  },
+  {
+    "id": 126,
+    "matBewegungArt": "Abgang",
+    "materialId": 24,
+    "menge": 7,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 85,
+    "tag": 21,
+    "fix": false
+  },
+  {
+    "id": 127,
+    "matBewegungArt": "Abgang",
+    "materialId": 22,
+    "menge": 14,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 85,
+    "tag": 21,
+    "fix": false
+  },
+  {
+    "id": 128,
+    "matBewegungArt": "Abgang",
+    "materialId": 1,
+    "menge": 10,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 86,
+    "tag": 38,
+    "fix": false
+  },
+  {
+    "id": 129,
+    "matBewegungArt": "Abgang",
+    "materialId": 30,
+    "menge": 12,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 88,
+    "tag": 34,
+    "fix": false
+  },
+  {
+    "id": 130,
+    "matBewegungArt": "Abgang",
+    "materialId": 8,
+    "menge": 19,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 88,
+    "tag": 34,
+    "fix": false
+  },
+  {
+    "id": 131,
+    "matBewegungArt": "Abgang",
+    "materialId": 3,
+    "menge": 16,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 89,
+    "tag": 71,
+    "fix": false
+  },
+  {
+    "id": 132,
+    "matBewegungArt": "Abgang",
+    "materialId": 1,
+    "menge": 5,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 89,
+    "tag": 71,
+    "fix": false
+  },
+  {
+    "id": 133,
+    "matBewegungArt": "Abgang",
+    "materialId": 23,
+    "menge": 13,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 92,
+    "tag": 29,
+    "fix": false
+  },
+  {
+    "id": 134,
+    "matBewegungArt": "Abgang",
+    "materialId": 18,
+    "menge": 2,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 95,
+    "tag": 93,
+    "fix": false
+  },
+  {
+    "id": 135,
+    "matBewegungArt": "Abgang",
+    "materialId": 16,
+    "menge": 12,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 96,
+    "tag": 91,
+    "fix": false
+  },
+  {
+    "id": 136,
+    "matBewegungArt": "Abgang",
+    "materialId": 26,
+    "menge": 9,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 100,
+    "tag": 92,
+    "fix": false
+  },
+  {
+    "id": 137,
+    "matBewegungArt": "Abgang",
+    "materialId": 2,
+    "menge": 17,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 100,
+    "tag": 92,
+    "fix": false
+  },
+  {
+    "id": 138,
+    "matBewegungArt": "Abgang",
+    "materialId": 1,
+    "menge": 20,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 100,
+    "tag": 92,
+    "fix": false
+  },
+  {
+    "id": 139,
+    "matBewegungArt": "Abgang",
+    "materialId": 22,
+    "menge": 5,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 101,
+    "tag": 76,
+    "fix": false
+  },
+  {
+    "id": 140,
+    "matBewegungArt": "Abgang",
+    "materialId": 12,
+    "menge": 18,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 101,
+    "tag": 76,
+    "fix": false
+  },
+  {
+    "id": 141,
+    "matBewegungArt": "Abgang",
+    "materialId": 9,
+    "menge": 6,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 102,
+    "tag": 63,
+    "fix": false
+  },
+  {
+    "id": 142,
+    "matBewegungArt": "Abgang",
+    "materialId": 29,
+    "menge": 5,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 103,
+    "tag": 5,
+    "fix": false
+  },
+  {
+    "id": 143,
+    "matBewegungArt": "Abgang",
+    "materialId": 15,
+    "menge": 3,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 103,
+    "tag": 5,
+    "fix": false
+  },
+  {
+    "id": 144,
+    "matBewegungArt": "Abgang",
+    "materialId": 14,
+    "menge": 4,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 104,
+    "tag": 59,
+    "fix": false
+  },
+  {
+    "id": 145,
+    "matBewegungArt": "Abgang",
+    "materialId": 5,
+    "menge": 11,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 104,
+    "tag": 59,
+    "fix": false
+  },
+  {
+    "id": 146,
+    "matBewegungArt": "Abgang",
+    "materialId": 9,
+    "menge": 2,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 104,
+    "tag": 59,
+    "fix": false
+  },
+  {
+    "id": 147,
+    "matBewegungArt": "Abgang",
+    "materialId": 24,
+    "menge": 14,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 106,
+    "tag": 91,
+    "fix": false
+  },
+  {
+    "id": 148,
+    "matBewegungArt": "Abgang",
+    "materialId": 12,
+    "menge": 10,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 106,
+    "tag": 91,
+    "fix": false
+  },
+  {
+    "id": 149,
+    "matBewegungArt": "Abgang",
+    "materialId": 17,
+    "menge": 14,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 108,
+    "tag": 11,
+    "fix": false
+  },
+  {
+    "id": 150,
+    "matBewegungArt": "Abgang",
+    "materialId": 11,
+    "menge": 6,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 108,
+    "tag": 11,
+    "fix": false
+  },
+  {
+    "id": 151,
+    "matBewegungArt": "Abgang",
+    "materialId": 25,
+    "menge": 18,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 109,
+    "tag": 46,
+    "fix": false
+  },
+  {
+    "id": 152,
+    "matBewegungArt": "Abgang",
+    "materialId": 5,
+    "menge": 15,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 109,
+    "tag": 46,
+    "fix": false
+  },
+  {
+    "id": 153,
+    "matBewegungArt": "Abgang",
+    "materialId": 2,
+    "menge": 8,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 110,
+    "tag": 60,
+    "fix": false
+  },
+  {
+    "id": 154,
+    "matBewegungArt": "Abgang",
+    "materialId": 9,
+    "menge": 15,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 111,
+    "tag": 57,
+    "fix": false
+  },
+  {
+    "id": 155,
+    "matBewegungArt": "Abgang",
+    "materialId": 6,
+    "menge": 14,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 111,
+    "tag": 57,
+    "fix": false
+  },
+  {
+    "id": 156,
+    "matBewegungArt": "Abgang",
+    "materialId": 2,
+    "menge": 12,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 112,
+    "tag": 40,
+    "fix": false
+  },
+  {
+    "id": 157,
+    "matBewegungArt": "Abgang",
+    "materialId": 15,
+    "menge": 18,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 112,
+    "tag": 40,
+    "fix": false
+  },
+  {
+    "id": 158,
+    "matBewegungArt": "Abgang",
+    "materialId": 4,
+    "menge": 5,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 113,
+    "tag": 20,
+    "fix": false
+  },
+  {
+    "id": 159,
+    "matBewegungArt": "Abgang",
+    "materialId": 28,
+    "menge": 4,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 113,
+    "tag": 20,
+    "fix": false
+  },
+  {
+    "id": 160,
+    "matBewegungArt": "Abgang",
+    "materialId": 28,
+    "menge": 10,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 114,
+    "tag": 92,
+    "fix": false
+  },
+  {
+    "id": 161,
+    "matBewegungArt": "Abgang",
+    "materialId": 24,
+    "menge": 17,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 115,
+    "tag": 71,
+    "fix": false
+  },
+  {
+    "id": 162,
+    "matBewegungArt": "Abgang",
+    "materialId": 19,
+    "menge": 17,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 117,
+    "tag": 68,
+    "fix": false
+  },
+  {
+    "id": 163,
+    "matBewegungArt": "Abgang",
+    "materialId": 7,
+    "menge": 19,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 117,
+    "tag": 68,
+    "fix": false
+  },
+  {
+    "id": 164,
+    "matBewegungArt": "Abgang",
+    "materialId": 1,
+    "menge": 6,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 117,
+    "tag": 68,
+    "fix": false
+  },
+  {
+    "id": 165,
+    "matBewegungArt": "Abgang",
+    "materialId": 8,
+    "menge": 16,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 118,
+    "tag": 51,
+    "fix": false
+  },
+  {
+    "id": 166,
+    "matBewegungArt": "Abgang",
+    "materialId": 1,
+    "menge": 4,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 119,
+    "tag": 71,
+    "fix": false
+  },
+  {
+    "id": 167,
+    "matBewegungArt": "Abgang",
+    "materialId": 10,
+    "menge": 13,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 119,
+    "tag": 71,
+    "fix": false
+  },
+  {
+    "id": 168,
+    "matBewegungArt": "Abgang",
+    "materialId": 27,
+    "menge": 11,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 120,
+    "tag": 10,
+    "fix": false
+  },
+  {
+    "id": 169,
+    "matBewegungArt": "Abgang",
+    "materialId": 15,
+    "menge": 16,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 121,
+    "tag": 97,
+    "fix": false
+  },
+  {
+    "id": 170,
+    "matBewegungArt": "Abgang",
+    "materialId": 20,
+    "menge": 1,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 122,
+    "tag": 33,
+    "fix": false
+  },
+  {
+    "id": 171,
+    "matBewegungArt": "Abgang",
+    "materialId": 22,
+    "menge": 11,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 122,
+    "tag": 33,
+    "fix": false
+  },
+  {
+    "id": 172,
+    "matBewegungArt": "Abgang",
+    "materialId": 11,
+    "menge": 19,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 124,
+    "tag": 40,
+    "fix": false
+  },
+  {
+    "id": 173,
+    "matBewegungArt": "Abgang",
+    "materialId": 24,
+    "menge": 5,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 124,
+    "tag": 40,
+    "fix": false
+  },
+  {
+    "id": 174,
+    "matBewegungArt": "Abgang",
+    "materialId": 26,
+    "menge": 10,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 125,
+    "tag": 58,
+    "fix": false
+  },
+  {
+    "id": 175,
+    "matBewegungArt": "Abgang",
+    "materialId": 24,
+    "menge": 3,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 126,
+    "tag": 73,
+    "fix": false
+  },
+  {
+    "id": 176,
+    "matBewegungArt": "Abgang",
+    "materialId": 13,
+    "menge": 6,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 127,
+    "tag": 62,
+    "fix": false
+  },
+  {
+    "id": 177,
+    "matBewegungArt": "Abgang",
+    "materialId": 3,
+    "menge": 8,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 127,
+    "tag": 62,
+    "fix": false
+  },
+  {
+    "id": 178,
+    "matBewegungArt": "Abgang",
+    "materialId": 9,
+    "menge": 13,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 127,
+    "tag": 62,
+    "fix": false
+  },
+  {
+    "id": 179,
+    "matBewegungArt": "Abgang",
+    "materialId": 6,
+    "menge": 13,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 128,
+    "tag": 45,
+    "fix": false
+  },
+  {
+    "id": 180,
+    "matBewegungArt": "Abgang",
+    "materialId": 5,
+    "menge": 16,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 130,
+    "tag": 55,
+    "fix": false
+  },
+  {
+    "id": 181,
+    "matBewegungArt": "Abgang",
+    "materialId": 4,
+    "menge": 14,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 130,
+    "tag": 55,
+    "fix": false
+  },
+  {
+    "id": 182,
+    "matBewegungArt": "Abgang",
+    "materialId": 10,
+    "menge": 10,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 130,
+    "tag": 55,
+    "fix": false
+  },
+  {
+    "id": 183,
+    "matBewegungArt": "Abgang",
+    "materialId": 22,
+    "menge": 12,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 132,
+    "tag": 47,
+    "fix": false
+  },
+  {
+    "id": 184,
+    "matBewegungArt": "Abgang",
+    "materialId": 4,
+    "menge": 17,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 132,
+    "tag": 47,
+    "fix": false
+  },
+  {
+    "id": 185,
+    "matBewegungArt": "Abgang",
+    "materialId": 29,
+    "menge": 16,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 133,
+    "tag": 15,
+    "fix": false
+  },
+  {
+    "id": 186,
+    "matBewegungArt": "Abgang",
+    "materialId": 13,
+    "menge": 9,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 133,
+    "tag": 15,
+    "fix": false
+  },
+  {
+    "id": 187,
+    "matBewegungArt": "Abgang",
+    "materialId": 3,
+    "menge": 14,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 134,
+    "tag": 78,
+    "fix": false
+  },
+  {
+    "id": 188,
+    "matBewegungArt": "Abgang",
+    "materialId": 25,
+    "menge": 12,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 134,
+    "tag": 78,
+    "fix": false
+  },
+  {
+    "id": 189,
+    "matBewegungArt": "Abgang",
+    "materialId": 21,
+    "menge": 3,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 135,
+    "tag": 8,
+    "fix": false
+  },
+  {
+    "id": 190,
+    "matBewegungArt": "Abgang",
+    "materialId": 14,
+    "menge": 2,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 135,
+    "tag": 8,
+    "fix": false
+  },
+  {
+    "id": 191,
+    "matBewegungArt": "Abgang",
+    "materialId": 22,
+    "menge": 5,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 136,
+    "tag": 99,
+    "fix": false
+  },
+  {
+    "id": 192,
+    "matBewegungArt": "Abgang",
+    "materialId": 8,
+    "menge": 16,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 136,
+    "tag": 99,
+    "fix": false
+  },
+  {
+    "id": 193,
+    "matBewegungArt": "Abgang",
+    "materialId": 17,
+    "menge": 15,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 137,
+    "tag": 33,
+    "fix": false
+  },
+  {
+    "id": 194,
+    "matBewegungArt": "Abgang",
+    "materialId": 3,
+    "menge": 14,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 137,
+    "tag": 33,
+    "fix": false
+  },
+  {
+    "id": 195,
+    "matBewegungArt": "Abgang",
+    "materialId": 10,
+    "menge": 3,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 137,
+    "tag": 33,
+    "fix": false
+  },
+  {
+    "id": 196,
+    "matBewegungArt": "Abgang",
+    "materialId": 5,
+    "menge": 10,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 139,
+    "tag": 59,
+    "fix": false
+  },
+  {
+    "id": 197,
+    "matBewegungArt": "Abgang",
+    "materialId": 19,
+    "menge": 18,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 141,
+    "tag": 36,
+    "fix": false
+  },
+  {
+    "id": 198,
+    "matBewegungArt": "Abgang",
+    "materialId": 2,
+    "menge": 3,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 141,
+    "tag": 36,
+    "fix": false
+  },
+  {
+    "id": 199,
+    "matBewegungArt": "Abgang",
+    "materialId": 14,
+    "menge": 19,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 143,
+    "tag": 26,
+    "fix": false
+  },
+  {
+    "id": 200,
+    "matBewegungArt": "Abgang",
+    "materialId": 4,
+    "menge": 9,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 143,
+    "tag": 26,
+    "fix": false
+  },
+  {
+    "id": 201,
+    "matBewegungArt": "Abgang",
+    "materialId": 15,
+    "menge": 12,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 143,
+    "tag": 26,
+    "fix": false
+  },
+  {
+    "id": 202,
+    "matBewegungArt": "Abgang",
+    "materialId": 25,
+    "menge": 17,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 144,
+    "tag": 47,
+    "fix": false
+  },
+  {
+    "id": 203,
+    "matBewegungArt": "Abgang",
+    "materialId": 22,
+    "menge": 6,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 145,
+    "tag": 44,
+    "fix": false
+  },
+  {
+    "id": 204,
+    "matBewegungArt": "Abgang",
+    "materialId": 15,
+    "menge": 13,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 145,
+    "tag": 44,
+    "fix": false
+  },
+  {
+    "id": 205,
+    "matBewegungArt": "Abgang",
+    "materialId": 6,
+    "menge": 2,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 145,
+    "tag": 44,
+    "fix": false
+  },
+  {
+    "id": 206,
+    "matBewegungArt": "Abgang",
+    "materialId": 10,
+    "menge": 15,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 146,
+    "tag": 13,
+    "fix": false
+  },
+  {
+    "id": 207,
+    "matBewegungArt": "Abgang",
+    "materialId": 11,
+    "menge": 15,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 146,
+    "tag": 13,
+    "fix": false
+  },
+  {
+    "id": 208,
+    "matBewegungArt": "Abgang",
+    "materialId": 19,
+    "menge": 20,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 146,
+    "tag": 13,
+    "fix": false
+  },
+  {
+    "id": 209,
+    "matBewegungArt": "Abgang",
+    "materialId": 7,
+    "menge": 6,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 148,
+    "tag": 85,
+    "fix": false
+  },
+  {
+    "id": 210,
+    "matBewegungArt": "Abgang",
+    "materialId": 9,
+    "menge": 4,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 149,
+    "tag": 17,
+    "fix": false
+  },
+  {
+    "id": 211,
+    "matBewegungArt": "Abgang",
+    "materialId": 28,
+    "menge": 14,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 149,
+    "tag": 17,
+    "fix": false
+  },
+  {
+    "id": 212,
+    "matBewegungArt": "Abgang",
+    "materialId": 22,
+    "menge": 18,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 149,
+    "tag": 17,
+    "fix": false
+  },
+  {
+    "id": 213,
+    "matBewegungArt": "Abgang",
+    "materialId": 4,
+    "menge": 6,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 150,
+    "tag": 8,
+    "fix": false
+  },
+  {
+    "id": 214,
+    "matBewegungArt": "Abgang",
+    "materialId": 1,
+    "menge": 16,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 150,
+    "tag": 8,
+    "fix": false
+  },
+  {
+    "id": 215,
+    "matBewegungArt": "Abgang",
+    "materialId": 28,
+    "menge": 20,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 151,
+    "tag": 66,
+    "fix": false
+  },
+  {
+    "id": 216,
+    "matBewegungArt": "Abgang",
+    "materialId": 22,
+    "menge": 16,
+    "upoTyp": "Arbeitsgang",
+    "upoId": 151,
+    "tag": 66,
+    "fix": false
+  },
+  {
+    "id": 217,
+    "matBewegungArt": "Zugang",
+    "materialId": 16,
+    "menge": 18,
+    "upoTyp": "FertObjekt",
+    "upoId": 4,
+    "tag": 93,
+    "fix": false
+  },
+  {
+    "id": 218,
+    "matBewegungArt": "Zugang",
+    "materialId": 17,
+    "menge": 10,
+    "upoTyp": "FertObjekt",
+    "upoId": 4,
+    "tag": 93,
+    "fix": false
+  },
+  {
+    "id": 219,
+    "matBewegungArt": "Zugang",
+    "materialId": 4,
+    "menge": 32,
+    "upoTyp": "FertObjekt",
+    "upoId": 5,
+    "tag": 105,
+    "fix": false
+  },
+  {
+    "id": 220,
+    "matBewegungArt": "Zugang",
+    "materialId": 9,
+    "menge": 32,
+    "upoTyp": "FertObjekt",
+    "upoId": 5,
+    "tag": 105,
+    "fix": false
+  },
+  {
+    "id": 221,
+    "matBewegungArt": "Zugang",
+    "materialId": 21,
+    "menge": 9,
+    "upoTyp": "FertObjekt",
+    "upoId": 6,
+    "tag": 97,
+    "fix": false
+  },
+  {
+    "id": 222,
+    "matBewegungArt": "Zugang",
+    "materialId": 4,
+    "menge": 48,
+    "upoTyp": "FertObjekt",
+    "upoId": 8,
+    "tag": 98,
+    "fix": false
+  },
+  {
+    "id": 223,
+    "matBewegungArt": "Zugang",
+    "materialId": 27,
+    "menge": 5,
+    "upoTyp": "FertObjekt",
+    "upoId": 9,
+    "tag": 99,
+    "fix": false
+  },
+  {
+    "id": 224,
+    "matBewegungArt": "Zugang",
+    "materialId": 22,
+    "menge": 12,
+    "upoTyp": "FertObjekt",
+    "upoId": 12,
+    "tag": 96,
+    "fix": false
+  },
+  {
+    "id": 225,
+    "matBewegungArt": "Zugang",
+    "materialId": 1,
+    "menge": 25,
+    "upoTyp": "FertObjekt",
+    "upoId": 12,
+    "tag": 96,
+    "fix": false
+  },
+  {
+    "id": 226,
+    "matBewegungArt": "Zugang",
+    "materialId": 5,
+    "menge": 40,
+    "upoTyp": "FertObjekt",
+    "upoId": 13,
+    "tag": 108,
+    "fix": false
+  },
+  {
+    "id": 227,
+    "matBewegungArt": "Zugang",
+    "materialId": 10,
+    "menge": 40,
+    "upoTyp": "FertObjekt",
+    "upoId": 13,
+    "tag": 108,
+    "fix": false
+  },
+  {
+    "id": 228,
+    "matBewegungArt": "Zugang",
+    "materialId": 25,
+    "menge": 5,
+    "upoTyp": "FertObjekt",
+    "upoId": 14,
+    "tag": 104,
+    "fix": false
+  },
+  {
+    "id": 229,
+    "matBewegungArt": "Zugang",
+    "materialId": 26,
+    "menge": 13,
+    "upoTyp": "FertObjekt",
+    "upoId": 15,
+    "tag": 103,
+    "fix": false
+  },
+  {
+    "id": 230,
+    "matBewegungArt": "Zugang",
+    "materialId": 15,
+    "menge": 19,
+    "upoTyp": "FertObjekt",
+    "upoId": 15,
+    "tag": 103,
+    "fix": false
+  },
+  {
+    "id": 231,
+    "matBewegungArt": "Zugang",
+    "materialId": 16,
+    "menge": 17,
+    "upoTyp": "FertObjekt",
+    "upoId": 17,
+    "tag": 73,
+    "fix": false
+  },
+  {
+    "id": 232,
+    "matBewegungArt": "Zugang",
+    "materialId": 17,
+    "menge": 35,
+    "upoTyp": "FertObjekt",
+    "upoId": 17,
+    "tag": 73,
+    "fix": false
+  },
+  {
+    "id": 233,
+    "matBewegungArt": "Zugang",
+    "materialId": 26,
+    "menge": 35,
+    "upoTyp": "FertObjekt",
+    "upoId": 18,
+    "tag": 101,
+    "fix": false
+  },
+  {
+    "id": 234,
+    "matBewegungArt": "Zugang",
+    "materialId": 28,
+    "menge": 35,
+    "upoTyp": "FertObjekt",
+    "upoId": 18,
+    "tag": 101,
+    "fix": false
+  },
+  {
+    "id": 235,
+    "matBewegungArt": "Zugang",
+    "materialId": 25,
+    "menge": 3,
+    "upoTyp": "FertObjekt",
+    "upoId": 20,
+    "tag": 95,
+    "fix": false
+  },
+  {
+    "id": 236,
+    "matBewegungArt": "Zugang",
+    "materialId": 29,
+    "menge": 8,
+    "upoTyp": "FertObjekt",
+    "upoId": 21,
+    "tag": 80,
+    "fix": false
+  },
+  {
+    "id": 237,
+    "matBewegungArt": "Zugang",
+    "materialId": 30,
+    "menge": 25,
+    "upoTyp": "FertObjekt",
+    "upoId": 21,
+    "tag": 80,
+    "fix": false
+  },
+  {
+    "id": 238,
+    "matBewegungArt": "Zugang",
+    "materialId": 11,
+    "menge": 25,
+    "upoTyp": "FertObjekt",
+    "upoId": 25,
+    "tag": 95,
+    "fix": false
+  },
+  {
+    "id": 239,
+    "matBewegungArt": "Zugang",
+    "materialId": 28,
+    "menge": 29,
+    "upoTyp": "FertObjekt",
+    "upoId": 25,
+    "tag": 95,
+    "fix": false
+  },
+  {
+    "id": 240,
+    "matBewegungArt": "Zugang",
+    "materialId": 2,
+    "menge": 36,
+    "upoTyp": "FertObjekt",
+    "upoId": 26,
+    "tag": 103,
+    "fix": false
+  },
+  {
+    "id": 241,
+    "matBewegungArt": "Zugang",
+    "materialId": 6,
+    "menge": 43,
+    "upoTyp": "FertObjekt",
+    "upoId": 26,
+    "tag": 103,
+    "fix": false
+  },
+  {
+    "id": 242,
+    "matBewegungArt": "Zugang",
+    "materialId": 29,
+    "menge": 11,
+    "upoTyp": "FertObjekt",
+    "upoId": 28,
+    "tag": 100,
+    "fix": false
+  },
+  {
+    "id": 243,
+    "matBewegungArt": "Zugang",
+    "materialId": 23,
+    "menge": 32,
+    "upoTyp": "FertObjekt",
+    "upoId": 28,
+    "tag": 100,
+    "fix": false
+  },
+  {
+    "id": 244,
+    "matBewegungArt": "Zugang",
+    "materialId": 5,
+    "menge": 46,
+    "upoTyp": "FertObjekt",
+    "upoId": 29,
+    "tag": 110,
+    "fix": false
+  },
+  {
+    "id": 245,
+    "matBewegungArt": "Zugang",
+    "materialId": 10,
+    "menge": 25,
+    "upoTyp": "FertObjekt",
+    "upoId": 29,
+    "tag": 110,
+    "fix": false
+  },
+  {
+    "id": 246,
+    "matBewegungArt": "Zugang",
+    "materialId": 25,
+    "menge": 37,
+    "upoTyp": "FertObjekt",
+    "upoId": 30,
+    "tag": 103,
+    "fix": false
+  },
+  {
+    "id": 247,
+    "matBewegungArt": "Zugang",
+    "materialId": 4,
+    "menge": 44,
+    "upoTyp": "FertObjekt",
+    "upoId": 30,
+    "tag": 103,
+    "fix": false
+  },
+  {
+    "id": 248,
+    "matBewegungArt": "Zugang",
+    "materialId": 22,
+    "menge": 44,
+    "upoTyp": "FertObjekt",
+    "upoId": 32,
+    "tag": 98,
+    "fix": false
+  },
+  {
+    "id": 249,
+    "matBewegungArt": "Zugang",
+    "materialId": 18,
+    "menge": 35,
+    "upoTyp": "FertObjekt",
+    "upoId": 32,
+    "tag": 98,
+    "fix": false
+  },
+  {
+    "id": 250,
+    "matBewegungArt": "Zugang",
+    "materialId": 16,
+    "menge": 11,
+    "upoTyp": "FertObjekt",
+    "upoId": 33,
+    "tag": 98,
+    "fix": false
+  },
+  {
+    "id": 251,
+    "matBewegungArt": "Zugang",
+    "materialId": 18,
+    "menge": 33,
+    "upoTyp": "FertObjekt",
+    "upoId": 33,
+    "tag": 98,
+    "fix": false
+  },
+  {
+    "id": 252,
+    "matBewegungArt": "Zugang",
+    "materialId": 13,
+    "menge": 17,
+    "upoTyp": "FertObjekt",
+    "upoId": 34,
+    "tag": 97,
+    "fix": false
+  },
+  {
+    "id": 253,
+    "matBewegungArt": "Zugang",
+    "materialId": 19,
+    "menge": 40,
+    "upoTyp": "FertObjekt",
+    "upoId": 38,
+    "tag": 97,
+    "fix": false
+  },
+  {
+    "id": 254,
+    "matBewegungArt": "Zugang",
+    "materialId": 13,
+    "menge": 44,
+    "upoTyp": "FertObjekt",
+    "upoId": 38,
+    "tag": 97,
+    "fix": false
+  },
+  {
+    "id": 255,
+    "matBewegungArt": "Zugang",
+    "materialId": 25,
+    "menge": 21,
+    "upoTyp": "FertObjekt",
+    "upoId": 39,
+    "tag": 99,
+    "fix": false
+  },
+  {
+    "id": 256,
+    "matBewegungArt": "Zugang",
+    "materialId": 10,
+    "menge": 4,
+    "upoTyp": "FertObjekt",
+    "upoId": 39,
+    "tag": 99,
+    "fix": false
+  },
+  {
+    "id": 257,
+    "matBewegungArt": "Zugang",
+    "materialId": 19,
+    "menge": 3,
+    "upoTyp": "FertObjekt",
+    "upoId": 41,
+    "tag": 42,
+    "fix": false
+  },
+  {
+    "id": 258,
+    "matBewegungArt": "Zugang",
+    "materialId": 27,
+    "menge": 24,
+    "upoTyp": "FertObjekt",
+    "upoId": 42,
+    "tag": 78,
+    "fix": false
+  },
+  {
+    "id": 259,
+    "matBewegungArt": "Zugang",
+    "materialId": 26,
+    "menge": 38,
+    "upoTyp": "FertObjekt",
+    "upoId": 43,
+    "tag": 85,
+    "fix": false
+  },
+  {
+    "id": 260,
+    "matBewegungArt": "Zugang",
+    "materialId": 24,
+    "menge": 2,
+    "upoTyp": "FertObjekt",
+    "upoId": 43,
+    "tag": 85,
+    "fix": false
+  },
+  {
+    "id": 261,
+    "matBewegungArt": "Zugang",
+    "materialId": 13,
+    "menge": 28,
+    "upoTyp": "FertObjekt",
+    "upoId": 45,
+    "tag": 101,
+    "fix": false
+  },
+  {
+    "id": 262,
+    "matBewegungArt": "Zugang",
+    "materialId": 4,
+    "menge": 23,
+    "upoTyp": "FertObjekt",
+    "upoId": 45,
+    "tag": 101,
+    "fix": false
+  },
+  {
+    "id": 263,
+    "matBewegungArt": "Zugang",
+    "materialId": 14,
+    "menge": 4,
+    "upoTyp": "FertObjekt",
+    "upoId": 46,
+    "tag": 67,
+    "fix": false
+  },
+  {
+    "id": 264,
+    "matBewegungArt": "Zugang",
+    "materialId": 12,
+    "menge": 43,
+    "upoTyp": "FertObjekt",
+    "upoId": 46,
+    "tag": 67,
+    "fix": false
+  },
+  {
+    "id": 265,
+    "matBewegungArt": "Zugang",
+    "materialId": 8,
+    "menge": 16,
+    "upoTyp": "FertObjekt",
+    "upoId": 47,
+    "tag": 91,
+    "fix": false
+  },
+  {
+    "id": 266,
+    "matBewegungArt": "Zugang",
+    "materialId": 19,
+    "menge": 45,
+    "upoTyp": "FertObjekt",
+    "upoId": 48,
+    "tag": 89,
+    "fix": false
+  },
+  {
+    "id": 267,
+    "matBewegungArt": "Zugang",
+    "materialId": 3,
+    "menge": 5,
+    "upoTyp": "FertObjekt",
+    "upoId": 48,
+    "tag": 89,
+    "fix": false
+  },
+  {
+    "id": 268,
+    "matBewegungArt": "Abgang",
+    "materialId": 4,
+    "menge": 18,
+    "upoTyp": "KundenAufPos",
+    "upoId": 1,
+    "tag": 61,
+    "fix": true
+  },
+  {
+    "id": 269,
+    "matBewegungArt": "Abgang",
+    "materialId": 20,
+    "menge": 96,
+    "upoTyp": "KundenAufPos",
+    "upoId": 2,
+    "tag": 68,
+    "fix": true
+  },
+  {
+    "id": 270,
+    "matBewegungArt": "Abgang",
+    "materialId": 19,
+    "menge": 29,
+    "upoTyp": "KundenAufPos",
+    "upoId": 3,
+    "tag": 133,
+    "fix": true
+  },
+  {
+    "id": 271,
+    "matBewegungArt": "Abgang",
+    "materialId": 5,
+    "menge": 86,
+    "upoTyp": "KundenAufPos",
+    "upoId": 4,
+    "tag": 125,
+    "fix": true
+  },
+  {
+    "id": 272,
+    "matBewegungArt": "Abgang",
+    "materialId": 9,
+    "menge": 50,
+    "upoTyp": "KundenAufPos",
+    "upoId": 5,
+    "tag": 113,
+    "fix": true
+  },
+  {
+    "id": 273,
+    "matBewegungArt": "Abgang",
+    "materialId": 16,
+    "menge": 97,
+    "upoTyp": "KundenAufPos",
+    "upoId": 6,
+    "tag": 139,
+    "fix": true
+  },
+  {
+    "id": 274,
+    "matBewegungArt": "Abgang",
+    "materialId": 15,
+    "menge": 28,
+    "upoTyp": "KundenAufPos",
+    "upoId": 7,
+    "tag": 91,
+    "fix": true
+  },
+  {
+    "id": 275,
+    "matBewegungArt": "Abgang",
+    "materialId": 5,
+    "menge": 10,
+    "upoTyp": "KundenAufPos",
+    "upoId": 8,
+    "tag": 67,
+    "fix": true
+  },
+  {
+    "id": 276,
+    "matBewegungArt": "Abgang",
+    "materialId": 5,
+    "menge": 44,
+    "upoTyp": "KundenAufPos",
+    "upoId": 9,
+    "tag": 134,
+    "fix": true
+  },
+  {
+    "id": 277,
+    "matBewegungArt": "Abgang",
+    "materialId": 14,
+    "menge": 70,
+    "upoTyp": "KundenAufPos",
+    "upoId": 10,
+    "tag": 143,
+    "fix": true
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "typ": "On",
+    "bezeichnung": "Frühschicht",
+    "kuerzel": "F",
+    "start": "06:00:00",
+    "ende": "14:00:00",
+    "pause": 30,
+    "dauer": 450
+  },
+  {
+    "id": 2,
+    "typ": "On",
+    "bezeichnung": "Spätschicht",
+    "kuerzel": "S",
+    "start": "14:00:00",
+    "ende": "22:00:00",
+    "pause": 30,
+    "dauer": 450
+  },
+  {
+    "id": 3,
+    "typ": "On",
+    "bezeichnung": "Nachtschicht",
+    "kuerzel": "N",
+    "start": "22:00:00",
+    "ende": "06:00:00",
+    "pause": 30,
+    "dauer": 450
+  },
+  {
+    "id": 4,
+    "typ": "On",
+    "bezeichnung": "Tagschicht",
+    "kuerzel": "T",
+    "start": "08:00:00",
+    "ende": "17:00:00",
+    "pause": 45,
+    "dauer": 495
+  },
+  {
+    "id": 5,
+    "typ": "Off",
+    "bezeichnung": "Urlaub",
+    "kuerzel": "U",
+    "start": "00:00:00",
+    "ende": "00:00:00",
+    "pause": 0,
+    "dauer": 0
+  }
+]

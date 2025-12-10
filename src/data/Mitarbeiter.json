@@ -1,0 +1,332 @@
+[
+  {
+    "id": 1,
+    "name": "Hans-Hermann Dietz",
+    "stundenprofil": {
+      "Monday": 8,
+      "Tuesday": 8,
+      "Wednesday": 8,
+      "Thursday": 8,
+      "Friday": 8,
+      "Saturday": 0,
+      "Sunday": 0
+    },
+    "stundenprofilUeberstunden": {
+      "Monday": 10,
+      "Tuesday": 10,
+      "Wednesday": 10,
+      "Thursday": 10,
+      "Friday": 10,
+      "Saturday": 4,
+      "Sunday": 0
+    }
+  },
+  {
+    "id": 2,
+    "name": "Siegried Kaul",
+    "stundenprofil": {
+      "Monday": 8,
+      "Tuesday": 8,
+      "Wednesday": 8,
+      "Thursday": 8,
+      "Friday": 8,
+      "Saturday": 0,
+      "Sunday": 0
+    },
+    "stundenprofilUeberstunden": {
+      "Monday": 10,
+      "Tuesday": 10,
+      "Wednesday": 10,
+      "Thursday": 10,
+      "Friday": 10,
+      "Saturday": 4,
+      "Sunday": 0
+    }
+  },
+  {
+    "id": 3,
+    "name": "Rosalia Beyer",
+    "stundenprofil": {
+      "Monday": 8,
+      "Tuesday": 8,
+      "Wednesday": 8,
+      "Thursday": 8,
+      "Friday": 8,
+      "Saturday": 0,
+      "Sunday": 0
+    },
+    "stundenprofilUeberstunden": {
+      "Monday": 10,
+      "Tuesday": 10,
+      "Wednesday": 10,
+      "Thursday": 10,
+      "Friday": 10,
+      "Saturday": 4,
+      "Sunday": 0
+    }
+  },
+  {
+    "id": 4,
+    "name": "Kathrin Ebert MBA.",
+    "stundenprofil": {
+      "Monday": 8,
+      "Tuesday": 8,
+      "Wednesday": 8,
+      "Thursday": 8,
+      "Friday": 8,
+      "Saturday": 0,
+      "Sunday": 0
+    },
+    "stundenprofilUeberstunden": {
+      "Monday": 10,
+      "Tuesday": 10,
+      "Wednesday": 10,
+      "Thursday": 10,
+      "Friday": 10,
+      "Saturday": 4,
+      "Sunday": 0
+    }
+  },
+  {
+    "id": 5,
+    "name": "Karl-Dieter Hornig",
+    "stundenprofil": {
+      "Monday": 8,
+      "Tuesday": 8,
+      "Wednesday": 8,
+      "Thursday": 8,
+      "Friday": 8,
+      "Saturday": 0,
+      "Sunday": 0
+    },
+    "stundenprofilUeberstunden": {
+      "Monday": 10,
+      "Tuesday": 10,
+      "Wednesday": 10,
+      "Thursday": 10,
+      "Friday": 10,
+      "Saturday": 4,
+      "Sunday": 0
+    }
+  },
+  {
+    "id": 6,
+    "name": "Leonie Gröttner",
+    "stundenprofil": {
+      "Monday": 8,
+      "Tuesday": 8,
+      "Wednesday": 8,
+      "Thursday": 8,
+      "Friday": 8,
+      "Saturday": 0,
+      "Sunday": 0
+    },
+    "stundenprofilUeberstunden": {
+      "Monday": 10,
+      "Tuesday": 10,
+      "Wednesday": 10,
+      "Thursday": 10,
+      "Friday": 10,
+      "Saturday": 4,
+      "Sunday": 0
+    }
+  },
+  {
+    "id": 7,
+    "name": "Anatoli Speer",
+    "stundenprofil": {
+      "Monday": 8,
+      "Tuesday": 8,
+      "Wednesday": 8,
+      "Thursday": 8,
+      "Friday": 8,
+      "Saturday": 0,
+      "Sunday": 0
+    },
+    "stundenprofilUeberstunden": {
+      "Monday": 10,
+      "Tuesday": 10,
+      "Wednesday": 10,
+      "Thursday": 10,
+      "Friday": 10,
+      "Saturday": 4,
+      "Sunday": 0
+    }
+  },
+  {
+    "id": 8,
+    "name": "Ing. Arnulf Heintze B.Sc.",
+    "stundenprofil": {
+      "Monday": 8,
+      "Tuesday": 8,
+      "Wednesday": 8,
+      "Thursday": 8,
+      "Friday": 8,
+      "Saturday": 0,
+      "Sunday": 0
+    },
+    "stundenprofilUeberstunden": {
+      "Monday": 10,
+      "Tuesday": 10,
+      "Wednesday": 10,
+      "Thursday": 10,
+      "Friday": 10,
+      "Saturday": 4,
+      "Sunday": 0
+    }
+  },
+  {
+    "id": 9,
+    "name": "Erika Metz-Schuster",
+    "stundenprofil": {
+      "Monday": 8,
+      "Tuesday": 8,
+      "Wednesday": 8,
+      "Thursday": 8,
+      "Friday": 8,
+      "Saturday": 0,
+      "Sunday": 0
+    },
+    "stundenprofilUeberstunden": {
+      "Monday": 10,
+      "Tuesday": 10,
+      "Wednesday": 10,
+      "Thursday": 10,
+      "Friday": 10,
+      "Saturday": 4,
+      "Sunday": 0
+    }
+  },
+  {
+    "id": 10,
+    "name": "Cathrin Koch II",
+    "stundenprofil": {
+      "Monday": 8,
+      "Tuesday": 8,
+      "Wednesday": 8,
+      "Thursday": 8,
+      "Friday": 8,
+      "Saturday": 0,
+      "Sunday": 0
+    },
+    "stundenprofilUeberstunden": {
+      "Monday": 10,
+      "Tuesday": 10,
+      "Wednesday": 10,
+      "Thursday": 10,
+      "Friday": 10,
+      "Saturday": 4,
+      "Sunday": 0
+    }
+  },
+  {
+    "id": 11,
+    "name": "Delia Steckel",
+    "stundenprofil": {
+      "Monday": 8,
+      "Tuesday": 8,
+      "Wednesday": 8,
+      "Thursday": 8,
+      "Friday": 8,
+      "Saturday": 0,
+      "Sunday": 0
+    },
+    "stundenprofilUeberstunden": {
+      "Monday": 10,
+      "Tuesday": 10,
+      "Wednesday": 10,
+      "Thursday": 10,
+      "Friday": 10,
+      "Saturday": 4,
+      "Sunday": 0
+    }
+  },
+  {
+    "id": 12,
+    "name": "Mechtild Stoll",
+    "stundenprofil": {
+      "Monday": 8,
+      "Tuesday": 8,
+      "Wednesday": 8,
+      "Thursday": 8,
+      "Friday": 8,
+      "Saturday": 0,
+      "Sunday": 0
+    },
+    "stundenprofilUeberstunden": {
+      "Monday": 10,
+      "Tuesday": 10,
+      "Wednesday": 10,
+      "Thursday": 10,
+      "Friday": 10,
+      "Saturday": 4,
+      "Sunday": 0
+    }
+  },
+  {
+    "id": 13,
+    "name": "Leif Schuster",
+    "stundenprofil": {
+      "Monday": 8,
+      "Tuesday": 8,
+      "Wednesday": 8,
+      "Thursday": 8,
+      "Friday": 8,
+      "Saturday": 0,
+      "Sunday": 0
+    },
+    "stundenprofilUeberstunden": {
+      "Monday": 10,
+      "Tuesday": 10,
+      "Wednesday": 10,
+      "Thursday": 10,
+      "Friday": 10,
+      "Saturday": 4,
+      "Sunday": 0
+    }
+  },
+  {
+    "id": 14,
+    "name": "Prof. Ottokar Henschel",
+    "stundenprofil": {
+      "Monday": 8,
+      "Tuesday": 8,
+      "Wednesday": 8,
+      "Thursday": 8,
+      "Friday": 8,
+      "Saturday": 0,
+      "Sunday": 0
+    },
+    "stundenprofilUeberstunden": {
+      "Monday": 10,
+      "Tuesday": 10,
+      "Wednesday": 10,
+      "Thursday": 10,
+      "Friday": 10,
+      "Saturday": 4,
+      "Sunday": 0
+    }
+  },
+  {
+    "id": 15,
+    "name": "Dipl.-Ing. Hans-Herbert Hiller",
+    "stundenprofil": {
+      "Monday": 8,
+      "Tuesday": 8,
+      "Wednesday": 8,
+      "Thursday": 8,
+      "Friday": 8,
+      "Saturday": 0,
+      "Sunday": 0
+    },
+    "stundenprofilUeberstunden": {
+      "Monday": 10,
+      "Tuesday": 10,
+      "Wednesday": 10,
+      "Thursday": 10,
+      "Friday": 10,
+      "Saturday": 4,
+      "Sunday": 0
+    }
+  }
+]

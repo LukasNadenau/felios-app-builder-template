@@ -1,0 +1,982 @@
+[
+  {
+    "arbeitsgangId": 2,
+    "materialId": 1,
+    "menge": 18
+  },
+  {
+    "arbeitsgangId": 3,
+    "materialId": 22,
+    "menge": 14
+  },
+  {
+    "arbeitsgangId": 3,
+    "materialId": 28,
+    "menge": 19
+  },
+  {
+    "arbeitsgangId": 4,
+    "materialId": 9,
+    "menge": 16
+  },
+  {
+    "arbeitsgangId": 4,
+    "materialId": 1,
+    "menge": 19
+  },
+  {
+    "arbeitsgangId": 5,
+    "materialId": 13,
+    "menge": 13
+  },
+  {
+    "arbeitsgangId": 5,
+    "materialId": 19,
+    "menge": 11
+  },
+  {
+    "arbeitsgangId": 6,
+    "materialId": 4,
+    "menge": 7
+  },
+  {
+    "arbeitsgangId": 6,
+    "materialId": 23,
+    "menge": 11
+  },
+  {
+    "arbeitsgangId": 7,
+    "materialId": 11,
+    "menge": 10
+  },
+  {
+    "arbeitsgangId": 7,
+    "materialId": 6,
+    "menge": 12
+  },
+  {
+    "arbeitsgangId": 7,
+    "materialId": 20,
+    "menge": 14
+  },
+  {
+    "arbeitsgangId": 8,
+    "materialId": 28,
+    "menge": 18
+  },
+  {
+    "arbeitsgangId": 8,
+    "materialId": 26,
+    "menge": 7
+  },
+  {
+    "arbeitsgangId": 8,
+    "materialId": 3,
+    "menge": 10
+  },
+  {
+    "arbeitsgangId": 9,
+    "materialId": 19,
+    "menge": 8
+  },
+  {
+    "arbeitsgangId": 9,
+    "materialId": 13,
+    "menge": 20
+  },
+  {
+    "arbeitsgangId": 11,
+    "materialId": 4,
+    "menge": 9
+  },
+  {
+    "arbeitsgangId": 11,
+    "materialId": 19,
+    "menge": 3
+  },
+  {
+    "arbeitsgangId": 11,
+    "materialId": 11,
+    "menge": 19
+  },
+  {
+    "arbeitsgangId": 13,
+    "materialId": 12,
+    "menge": 3
+  },
+  {
+    "arbeitsgangId": 14,
+    "materialId": 17,
+    "menge": 10
+  },
+  {
+    "arbeitsgangId": 14,
+    "materialId": 26,
+    "menge": 14
+  },
+  {
+    "arbeitsgangId": 15,
+    "materialId": 7,
+    "menge": 13
+  },
+  {
+    "arbeitsgangId": 15,
+    "materialId": 14,
+    "menge": 9
+  },
+  {
+    "arbeitsgangId": 16,
+    "materialId": 22,
+    "menge": 18
+  },
+  {
+    "arbeitsgangId": 16,
+    "materialId": 25,
+    "menge": 6
+  },
+  {
+    "arbeitsgangId": 18,
+    "materialId": 28,
+    "menge": 16
+  },
+  {
+    "arbeitsgangId": 18,
+    "materialId": 6,
+    "menge": 7
+  },
+  {
+    "arbeitsgangId": 18,
+    "materialId": 19,
+    "menge": 15
+  },
+  {
+    "arbeitsgangId": 19,
+    "materialId": 18,
+    "menge": 14
+  },
+  {
+    "arbeitsgangId": 19,
+    "materialId": 26,
+    "menge": 19
+  },
+  {
+    "arbeitsgangId": 19,
+    "materialId": 20,
+    "menge": 2
+  },
+  {
+    "arbeitsgangId": 20,
+    "materialId": 15,
+    "menge": 8
+  },
+  {
+    "arbeitsgangId": 20,
+    "materialId": 5,
+    "menge": 5
+  },
+  {
+    "arbeitsgangId": 24,
+    "materialId": 21,
+    "menge": 7
+  },
+  {
+    "arbeitsgangId": 26,
+    "materialId": 21,
+    "menge": 9
+  },
+  {
+    "arbeitsgangId": 26,
+    "materialId": 6,
+    "menge": 20
+  },
+  {
+    "arbeitsgangId": 27,
+    "materialId": 4,
+    "menge": 5
+  },
+  {
+    "arbeitsgangId": 28,
+    "materialId": 26,
+    "menge": 10
+  },
+  {
+    "arbeitsgangId": 29,
+    "materialId": 14,
+    "menge": 2
+  },
+  {
+    "arbeitsgangId": 29,
+    "materialId": 21,
+    "menge": 7
+  },
+  {
+    "arbeitsgangId": 29,
+    "materialId": 29,
+    "menge": 6
+  },
+  {
+    "arbeitsgangId": 30,
+    "materialId": 9,
+    "menge": 9
+  },
+  {
+    "arbeitsgangId": 31,
+    "materialId": 21,
+    "menge": 2
+  },
+  {
+    "arbeitsgangId": 33,
+    "materialId": 2,
+    "menge": 3
+  },
+  {
+    "arbeitsgangId": 34,
+    "materialId": 28,
+    "menge": 14
+  },
+  {
+    "arbeitsgangId": 34,
+    "materialId": 3,
+    "menge": 12
+  },
+  {
+    "arbeitsgangId": 35,
+    "materialId": 13,
+    "menge": 5
+  },
+  {
+    "arbeitsgangId": 36,
+    "materialId": 24,
+    "menge": 4
+  },
+  {
+    "arbeitsgangId": 36,
+    "materialId": 17,
+    "menge": 17
+  },
+  {
+    "arbeitsgangId": 36,
+    "materialId": 30,
+    "menge": 19
+  },
+  {
+    "arbeitsgangId": 39,
+    "materialId": 8,
+    "menge": 20
+  },
+  {
+    "arbeitsgangId": 40,
+    "materialId": 11,
+    "menge": 19
+  },
+  {
+    "arbeitsgangId": 40,
+    "materialId": 27,
+    "menge": 13
+  },
+  {
+    "arbeitsgangId": 44,
+    "materialId": 6,
+    "menge": 7
+  },
+  {
+    "arbeitsgangId": 46,
+    "materialId": 28,
+    "menge": 2
+  },
+  {
+    "arbeitsgangId": 46,
+    "materialId": 19,
+    "menge": 16
+  },
+  {
+    "arbeitsgangId": 47,
+    "materialId": 4,
+    "menge": 14
+  },
+  {
+    "arbeitsgangId": 47,
+    "materialId": 11,
+    "menge": 16
+  },
+  {
+    "arbeitsgangId": 47,
+    "materialId": 18,
+    "menge": 8
+  },
+  {
+    "arbeitsgangId": 51,
+    "materialId": 12,
+    "menge": 1
+  },
+  {
+    "arbeitsgangId": 51,
+    "materialId": 27,
+    "menge": 20
+  },
+  {
+    "arbeitsgangId": 51,
+    "materialId": 10,
+    "menge": 2
+  },
+  {
+    "arbeitsgangId": 53,
+    "materialId": 23,
+    "menge": 8
+  },
+  {
+    "arbeitsgangId": 54,
+    "materialId": 10,
+    "menge": 12
+  },
+  {
+    "arbeitsgangId": 54,
+    "materialId": 21,
+    "menge": 4
+  },
+  {
+    "arbeitsgangId": 55,
+    "materialId": 28,
+    "menge": 15
+  },
+  {
+    "arbeitsgangId": 56,
+    "materialId": 30,
+    "menge": 10
+  },
+  {
+    "arbeitsgangId": 56,
+    "materialId": 9,
+    "menge": 3
+  },
+  {
+    "arbeitsgangId": 59,
+    "materialId": 30,
+    "menge": 15
+  },
+  {
+    "arbeitsgangId": 60,
+    "materialId": 14,
+    "menge": 9
+  },
+  {
+    "arbeitsgangId": 60,
+    "materialId": 26,
+    "menge": 3
+  },
+  {
+    "arbeitsgangId": 60,
+    "materialId": 2,
+    "menge": 16
+  },
+  {
+    "arbeitsgangId": 61,
+    "materialId": 30,
+    "menge": 11
+  },
+  {
+    "arbeitsgangId": 61,
+    "materialId": 27,
+    "menge": 14
+  },
+  {
+    "arbeitsgangId": 65,
+    "materialId": 3,
+    "menge": 20
+  },
+  {
+    "arbeitsgangId": 65,
+    "materialId": 12,
+    "menge": 18
+  },
+  {
+    "arbeitsgangId": 65,
+    "materialId": 14,
+    "menge": 11
+  },
+  {
+    "arbeitsgangId": 66,
+    "materialId": 25,
+    "menge": 2
+  },
+  {
+    "arbeitsgangId": 67,
+    "materialId": 21,
+    "menge": 15
+  },
+  {
+    "arbeitsgangId": 69,
+    "materialId": 7,
+    "menge": 10
+  },
+  {
+    "arbeitsgangId": 69,
+    "materialId": 21,
+    "menge": 11
+  },
+  {
+    "arbeitsgangId": 70,
+    "materialId": 6,
+    "menge": 8
+  },
+  {
+    "arbeitsgangId": 71,
+    "materialId": 25,
+    "menge": 20
+  },
+  {
+    "arbeitsgangId": 71,
+    "materialId": 5,
+    "menge": 14
+  },
+  {
+    "arbeitsgangId": 71,
+    "materialId": 28,
+    "menge": 11
+  },
+  {
+    "arbeitsgangId": 72,
+    "materialId": 5,
+    "menge": 19
+  },
+  {
+    "arbeitsgangId": 72,
+    "materialId": 9,
+    "menge": 11
+  },
+  {
+    "arbeitsgangId": 72,
+    "materialId": 6,
+    "menge": 10
+  },
+  {
+    "arbeitsgangId": 73,
+    "materialId": 12,
+    "menge": 13
+  },
+  {
+    "arbeitsgangId": 73,
+    "materialId": 6,
+    "menge": 13
+  },
+  {
+    "arbeitsgangId": 76,
+    "materialId": 30,
+    "menge": 18
+  },
+  {
+    "arbeitsgangId": 77,
+    "materialId": 8,
+    "menge": 15
+  },
+  {
+    "arbeitsgangId": 77,
+    "materialId": 30,
+    "menge": 7
+  },
+  {
+    "arbeitsgangId": 77,
+    "materialId": 3,
+    "menge": 9
+  },
+  {
+    "arbeitsgangId": 79,
+    "materialId": 20,
+    "menge": 20
+  },
+  {
+    "arbeitsgangId": 79,
+    "materialId": 14,
+    "menge": 9
+  },
+  {
+    "arbeitsgangId": 80,
+    "materialId": 6,
+    "menge": 4
+  },
+  {
+    "arbeitsgangId": 80,
+    "materialId": 19,
+    "menge": 1
+  },
+  {
+    "arbeitsgangId": 82,
+    "materialId": 27,
+    "menge": 16
+  },
+  {
+    "arbeitsgangId": 82,
+    "materialId": 22,
+    "menge": 4
+  },
+  {
+    "arbeitsgangId": 83,
+    "materialId": 7,
+    "menge": 9
+  },
+  {
+    "arbeitsgangId": 84,
+    "materialId": 13,
+    "menge": 14
+  },
+  {
+    "arbeitsgangId": 84,
+    "materialId": 5,
+    "menge": 7
+  },
+  {
+    "arbeitsgangId": 85,
+    "materialId": 24,
+    "menge": 7
+  },
+  {
+    "arbeitsgangId": 85,
+    "materialId": 22,
+    "menge": 14
+  },
+  {
+    "arbeitsgangId": 86,
+    "materialId": 1,
+    "menge": 10
+  },
+  {
+    "arbeitsgangId": 88,
+    "materialId": 30,
+    "menge": 12
+  },
+  {
+    "arbeitsgangId": 88,
+    "materialId": 8,
+    "menge": 19
+  },
+  {
+    "arbeitsgangId": 89,
+    "materialId": 3,
+    "menge": 16
+  },
+  {
+    "arbeitsgangId": 89,
+    "materialId": 1,
+    "menge": 5
+  },
+  {
+    "arbeitsgangId": 92,
+    "materialId": 23,
+    "menge": 13
+  },
+  {
+    "arbeitsgangId": 95,
+    "materialId": 18,
+    "menge": 2
+  },
+  {
+    "arbeitsgangId": 96,
+    "materialId": 16,
+    "menge": 12
+  },
+  {
+    "arbeitsgangId": 100,
+    "materialId": 26,
+    "menge": 9
+  },
+  {
+    "arbeitsgangId": 100,
+    "materialId": 2,
+    "menge": 17
+  },
+  {
+    "arbeitsgangId": 100,
+    "materialId": 1,
+    "menge": 20
+  },
+  {
+    "arbeitsgangId": 101,
+    "materialId": 22,
+    "menge": 5
+  },
+  {
+    "arbeitsgangId": 101,
+    "materialId": 12,
+    "menge": 18
+  },
+  {
+    "arbeitsgangId": 102,
+    "materialId": 9,
+    "menge": 6
+  },
+  {
+    "arbeitsgangId": 103,
+    "materialId": 29,
+    "menge": 5
+  },
+  {
+    "arbeitsgangId": 103,
+    "materialId": 15,
+    "menge": 3
+  },
+  {
+    "arbeitsgangId": 104,
+    "materialId": 14,
+    "menge": 4
+  },
+  {
+    "arbeitsgangId": 104,
+    "materialId": 5,
+    "menge": 11
+  },
+  {
+    "arbeitsgangId": 104,
+    "materialId": 9,
+    "menge": 2
+  },
+  {
+    "arbeitsgangId": 106,
+    "materialId": 24,
+    "menge": 14
+  },
+  {
+    "arbeitsgangId": 106,
+    "materialId": 12,
+    "menge": 10
+  },
+  {
+    "arbeitsgangId": 108,
+    "materialId": 17,
+    "menge": 14
+  },
+  {
+    "arbeitsgangId": 108,
+    "materialId": 11,
+    "menge": 6
+  },
+  {
+    "arbeitsgangId": 109,
+    "materialId": 25,
+    "menge": 18
+  },
+  {
+    "arbeitsgangId": 109,
+    "materialId": 5,
+    "menge": 15
+  },
+  {
+    "arbeitsgangId": 110,
+    "materialId": 2,
+    "menge": 8
+  },
+  {
+    "arbeitsgangId": 111,
+    "materialId": 9,
+    "menge": 15
+  },
+  {
+    "arbeitsgangId": 111,
+    "materialId": 6,
+    "menge": 14
+  },
+  {
+    "arbeitsgangId": 112,
+    "materialId": 2,
+    "menge": 12
+  },
+  {
+    "arbeitsgangId": 112,
+    "materialId": 15,
+    "menge": 18
+  },
+  {
+    "arbeitsgangId": 113,
+    "materialId": 4,
+    "menge": 5
+  },
+  {
+    "arbeitsgangId": 113,
+    "materialId": 28,
+    "menge": 4
+  },
+  {
+    "arbeitsgangId": 114,
+    "materialId": 28,
+    "menge": 10
+  },
+  {
+    "arbeitsgangId": 115,
+    "materialId": 24,
+    "menge": 17
+  },
+  {
+    "arbeitsgangId": 117,
+    "materialId": 19,
+    "menge": 17
+  },
+  {
+    "arbeitsgangId": 117,
+    "materialId": 7,
+    "menge": 19
+  },
+  {
+    "arbeitsgangId": 117,
+    "materialId": 1,
+    "menge": 6
+  },
+  {
+    "arbeitsgangId": 118,
+    "materialId": 8,
+    "menge": 16
+  },
+  {
+    "arbeitsgangId": 119,
+    "materialId": 1,
+    "menge": 4
+  },
+  {
+    "arbeitsgangId": 119,
+    "materialId": 10,
+    "menge": 13
+  },
+  {
+    "arbeitsgangId": 120,
+    "materialId": 27,
+    "menge": 11
+  },
+  {
+    "arbeitsgangId": 121,
+    "materialId": 15,
+    "menge": 16
+  },
+  {
+    "arbeitsgangId": 122,
+    "materialId": 20,
+    "menge": 1
+  },
+  {
+    "arbeitsgangId": 122,
+    "materialId": 22,
+    "menge": 11
+  },
+  {
+    "arbeitsgangId": 124,
+    "materialId": 11,
+    "menge": 19
+  },
+  {
+    "arbeitsgangId": 124,
+    "materialId": 24,
+    "menge": 5
+  },
+  {
+    "arbeitsgangId": 125,
+    "materialId": 26,
+    "menge": 10
+  },
+  {
+    "arbeitsgangId": 126,
+    "materialId": 24,
+    "menge": 3
+  },
+  {
+    "arbeitsgangId": 127,
+    "materialId": 13,
+    "menge": 6
+  },
+  {
+    "arbeitsgangId": 127,
+    "materialId": 3,
+    "menge": 8
+  },
+  {
+    "arbeitsgangId": 127,
+    "materialId": 9,
+    "menge": 13
+  },
+  {
+    "arbeitsgangId": 128,
+    "materialId": 6,
+    "menge": 13
+  },
+  {
+    "arbeitsgangId": 130,
+    "materialId": 5,
+    "menge": 16
+  },
+  {
+    "arbeitsgangId": 130,
+    "materialId": 4,
+    "menge": 14
+  },
+  {
+    "arbeitsgangId": 130,
+    "materialId": 10,
+    "menge": 10
+  },
+  {
+    "arbeitsgangId": 132,
+    "materialId": 22,
+    "menge": 12
+  },
+  {
+    "arbeitsgangId": 132,
+    "materialId": 4,
+    "menge": 17
+  },
+  {
+    "arbeitsgangId": 133,
+    "materialId": 29,
+    "menge": 16
+  },
+  {
+    "arbeitsgangId": 133,
+    "materialId": 13,
+    "menge": 9
+  },
+  {
+    "arbeitsgangId": 134,
+    "materialId": 3,
+    "menge": 14
+  },
+  {
+    "arbeitsgangId": 134,
+    "materialId": 25,
+    "menge": 12
+  },
+  {
+    "arbeitsgangId": 135,
+    "materialId": 21,
+    "menge": 3
+  },
+  {
+    "arbeitsgangId": 135,
+    "materialId": 14,
+    "menge": 2
+  },
+  {
+    "arbeitsgangId": 136,
+    "materialId": 22,
+    "menge": 5
+  },
+  {
+    "arbeitsgangId": 136,
+    "materialId": 8,
+    "menge": 16
+  },
+  {
+    "arbeitsgangId": 137,
+    "materialId": 17,
+    "menge": 15
+  },
+  {
+    "arbeitsgangId": 137,
+    "materialId": 3,
+    "menge": 14
+  },
+  {
+    "arbeitsgangId": 137,
+    "materialId": 10,
+    "menge": 3
+  },
+  {
+    "arbeitsgangId": 139,
+    "materialId": 5,
+    "menge": 10
+  },
+  {
+    "arbeitsgangId": 141,
+    "materialId": 19,
+    "menge": 18
+  },
+  {
+    "arbeitsgangId": 141,
+    "materialId": 2,
+    "menge": 3
+  },
+  {
+    "arbeitsgangId": 143,
+    "materialId": 14,
+    "menge": 19
+  },
+  {
+    "arbeitsgangId": 143,
+    "materialId": 4,
+    "menge": 9
+  },
+  {
+    "arbeitsgangId": 143,
+    "materialId": 15,
+    "menge": 12
+  },
+  {
+    "arbeitsgangId": 144,
+    "materialId": 25,
+    "menge": 17
+  },
+  {
+    "arbeitsgangId": 145,
+    "materialId": 22,
+    "menge": 6
+  },
+  {
+    "arbeitsgangId": 145,
+    "materialId": 15,
+    "menge": 13
+  },
+  {
+    "arbeitsgangId": 145,
+    "materialId": 6,
+    "menge": 2
+  },
+  {
+    "arbeitsgangId": 146,
+    "materialId": 10,
+    "menge": 15
+  },
+  {
+    "arbeitsgangId": 146,
+    "materialId": 11,
+    "menge": 15
+  },
+  {
+    "arbeitsgangId": 146,
+    "materialId": 19,
+    "menge": 20
+  },
+  {
+    "arbeitsgangId": 148,
+    "materialId": 7,
+    "menge": 6
+  },
+  {
+    "arbeitsgangId": 149,
+    "materialId": 9,
+    "menge": 4
+  },
+  {
+    "arbeitsgangId": 149,
+    "materialId": 28,
+    "menge": 14
+  },
+  {
+    "arbeitsgangId": 149,
+    "materialId": 22,
+    "menge": 18
+  },
+  {
+    "arbeitsgangId": 150,
+    "materialId": 4,
+    "menge": 6
+  },
+  {
+    "arbeitsgangId": 150,
+    "materialId": 1,
+    "menge": 16
+  },
+  {
+    "arbeitsgangId": 151,
+    "materialId": 28,
+    "menge": 20
+  },
+  {
+    "arbeitsgangId": 151,
+    "materialId": 22,
+    "menge": 16
+  }
+]

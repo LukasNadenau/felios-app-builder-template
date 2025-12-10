@@ -1,0 +1,482 @@
+[
+  {
+    "id": 1,
+    "bezeichnung": "Projekt Maschinenbau 1",
+    "typ": "Projekt",
+    "parentFertObjektId": -1,
+    "zieltermin": 130,
+    "dauer": -1,
+    "start": -1,
+    "ende": -1
+  },
+  {
+    "id": 2,
+    "bezeichnung": "Netzplan A",
+    "typ": "Netzplan",
+    "parentFertObjektId": 1,
+    "zieltermin": -1,
+    "dauer": -1,
+    "start": -1,
+    "ende": -1
+  },
+  {
+    "id": 3,
+    "bezeichnung": "Unternetzplan A",
+    "typ": "Unternetzplan",
+    "parentFertObjektId": 2,
+    "zieltermin": -1,
+    "dauer": -1,
+    "start": -1,
+    "ende": -1
+  },
+  {
+    "id": 4,
+    "bezeichnung": "Fertigungsauftrag 1",
+    "typ": "Fertigungsauftrag",
+    "parentFertObjektId": 3,
+    "zieltermin": -1,
+    "dauer": 88,
+    "start": 5,
+    "ende": 93
+  },
+  {
+    "id": 5,
+    "bezeichnung": "Fertigungsauftrag 2",
+    "typ": "Fertigungsauftrag",
+    "parentFertObjektId": 3,
+    "zieltermin": -1,
+    "dauer": 38,
+    "start": 67,
+    "ende": 105
+  },
+  {
+    "id": 6,
+    "bezeichnung": "Fertigungsauftrag 3",
+    "typ": "Fertigungsauftrag",
+    "parentFertObjektId": 3,
+    "zieltermin": -1,
+    "dauer": 83,
+    "start": 14,
+    "ende": 97
+  },
+  {
+    "id": 7,
+    "bezeichnung": "Unternetzplan B",
+    "typ": "Unternetzplan",
+    "parentFertObjektId": 2,
+    "zieltermin": -1,
+    "dauer": -1,
+    "start": -1,
+    "ende": -1
+  },
+  {
+    "id": 8,
+    "bezeichnung": "Fertigungsauftrag 1",
+    "typ": "Fertigungsauftrag",
+    "parentFertObjektId": 7,
+    "zieltermin": -1,
+    "dauer": 90,
+    "start": 8,
+    "ende": 98
+  },
+  {
+    "id": 9,
+    "bezeichnung": "Montageauftrag 2",
+    "typ": "Montageauftrag",
+    "parentFertObjektId": 7,
+    "zieltermin": -1,
+    "dauer": 79,
+    "start": 20,
+    "ende": 99
+  },
+  {
+    "id": 10,
+    "bezeichnung": "Netzplan B",
+    "typ": "Netzplan",
+    "parentFertObjektId": 1,
+    "zieltermin": -1,
+    "dauer": -1,
+    "start": -1,
+    "ende": -1
+  },
+  {
+    "id": 11,
+    "bezeichnung": "Unternetzplan A",
+    "typ": "Unternetzplan",
+    "parentFertObjektId": 10,
+    "zieltermin": -1,
+    "dauer": -1,
+    "start": -1,
+    "ende": -1
+  },
+  {
+    "id": 12,
+    "bezeichnung": "Fertigungsauftrag 1",
+    "typ": "Fertigungsauftrag",
+    "parentFertObjektId": 11,
+    "zieltermin": -1,
+    "dauer": 90,
+    "start": 6,
+    "ende": 96
+  },
+  {
+    "id": 13,
+    "bezeichnung": "Montageauftrag 2",
+    "typ": "Montageauftrag",
+    "parentFertObjektId": 11,
+    "zieltermin": -1,
+    "dauer": 102,
+    "start": 6,
+    "ende": 108
+  },
+  {
+    "id": 14,
+    "bezeichnung": "Fertigungsauftrag 3",
+    "typ": "Fertigungsauftrag",
+    "parentFertObjektId": 11,
+    "zieltermin": -1,
+    "dauer": 88,
+    "start": 16,
+    "ende": 104
+  },
+  {
+    "id": 15,
+    "bezeichnung": "Montageauftrag 4",
+    "typ": "Montageauftrag",
+    "parentFertObjektId": 11,
+    "zieltermin": -1,
+    "dauer": 70,
+    "start": 33,
+    "ende": 103
+  },
+  {
+    "id": 16,
+    "bezeichnung": "Unternetzplan B",
+    "typ": "Unternetzplan",
+    "parentFertObjektId": 10,
+    "zieltermin": -1,
+    "dauer": -1,
+    "start": -1,
+    "ende": -1
+  },
+  {
+    "id": 17,
+    "bezeichnung": "Fertigungsauftrag 1",
+    "typ": "Fertigungsauftrag",
+    "parentFertObjektId": 16,
+    "zieltermin": -1,
+    "dauer": 64,
+    "start": 9,
+    "ende": 73
+  },
+  {
+    "id": 18,
+    "bezeichnung": "Fertigungsauftrag 2",
+    "typ": "Fertigungsauftrag",
+    "parentFertObjektId": 16,
+    "zieltermin": -1,
+    "dauer": 70,
+    "start": 31,
+    "ende": 101
+  },
+  {
+    "id": 19,
+    "bezeichnung": "Unternetzplan C",
+    "typ": "Unternetzplan",
+    "parentFertObjektId": 10,
+    "zieltermin": -1,
+    "dauer": -1,
+    "start": -1,
+    "ende": -1
+  },
+  {
+    "id": 20,
+    "bezeichnung": "Montageauftrag 1",
+    "typ": "Montageauftrag",
+    "parentFertObjektId": 19,
+    "zieltermin": -1,
+    "dauer": 90,
+    "start": 5,
+    "ende": 95
+  },
+  {
+    "id": 21,
+    "bezeichnung": "Montageauftrag 2",
+    "typ": "Montageauftrag",
+    "parentFertObjektId": 19,
+    "zieltermin": -1,
+    "dauer": 61,
+    "start": 19,
+    "ende": 80
+  },
+  {
+    "id": 22,
+    "bezeichnung": "Projekt Elektrotechnik 2",
+    "typ": "Projekt",
+    "parentFertObjektId": -1,
+    "zieltermin": 101,
+    "dauer": -1,
+    "start": -1,
+    "ende": -1
+  },
+  {
+    "id": 23,
+    "bezeichnung": "Netzplan A",
+    "typ": "Netzplan",
+    "parentFertObjektId": 22,
+    "zieltermin": -1,
+    "dauer": -1,
+    "start": -1,
+    "ende": -1
+  },
+  {
+    "id": 24,
+    "bezeichnung": "Unternetzplan A",
+    "typ": "Unternetzplan",
+    "parentFertObjektId": 23,
+    "zieltermin": -1,
+    "dauer": -1,
+    "start": -1,
+    "ende": -1
+  },
+  {
+    "id": 25,
+    "bezeichnung": "Fertigungsauftrag 1",
+    "typ": "Fertigungsauftrag",
+    "parentFertObjektId": 24,
+    "zieltermin": -1,
+    "dauer": 69,
+    "start": 26,
+    "ende": 95
+  },
+  {
+    "id": 26,
+    "bezeichnung": "Montageauftrag 2",
+    "typ": "Montageauftrag",
+    "parentFertObjektId": 24,
+    "zieltermin": -1,
+    "dauer": 26,
+    "start": 77,
+    "ende": 103
+  },
+  {
+    "id": 27,
+    "bezeichnung": "Unternetzplan B",
+    "typ": "Unternetzplan",
+    "parentFertObjektId": 23,
+    "zieltermin": -1,
+    "dauer": -1,
+    "start": -1,
+    "ende": -1
+  },
+  {
+    "id": 28,
+    "bezeichnung": "Fertigungsauftrag 1",
+    "typ": "Fertigungsauftrag",
+    "parentFertObjektId": 27,
+    "zieltermin": -1,
+    "dauer": 87,
+    "start": 13,
+    "ende": 100
+  },
+  {
+    "id": 29,
+    "bezeichnung": "Montageauftrag 2",
+    "typ": "Montageauftrag",
+    "parentFertObjektId": 27,
+    "zieltermin": -1,
+    "dauer": 97,
+    "start": 13,
+    "ende": 110
+  },
+  {
+    "id": 30,
+    "bezeichnung": "Montageauftrag 3",
+    "typ": "Montageauftrag",
+    "parentFertObjektId": 27,
+    "zieltermin": -1,
+    "dauer": 74,
+    "start": 29,
+    "ende": 103
+  },
+  {
+    "id": 31,
+    "bezeichnung": "Unternetzplan C",
+    "typ": "Unternetzplan",
+    "parentFertObjektId": 23,
+    "zieltermin": -1,
+    "dauer": -1,
+    "start": -1,
+    "ende": -1
+  },
+  {
+    "id": 32,
+    "bezeichnung": "Montageauftrag 1",
+    "typ": "Montageauftrag",
+    "parentFertObjektId": 31,
+    "zieltermin": -1,
+    "dauer": 91,
+    "start": 7,
+    "ende": 98
+  },
+  {
+    "id": 33,
+    "bezeichnung": "Fertigungsauftrag 2",
+    "typ": "Fertigungsauftrag",
+    "parentFertObjektId": 31,
+    "zieltermin": -1,
+    "dauer": 93,
+    "start": 5,
+    "ende": 98
+  },
+  {
+    "id": 34,
+    "bezeichnung": "Fertigungsauftrag 3",
+    "typ": "Fertigungsauftrag",
+    "parentFertObjektId": 31,
+    "zieltermin": -1,
+    "dauer": 86,
+    "start": 11,
+    "ende": 97
+  },
+  {
+    "id": 35,
+    "bezeichnung": "Projekt Automobilkomponente 3",
+    "typ": "Projekt",
+    "parentFertObjektId": -1,
+    "zieltermin": 137,
+    "dauer": -1,
+    "start": -1,
+    "ende": -1
+  },
+  {
+    "id": 36,
+    "bezeichnung": "Netzplan A",
+    "typ": "Netzplan",
+    "parentFertObjektId": 35,
+    "zieltermin": -1,
+    "dauer": -1,
+    "start": -1,
+    "ende": -1
+  },
+  {
+    "id": 37,
+    "bezeichnung": "Unternetzplan A",
+    "typ": "Unternetzplan",
+    "parentFertObjektId": 36,
+    "zieltermin": -1,
+    "dauer": -1,
+    "start": -1,
+    "ende": -1
+  },
+  {
+    "id": 38,
+    "bezeichnung": "Fertigungsauftrag 1",
+    "typ": "Fertigungsauftrag",
+    "parentFertObjektId": 37,
+    "zieltermin": -1,
+    "dauer": 77,
+    "start": 20,
+    "ende": 97
+  },
+  {
+    "id": 39,
+    "bezeichnung": "Fertigungsauftrag 2",
+    "typ": "Fertigungsauftrag",
+    "parentFertObjektId": 37,
+    "zieltermin": -1,
+    "dauer": 89,
+    "start": 10,
+    "ende": 99
+  },
+  {
+    "id": 40,
+    "bezeichnung": "Unternetzplan B",
+    "typ": "Unternetzplan",
+    "parentFertObjektId": 36,
+    "zieltermin": -1,
+    "dauer": -1,
+    "start": -1,
+    "ende": -1
+  },
+  {
+    "id": 41,
+    "bezeichnung": "Fertigungsauftrag 1",
+    "typ": "Fertigungsauftrag",
+    "parentFertObjektId": 40,
+    "zieltermin": -1,
+    "dauer": 31,
+    "start": 11,
+    "ende": 42
+  },
+  {
+    "id": 42,
+    "bezeichnung": "Fertigungsauftrag 2",
+    "typ": "Fertigungsauftrag",
+    "parentFertObjektId": 40,
+    "zieltermin": -1,
+    "dauer": 73,
+    "start": 5,
+    "ende": 78
+  },
+  {
+    "id": 43,
+    "bezeichnung": "Fertigungsauftrag 3",
+    "typ": "Fertigungsauftrag",
+    "parentFertObjektId": 40,
+    "zieltermin": -1,
+    "dauer": 70,
+    "start": 15,
+    "ende": 85
+  },
+  {
+    "id": 44,
+    "bezeichnung": "Unternetzplan C",
+    "typ": "Unternetzplan",
+    "parentFertObjektId": 36,
+    "zieltermin": -1,
+    "dauer": -1,
+    "start": -1,
+    "ende": -1
+  },
+  {
+    "id": 45,
+    "bezeichnung": "Montageauftrag 1",
+    "typ": "Montageauftrag",
+    "parentFertObjektId": 44,
+    "zieltermin": -1,
+    "dauer": 93,
+    "start": 8,
+    "ende": 101
+  },
+  {
+    "id": 46,
+    "bezeichnung": "Montageauftrag 2",
+    "typ": "Montageauftrag",
+    "parentFertObjektId": 44,
+    "zieltermin": -1,
+    "dauer": 53,
+    "start": 14,
+    "ende": 67
+  },
+  {
+    "id": 47,
+    "bezeichnung": "Montageauftrag 3",
+    "typ": "Montageauftrag",
+    "parentFertObjektId": 44,
+    "zieltermin": -1,
+    "dauer": 78,
+    "start": 13,
+    "ende": 91
+  },
+  {
+    "id": 48,
+    "bezeichnung": "Fertigungsauftrag 4",
+    "typ": "Fertigungsauftrag",
+    "parentFertObjektId": 44,
+    "zieltermin": -1,
+    "dauer": 81,
+    "start": 8,
+    "ende": 89
+  }
+]
