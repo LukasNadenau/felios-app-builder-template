@@ -82,19 +82,33 @@ Manages operations/tasks (`vorgaenge` table).
 - `updateProgress(id: number, progress: number): Promise<boolean>` - Update operation progress
 - `updateStatus(id: number, status: string): Promise<boolean>` - Update operation status
 
+### ProjektStrukturService
+Aggregates project data with nested network plans and operations. Returns complete hierarchical project structure.
+
+**Methods:**
+- `getByProjektId(projektId: number): Promise<ProjektStruktur | null>` - Get complete project structure by ID
+- `getByProjektCode(projektCode: string): Promise<ProjektStruktur | null>` - Get complete project structure by code
+- `getAll(): Promise<ProjektStruktur[]>` - Get all projects with their complete structure
+
+**Types:**
+- `ProjektStruktur` - Project with nested `netzplaene` array
+- `NetzplanMitVorgaenge` - Network plan with nested `vorgaenge` array
+
 ## Usage Example
 
 ```typescript
-import { 
-  StandorteService, 
-  ProjekteService, 
-  VorgaengeService 
+import {
+  StandorteService,
+  ProjekteService,
+  VorgaengeService,
+  ProjektStrukturService
 } from './services';
 
 // Create service instances
 const standorteService = new StandorteService();
 const projekteService = new ProjekteService();
 const vorgaengeService = new VorgaengeService();
+const projektStrukturService = new ProjektStrukturService();
 
 // Get all locations
 const standorte = await standorteService.getAll();
@@ -113,6 +127,10 @@ const activeOps = await vorgaengeService.getByStatus('in_arbeit');
 
 // Update operation progress
 await vorgaengeService.updateProgress(1, 75);
+
+// Get complete project structure with nested data
+const projektStruktur = await projektStrukturService.getByProjektCode('PROJ-001');
+// Returns: { ...projekt, netzplaene: [{ ...netzplan, vorgaenge: [...] }] }
 ```
 
 ## Database Connection
