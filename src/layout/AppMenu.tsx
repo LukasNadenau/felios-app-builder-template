@@ -1,5 +1,5 @@
 import React from 'react';
-import { PanelMenu } from 'primereact/panelmenu';
+import { Menu } from 'primereact/menu';
 import { MenuItem } from 'primereact/menuitem';
 import { useNavigate } from 'react-router-dom';
 
@@ -30,7 +30,7 @@ const AppMenu = () => {
     ];
 
     return (
-        <PanelMenu
+        <Menu
             model={model}
             className="layout-menu"
         />
