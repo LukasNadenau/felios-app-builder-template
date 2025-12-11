@@ -14,6 +14,7 @@ export * from "./mitarbeiterService";
 export * from "./mitarbeiterEignungService";
 export * from "./mitarbeiterRessourceBedarfLinkService";
 export * from "./mitarbeiterSpeEintragungsgrundLinkService";
+export * from "./projektStrukturService";
 export * from "./ressourceService";
 export * from "./schichtmodellService";
 export * from "./tagService";
