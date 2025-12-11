@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest --coverage"
   },
   "dependencies": {
     "@primeuix/themes": "^2.0.2",
@@ -18,12 +21,18 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4.0.11",
     "@tailwindcss/vite": "^4.0.11",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
     "@types/node": "^22.13.5",
     "@types/react": "19.0.10",
     "@types/react-dom": "19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
+    "@vitest/ui": "^4.0.15",
+    "jsdom": "^27.3.0",
     "tailwindcss": "^4.0.11",
     "typescript": "5.8.2",
-    "vite": "^6.1.1"
+    "vite": "^6.1.1",
+    "vitest": "^4.0.15"
   }
 }
