@@ -1,6 +1,7 @@
+import Aura from '@primeuix/themes/aura';
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { PrimeReactProvider } from "primereact/api";
+import { PrimeReactProvider } from "@primereact/core/config";
 import App from "./App";
 // tailwind css
 import "./index.css";
@@ -8,9 +9,13 @@ import "./index.css";
 import "primeicons/primeicons.css";
 import "./App.css";
 
+const theme = {
+    preset: Aura
+};
+
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <PrimeReactProvider value={{ unstyled: false }}>
+    <PrimeReactProvider theme={theme}>
       <App />
     </PrimeReactProvider>
   </React.StrictMode>
