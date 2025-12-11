@@ -1,11 +1,11 @@
-# Database Services
+# Services
 
-This directory contains CRUD services for the `projekt_netzplan.db` SQLite database.
+This directory contains services with hard-coded Star Wars themed dummy data.
 
 ## Services
 
 ### StandorteService
-Manages locations/sites (`standorte` table).
+Manages locations/sites.
 
 **Methods:**
 - `getAll(): Promise<Standort[]>` - Get all locations
@@ -16,7 +16,7 @@ Manages locations/sites (`standorte` table).
 - `delete(id: number): Promise<boolean>` - Delete location
 
 ### RessourcenService
-Manages resources (`ressourcen` table).
+Manages resources.
 
 **Methods:**
 - `getAll(): Promise<Ressource[]>` - Get all resources
@@ -28,7 +28,7 @@ Manages resources (`ressourcen` table).
 - `delete(id: number): Promise<boolean>` - Delete resource
 
 ### MitarbeiterService
-Manages employees (`mitarbeiter` table).
+Manages employees.
 
 **Methods:**
 - `getAll(): Promise<Mitarbeiter[]>` - Get all employees
@@ -43,7 +43,7 @@ Manages employees (`mitarbeiter` table).
 - `activate(id: number): Promise<boolean>` - Activate employee
 
 ### ProjekteService
-Manages projects (`projekte` table).
+Manages projects.
 
 **Methods:**
 - `getAll(): Promise<Projekt[]>` - Get all projects
@@ -54,7 +54,7 @@ Manages projects (`projekte` table).
 - `delete(id: number): Promise<boolean>` - Delete project
 
 ### NetzplaeneService
-Manages network plans (`netzplaene` table).
+Manages network plans.
 
 **Methods:**
 - `getAll(): Promise<Netzplan[]>` - Get all network plans
@@ -66,7 +66,7 @@ Manages network plans (`netzplaene` table).
 - `delete(id: number): Promise<boolean>` - Delete network plan
 
 ### VorgaengeService
-Manages operations/tasks (`vorgaenge` table).
+Manages operations/tasks.
 
 **Methods:**
 - `getAll(): Promise<Vorgang[]>` - Get all operations
@@ -118,12 +118,12 @@ const projektId = await projekteService.create({
   code: 'PROJ-001',
   name: 'New Project',
   beschreibung: 'Project description',
-  start_geplant: '2024-01-01',
-  ende_geplant: '2024-12-31'
+  start_geplant: '2025-01-01',
+  ende_geplant: '2026-12-31'
 });
 
 // Get operations by status
-const activeOps = await vorgaengeService.getByStatus('in_arbeit');
+const activeOps = await vorgaengeService.getByStatus('in_progress');
 
 // Update operation progress
 await vorgaengeService.updateProgress(1, 75);
@@ -133,22 +133,17 @@ const projektStruktur = await projektStrukturService.getByProjektCode('PROJ-001'
 // Returns: { ...projekt, netzplaene: [{ ...netzplan, vorgaenge: [...] }] }
 ```
 
-## Database Connection
+## Data
 
-The services use a database abstraction layer through `getDatabase()` from `database.ts`. By default, a mock database is used for development. To use a real SQLite database, implement the `DatabaseConnection` interface and set it using `setDatabase()`:
+All services use hard-coded Star Wars themed dummy data:
+- 4 Locations: Death Star, Yavin IV Base, Hoth Base, Endor Station
+- 8 Resource Teams across different locations
+- 12 Employees (Star Wars characters)
+- 4 Major Projects spanning 2025-2027
+- 11 Network Plans (project phases)
+- 24 Operations/Tasks with realistic progress tracking
 
-```typescript
-import { setDatabase, DatabaseConnection } from './services/database';
-
-// Implement your real database connection
-const realDb: DatabaseConnection = {
-  query: async (sql, params) => { /* your implementation */ },
-  run: async (sql, params) => { /* your implementation */ },
-  close: async () => { /* your implementation */ }
-};
-
-setDatabase(realDb);
-```
+The data is coherent and interconnected, following the original Star Wars trilogy timeline.
 
 ## Testing
 
@@ -163,16 +158,3 @@ Tests cover:
 - Edge cases (not found, empty results)
 - Partial updates
 - Specialized query methods
-
-## Database Schema
-
-The database follows this structure:
-
-- **standorte**: Locations/sites
-- **ressourcen**: Resources (linked to standorte)
-- **mitarbeiter**: Employees (linked to ressourcen)
-- **projekte**: Projects
-- **netzplaene**: Network plans (linked to projekte)
-- **vorgaenge**: Operations/tasks (linked to netzplaene and ressourcen)
-
-All services respect foreign key relationships and CASCADE delete operations where configured.

@@ -1,5 +1,4 @@
 // Export all services
-export * from './database';
 export * from './standorte.service';
 export * from './ressourcen.service';
 export * from './mitarbeiter.service';

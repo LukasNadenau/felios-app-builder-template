@@ -1,5 +1,3 @@
-import { getDatabase } from './database';
-
 export interface Ressource {
   id?: number;
   standort_id: number;
@@ -9,80 +7,60 @@ export interface Ressource {
   beschreibung?: string | null;
 }
 
+const RESSOURCEN_DATA: Ressource[] = [
+  // Death Star resources
+  { id: 1, standort_id: 1, code: 'DS-ENG', name: 'Engineering Division', kapazitaet: 50, beschreibung: 'Main engineering and construction team' },
+  { id: 2, standort_id: 1, code: 'DS-TAC', name: 'Tactical Operations', kapazitaet: 30, beschreibung: 'Strategic planning and command' },
+  { id: 3, standort_id: 1, code: 'DS-SEC', name: 'Security Forces', kapazitaet: 100, beschreibung: 'Station security and defense' },
+
+  // Yavin Base resources
+  { id: 4, standort_id: 2, code: 'YAV-FLT', name: 'Red Squadron', kapazitaet: 12, beschreibung: 'Elite fighter pilot squadron' },
+  { id: 5, standort_id: 2, code: 'YAV-CMD', name: 'Rebel Command', kapazitaet: 15, beschreibung: 'Strategic command center' },
+
+  // Hoth Base resources
+  { id: 6, standort_id: 3, code: 'HOT-DEF', name: 'Defense Systems', kapazitaet: 20, beschreibung: 'Shield generators and defense' },
+  { id: 7, standort_id: 3, code: 'HOT-LOG', name: 'Logistics Team', kapazitaet: 25, beschreibung: 'Supply and evacuation planning' },
+
+  // Endor resources
+  { id: 8, standort_id: 4, code: 'END-SPE', name: 'Strike Team', kapazitaet: 8, beschreibung: 'Special operations forces' }
+];
+
 export class RessourcenService {
+  private nextId = 9;
+
   async getAll(): Promise<Ressource[]> {
-    const db = getDatabase();
-    return await db.query<Ressource>('SELECT * FROM ressourcen ORDER BY code');
+    return [...RESSOURCEN_DATA];
   }
 
   async getById(id: number): Promise<Ressource | null> {
-    const db = getDatabase();
-    const results = await db.query<Ressource>('SELECT * FROM ressourcen WHERE id = ?', [id]);
-    return results.length > 0 ? results[0] : null;
+    return RESSOURCEN_DATA.find(r => r.id === id) || null;
   }
 
   async getByStandortId(standortId: number): Promise<Ressource[]> {
-    const db = getDatabase();
-    return await db.query<Ressource>('SELECT * FROM ressourcen WHERE standort_id = ? ORDER BY code', [standortId]);
+    return RESSOURCEN_DATA.filter(r => r.standort_id === standortId);
   }
 
   async getByCode(standortId: number, code: string): Promise<Ressource | null> {
-    const db = getDatabase();
-    const results = await db.query<Ressource>(
-      'SELECT * FROM ressourcen WHERE standort_id = ? AND code = ?',
-      [standortId, code]
-    );
-    return results.length > 0 ? results[0] : null;
+    return RESSOURCEN_DATA.find(r => r.standort_id === standortId && r.code === code) || null;
   }
 
   async create(ressource: Omit<Ressource, 'id'>): Promise<number> {
-    const db = getDatabase();
-    const result = await db.run(
-      'INSERT INTO ressourcen (standort_id, code, name, kapazitaet, beschreibung) VALUES (?, ?, ?, ?, ?)',
-      [ressource.standort_id, ressource.code, ressource.name, ressource.kapazitaet, ressource.beschreibung]
-    );
-    return result.lastID;
+    const newId = this.nextId++;
+    RESSOURCEN_DATA.push({ ...ressource, id: newId });
+    return newId;
   }
 
   async update(id: number, ressource: Partial<Omit<Ressource, 'id'>>): Promise<boolean> {
-    const db = getDatabase();
-    const fields: string[] = [];
-    const values: any[] = [];
-
-    if (ressource.standort_id !== undefined) {
-      fields.push('standort_id = ?');
-      values.push(ressource.standort_id);
-    }
-    if (ressource.code !== undefined) {
-      fields.push('code = ?');
-      values.push(ressource.code);
-    }
-    if (ressource.name !== undefined) {
-      fields.push('name = ?');
-      values.push(ressource.name);
-    }
-    if (ressource.kapazitaet !== undefined) {
-      fields.push('kapazitaet = ?');
-      values.push(ressource.kapazitaet);
-    }
-    if (ressource.beschreibung !== undefined) {
-      fields.push('beschreibung = ?');
-      values.push(ressource.beschreibung);
-    }
-
-    if (fields.length === 0) return false;
-
-    values.push(id);
-    const result = await db.run(
-      `UPDATE ressourcen SET ${fields.join(', ')} WHERE id = ?`,
-      values
-    );
-    return result.changes > 0;
+    const index = RESSOURCEN_DATA.findIndex(r => r.id === id);
+    if (index === -1) return false;
+    RESSOURCEN_DATA[index] = { ...RESSOURCEN_DATA[index], ...ressource };
+    return true;
   }
 
   async delete(id: number): Promise<boolean> {
-    const db = getDatabase();
-    const result = await db.run('DELETE FROM ressourcen WHERE id = ?', [id]);
-    return result.changes > 0;
+    const index = RESSOURCEN_DATA.findIndex(r => r.id === id);
+    if (index === -1) return false;
+    RESSOURCEN_DATA.splice(index, 1);
+    return true;
   }
 }

@@ -1,5 +1,3 @@
-import { getDatabase } from './database';
-
 export interface Projekt {
   id?: number;
   code: string;
@@ -9,72 +7,73 @@ export interface Projekt {
   ende_geplant?: string | null;
 }
 
+const PROJEKTE_DATA: Projekt[] = [
+  {
+    id: 1,
+    code: 'DS-CONST',
+    name: 'Death Star Construction',
+    beschreibung: 'Complete construction and testing of the Imperial battle station',
+    start_geplant: '2025-01-15',
+    ende_geplant: '2025-08-30'
+  },
+  {
+    id: 2,
+    code: 'YAVIN-DEF',
+    name: 'Battle of Yavin Defense',
+    beschreibung: 'Defend Yavin IV base and destroy the Death Star',
+    start_geplant: '2025-08-15',
+    ende_geplant: '2025-09-15'
+  },
+  {
+    id: 3,
+    code: 'HOTH-EVAC',
+    name: 'Hoth Base Evacuation',
+    beschreibung: 'Establish Echo Base and plan evacuation procedures',
+    start_geplant: '2025-10-01',
+    ende_geplant: '2026-03-30'
+  },
+  {
+    id: 4,
+    code: 'ENDOR-OPS',
+    name: 'Endor Shield Generator Mission',
+    beschreibung: 'Destroy shield generator and second Death Star',
+    start_geplant: '2026-04-01',
+    ende_geplant: '2026-12-31'
+  }
+];
+
 export class ProjekteService {
+  private nextId = 5;
+
   async getAll(): Promise<Projekt[]> {
-    const db = getDatabase();
-    return await db.query<Projekt>('SELECT * FROM projekte ORDER BY code');
+    return [...PROJEKTE_DATA].sort((a, b) => a.code.localeCompare(b.code));
   }
 
   async getById(id: number): Promise<Projekt | null> {
-    const db = getDatabase();
-    const results = await db.query<Projekt>('SELECT * FROM projekte WHERE id = ?', [id]);
-    return results.length > 0 ? results[0] : null;
+    return PROJEKTE_DATA.find(p => p.id === id) || null;
   }
 
   async getByCode(code: string): Promise<Projekt | null> {
-    const db = getDatabase();
-    const results = await db.query<Projekt>('SELECT * FROM projekte WHERE code = ?', [code]);
-    return results.length > 0 ? results[0] : null;
+    return PROJEKTE_DATA.find(p => p.code === code) || null;
   }
 
   async create(projekt: Omit<Projekt, 'id'>): Promise<number> {
-    const db = getDatabase();
-    const result = await db.run(
-      'INSERT INTO projekte (code, name, beschreibung, start_geplant, ende_geplant) VALUES (?, ?, ?, ?, ?)',
-      [projekt.code, projekt.name, projekt.beschreibung, projekt.start_geplant, projekt.ende_geplant]
-    );
-    return result.lastID;
+    const newId = this.nextId++;
+    PROJEKTE_DATA.push({ ...projekt, id: newId });
+    return newId;
   }
 
   async update(id: number, projekt: Partial<Omit<Projekt, 'id'>>): Promise<boolean> {
-    const db = getDatabase();
-    const fields: string[] = [];
-    const values: any[] = [];
-
-    if (projekt.code !== undefined) {
-      fields.push('code = ?');
-      values.push(projekt.code);
-    }
-    if (projekt.name !== undefined) {
-      fields.push('name = ?');
-      values.push(projekt.name);
-    }
-    if (projekt.beschreibung !== undefined) {
-      fields.push('beschreibung = ?');
-      values.push(projekt.beschreibung);
-    }
-    if (projekt.start_geplant !== undefined) {
-      fields.push('start_geplant = ?');
-      values.push(projekt.start_geplant);
-    }
-    if (projekt.ende_geplant !== undefined) {
-      fields.push('ende_geplant = ?');
-      values.push(projekt.ende_geplant);
-    }
-
-    if (fields.length === 0) return false;
-
-    values.push(id);
-    const result = await db.run(
-      `UPDATE projekte SET ${fields.join(', ')} WHERE id = ?`,
-      values
-    );
-    return result.changes > 0;
+    const index = PROJEKTE_DATA.findIndex(p => p.id === id);
+    if (index === -1) return false;
+    PROJEKTE_DATA[index] = { ...PROJEKTE_DATA[index], ...projekt };
+    return true;
   }
 
   async delete(id: number): Promise<boolean> {
-    const db = getDatabase();
-    const result = await db.run('DELETE FROM projekte WHERE id = ?', [id]);
-    return result.changes > 0;
+    const index = PROJEKTE_DATA.findIndex(p => p.id === id);
+    if (index === -1) return false;
+    PROJEKTE_DATA.splice(index, 1);
+    return true;
   }
 }
