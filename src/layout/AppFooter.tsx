@@ -1,10 +1,16 @@
 import React from 'react';
+import { Toolbar } from 'primereact/toolbar';
 
 const AppFooter = () => {
+    const centerContent = (
+        <span className="font-medium">Powered by FELIOS ⚡</span>
+    );
+
     return (
-        <div className="layout-footer">
-            <span className="font-medium">Powered by FELIOS ⚡</span>
-        </div>
+        <Toolbar
+            center={centerContent}
+            className="layout-footer"
+        />
     );
 };
 

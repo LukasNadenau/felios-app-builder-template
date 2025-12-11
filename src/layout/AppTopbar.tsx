@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { classNames } from 'primereact/utils';
 import React, { forwardRef, useContext, useImperativeHandle, useRef } from 'react';
 import { AppTopbarRef } from '../types/layout';
 import { LayoutContext } from './context/layoutcontext';
@@ -21,14 +20,14 @@ const AppTopbar = forwardRef<AppTopbarRef>((props, ref) => {
             <button
                 ref={menubuttonRef}
                 type="button"
-                className="p-link layout-topbar-button"
+                className="layout-topbar-button"
                 onClick={onMenuToggle}
             >
-                <i className="pi pi-bars" />
+                <i className="pi pi-bars"></i>
             </button>
 
             <Link to="/" className="layout-topbar-logo ml-6">
-                <span>APP BUILDER</span>
+                <span>FELIOS ⚡ App</span> {/* You can replace this with your app title */}
             </Link>
         </div>
     );
