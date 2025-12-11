@@ -1000,7 +1000,7 @@ Same layout can be achieved using the semantic elements with screen reader suppo
 
 ## WAI ARIA
 
-ARIA refers to "Accessible Rich Internet Applications" is a suite to fill the gap where semantic HTML is inadequate. These cases are mainly related to rich UI components/widgets. Although browser support for rich UI components such as a datepicker or colorpicker has been improved over the past years many web developers still utilize UI components derived from standard HTML elements created by them or by other projects like PrimeReact. These types of components must provide keyboard and screen reader support, the latter case is where the WAI-ARIA is utilized.
+ARIA refers to "Accessible Rich Internet Applications" is a suite to fill the gap where semantic HTML is inadequate. These cases are mainly related to rich UI components/widgets. Although browser support for rich UI components such as a Calendar or colorpicker has been improved over the past years many web developers still utilize UI components derived from standard HTML elements created by them or by other projects like PrimeReact. These types of components must provide keyboard and screen reader support, the latter case is where the WAI-ARIA is utilized.
 
 ARIA consists of roles, properties and attributes. **Roles** define what the element is mainly used for e.g. `checkbox`, `dialog`, `tablist` whereas **States** and **Properties** define the metadata of the element like `aria-checked`, `aria-disabled`.
 
@@ -2594,11 +2594,11 @@ API documentation for Accordion component
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
 | children | ReactNode \\| ((instance: AccordionInstance) => ReactNode) | null | The children to render. |
-| lazy | boolean | false | When enabled, hidden tabs are not rendered at all. Defaults to false that hides tabs with css. |
+| lazy | boolean | false | When enabled, hidden TabView are not rendered at all. Defaults to false that hides TabView with css. |
 | tabIndex | number | 0 | Index of the element in tabbing order. |
 | defaultValue | string \\| number \\| (string \\| number)[] | null | Default value of the active panel or an array of values in multiple mode. |
 | value | string \\| number \\| (string \\| number)[] | null | Value of the active panel or an array of values in multiple mode. |
-| multiple | boolean | false | When enabled, multiple tabs can be activated at the same time. |
+| multiple | boolean | false | When enabled, multiple TabView can be activated at the same time. |
 | selectOnFocus | boolean | false | When enabled, the accordion will be selected on focus. |
 | onValueChange | (event: useAccordionChangeEvent) => void | null | Callback fired when the accordion's value changes. |
 | [key: string] | any | null |  |
@@ -6276,7 +6276,7 @@ export default LoopDemo;
 
 ```
 
-### Gallery
+### Galleria
 
 ```tsx
 'use client';
@@ -6296,7 +6296,7 @@ const images = [
     'https://images.unsplash.com/photo-1638255402906-e838358069ab?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
 ];
 
-function GalleryDemo() {
+function GalleriaDemo() {
     const [selectedImage, setSelectedImage] = React.useState(0);
 
     return (
@@ -6340,7 +6340,7 @@ function GalleryDemo() {
     );
 }
 
-export default GalleryDemo;
+export default GalleriaDemo;
 
 ```
 
@@ -8370,26 +8370,26 @@ export default function BasicDemo() {
 
 ```
 
-### With Popover
+### With OverlayPanel
 
-Use the `ColorPicker` inside a `Popover` to put the `ColorPicker` to the top of the component.
+Use the `ColorPicker` inside a `OverlayPanel` to put the `ColorPicker` to the top of the component.
 
 ```tsx
 'use client';
 
 import { ColorPicker } from 'primereact/colorpicker';
-import { Popover } from 'primereact/popover';
+import { OverlayPanel } from 'primereact/OverlayPanel';
 
-function PopoverDemo() {
+function OverlayPanelDemo() {
     return (
         <div>
             <ColorPicker defaultColor="#0099ff">
-                <Popover>
-                    <Popover.Trigger unstyled>
+                <OverlayPanel>
+                    <OverlayPanel.Trigger unstyled>
                         <ColorPicker.Swatch />
-                    </Popover.Trigger>
-                    <Popover.Portal>
-                        <Popover.Content className="min-w-72 w-full">
+                    </OverlayPanel.Trigger>
+                    <OverlayPanel.Portal>
+                        <OverlayPanel.Content className="min-w-72 w-full">
                             <div className="w-full space-y-3">
                                 <ColorPicker.Area />
                                 <div className="flex items-center gap-4">
@@ -8401,15 +8401,15 @@ function PopoverDemo() {
                                 </div>
                                 <ColorPicker.Input fluid channel="hex" />
                             </div>
-                        </Popover.Content>
-                    </Popover.Portal>
-                </Popover>
+                        </OverlayPanel.Content>
+                    </OverlayPanel.Portal>
+                </OverlayPanel>
             </ColorPicker>
         </div>
     );
 }
 
-export default PopoverDemo;
+export default OverlayPanelDemo;
 
 ```
 
@@ -11287,12 +11287,12 @@ List of design tokens.
 Theming is implemented with the pass through properties in unstyled mode.
 
 
-# DatePicker API
+# Calendar API
 
-API documentation for DatePicker component
+API documentation for Calendar component
 
 
-## DatePicker
+## Calendar
 
 ### Props
 
@@ -11300,17 +11300,17 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerInstance) => ReactNode) | null | The children to render. |
-| onValueChange | (event: DatePickerValueChangeEvent) => void | null | Callback to invoke when the value changes. |
+| children | ReactNode \\| ((instance: CalendarInstance) => ReactNode) | null | The children to render. |
+| onValueChange | (event: CalendarValueChangeEvent) => void | null | Callback to invoke when the value changes. |
 | defaultValue | string \\| string[] \\| Date \\| Date[] | null | The default value for the input when not controlled by  `modelValue` . |
 | value | string \\| string[] \\| Date \\| Date[] | null | Value of the component. |
 | name | string | null | The name attribute for the element, typically used in form submissions. |
@@ -11319,20 +11319,20 @@ API documentation for DatePicker component
 | updateModelType | "string" \\| "date" | date | Type of the value to write back to modelValue. |
 | selectOtherMonths | boolean | false | Whether days in other months shown before or after the current month are selectable. This only applies if the showOtherMonths option is set to true. |
 | showIcon | boolean | false | When enabled, displays a button with icon next to input. |
-| icon | string | null | Icon of the datepicker button. |
+| icon | string | null | Icon of the Calendar button. |
 | prevIcon | string | null | Icon to show in the previous button. |
 | nextIcon | string | null | Icon to show in the next button. |
 | incrementIcon | string | null | Icon to show in each of the increment buttons. |
 | decrementIcon | string | null | Icon to show in each of the decrement buttons. |
 | numberOfMonths | number | 1 | Number of months to display. |
-| breakpoint | string | 769px | The breakpoint to define the maximum width boundary for datepicker panel. |
+| breakpoint | string | 769px | The breakpoint to define the maximum width boundary for Calendar panel. |
 | view | "date" \\| "month" \\| "year" | date | Type of view to display. |
 | minDate | Date | null | The minimum selectable date. |
 | maxDate | Date | null | The maximum selectable date. |
 | disabledDates | Date[] | null | Array with dates to disable. |
 | disabledDays | number[] | null | Array with disabled weekday numbers. |
 | maxDateCount | number | null | Maximum number of selectable dates in multiple mode. |
-| showOnFocus | boolean | true | When disabled, datepicker will not be visible with input focus. |
+| showOnFocus | boolean | true | When disabled, Calendar will not be visible with input focus. |
 | autoZIndex | boolean | true | Whether to automatically manage layering. |
 | baseZIndex | number | 0 | Base zIndex value to use in layering. |
 | showButtonBar | boolean | false | Whether to display today and clear buttons at the footer. |
@@ -11360,15 +11360,15 @@ API documentation for DatePicker component
 | fluid | boolean | null | Spans 100% width of the container when enabled. |
 | ariaLabelledby | string | null | Establishes relationships between the component and label(s) where its value should be one or more element IDs. |
 | ariaLabel | string | null | Establishes a string value that labels the component. |
-| onDateSelect | (event: useDatePickerDateSelectEvent) => void | null | Callback to invoke when a date is selected. |
-| onMonthChange | (event: useDatePickerMonthChangeEvent) => void | null | Callback to invoke when the month changes. |
-| onYearChange | (event: useDatePickerYearChangeEvent) => void | null | Callback to invoke when the year changes. |
-| onTodayButtonClick | (event: useDatePickerTodayButtonClickEvent) => void | null | Callback to invoke when the today button is clicked. |
+| onDateSelect | (event: useCalendarDateSelectEvent) => void | null | Callback to invoke when a date is selected. |
+| onMonthChange | (event: useCalendarMonthChangeEvent) => void | null | Callback to invoke when the month changes. |
+| onYearChange | (event: useCalendarYearChangeEvent) => void | null | Callback to invoke when the year changes. |
+| onTodayButtonClick | (event: useCalendarTodayButtonClickEvent) => void | null | Callback to invoke when the today button is clicked. |
 | onClearButtonClick | (event: MouseEvent<HTMLButtonElement>) => void | null | Callback to invoke when the clear button is clicked. |
 | onInput | (event: ChangeEvent<HTMLInputElement>) => void | null | Callback to invoke on input event. |
 | onKeyDown | (event: KeyboardEvent<HTMLButtonElement \\| HTMLInputElement>) => void | null | Callback to invoke on keydown event. |
 | onFocus | (event: FocusEvent<HTMLInputElement>) => void | null | Callback to invoke on focus event. |
-| onBlur | (event: useDatePickerBlurEvent) => void | null | Callback to invoke on blur event. |
+| onBlur | (event: useCalendarBlurEvent) => void | null | Callback to invoke on blur event. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -11377,18 +11377,18 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| rawValue | string \\| string[] \\| Date \\| Date[] | null | The current raw value of the datepicker (unformatted). |
+| rawValue | string \\| string[] \\| Date \\| Date[] | null | The current raw value of the Calendar (unformatted). |
 | overlayVisible | boolean | null | Whether the overlay is visible. |
 | currentView | "date" \\| "month" \\| "year" | null | Current view state information. |
 | showClearIcon | boolean | null | Whether to show the clear icon. |
-| hoveredDate | useDatePickerDateMeta | null | The date currently being hovered in range selection mode. |
+| hoveredDate | useCalendarDateMeta | null | The date currently being hovered in range selection mode. |
 
 
 ### Exposes
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| state | useDatePickerState | null | State object containing the current raw value and view information. |
+| state | useCalendarState | null | State object containing the current raw value and view information. |
 | inputRef | RefObject<{ elementRef: RefObject<HTMLInputElement> }> | null | Reference to the input element. |
 | nextButtonRef | RefObject<{ elementRef: RefObject<HTMLButtonElement> }> | null | Reference to the next navigation button element. |
 | prevButtonRef | RefObject<{ elementRef: RefObject<HTMLButtonElement> }> | null | Reference to the previous navigation button element. |
@@ -11399,7 +11399,7 @@ API documentation for DatePicker component
 | todayLabel | string | null | Label text for today button. |
 | clearLabel | string | null | Label text for clear button. |
 | weekDays | string[] | null | Array of localized day names for the week. |
-| months | useDatePickerMonthData[] | null | Array of month data objects containing dates and week numbers. |
+| months | useCalendarMonthData[] | null | Array of month data objects containing dates and week numbers. |
 | monthPickerValues | { value: string; selectable: boolean }[] | null | Array of month picker values. |
 | yearPickerValues | { value: number; selectable: boolean }[] | null | Array of year picker values. |
 | switchViewButtonDisabled | boolean | null | Whether the switch view button is disabled. |
@@ -11408,19 +11408,19 @@ API documentation for DatePicker component
 | formattedCurrentSecond | string \\| number | null | Formatted current second value for display. |
 | ampmLabel | string | null | AM/PM label for 12-hour format. |
 | changeVisibleState | (visible: boolean) => void | null | Sets the visibility state of the overlay. |
-| getIndexedMonth | (index?: number) => useDatePickerMonthData | null | Returns a specific month by index. |
+| getIndexedMonth | (index?: number) => useCalendarMonthData | null | Returns a specific month by index. |
 | getYear | () => number | null | Returns the current year. |
 | getMonthName | (index?: number) => string | null | Returns the name of the current month. |
 | isRangeSelection | () => boolean | null | Returns whether the selection mode is range. |
-| isSelected | (dateMeta: useDatePickerDateMeta) => boolean | null | Checks if a date is selected. |
+| isSelected | (dateMeta: useCalendarDateMeta) => boolean | null | Checks if a date is selected. |
 | onPrevButtonClick | (event: MouseEvent<HTMLButtonElement>) => void | null | Handles previous button click event. |
 | onNextButtonClick | (event: MouseEvent<HTMLButtonElement>) => void | null | Handles next button click event. |
 | switchToMonthView | (event: MouseEvent<HTMLButtonElement>) => void | null | Switches to month view. |
 | switchToYearView | (event: MouseEvent<HTMLButtonElement>) => void | null | Switches to year view. |
-| onDateSelect | (event: KeyboardEvent<HTMLSpanElement> \\| MouseEvent<HTMLSpanElement, MouseEvent>, dateMeta: useDatePickerDateMeta) => void | null | Handles date selection. |
+| onDateSelect | (event: KeyboardEvent<HTMLSpanElement> \\| MouseEvent<HTMLSpanElement, MouseEvent>, dateMeta: useCalendarDateMeta) => void | null | Handles date selection. |
 | onMonthSelect | (event: KeyboardEvent<HTMLSpanElement> \\| MouseEvent<HTMLSpanElement, MouseEvent>, index: number) => void | null | Handles month selection. |
 | onYearSelect | (event: KeyboardEvent<HTMLSpanElement> \\| MouseEvent<HTMLSpanElement, MouseEvent>, year: { value: number }) => void | null | Handles year selection. |
-| onDateCellKeydown | (event: KeyboardEvent<HTMLSpanElement>, date: useDatePickerDateMeta, groupIndex: number) => void | null | Handles date cell keydown event. |
+| onDateCellKeydown | (event: KeyboardEvent<HTMLSpanElement>, date: useCalendarDateMeta, groupIndex: number) => void | null | Handles date cell keydown event. |
 | onMonthCellKeydown | (event: KeyboardEvent<HTMLSpanElement>, index: number) => void | null | Handles month cell keydown event. |
 | onYearCellKeydown | (event: KeyboardEvent<HTMLSpanElement>, year: { value: number }) => void | null | Handles year cell keydown event. |
 | onButtonClick | () => void | null | Handles button click event. |
@@ -11441,35 +11441,35 @@ API documentation for DatePicker component
 | onInputBlur | (event: FocusEvent<HTMLInputElement>) => void | null | Handles input blur event. |
 | onOverlayEnter | () => void | null | Handles overlay enter event. |
 | parseValue | (text: string) => string \\| string[] \\| Date \\| Date[] | null | Parses a string value to date picker value. |
-| isDateEquals | (value: string \\| Date, dateMeta: useDatePickerDateMeta) => boolean | null | Checks if two dates are equal. |
+| isDateEquals | (value: string \\| Date, dateMeta: useCalendarDateMeta) => boolean | null | Checks if two dates are equal. |
 | isMonthSelected | (month: number) => boolean | null | Checks if a month is selected. |
 | isYearSelected | (year: number) => boolean | null | Checks if a year is selected. |
-| isInHoverRange | (dateMeta: useDatePickerDateMeta) => boolean | null | Checks if a date is in the hover range during range selection. |
-| onDateCellMouseEnter | (dateMeta: useDatePickerDateMeta) => void | null | Handles date cell mouse enter event. |
+| isInHoverRange | (dateMeta: useCalendarDateMeta) => boolean | null | Checks if a date is in the hover range during range selection. |
+| onDateCellMouseEnter | (dateMeta: useCalendarDateMeta) => void | null | Handles date cell mouse enter event. |
 
 
 ### Events
 
 | Id | Label | Description | RelatedProp | Data |
 |:------|:------|:------|:------|:------|
-| api.datepicker.events.DatePickerValueChangeEvent | DatePickerValueChangeEvent | Event fired when the datepicker's value changes. |  | [object Object] |
+| api.Calendar.events.CalendarValueChangeEvent | CalendarValueChangeEvent | Event fired when the Calendar's value changes. |  | [object Object] |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePicker component. | [object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of Calendar component. | [object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePicker component. | [object Object] |
+| Instance | Instance of Calendar component. | [object Object] |
 
 
-## DatePickerInput
+## CalendarInput
 
 ### Props
 
@@ -11477,16 +11477,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerInputInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerInputInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarInputInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarInputInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerInputPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarInputPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerInputInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarInputInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -11495,24 +11495,24 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerInput component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarInput component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerInput component. | [object Object] |
+| Instance | Instance of CalendarInput component. | [object Object] |
 
 
-## DatePickerInputIconContainer
+## CalendarInputIconContainer
 
 ### Props
 
@@ -11520,16 +11520,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerInputIconContainerInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerInputIconContainerInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarInputIconContainerInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarInputIconContainerInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerInputIconContainerPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarInputIconContainerPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerInputIconContainerInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarInputIconContainerInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -11538,24 +11538,24 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerInputIconContainer component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarInputIconContainer component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerInputIconContainer component. | [object Object] |
+| Instance | Instance of CalendarInputIconContainer component. | [object Object] |
 
 
-## DatePickerDropdownIcon
+## CalendarDropdownIcon
 
 ### Props
 
@@ -11563,16 +11563,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerDropdownIconInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerDropdownIconInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarDropdownIconInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarDropdownIconInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerDropdownIconPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarDropdownIconPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerDropdownIconInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarDropdownIconInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -11581,17 +11581,17 @@ API documentation for DatePicker component
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerDropdownIcon component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarDropdownIcon component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerDropdownIcon component. | [object Object] |
+| Instance | Instance of CalendarDropdownIcon component. | [object Object] |
 
 
-## DatePickerDropdown
+## CalendarDropdown
 
 ### Props
 
@@ -11599,50 +11599,50 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerDropdownInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerDropdownInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarDropdownInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarDropdownInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerDropdownPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarDropdownPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerDropdownInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarDropdownInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
 
 ### State
 
-<DocTable name="DatePickerDropdown" category="api" type="state" />
+<DocTable name="CalendarDropdown" category="api" type="state" />
 
 ### Exposes
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
 
 
 ### Events
 
-<DocTable name="DatePickerDropdown" category="api" type="events" />
+<DocTable name="CalendarDropdown" category="api" type="events" />
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerDropdown component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarDropdown component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerDropdown component. | [object Object] |
+| Instance | Instance of CalendarDropdown component. | [object Object] |
 
 
-## DatePickerClearIcon
+## CalendarClearIcon
 
 ### Props
 
@@ -11650,16 +11650,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerClearIconInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerClearIconInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarClearIconInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarClearIconInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerClearIconPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarClearIconPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerClearIconInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarClearIconInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -11668,24 +11668,24 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | The DatePicker component instance. |
+| Calendar | CalendarInstance | null | The Calendar component instance. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerClearIcon component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarClearIcon component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerClearIcon component. | [object Object] |
+| Instance | Instance of CalendarClearIcon component. | [object Object] |
 
 
-## DatePickerPortal
+## CalendarPortal
 
 ### Props
 
@@ -11693,16 +11693,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerPortalInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerPortalInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarPortalInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarPortalInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerPortalPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarPortalPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerPortalInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarPortalInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -11711,24 +11711,24 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerPortal component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarPortal component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerPortal component. | [object Object] |
+| Instance | Instance of CalendarPortal component. | [object Object] |
 
 
-## DatePickerPanel
+## CalendarPanel
 
 ### Props
 
@@ -11736,16 +11736,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerPanelInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerPanelInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarPanelInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarPanelInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerPanelPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarPanelPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerPanelInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarPanelInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -11754,24 +11754,24 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerPanel component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarPanel component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerPanel component. | [object Object] |
+| Instance | Instance of CalendarPanel component. | [object Object] |
 
 
-## DatePickerContainer
+## CalendarContainer
 
 ### Props
 
@@ -11779,16 +11779,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerContainerInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerContainerInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarContainerInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarContainerInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerContainerPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarContainerPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerContainerInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarContainerInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -11797,24 +11797,24 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerContainer component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarContainer component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerContainer component. | [object Object] |
+| Instance | Instance of CalendarContainer component. | [object Object] |
 
 
-## DatePickerCalendar
+## CalendarCalendar
 
 ### Props
 
@@ -11822,16 +11822,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerCalendarInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerCalendarInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarCalendarInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarCalendarInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerCalendarPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarCalendarPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerCalendarInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarCalendarInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -11840,24 +11840,24 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerCalendar component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarCalendar component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerCalendar component. | [object Object] |
+| Instance | Instance of CalendarCalendar component. | [object Object] |
 
 
-## DatePickerHeader
+## CalendarHeader
 
 ### Props
 
@@ -11865,16 +11865,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerHeaderInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerHeaderInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarHeaderInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarHeaderInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerHeaderPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarHeaderPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerHeaderInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarHeaderInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -11883,24 +11883,24 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerHeader component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarHeader component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerHeader component. | [object Object] |
+| Instance | Instance of CalendarHeader component. | [object Object] |
 
 
-## DatePickerPrev
+## CalendarPrev
 
 ### Props
 
@@ -11908,16 +11908,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerPrevInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerPrevInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarPrevInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarPrevInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerPrevPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarPrevPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerPrevInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarPrevInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -11926,24 +11926,24 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerPrev component. | [object Object],[object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarPrev component. | [object Object],[object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerPrev component. | [object Object] |
+| Instance | Instance of CalendarPrev component. | [object Object] |
 
 
-## DatePickerTitle
+## CalendarTitle
 
 ### Props
 
@@ -11951,16 +11951,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerTitleInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerTitleInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarTitleInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarTitleInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerTitlePassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarTitlePassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerTitleInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarTitleInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -11969,24 +11969,24 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerTitle component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarTitle component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerTitle component. | [object Object] |
+| Instance | Instance of CalendarTitle component. | [object Object] |
 
 
-## DatePickerSelectMonth
+## CalendarSelectMonth
 
 ### Props
 
@@ -11994,16 +11994,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerSelectMonthInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerSelectMonthInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarSelectMonthInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarSelectMonthInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerSelectMonthPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarSelectMonthPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerSelectMonthInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarSelectMonthInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -12012,24 +12012,24 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerSelectMonth component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarSelectMonth component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerSelectMonth component. | [object Object] |
+| Instance | Instance of CalendarSelectMonth component. | [object Object] |
 
 
-## DatePickerSelectYear
+## CalendarSelectYear
 
 ### Props
 
@@ -12037,16 +12037,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerSelectYearInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerSelectYearInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarSelectYearInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarSelectYearInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerSelectYearPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarSelectYearPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerSelectYearInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarSelectYearInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -12055,24 +12055,24 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerSelectYear component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarSelectYear component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerSelectYear component. | [object Object] |
+| Instance | Instance of CalendarSelectYear component. | [object Object] |
 
 
-## DatePickerDecade
+## CalendarDecade
 
 ### Props
 
@@ -12080,16 +12080,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerDecadeInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerDecadeInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarDecadeInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarDecadeInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerDecadePassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarDecadePassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerDecadeInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarDecadeInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -12098,24 +12098,24 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerDecade component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarDecade component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerDecade component. | [object Object] |
+| Instance | Instance of CalendarDecade component. | [object Object] |
 
 
-## DatePickerNext
+## CalendarNext
 
 ### Props
 
@@ -12123,16 +12123,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerNextInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerNextInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarNextInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarNextInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerNextPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarNextPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerNextInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarNextInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -12141,24 +12141,24 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerNext component. | [object Object],[object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarNext component. | [object Object],[object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerNext component. | [object Object] |
+| Instance | Instance of CalendarNext component. | [object Object] |
 
 
-## DatePickerTable
+## CalendarTable
 
 ### Props
 
@@ -12166,16 +12166,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerTableInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerTableInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarTableInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarTableInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerTablePassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarTablePassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerTableInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarTableInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -12184,24 +12184,24 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerTable component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarTable component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerTable component. | [object Object] |
+| Instance | Instance of CalendarTable component. | [object Object] |
 
 
-## DatePickerTableHead
+## CalendarTableHead
 
 ### Props
 
@@ -12209,16 +12209,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerTableHeadInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerTableHeadInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarTableHeadInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarTableHeadInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerTableHeadPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarTableHeadPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerTableHeadInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarTableHeadInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -12227,24 +12227,24 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerTableHead component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarTableHead component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerTableHead component. | [object Object] |
+| Instance | Instance of CalendarTableHead component. | [object Object] |
 
 
-## DatePickerTableHeadRow
+## CalendarTableHeadRow
 
 ### Props
 
@@ -12252,16 +12252,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerTableHeadRowInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerTableHeadRowInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarTableHeadRowInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarTableHeadRowInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerTableHeadRowPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarTableHeadRowPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerTableHeadRowInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarTableHeadRowInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -12270,24 +12270,24 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerTableHeadRow component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarTableHeadRow component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerTableHeadRow component. | [object Object] |
+| Instance | Instance of CalendarTableHeadRow component. | [object Object] |
 
 
-## DatePickerTableHeadCell
+## CalendarTableHeadCell
 
 ### Props
 
@@ -12295,16 +12295,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerTableHeadCellInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerTableHeadCellInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarTableHeadCellInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarTableHeadCellInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerTableHeadCellPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarTableHeadCellPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerTableHeadCellInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarTableHeadCellInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -12313,24 +12313,24 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerTableHeadCell component. | [object Object],[object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarTableHeadCell component. | [object Object],[object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerTableHeadCell component. | [object Object] |
+| Instance | Instance of CalendarTableHeadCell component. | [object Object] |
 
 
-## DatePickerTableHeadWeekCell
+## CalendarTableHeadWeekCell
 
 ### Props
 
@@ -12338,16 +12338,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerTableHeadWeekCellInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerTableHeadWeekCellInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarTableHeadWeekCellInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarTableHeadWeekCellInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerTableHeadWeekCellPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarTableHeadWeekCellPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerTableHeadWeekCellInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarTableHeadWeekCellInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -12356,24 +12356,24 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerTableHeadWeekCell component. | [object Object],[object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarTableHeadWeekCell component. | [object Object],[object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerTableHeadWeekCell component. | [object Object] |
+| Instance | Instance of CalendarTableHeadWeekCell component. | [object Object] |
 
 
-## DatePickerTableBody
+## CalendarTableBody
 
 ### Props
 
@@ -12381,16 +12381,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerTableBodyInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerTableBodyInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarTableBodyInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarTableBodyInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerTableBodyPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarTableBodyPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerTableBodyInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarTableBodyInstance) => ReactNode) | null | The children to render. |
 | view | "date" \\| "month" \\| "year" | date | Current view of the date picker. |
 | index | number | 0 | Index of the table body. |
 | [key: string] | any | null |  |
@@ -12401,24 +12401,24 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerTableBody component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarTableBody component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerTableBody component. | [object Object] |
+| Instance | Instance of CalendarTableBody component. | [object Object] |
 
 
-## DatePickerTableBodyRow
+## CalendarTableBodyRow
 
 ### Props
 
@@ -12426,16 +12426,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerTableBodyRowInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerTableBodyRowInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarTableBodyRowInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarTableBodyRowInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerTableBodyRowPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarTableBodyRowPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerTableBodyRowInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarTableBodyRowInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -12444,24 +12444,24 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerTableBodyRow component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarTableBodyRow component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerTableBodyRow component. | [object Object] |
+| Instance | Instance of CalendarTableBodyRow component. | [object Object] |
 
 
-## DatePickerTableBodyCell
+## CalendarTableBodyCell
 
 ### Props
 
@@ -12469,20 +12469,20 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerTableBodyCellInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerTableBodyCellInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarTableBodyCellInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarTableBodyCellInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerTableBodyCellPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarTableBodyCellPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerTableBodyCellInstance) => ReactNode) | null | The children to render. |
-| date | useDatePickerDateMeta | null | Date metadata for the cell. |
-| month | useDatePickerMonthOptions | null | Month options for the cell. |
+| children | ReactNode \\| ((instance: CalendarTableBodyCellInstance) => ReactNode) | null | The children to render. |
+| date | useCalendarDateMeta | null | Date metadata for the cell. |
+| month | useCalendarMonthOptions | null | Month options for the cell. |
 | index | number | null | Month index of the cell. |
-| year | useDatePickerYearOptions | null | Year options for the cell. |
+| year | useCalendarYearOptions | null | Year options for the cell. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -12491,25 +12491,25 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
-| datepickertablebody | DatePickerTableBodyInstance | null | Instance of the DatePickerTableBody component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
+| Calendartablebody | CalendarTableBodyInstance | null | Instance of the CalendarTableBody component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerTableBodyCell component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarTableBodyCell component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerTableBodyCell component. | [object Object] |
+| Instance | Instance of CalendarTableBodyCell component. | [object Object] |
 
 
-## DatePickerTableBodyWeekCell
+## CalendarTableBodyWeekCell
 
 ### Props
 
@@ -12517,16 +12517,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerTableBodyWeekCellInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerTableBodyWeekCellInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarTableBodyWeekCellInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarTableBodyWeekCellInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerTableBodyWeekCellPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarTableBodyWeekCellPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerTableBodyWeekCellInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarTableBodyWeekCellInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -12535,24 +12535,24 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerTableBodyWeekCell component. | [object Object],[object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarTableBodyWeekCell component. | [object Object],[object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerTableBodyWeekCell component. | [object Object] |
+| Instance | Instance of CalendarTableBodyWeekCell component. | [object Object] |
 
 
-## DatePickerFooter
+## CalendarFooter
 
 ### Props
 
@@ -12560,16 +12560,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerFooterInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerFooterInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarFooterInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarFooterInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerFooterPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarFooterPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerFooterInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarFooterInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -12578,24 +12578,24 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerFooter component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarFooter component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerFooter component. | [object Object] |
+| Instance | Instance of CalendarFooter component. | [object Object] |
 
 
-## DatePickerButtonbar
+## CalendarButtonbar
 
 ### Props
 
@@ -12603,16 +12603,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerButtonbarInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerButtonbarInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarButtonbarInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarButtonbarInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerButtonbarPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarButtonbarPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerButtonbarInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarButtonbarInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -12621,24 +12621,24 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerButtonbar component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarButtonbar component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerButtonbar component. | [object Object] |
+| Instance | Instance of CalendarButtonbar component. | [object Object] |
 
 
-## DatePickerToday
+## CalendarToday
 
 ### Props
 
@@ -12646,16 +12646,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerTodayInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerTodayInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarTodayInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarTodayInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerTodayPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarTodayPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerTodayInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarTodayInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -12664,24 +12664,24 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerToday component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarToday component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerToday component. | [object Object] |
+| Instance | Instance of CalendarToday component. | [object Object] |
 
 
-## DatePickerClear
+## CalendarClear
 
 ### Props
 
@@ -12689,16 +12689,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerClearInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerClearInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarClearInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarClearInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerClearPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarClearPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerClearInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarClearInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -12707,24 +12707,24 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerClear component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarClear component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerClear component. | [object Object] |
+| Instance | Instance of CalendarClear component. | [object Object] |
 
 
-## DatePickerTime
+## CalendarTime
 
 ### Props
 
@@ -12732,16 +12732,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerTimeInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerTimeInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarTimeInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarTimeInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerTimePassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarTimePassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerTimeInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarTimeInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -12750,24 +12750,24 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerTime component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarTime component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerTime component. | [object Object] |
+| Instance | Instance of CalendarTime component. | [object Object] |
 
 
-## DatePickerPicker
+## CalendarPicker
 
 ### Props
 
@@ -12775,16 +12775,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerPickerInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerPickerInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarPickerInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarPickerInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerPickerPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarPickerPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerPickerInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarPickerInstance) => ReactNode) | null | The children to render. |
 | type | "hour" \\| "minute" \\| "second" \\| "ampm" | null | Type of the picker. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
@@ -12794,24 +12794,24 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerPicker component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarPicker component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerPicker component. | [object Object] |
+| Instance | Instance of CalendarPicker component. | [object Object] |
 
 
-## DatePickerIncrement
+## CalendarIncrement
 
 ### Props
 
@@ -12819,16 +12819,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerIncrementInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerIncrementInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarIncrementInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarIncrementInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerIncrementPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarIncrementPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerIncrementInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarIncrementInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -12837,24 +12837,24 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerIncrement component. | [object Object],[object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarIncrement component. | [object Object],[object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerIncrement component. | [object Object] |
+| Instance | Instance of CalendarIncrement component. | [object Object] |
 
 
-## DatePickerHour
+## CalendarHour
 
 ### Props
 
@@ -12862,16 +12862,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerHourInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerHourInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarHourInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarHourInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerHourPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarHourPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerHourInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarHourInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -12880,24 +12880,24 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerHour component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarHour component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerHour component. | [object Object] |
+| Instance | Instance of CalendarHour component. | [object Object] |
 
 
-## DatePickerDecrement
+## CalendarDecrement
 
 ### Props
 
@@ -12905,16 +12905,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerDecrementInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerDecrementInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarDecrementInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarDecrementInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerDecrementPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarDecrementPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerDecrementInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarDecrementInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -12923,24 +12923,24 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerDecrement component. | [object Object],[object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarDecrement component. | [object Object],[object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerDecrement component. | [object Object] |
+| Instance | Instance of CalendarDecrement component. | [object Object] |
 
 
-## DatePickerSeparatorContainer
+## CalendarSeparatorContainer
 
 ### Props
 
@@ -12948,16 +12948,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerSeparatorContainerInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerSeparatorContainerInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarSeparatorContainerInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarSeparatorContainerInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerSeparatorContainerPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarSeparatorContainerPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerSeparatorContainerInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarSeparatorContainerInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -12966,24 +12966,24 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerSeparatorContainer component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarSeparatorContainer component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerSeparatorContainer component. | [object Object] |
+| Instance | Instance of CalendarSeparatorContainer component. | [object Object] |
 
 
-## DatePickerSeparator
+## CalendarSeparator
 
 ### Props
 
@@ -12991,16 +12991,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerSeparatorInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerSeparatorInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarSeparatorInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarSeparatorInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerSeparatorPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarSeparatorPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerSeparatorInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarSeparatorInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -13009,24 +13009,24 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerSeparator component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarSeparator component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerSeparator component. | [object Object] |
+| Instance | Instance of CalendarSeparator component. | [object Object] |
 
 
-## DatePickerMinute
+## CalendarMinute
 
 ### Props
 
@@ -13034,16 +13034,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerMinuteInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerMinuteInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarMinuteInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarMinuteInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerMinutePassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarMinutePassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerMinuteInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarMinuteInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -13052,24 +13052,24 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerMinute component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarMinute component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerMinute component. | [object Object] |
+| Instance | Instance of CalendarMinute component. | [object Object] |
 
 
-## DatePickerSecond
+## CalendarSecond
 
 ### Props
 
@@ -13077,16 +13077,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerSecondInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerSecondInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarSecondInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarSecondInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerSecondPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarSecondPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerSecondInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarSecondInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -13095,24 +13095,24 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerSecond component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarSecond component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerSecond component. | [object Object] |
+| Instance | Instance of CalendarSecond component. | [object Object] |
 
 
-## DatePickerAmPm
+## CalendarAmPm
 
 ### Props
 
@@ -13120,16 +13120,16 @@ API documentation for DatePicker component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DatePickerAmPmInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DatePickerAmPmInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: CalendarAmPmInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: CalendarAmPmInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DatePickerAmPmPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<CalendarAmPmPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DatePickerAmPmInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: CalendarAmPmInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -13138,24 +13138,24 @@ API documentation for DatePicker component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| datepicker | DatePickerInstance | null | Instance of the DatePicker component. |
+| Calendar | CalendarInstance | null | Instance of the Calendar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DatePickerAmPm component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of CalendarAmPm component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DatePickerAmPm component. | [object Object] |
+| Instance | Instance of CalendarAmPm component. | [object Object] |
 
 
-## useDatePicker
+## useCalendar
 
 ### Props
 
@@ -13169,20 +13169,20 @@ API documentation for DatePicker component
 | updateModelType | "string" \\| "date" | date | Type of the value to write back to modelValue. |
 | selectOtherMonths | boolean | false | Whether days in other months shown before or after the current month are selectable. This only applies if the showOtherMonths option is set to true. |
 | showIcon | boolean | false | When enabled, displays a button with icon next to input. |
-| icon | string | null | Icon of the datepicker button. |
+| icon | string | null | Icon of the Calendar button. |
 | prevIcon | string | null | Icon to show in the previous button. |
 | nextIcon | string | null | Icon to show in the next button. |
 | incrementIcon | string | null | Icon to show in each of the increment buttons. |
 | decrementIcon | string | null | Icon to show in each of the decrement buttons. |
 | numberOfMonths | number | 1 | Number of months to display. |
-| breakpoint | string | 769px | The breakpoint to define the maximum width boundary for datepicker panel. |
+| breakpoint | string | 769px | The breakpoint to define the maximum width boundary for Calendar panel. |
 | view | "date" \\| "month" \\| "year" | date | Type of view to display. |
 | minDate | Date | null | The minimum selectable date. |
 | maxDate | Date | null | The maximum selectable date. |
 | disabledDates | Date[] | null | Array with dates to disable. |
 | disabledDays | number[] | null | Array with disabled weekday numbers. |
 | maxDateCount | number | null | Maximum number of selectable dates in multiple mode. |
-| showOnFocus | boolean | true | When disabled, datepicker will not be visible with input focus. |
+| showOnFocus | boolean | true | When disabled, Calendar will not be visible with input focus. |
 | autoZIndex | boolean | true | Whether to automatically manage layering. |
 | baseZIndex | number | 0 | Base zIndex value to use in layering. |
 | showButtonBar | boolean | false | Whether to display today and clear buttons at the footer. |
@@ -13210,34 +13210,34 @@ API documentation for DatePicker component
 | fluid | boolean | null | Spans 100% width of the container when enabled. |
 | ariaLabelledby | string | null | Establishes relationships between the component and label(s) where its value should be one or more element IDs. |
 | ariaLabel | string | null | Establishes a string value that labels the component. |
-| onValueChange | (event: useDatePickerValueChangeEvent) => void | null | Callback to invoke when the value changes. |
-| onDateSelect | (event: useDatePickerDateSelectEvent) => void | null | Callback to invoke when a date is selected. |
-| onMonthChange | (event: useDatePickerMonthChangeEvent) => void | null | Callback to invoke when the month changes. |
-| onYearChange | (event: useDatePickerYearChangeEvent) => void | null | Callback to invoke when the year changes. |
-| onTodayButtonClick | (event: useDatePickerTodayButtonClickEvent) => void | null | Callback to invoke when the today button is clicked. |
+| onValueChange | (event: useCalendarValueChangeEvent) => void | null | Callback to invoke when the value changes. |
+| onDateSelect | (event: useCalendarDateSelectEvent) => void | null | Callback to invoke when a date is selected. |
+| onMonthChange | (event: useCalendarMonthChangeEvent) => void | null | Callback to invoke when the month changes. |
+| onYearChange | (event: useCalendarYearChangeEvent) => void | null | Callback to invoke when the year changes. |
+| onTodayButtonClick | (event: useCalendarTodayButtonClickEvent) => void | null | Callback to invoke when the today button is clicked. |
 | onClearButtonClick | (event: MouseEvent<HTMLButtonElement>) => void | null | Callback to invoke when the clear button is clicked. |
 | onInput | (event: ChangeEvent<HTMLInputElement>) => void | null | Callback to invoke on input event. |
 | onKeyDown | (event: KeyboardEvent<HTMLButtonElement \\| HTMLInputElement>) => void | null | Callback to invoke on keydown event. |
 | onFocus | (event: FocusEvent<HTMLInputElement>) => void | null | Callback to invoke on focus event. |
-| onBlur | (event: useDatePickerBlurEvent) => void | null | Callback to invoke on blur event. |
+| onBlur | (event: useCalendarBlurEvent) => void | null | Callback to invoke on blur event. |
 
 
 ### State
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| rawValue | string \\| string[] \\| Date \\| Date[] | null | The current raw value of the datepicker (unformatted). |
+| rawValue | string \\| string[] \\| Date \\| Date[] | null | The current raw value of the Calendar (unformatted). |
 | overlayVisible | boolean | null | Whether the overlay is visible. |
 | currentView | "date" \\| "month" \\| "year" | null | Current view state information. |
 | showClearIcon | boolean | null | Whether to show the clear icon. |
-| hoveredDate | useDatePickerDateMeta | null | The date currently being hovered in range selection mode. |
+| hoveredDate | useCalendarDateMeta | null | The date currently being hovered in range selection mode. |
 
 
 ### Exposes
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| state | useDatePickerState | null | State object containing the current raw value and view information. |
+| state | useCalendarState | null | State object containing the current raw value and view information. |
 | inputRef | RefObject<{ elementRef: RefObject<HTMLInputElement> }> | null | Reference to the input element. |
 | nextButtonRef | RefObject<{ elementRef: RefObject<HTMLButtonElement> }> | null | Reference to the next navigation button element. |
 | prevButtonRef | RefObject<{ elementRef: RefObject<HTMLButtonElement> }> | null | Reference to the previous navigation button element. |
@@ -13248,7 +13248,7 @@ API documentation for DatePicker component
 | todayLabel | string | null | Label text for today button. |
 | clearLabel | string | null | Label text for clear button. |
 | weekDays | string[] | null | Array of localized day names for the week. |
-| months | useDatePickerMonthData[] | null | Array of month data objects containing dates and week numbers. |
+| months | useCalendarMonthData[] | null | Array of month data objects containing dates and week numbers. |
 | monthPickerValues | { value: string; selectable: boolean }[] | null | Array of month picker values. |
 | yearPickerValues | { value: number; selectable: boolean }[] | null | Array of year picker values. |
 | switchViewButtonDisabled | boolean | null | Whether the switch view button is disabled. |
@@ -13257,19 +13257,19 @@ API documentation for DatePicker component
 | formattedCurrentSecond | string \\| number | null | Formatted current second value for display. |
 | ampmLabel | string | null | AM/PM label for 12-hour format. |
 | changeVisibleState | (visible: boolean) => void | null | Sets the visibility state of the overlay. |
-| getIndexedMonth | (index?: number) => useDatePickerMonthData | null | Returns a specific month by index. |
+| getIndexedMonth | (index?: number) => useCalendarMonthData | null | Returns a specific month by index. |
 | getYear | () => number | null | Returns the current year. |
 | getMonthName | (index?: number) => string | null | Returns the name of the current month. |
 | isRangeSelection | () => boolean | null | Returns whether the selection mode is range. |
-| isSelected | (dateMeta: useDatePickerDateMeta) => boolean | null | Checks if a date is selected. |
+| isSelected | (dateMeta: useCalendarDateMeta) => boolean | null | Checks if a date is selected. |
 | onPrevButtonClick | (event: MouseEvent<HTMLButtonElement>) => void | null | Handles previous button click event. |
 | onNextButtonClick | (event: MouseEvent<HTMLButtonElement>) => void | null | Handles next button click event. |
 | switchToMonthView | (event: MouseEvent<HTMLButtonElement>) => void | null | Switches to month view. |
 | switchToYearView | (event: MouseEvent<HTMLButtonElement>) => void | null | Switches to year view. |
-| onDateSelect | (event: KeyboardEvent<HTMLSpanElement> \\| MouseEvent<HTMLSpanElement, MouseEvent>, dateMeta: useDatePickerDateMeta) => void | null | Handles date selection. |
+| onDateSelect | (event: KeyboardEvent<HTMLSpanElement> \\| MouseEvent<HTMLSpanElement, MouseEvent>, dateMeta: useCalendarDateMeta) => void | null | Handles date selection. |
 | onMonthSelect | (event: KeyboardEvent<HTMLSpanElement> \\| MouseEvent<HTMLSpanElement, MouseEvent>, index: number) => void | null | Handles month selection. |
 | onYearSelect | (event: KeyboardEvent<HTMLSpanElement> \\| MouseEvent<HTMLSpanElement, MouseEvent>, year: { value: number }) => void | null | Handles year selection. |
-| onDateCellKeydown | (event: KeyboardEvent<HTMLSpanElement>, date: useDatePickerDateMeta, groupIndex: number) => void | null | Handles date cell keydown event. |
+| onDateCellKeydown | (event: KeyboardEvent<HTMLSpanElement>, date: useCalendarDateMeta, groupIndex: number) => void | null | Handles date cell keydown event. |
 | onMonthCellKeydown | (event: KeyboardEvent<HTMLSpanElement>, index: number) => void | null | Handles month cell keydown event. |
 | onYearCellKeydown | (event: KeyboardEvent<HTMLSpanElement>, year: { value: number }) => void | null | Handles year cell keydown event. |
 | onButtonClick | () => void | null | Handles button click event. |
@@ -13290,65 +13290,65 @@ API documentation for DatePicker component
 | onInputBlur | (event: FocusEvent<HTMLInputElement>) => void | null | Handles input blur event. |
 | onOverlayEnter | () => void | null | Handles overlay enter event. |
 | parseValue | (text: string) => string \\| string[] \\| Date \\| Date[] | null | Parses a string value to date picker value. |
-| isDateEquals | (value: string \\| Date, dateMeta: useDatePickerDateMeta) => boolean | null | Checks if two dates are equal. |
+| isDateEquals | (value: string \\| Date, dateMeta: useCalendarDateMeta) => boolean | null | Checks if two dates are equal. |
 | isMonthSelected | (month: number) => boolean | null | Checks if a month is selected. |
 | isYearSelected | (year: number) => boolean | null | Checks if a year is selected. |
-| isInHoverRange | (dateMeta: useDatePickerDateMeta) => boolean | null | Checks if a date is in the hover range during range selection. |
-| onDateCellMouseEnter | (dateMeta: useDatePickerDateMeta) => void | null | Handles date cell mouse enter event. |
+| isInHoverRange | (dateMeta: useCalendarDateMeta) => boolean | null | Checks if a date is in the hover range during range selection. |
+| onDateCellMouseEnter | (dateMeta: useCalendarDateMeta) => void | null | Handles date cell mouse enter event. |
 
 
 ### Events
 
 | Id | Label | Description | RelatedProp | Data |
 |:------|:------|:------|:------|:------|
-| api.usedatepicker.events.useDatePickerValueChangeEvent | useDatePickerValueChangeEvent | Event fired when the datepicker's value changes. |  | [object Object] |
-| api.usedatepicker.events.useDatePickerDateSelectEvent | useDatePickerDateSelectEvent | Event fired when a date is selected. |  | [object Object] |
-| api.usedatepicker.events.useDatePickerMonthChangeEvent | useDatePickerMonthChangeEvent | Event fired when the month changes. |  | [object Object],[object Object] |
-| api.usedatepicker.events.useDatePickerYearChangeEvent | useDatePickerYearChangeEvent | Event fired when the year changes. |  | [object Object],[object Object] |
-| api.usedatepicker.events.useDatePickerTodayButtonClickEvent | useDatePickerTodayButtonClickEvent | Event fired when the today button is clicked. |  | [object Object],[object Object] |
-| api.usedatepicker.events.useDatePickerBlurEvent | useDatePickerBlurEvent | Event fired when input blur occurs. |  | [object Object],[object Object] |
+| api.useCalendar.events.useCalendarValueChangeEvent | useCalendarValueChangeEvent | Event fired when the Calendar's value changes. |  | [object Object] |
+| api.useCalendar.events.useCalendarDateSelectEvent | useCalendarDateSelectEvent | Event fired when a date is selected. |  | [object Object] |
+| api.useCalendar.events.useCalendarMonthChangeEvent | useCalendarMonthChangeEvent | Event fired when the month changes. |  | [object Object],[object Object] |
+| api.useCalendar.events.useCalendarYearChangeEvent | useCalendarYearChangeEvent | Event fired when the year changes. |  | [object Object],[object Object] |
+| api.useCalendar.events.useCalendarTodayButtonClickEvent | useCalendarTodayButtonClickEvent | Event fired when the today button is clicked. |  | [object Object],[object Object] |
+| api.useCalendar.events.useCalendarBlurEvent | useCalendarBlurEvent | Event fired when input blur occurs. |  | [object Object],[object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of useDatePicker headless. | [object Object] |
+| Instance | Instance of useCalendar headless. | [object Object] |
 
 
 
-# DatePicker
+# Calendar
 
-DatePicker is a form component to work with dates.
+Calendar is a form component to work with dates.
 
 
 ## Usage
 
 ```tsx
-import { DatePicker } from 'primereact/datepicker';
+import { Calendar } from 'primereact/Calendar';
 ```
 
 ```tsx
-<DatePicker>
-    <DatePicker.Input />
-    <DatePicker.Portal>
-        <DatePicker.Container>
-            <DatePicker.Calendar>
-                <DatePicker.Header />
-                <DatePicker.Table>
-                    <DatePicker.TableHead />
-                    <DatePicker.TableBody>
-                        <DatePicker.TableBodyRow>
-                            <DatePicker.TableBodyCell />
-                        </DatePicker.TableBodyRow>
-                    </DatePicker.TableBody>
-                </DatePicker.Table>
-                <DatePicker.Buttonbar />
-            </DatePicker.Calendar>
-        </DatePicker.Container>
-        <DatePicker.Time />
-    </DatePicker.Portal>
-</DatePicker>
+<Calendar>
+    <Calendar.Input />
+    <Calendar.Portal>
+        <Calendar.Container>
+            <Calendar.Calendar>
+                <Calendar.Header />
+                <Calendar.Table>
+                    <Calendar.TableHead />
+                    <Calendar.TableBody>
+                        <Calendar.TableBodyRow>
+                            <Calendar.TableBodyCell />
+                        </Calendar.TableBodyRow>
+                    </Calendar.TableBody>
+                </Calendar.Table>
+                <Calendar.Buttonbar />
+            </Calendar.Calendar>
+        </Calendar.Container>
+        <Calendar.Time />
+    </Calendar.Portal>
+</Calendar>
 ```
 
 ## Examples
@@ -13359,130 +13359,130 @@ import { DatePicker } from 'primereact/datepicker';
 'use client';
 
 import {
-    DatePickerTableBodyInstance,
-    DatePickerTableHeadRowInstance,
-    DatePickerValueChangeEvent,
-    useDatePickerMonthData,
-    useDatePickerMonthOptions,
-    useDatePickerProps,
-    useDatePickerYearOptions
-} from '@primereact/types/shared/datepicker';
-import { DatePicker } from 'primereact/datepicker';
+    CalendarTableBodyInstance,
+    CalendarTableHeadRowInstance,
+    CalendarValueChangeEvent,
+    useCalendarMonthData,
+    useCalendarMonthOptions,
+    useCalendarProps,
+    useCalendarYearOptions
+} from '@primereact/types/shared/Calendar';
+import { Calendar } from 'primereact/Calendar';
 import * as React from 'react';
 
 export default function BasicDemo() {
-    const [date, setDate] = React.useState<useDatePickerProps['value'] | null>(null);
+    const [date, setDate] = React.useState<useCalendarProps['value'] | null>(null);
 
     return (
         <div className="flex justify-center">
-            <DatePicker value={date} onValueChange={(event: DatePickerValueChangeEvent) => setDate(event.value)}>
-                <DatePicker.Input />
-                <DatePicker.Portal>
-                    <DatePicker.Container>
-                        <DatePicker.Calendar>
-                            <DatePicker.Header>
-                                <DatePicker.Prev />
-                                <DatePicker.Title>
-                                    <DatePicker.SelectMonth />
-                                    <DatePicker.SelectYear />
-                                    <DatePicker.Decade />
-                                </DatePicker.Title>
-                                <DatePicker.Next />
-                            </DatePicker.Header>
-                            <DatePicker.Table>
-                                <DatePicker.TableHead>
-                                    <DatePicker.TableHeadRow>
-                                        {(instance: DatePickerTableHeadRowInstance) => {
-                                            const { datepicker } = instance;
-                                            const weekDays = datepicker?.weekDays as string[];
+            <Calendar value={date} onValueChange={(event: CalendarValueChangeEvent) => setDate(event.value)}>
+                <Calendar.Input />
+                <Calendar.Portal>
+                    <Calendar.Container>
+                        <Calendar.Calendar>
+                            <Calendar.Header>
+                                <Calendar.Prev />
+                                <Calendar.Title>
+                                    <Calendar.SelectMonth />
+                                    <Calendar.SelectYear />
+                                    <Calendar.Decade />
+                                </Calendar.Title>
+                                <Calendar.Next />
+                            </Calendar.Header>
+                            <Calendar.Table>
+                                <Calendar.TableHead>
+                                    <Calendar.TableHeadRow>
+                                        {(instance: CalendarTableHeadRowInstance) => {
+                                            const { Calendar } = instance;
+                                            const weekDays = Calendar?.weekDays as string[];
 
                                             return (
                                                 <>
                                                     {weekDays.map((day, index) => (
-                                                        <DatePicker.TableHeadCell key={index} abbr={day}>
+                                                        <Calendar.TableHeadCell key={index} abbr={day}>
                                                             {day}
-                                                        </DatePicker.TableHeadCell>
+                                                        </Calendar.TableHeadCell>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableHeadRow>
-                                </DatePicker.TableHead>
-                                <DatePicker.TableBody>
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const month = datepicker?.getIndexedMonth?.() as useDatePickerMonthData;
+                                    </Calendar.TableHeadRow>
+                                </Calendar.TableHead>
+                                <Calendar.TableBody>
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const month = Calendar?.getIndexedMonth?.() as useCalendarMonthData;
 
                                         return (
                                             <>
                                                 {month.dates?.map((week) => (
-                                                    <DatePicker.TableBodyRow key={week[0].day + '' + week[0].month}>
+                                                    <Calendar.TableBodyRow key={week[0].day + '' + week[0].month}>
                                                         <>
                                                             {week.map((date) => (
-                                                                <DatePicker.TableBodyCell key={date.day + '' + date.month} date={date}>
+                                                                <Calendar.TableBodyCell key={date.day + '' + date.month} date={date}>
                                                                     {date.day}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             ))}
                                                         </>
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="month">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const months = datepicker?.monthPickerValues as useDatePickerMonthOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="month">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const months = Calendar?.monthPickerValues as useCalendarMonthOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 4 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`month-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`month-row-${rowIndex}`}>
                                                         {months.slice(rowIndex * 3, (rowIndex + 1) * 3).map((month, colIndex) => {
                                                             const monthIndex = rowIndex * 3 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
+                                                                <Calendar.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
                                                                     {month.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="year">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const years = datepicker?.yearPickerValues as useDatePickerYearOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="year">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const years = Calendar?.yearPickerValues as useCalendarYearOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 5 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`year-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`year-row-${rowIndex}`}>
                                                         {years.slice(rowIndex * 2, (rowIndex + 1) * 2).map((year, colIndex) => {
                                                             const yearIndex = rowIndex * 2 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={yearIndex} year={year}>
+                                                                <Calendar.TableBodyCell key={yearIndex} year={year}>
                                                                     {year.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                            </DatePicker.Table>
-                        </DatePicker.Calendar>
-                    </DatePicker.Container>
-                </DatePicker.Portal>
-            </DatePicker>
+                                </Calendar.TableBody>
+                            </Calendar.Table>
+                        </Calendar.Calendar>
+                    </Calendar.Container>
+                </Calendar.Portal>
+            </Calendar>
         </div>
     );
 }
@@ -13517,130 +13517,130 @@ Default date format is `mm/dd/yy` which can be customized using the `dateFormat`
 'use client';
 
 import {
-    DatePickerTableBodyInstance,
-    DatePickerTableHeadRowInstance,
-    DatePickerValueChangeEvent,
-    useDatePickerMonthData,
-    useDatePickerMonthOptions,
-    useDatePickerProps,
-    useDatePickerYearOptions
-} from '@primereact/types/shared/datepicker';
-import { DatePicker } from 'primereact/datepicker';
+    CalendarTableBodyInstance,
+    CalendarTableHeadRowInstance,
+    CalendarValueChangeEvent,
+    useCalendarMonthData,
+    useCalendarMonthOptions,
+    useCalendarProps,
+    useCalendarYearOptions
+} from '@primereact/types/shared/Calendar';
+import { Calendar } from 'primereact/Calendar';
 import * as React from 'react';
 
 export default function FormatDemo() {
-    const [date, setDate] = React.useState<useDatePickerProps['value'] | null>(null);
+    const [date, setDate] = React.useState<useCalendarProps['value'] | null>(null);
 
     return (
         <div className="flex justify-center">
-            <DatePicker value={date} dateFormat="dd/mm/yy" onValueChange={(event: DatePickerValueChangeEvent) => setDate(event.value)}>
-                <DatePicker.Input />
-                <DatePicker.Portal>
-                    <DatePicker.Container>
-                        <DatePicker.Calendar>
-                            <DatePicker.Header>
-                                <DatePicker.Prev />
-                                <DatePicker.Title>
-                                    <DatePicker.SelectMonth />
-                                    <DatePicker.SelectYear />
-                                    <DatePicker.Decade />
-                                </DatePicker.Title>
-                                <DatePicker.Next />
-                            </DatePicker.Header>
-                            <DatePicker.Table>
-                                <DatePicker.TableHead>
-                                    <DatePicker.TableHeadRow>
-                                        {(instance: DatePickerTableHeadRowInstance) => {
-                                            const { datepicker } = instance;
-                                            const weekDays = datepicker?.weekDays as string[];
+            <Calendar value={date} dateFormat="dd/mm/yy" onValueChange={(event: CalendarValueChangeEvent) => setDate(event.value)}>
+                <Calendar.Input />
+                <Calendar.Portal>
+                    <Calendar.Container>
+                        <Calendar.Calendar>
+                            <Calendar.Header>
+                                <Calendar.Prev />
+                                <Calendar.Title>
+                                    <Calendar.SelectMonth />
+                                    <Calendar.SelectYear />
+                                    <Calendar.Decade />
+                                </Calendar.Title>
+                                <Calendar.Next />
+                            </Calendar.Header>
+                            <Calendar.Table>
+                                <Calendar.TableHead>
+                                    <Calendar.TableHeadRow>
+                                        {(instance: CalendarTableHeadRowInstance) => {
+                                            const { Calendar } = instance;
+                                            const weekDays = Calendar?.weekDays as string[];
 
                                             return (
                                                 <>
                                                     {weekDays.map((day, index) => (
-                                                        <DatePicker.TableHeadCell key={index} abbr={day}>
+                                                        <Calendar.TableHeadCell key={index} abbr={day}>
                                                             {day}
-                                                        </DatePicker.TableHeadCell>
+                                                        </Calendar.TableHeadCell>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableHeadRow>
-                                </DatePicker.TableHead>
-                                <DatePicker.TableBody>
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const month = datepicker?.getIndexedMonth?.() as useDatePickerMonthData;
+                                    </Calendar.TableHeadRow>
+                                </Calendar.TableHead>
+                                <Calendar.TableBody>
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const month = Calendar?.getIndexedMonth?.() as useCalendarMonthData;
 
                                         return (
                                             <>
                                                 {month.dates?.map((week) => (
-                                                    <DatePicker.TableBodyRow key={week[0].day + '' + week[0].month}>
+                                                    <Calendar.TableBodyRow key={week[0].day + '' + week[0].month}>
                                                         <>
                                                             {week.map((date) => (
-                                                                <DatePicker.TableBodyCell key={date.day + '' + date.month} date={date}>
+                                                                <Calendar.TableBodyCell key={date.day + '' + date.month} date={date}>
                                                                     {date.day}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             ))}
                                                         </>
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="month">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const months = datepicker?.monthPickerValues as useDatePickerMonthOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="month">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const months = Calendar?.monthPickerValues as useCalendarMonthOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 4 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`month-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`month-row-${rowIndex}`}>
                                                         {months.slice(rowIndex * 3, (rowIndex + 1) * 3).map((month, colIndex) => {
                                                             const monthIndex = rowIndex * 3 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
+                                                                <Calendar.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
                                                                     {month.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="year">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const years = datepicker?.yearPickerValues as useDatePickerYearOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="year">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const years = Calendar?.yearPickerValues as useCalendarYearOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 5 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`year-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`year-row-${rowIndex}`}>
                                                         {years.slice(rowIndex * 2, (rowIndex + 1) * 2).map((year, colIndex) => {
                                                             const yearIndex = rowIndex * 2 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={yearIndex} year={year}>
+                                                                <Calendar.TableBodyCell key={yearIndex} year={year}>
                                                                     {year.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                            </DatePicker.Table>
-                        </DatePicker.Calendar>
-                    </DatePicker.Container>
-                </DatePicker.Portal>
-            </DatePicker>
+                                </Calendar.TableBody>
+                            </Calendar.Table>
+                        </Calendar.Calendar>
+                    </Calendar.Container>
+                </Calendar.Portal>
+            </Calendar>
         </div>
     );
 }
@@ -13655,23 +13655,23 @@ An additional icon is displayed next to the input field.
 'use client';
 
 import {
-    DatePickerInputIconContainerInstance,
-    DatePickerTableBodyInstance,
-    DatePickerTableHeadRowInstance,
-    DatePickerValueChangeEvent,
-    useDatePickerMonthData,
-    useDatePickerMonthOptions,
-    useDatePickerProps,
-    useDatePickerYearOptions
-} from '@primereact/types/shared/datepicker';
-import { DatePicker } from 'primereact/datepicker';
+    CalendarInputIconContainerInstance,
+    CalendarTableBodyInstance,
+    CalendarTableHeadRowInstance,
+    CalendarValueChangeEvent,
+    useCalendarMonthData,
+    useCalendarMonthOptions,
+    useCalendarProps,
+    useCalendarYearOptions
+} from '@primereact/types/shared/Calendar';
+import { Calendar } from 'primereact/Calendar';
 import { Label } from 'primereact/label';
 import * as React from 'react';
 
 export default function IconDemo() {
-    const [date, setDate] = React.useState<useDatePickerProps['value'] | null>(null);
-    const [date2, setDate2] = React.useState<useDatePickerProps['value'] | null>(null);
-    const [date3, setDate3] = React.useState<useDatePickerProps['value'] | null>(null);
+    const [date, setDate] = React.useState<useCalendarProps['value'] | null>(null);
+    const [date2, setDate2] = React.useState<useCalendarProps['value'] | null>(null);
+    const [date3, setDate3] = React.useState<useCalendarProps['value'] | null>(null);
 
     return (
         <div className="flex flex-wrap gap-4">
@@ -13679,265 +13679,265 @@ export default function IconDemo() {
                 <Label htmlFor="buttondisplay" className="font-bold block mb-2">
                     Button
                 </Label>
-                <DatePicker value={date} fluid onValueChange={(event: DatePickerValueChangeEvent) => setDate(event.value)}>
-                    <DatePicker.Input id="buttondisplay" />
-                    <DatePicker.Dropdown>
-                        <DatePicker.DropdownIcon />
-                    </DatePicker.Dropdown>
-                    <DatePicker.Portal>
-                        <DatePicker.Container>
-                            <DatePicker.Calendar>
-                                <DatePicker.Header>
-                                    <DatePicker.Prev />
-                                    <DatePicker.Title>
-                                        <DatePicker.SelectMonth />
-                                        <DatePicker.SelectYear />
-                                        <DatePicker.Decade />
-                                    </DatePicker.Title>
-                                    <DatePicker.Next />
-                                </DatePicker.Header>
-                                <DatePicker.Table>
-                                    <DatePicker.TableHead>
-                                        <DatePicker.TableHeadRow>
-                                            {(instance: DatePickerTableHeadRowInstance) => {
-                                                const { datepicker } = instance;
-                                                const weekDays = datepicker?.weekDays as string[];
+                <Calendar value={date} fluid onValueChange={(event: CalendarValueChangeEvent) => setDate(event.value)}>
+                    <Calendar.Input id="buttondisplay" />
+                    <Calendar.Dropdown>
+                        <Calendar.DropdownIcon />
+                    </Calendar.Dropdown>
+                    <Calendar.Portal>
+                        <Calendar.Container>
+                            <Calendar.Calendar>
+                                <Calendar.Header>
+                                    <Calendar.Prev />
+                                    <Calendar.Title>
+                                        <Calendar.SelectMonth />
+                                        <Calendar.SelectYear />
+                                        <Calendar.Decade />
+                                    </Calendar.Title>
+                                    <Calendar.Next />
+                                </Calendar.Header>
+                                <Calendar.Table>
+                                    <Calendar.TableHead>
+                                        <Calendar.TableHeadRow>
+                                            {(instance: CalendarTableHeadRowInstance) => {
+                                                const { Calendar } = instance;
+                                                const weekDays = Calendar?.weekDays as string[];
 
                                                 return (
                                                     <>
                                                         {weekDays.map((day, index) => (
-                                                            <DatePicker.TableHeadCell key={index} abbr={day}>
+                                                            <Calendar.TableHeadCell key={index} abbr={day}>
                                                                 {day}
-                                                            </DatePicker.TableHeadCell>
+                                                            </Calendar.TableHeadCell>
                                                         ))}
                                                     </>
                                                 );
                                             }}
-                                        </DatePicker.TableHeadRow>
-                                    </DatePicker.TableHead>
-                                    <DatePicker.TableBody>
-                                        {(instance: DatePickerTableBodyInstance) => {
-                                            const { datepicker } = instance;
-                                            const month = datepicker?.getIndexedMonth?.() as useDatePickerMonthData;
+                                        </Calendar.TableHeadRow>
+                                    </Calendar.TableHead>
+                                    <Calendar.TableBody>
+                                        {(instance: CalendarTableBodyInstance) => {
+                                            const { Calendar } = instance;
+                                            const month = Calendar?.getIndexedMonth?.() as useCalendarMonthData;
 
                                             return (
                                                 <>
                                                     {month.dates?.map((week) => (
-                                                        <DatePicker.TableBodyRow key={week[0].day + '' + week[0].month}>
+                                                        <Calendar.TableBodyRow key={week[0].day + '' + week[0].month}>
                                                             <>
                                                                 {week.map((date) => (
-                                                                    <DatePicker.TableBodyCell key={date.day + '' + date.month} date={date}>
+                                                                    <Calendar.TableBodyCell key={date.day + '' + date.month} date={date}>
                                                                         {date.day}
-                                                                    </DatePicker.TableBodyCell>
+                                                                    </Calendar.TableBodyCell>
                                                                 ))}
                                                             </>
-                                                        </DatePicker.TableBodyRow>
+                                                        </Calendar.TableBodyRow>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableBody>
-                                    <DatePicker.TableBody view="month">
-                                        {(instance: DatePickerTableBodyInstance) => {
-                                            const { datepicker } = instance;
-                                            const months = datepicker?.monthPickerValues as useDatePickerMonthOptions[];
+                                    </Calendar.TableBody>
+                                    <Calendar.TableBody view="month">
+                                        {(instance: CalendarTableBodyInstance) => {
+                                            const { Calendar } = instance;
+                                            const months = Calendar?.monthPickerValues as useCalendarMonthOptions[];
 
                                             return (
                                                 <>
                                                     {Array.from({ length: 4 }).map((_, rowIndex) => (
-                                                        <DatePicker.TableBodyRow key={`month-row-${rowIndex}`}>
+                                                        <Calendar.TableBodyRow key={`month-row-${rowIndex}`}>
                                                             {months.slice(rowIndex * 3, (rowIndex + 1) * 3).map((month, colIndex) => {
                                                                 const monthIndex = rowIndex * 3 + colIndex;
 
                                                                 return (
-                                                                    <DatePicker.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
+                                                                    <Calendar.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
                                                                         {month.value}
-                                                                    </DatePicker.TableBodyCell>
+                                                                    </Calendar.TableBodyCell>
                                                                 );
                                                             })}
-                                                        </DatePicker.TableBodyRow>
+                                                        </Calendar.TableBodyRow>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableBody>
-                                    <DatePicker.TableBody view="year">
-                                        {(instance: DatePickerTableBodyInstance) => {
-                                            const { datepicker } = instance;
-                                            const years = datepicker?.yearPickerValues as useDatePickerYearOptions[];
+                                    </Calendar.TableBody>
+                                    <Calendar.TableBody view="year">
+                                        {(instance: CalendarTableBodyInstance) => {
+                                            const { Calendar } = instance;
+                                            const years = Calendar?.yearPickerValues as useCalendarYearOptions[];
 
                                             return (
                                                 <>
                                                     {Array.from({ length: 5 }).map((_, rowIndex) => (
-                                                        <DatePicker.TableBodyRow key={`year-row-${rowIndex}`}>
+                                                        <Calendar.TableBodyRow key={`year-row-${rowIndex}`}>
                                                             {years.slice(rowIndex * 2, (rowIndex + 1) * 2).map((year, colIndex) => {
                                                                 const yearIndex = rowIndex * 2 + colIndex;
 
                                                                 return (
-                                                                    <DatePicker.TableBodyCell key={yearIndex} year={year}>
+                                                                    <Calendar.TableBodyCell key={yearIndex} year={year}>
                                                                         {year.value}
-                                                                    </DatePicker.TableBodyCell>
+                                                                    </Calendar.TableBodyCell>
                                                                 );
                                                             })}
-                                                        </DatePicker.TableBodyRow>
+                                                        </Calendar.TableBodyRow>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableBody>
-                                </DatePicker.Table>
-                            </DatePicker.Calendar>
-                        </DatePicker.Container>
-                    </DatePicker.Portal>
-                </DatePicker>
+                                    </Calendar.TableBody>
+                                </Calendar.Table>
+                            </Calendar.Calendar>
+                        </Calendar.Container>
+                    </Calendar.Portal>
+                </Calendar>
             </div>
             <div className="flex-auto">
                 <Label htmlFor="icondisplay" className="font-bold block mb-2">
                     Default Icon
                 </Label>
-                <DatePicker value={date2} fluid onValueChange={(event: DatePickerValueChangeEvent) => setDate2(event.value)}>
-                    <DatePicker.Input id="icondisplay" />
-                    <DatePicker.InputIconContainer>
-                        <DatePicker.DropdownIcon />
-                    </DatePicker.InputIconContainer>
-                    <DatePicker.Portal>
-                        <DatePicker.Container>
-                            <DatePicker.Calendar>
-                                <DatePicker.Header>
-                                    <DatePicker.Prev />
-                                    <DatePicker.Title>
-                                        <DatePicker.SelectMonth />
-                                        <DatePicker.SelectYear />
-                                        <DatePicker.Decade />
-                                    </DatePicker.Title>
-                                    <DatePicker.Next />
-                                </DatePicker.Header>
-                                <DatePicker.Table>
-                                    <DatePicker.TableHead>
-                                        <DatePicker.TableHeadRow>
-                                            {(instance: DatePickerTableHeadRowInstance) => {
-                                                const { datepicker } = instance;
-                                                const weekDays = datepicker?.weekDays as string[];
+                <Calendar value={date2} fluid onValueChange={(event: CalendarValueChangeEvent) => setDate2(event.value)}>
+                    <Calendar.Input id="icondisplay" />
+                    <Calendar.InputIconContainer>
+                        <Calendar.DropdownIcon />
+                    </Calendar.InputIconContainer>
+                    <Calendar.Portal>
+                        <Calendar.Container>
+                            <Calendar.Calendar>
+                                <Calendar.Header>
+                                    <Calendar.Prev />
+                                    <Calendar.Title>
+                                        <Calendar.SelectMonth />
+                                        <Calendar.SelectYear />
+                                        <Calendar.Decade />
+                                    </Calendar.Title>
+                                    <Calendar.Next />
+                                </Calendar.Header>
+                                <Calendar.Table>
+                                    <Calendar.TableHead>
+                                        <Calendar.TableHeadRow>
+                                            {(instance: CalendarTableHeadRowInstance) => {
+                                                const { Calendar } = instance;
+                                                const weekDays = Calendar?.weekDays as string[];
 
                                                 return (
                                                     <>
                                                         {weekDays.map((day, index) => (
-                                                            <DatePicker.TableHeadCell key={index} abbr={day}>
+                                                            <Calendar.TableHeadCell key={index} abbr={day}>
                                                                 {day}
-                                                            </DatePicker.TableHeadCell>
+                                                            </Calendar.TableHeadCell>
                                                         ))}
                                                     </>
                                                 );
                                             }}
-                                        </DatePicker.TableHeadRow>
-                                    </DatePicker.TableHead>
-                                    <DatePicker.TableBody>
-                                        {(instance: DatePickerTableBodyInstance) => {
-                                            const { datepicker } = instance;
-                                            const month = datepicker?.getIndexedMonth?.() as useDatePickerMonthData;
+                                        </Calendar.TableHeadRow>
+                                    </Calendar.TableHead>
+                                    <Calendar.TableBody>
+                                        {(instance: CalendarTableBodyInstance) => {
+                                            const { Calendar } = instance;
+                                            const month = Calendar?.getIndexedMonth?.() as useCalendarMonthData;
 
                                             return (
                                                 <>
                                                     {month.dates?.map((week) => (
-                                                        <DatePicker.TableBodyRow key={week[0].day + '' + week[0].month}>
+                                                        <Calendar.TableBodyRow key={week[0].day + '' + week[0].month}>
                                                             <>
                                                                 {week.map((date) => (
-                                                                    <DatePicker.TableBodyCell key={date.day + '' + date.month} date={date}>
+                                                                    <Calendar.TableBodyCell key={date.day + '' + date.month} date={date}>
                                                                         {date.day}
-                                                                    </DatePicker.TableBodyCell>
+                                                                    </Calendar.TableBodyCell>
                                                                 ))}
                                                             </>
-                                                        </DatePicker.TableBodyRow>
+                                                        </Calendar.TableBodyRow>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableBody>
-                                    <DatePicker.TableBody view="month">
-                                        {(instance: DatePickerTableBodyInstance) => {
-                                            const { datepicker } = instance;
-                                            const months = datepicker?.monthPickerValues as useDatePickerMonthOptions[];
+                                    </Calendar.TableBody>
+                                    <Calendar.TableBody view="month">
+                                        {(instance: CalendarTableBodyInstance) => {
+                                            const { Calendar } = instance;
+                                            const months = Calendar?.monthPickerValues as useCalendarMonthOptions[];
 
                                             return (
                                                 <>
                                                     {Array.from({ length: 4 }).map((_, rowIndex) => (
-                                                        <DatePicker.TableBodyRow key={`month-row-${rowIndex}`}>
+                                                        <Calendar.TableBodyRow key={`month-row-${rowIndex}`}>
                                                             {months.slice(rowIndex * 3, (rowIndex + 1) * 3).map((month, colIndex) => {
                                                                 const monthIndex = rowIndex * 3 + colIndex;
 
                                                                 return (
-                                                                    <DatePicker.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
+                                                                    <Calendar.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
                                                                         {month.value}
-                                                                    </DatePicker.TableBodyCell>
+                                                                    </Calendar.TableBodyCell>
                                                                 );
                                                             })}
-                                                        </DatePicker.TableBodyRow>
+                                                        </Calendar.TableBodyRow>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableBody>
-                                    <DatePicker.TableBody view="year">
-                                        {(instance: DatePickerTableBodyInstance) => {
-                                            const { datepicker } = instance;
-                                            const years = datepicker?.yearPickerValues as useDatePickerYearOptions[];
+                                    </Calendar.TableBody>
+                                    <Calendar.TableBody view="year">
+                                        {(instance: CalendarTableBodyInstance) => {
+                                            const { Calendar } = instance;
+                                            const years = Calendar?.yearPickerValues as useCalendarYearOptions[];
 
                                             return (
                                                 <>
                                                     {Array.from({ length: 5 }).map((_, rowIndex) => (
-                                                        <DatePicker.TableBodyRow key={`year-row-${rowIndex}`}>
+                                                        <Calendar.TableBodyRow key={`year-row-${rowIndex}`}>
                                                             {years.slice(rowIndex * 2, (rowIndex + 1) * 2).map((year, colIndex) => {
                                                                 const yearIndex = rowIndex * 2 + colIndex;
 
                                                                 return (
-                                                                    <DatePicker.TableBodyCell key={yearIndex} year={year}>
+                                                                    <Calendar.TableBodyCell key={yearIndex} year={year}>
                                                                         {year.value}
-                                                                    </DatePicker.TableBodyCell>
+                                                                    </Calendar.TableBodyCell>
                                                                 );
                                                             })}
-                                                        </DatePicker.TableBodyRow>
+                                                        </Calendar.TableBodyRow>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableBody>
-                                </DatePicker.Table>
-                            </DatePicker.Calendar>
-                        </DatePicker.Container>
-                    </DatePicker.Portal>
-                </DatePicker>
+                                    </Calendar.TableBody>
+                                </Calendar.Table>
+                            </Calendar.Calendar>
+                        </Calendar.Container>
+                    </Calendar.Portal>
+                </Calendar>
             </div>
             <div className="flex-auto">
                 <Label htmlFor="templatedisplay" className="font-bold block mb-2">
                     Custom Icon
                 </Label>
-                <DatePicker value={date3} fluid timeOnly onValueChange={(event: DatePickerValueChangeEvent) => setDate3(event.value)}>
-                    <DatePicker.Input id="templatedisplay" />
-                    <DatePicker.InputIconContainer>
-                        {(instance: DatePickerInputIconContainerInstance) => {
-                            const { datepicker } = instance;
+                <Calendar value={date3} fluid timeOnly onValueChange={(event: CalendarValueChangeEvent) => setDate3(event.value)}>
+                    <Calendar.Input id="templatedisplay" />
+                    <Calendar.InputIconContainer>
+                        {(instance: CalendarInputIconContainerInstance) => {
+                            const { Calendar } = instance;
 
-                            return <i className="pi pi-clock" onClick={datepicker?.onButtonClick}></i>;
+                            return <i className="pi pi-clock" onClick={Calendar?.onButtonClick}></i>;
                         }}
-                    </DatePicker.InputIconContainer>
-                    <DatePicker.Portal>
-                        <DatePicker.Time>
-                            <DatePicker.Picker type="hour">
-                                <DatePicker.Increment />
-                                <DatePicker.Hour />
-                                <DatePicker.Decrement />
-                            </DatePicker.Picker>
-                            <DatePicker.SeparatorContainer>
-                                <DatePicker.Separator />
-                            </DatePicker.SeparatorContainer>
-                            <DatePicker.Picker type="minute">
-                                <DatePicker.Increment />
-                                <DatePicker.Minute />
-                                <DatePicker.Decrement />
-                            </DatePicker.Picker>
-                        </DatePicker.Time>
-                    </DatePicker.Portal>
-                </DatePicker>
+                    </Calendar.InputIconContainer>
+                    <Calendar.Portal>
+                        <Calendar.Time>
+                            <Calendar.Picker type="hour">
+                                <Calendar.Increment />
+                                <Calendar.Hour />
+                                <Calendar.Decrement />
+                            </Calendar.Picker>
+                            <Calendar.SeparatorContainer>
+                                <Calendar.Separator />
+                            </Calendar.SeparatorContainer>
+                            <Calendar.Picker type="minute">
+                                <Calendar.Increment />
+                                <Calendar.Minute />
+                                <Calendar.Decrement />
+                            </Calendar.Picker>
+                        </Calendar.Time>
+                    </Calendar.Portal>
+                </Calendar>
             </div>
         </div>
     );
@@ -13953,19 +13953,19 @@ Boundaries for the permitted dates that can be entered are defined with `minDate
 'use client';
 
 import {
-    DatePickerTableBodyInstance,
-    DatePickerTableHeadRowInstance,
-    DatePickerValueChangeEvent,
-    useDatePickerMonthData,
-    useDatePickerMonthOptions,
-    useDatePickerProps,
-    useDatePickerYearOptions
-} from '@primereact/types/shared/datepicker';
-import { DatePicker } from 'primereact/datepicker';
+    CalendarTableBodyInstance,
+    CalendarTableHeadRowInstance,
+    CalendarValueChangeEvent,
+    useCalendarMonthData,
+    useCalendarMonthOptions,
+    useCalendarProps,
+    useCalendarYearOptions
+} from '@primereact/types/shared/Calendar';
+import { Calendar } from 'primereact/Calendar';
 import * as React from 'react';
 
 export default function MinMaxDemo() {
-    const [date, setDate] = React.useState<useDatePickerProps['value'] | null>(null);
+    const [date, setDate] = React.useState<useCalendarProps['value'] | null>(null);
     const today = new Date();
     const month = today.getMonth();
     const year = today.getFullYear();
@@ -13984,120 +13984,120 @@ export default function MinMaxDemo() {
 
     return (
         <div className="flex justify-center">
-            <DatePicker
+            <Calendar
                 value={date}
                 minDate={minDate}
                 maxDate={maxDate}
                 manualInput={false}
-                onValueChange={(event: DatePickerValueChangeEvent) => setDate(event.value)}
+                onValueChange={(event: CalendarValueChangeEvent) => setDate(event.value)}
             >
-                <DatePicker.Input />
-                <DatePicker.Portal>
-                    <DatePicker.Container>
-                        <DatePicker.Calendar>
-                            <DatePicker.Header>
-                                <DatePicker.Prev />
-                                <DatePicker.Title>
-                                    <DatePicker.SelectMonth />
-                                    <DatePicker.SelectYear />
-                                    <DatePicker.Decade />
-                                </DatePicker.Title>
-                                <DatePicker.Next />
-                            </DatePicker.Header>
-                            <DatePicker.Table>
-                                <DatePicker.TableHead>
-                                    <DatePicker.TableHeadRow>
-                                        {(instance: DatePickerTableHeadRowInstance) => {
-                                            const { datepicker } = instance;
-                                            const weekDays = datepicker?.weekDays as string[];
+                <Calendar.Input />
+                <Calendar.Portal>
+                    <Calendar.Container>
+                        <Calendar.Calendar>
+                            <Calendar.Header>
+                                <Calendar.Prev />
+                                <Calendar.Title>
+                                    <Calendar.SelectMonth />
+                                    <Calendar.SelectYear />
+                                    <Calendar.Decade />
+                                </Calendar.Title>
+                                <Calendar.Next />
+                            </Calendar.Header>
+                            <Calendar.Table>
+                                <Calendar.TableHead>
+                                    <Calendar.TableHeadRow>
+                                        {(instance: CalendarTableHeadRowInstance) => {
+                                            const { Calendar } = instance;
+                                            const weekDays = Calendar?.weekDays as string[];
 
                                             return (
                                                 <>
                                                     {weekDays.map((day, index) => (
-                                                        <DatePicker.TableHeadCell key={index} abbr={day}>
+                                                        <Calendar.TableHeadCell key={index} abbr={day}>
                                                             {day}
-                                                        </DatePicker.TableHeadCell>
+                                                        </Calendar.TableHeadCell>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableHeadRow>
-                                </DatePicker.TableHead>
-                                <DatePicker.TableBody>
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const month = datepicker?.getIndexedMonth?.() as useDatePickerMonthData;
+                                    </Calendar.TableHeadRow>
+                                </Calendar.TableHead>
+                                <Calendar.TableBody>
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const month = Calendar?.getIndexedMonth?.() as useCalendarMonthData;
 
                                         return (
                                             <>
                                                 {month.dates?.map((week) => (
-                                                    <DatePicker.TableBodyRow key={week[0].day + '' + week[0].month}>
+                                                    <Calendar.TableBodyRow key={week[0].day + '' + week[0].month}>
                                                         <>
                                                             {week.map((date) => (
-                                                                <DatePicker.TableBodyCell key={date.day + '' + date.month} date={date}>
+                                                                <Calendar.TableBodyCell key={date.day + '' + date.month} date={date}>
                                                                     {date.day}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             ))}
                                                         </>
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="month">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const months = datepicker?.monthPickerValues as useDatePickerMonthOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="month">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const months = Calendar?.monthPickerValues as useCalendarMonthOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 4 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`month-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`month-row-${rowIndex}`}>
                                                         {months.slice(rowIndex * 3, (rowIndex + 1) * 3).map((month, colIndex) => {
                                                             const monthIndex = rowIndex * 3 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
+                                                                <Calendar.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
                                                                     {month.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="year">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const years = datepicker?.yearPickerValues as useDatePickerYearOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="year">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const years = Calendar?.yearPickerValues as useCalendarYearOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 5 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`year-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`year-row-${rowIndex}`}>
                                                         {years.slice(rowIndex * 2, (rowIndex + 1) * 2).map((year, colIndex) => {
                                                             const yearIndex = rowIndex * 2 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={yearIndex} year={year}>
+                                                                <Calendar.TableBodyCell key={yearIndex} year={year}>
                                                                     {year.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                            </DatePicker.Table>
-                        </DatePicker.Calendar>
-                    </DatePicker.Container>
-                </DatePicker.Portal>
-            </DatePicker>
+                                </Calendar.TableBody>
+                            </Calendar.Table>
+                        </Calendar.Calendar>
+                    </Calendar.Container>
+                </Calendar.Portal>
+            </Calendar>
         </div>
     );
 }
@@ -14112,136 +14112,136 @@ In order to choose multiple dates, set `selectionMode` as `multiple`. In this mo
 'use client';
 
 import {
-    DatePickerTableBodyInstance,
-    DatePickerTableHeadRowInstance,
-    DatePickerValueChangeEvent,
-    useDatePickerMonthData,
-    useDatePickerMonthOptions,
-    useDatePickerProps,
-    useDatePickerYearOptions
-} from '@primereact/types/shared/datepicker';
-import { DatePicker } from 'primereact/datepicker';
+    CalendarTableBodyInstance,
+    CalendarTableHeadRowInstance,
+    CalendarValueChangeEvent,
+    useCalendarMonthData,
+    useCalendarMonthOptions,
+    useCalendarProps,
+    useCalendarYearOptions
+} from '@primereact/types/shared/Calendar';
+import { Calendar } from 'primereact/Calendar';
 
 import * as React from 'react';
 
 export default function MultipleDemo() {
-    const [date, setDate] = React.useState<useDatePickerProps['value'] | null>(null);
+    const [date, setDate] = React.useState<useCalendarProps['value'] | null>(null);
 
     return (
         <div className="flex justify-center">
-            <DatePicker
+            <Calendar
                 value={date}
                 selectionMode="multiple"
                 manualInput={false}
-                onValueChange={(event: DatePickerValueChangeEvent) => setDate(event.value)}
+                onValueChange={(event: CalendarValueChangeEvent) => setDate(event.value)}
             >
-                <DatePicker.Input />
-                <DatePicker.Portal>
-                    <DatePicker.Container>
-                        <DatePicker.Calendar>
-                            <DatePicker.Header>
-                                <DatePicker.Prev />
-                                <DatePicker.Title>
-                                    <DatePicker.SelectMonth />
-                                    <DatePicker.SelectYear />
-                                    <DatePicker.Decade />
-                                </DatePicker.Title>
-                                <DatePicker.Next />
-                            </DatePicker.Header>
-                            <DatePicker.Table>
-                                <DatePicker.TableHead>
-                                    <DatePicker.TableHeadRow>
-                                        {(instance: DatePickerTableHeadRowInstance) => {
-                                            const { datepicker } = instance;
-                                            const weekDays = datepicker?.weekDays as string[];
+                <Calendar.Input />
+                <Calendar.Portal>
+                    <Calendar.Container>
+                        <Calendar.Calendar>
+                            <Calendar.Header>
+                                <Calendar.Prev />
+                                <Calendar.Title>
+                                    <Calendar.SelectMonth />
+                                    <Calendar.SelectYear />
+                                    <Calendar.Decade />
+                                </Calendar.Title>
+                                <Calendar.Next />
+                            </Calendar.Header>
+                            <Calendar.Table>
+                                <Calendar.TableHead>
+                                    <Calendar.TableHeadRow>
+                                        {(instance: CalendarTableHeadRowInstance) => {
+                                            const { Calendar } = instance;
+                                            const weekDays = Calendar?.weekDays as string[];
 
                                             return (
                                                 <>
                                                     {weekDays.map((day, index) => (
-                                                        <DatePicker.TableHeadCell key={index} abbr={day}>
+                                                        <Calendar.TableHeadCell key={index} abbr={day}>
                                                             {day}
-                                                        </DatePicker.TableHeadCell>
+                                                        </Calendar.TableHeadCell>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableHeadRow>
-                                </DatePicker.TableHead>
-                                <DatePicker.TableBody>
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const month = datepicker?.getIndexedMonth?.() as useDatePickerMonthData;
+                                    </Calendar.TableHeadRow>
+                                </Calendar.TableHead>
+                                <Calendar.TableBody>
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const month = Calendar?.getIndexedMonth?.() as useCalendarMonthData;
 
                                         return (
                                             <>
                                                 {month.dates?.map((week) => (
-                                                    <DatePicker.TableBodyRow key={week[0].day + '' + week[0].month}>
+                                                    <Calendar.TableBodyRow key={week[0].day + '' + week[0].month}>
                                                         <>
                                                             {week.map((date) => (
-                                                                <DatePicker.TableBodyCell key={date.day + '' + date.month} date={date}>
+                                                                <Calendar.TableBodyCell key={date.day + '' + date.month} date={date}>
                                                                     {date.day}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             ))}
                                                         </>
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="month">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const months = datepicker?.monthPickerValues as useDatePickerMonthOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="month">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const months = Calendar?.monthPickerValues as useCalendarMonthOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 4 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`month-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`month-row-${rowIndex}`}>
                                                         {months.slice(rowIndex * 3, (rowIndex + 1) * 3).map((month, colIndex) => {
                                                             const monthIndex = rowIndex * 3 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
+                                                                <Calendar.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
                                                                     {month.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="year">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const years = datepicker?.yearPickerValues as useDatePickerYearOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="year">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const years = Calendar?.yearPickerValues as useCalendarYearOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 5 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`year-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`year-row-${rowIndex}`}>
                                                         {years.slice(rowIndex * 2, (rowIndex + 1) * 2).map((year, colIndex) => {
                                                             const yearIndex = rowIndex * 2 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={yearIndex} year={year}>
+                                                                <Calendar.TableBodyCell key={yearIndex} year={year}>
                                                                     {year.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                            </DatePicker.Table>
-                        </DatePicker.Calendar>
-                    </DatePicker.Container>
-                </DatePicker.Portal>
-            </DatePicker>
+                                </Calendar.TableBody>
+                            </Calendar.Table>
+                        </Calendar.Calendar>
+                    </Calendar.Container>
+                </Calendar.Portal>
+            </Calendar>
         </div>
     );
 }
@@ -14256,136 +14256,136 @@ A range of dates can be selected by defining `selectionMode` as `range`, in this
 'use client';
 
 import {
-    DatePickerTableBodyInstance,
-    DatePickerTableHeadRowInstance,
-    DatePickerValueChangeEvent,
-    useDatePickerMonthData,
-    useDatePickerMonthOptions,
-    useDatePickerProps,
-    useDatePickerYearOptions
-} from '@primereact/types/shared/datepicker';
-import { DatePicker } from 'primereact/datepicker';
+    CalendarTableBodyInstance,
+    CalendarTableHeadRowInstance,
+    CalendarValueChangeEvent,
+    useCalendarMonthData,
+    useCalendarMonthOptions,
+    useCalendarProps,
+    useCalendarYearOptions
+} from '@primereact/types/shared/Calendar';
+import { Calendar } from 'primereact/Calendar';
 
 import * as React from 'react';
 
 export default function RangeDemo() {
-    const [date, setDate] = React.useState<useDatePickerProps['value'] | null>(null);
+    const [date, setDate] = React.useState<useCalendarProps['value'] | null>(null);
 
     return (
         <div className="flex justify-center">
-            <DatePicker
+            <Calendar
                 value={date}
                 selectionMode="range"
                 manualInput={false}
-                onValueChange={(event: DatePickerValueChangeEvent) => setDate(event.value)}
+                onValueChange={(event: CalendarValueChangeEvent) => setDate(event.value)}
             >
-                <DatePicker.Input />
-                <DatePicker.Portal>
-                    <DatePicker.Container>
-                        <DatePicker.Calendar>
-                            <DatePicker.Header>
-                                <DatePicker.Prev />
-                                <DatePicker.Title>
-                                    <DatePicker.SelectMonth />
-                                    <DatePicker.SelectYear />
-                                    <DatePicker.Decade />
-                                </DatePicker.Title>
-                                <DatePicker.Next />
-                            </DatePicker.Header>
-                            <DatePicker.Table>
-                                <DatePicker.TableHead>
-                                    <DatePicker.TableHeadRow>
-                                        {(instance: DatePickerTableHeadRowInstance) => {
-                                            const { datepicker } = instance;
-                                            const weekDays = datepicker?.weekDays as string[];
+                <Calendar.Input />
+                <Calendar.Portal>
+                    <Calendar.Container>
+                        <Calendar.Calendar>
+                            <Calendar.Header>
+                                <Calendar.Prev />
+                                <Calendar.Title>
+                                    <Calendar.SelectMonth />
+                                    <Calendar.SelectYear />
+                                    <Calendar.Decade />
+                                </Calendar.Title>
+                                <Calendar.Next />
+                            </Calendar.Header>
+                            <Calendar.Table>
+                                <Calendar.TableHead>
+                                    <Calendar.TableHeadRow>
+                                        {(instance: CalendarTableHeadRowInstance) => {
+                                            const { Calendar } = instance;
+                                            const weekDays = Calendar?.weekDays as string[];
 
                                             return (
                                                 <>
                                                     {weekDays.map((day, index) => (
-                                                        <DatePicker.TableHeadCell key={index} abbr={day}>
+                                                        <Calendar.TableHeadCell key={index} abbr={day}>
                                                             {day}
-                                                        </DatePicker.TableHeadCell>
+                                                        </Calendar.TableHeadCell>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableHeadRow>
-                                </DatePicker.TableHead>
-                                <DatePicker.TableBody>
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const month = datepicker?.getIndexedMonth?.() as useDatePickerMonthData;
+                                    </Calendar.TableHeadRow>
+                                </Calendar.TableHead>
+                                <Calendar.TableBody>
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const month = Calendar?.getIndexedMonth?.() as useCalendarMonthData;
 
                                         return (
                                             <>
                                                 {month.dates?.map((week) => (
-                                                    <DatePicker.TableBodyRow key={week[0].day + '' + week[0].month}>
+                                                    <Calendar.TableBodyRow key={week[0].day + '' + week[0].month}>
                                                         <>
                                                             {week.map((date) => (
-                                                                <DatePicker.TableBodyCell key={date.day + '' + date.month} date={date}>
+                                                                <Calendar.TableBodyCell key={date.day + '' + date.month} date={date}>
                                                                     {date.day}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             ))}
                                                         </>
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="month">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const months = datepicker?.monthPickerValues as useDatePickerMonthOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="month">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const months = Calendar?.monthPickerValues as useCalendarMonthOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 4 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`month-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`month-row-${rowIndex}`}>
                                                         {months.slice(rowIndex * 3, (rowIndex + 1) * 3).map((month, colIndex) => {
                                                             const monthIndex = rowIndex * 3 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
+                                                                <Calendar.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
                                                                     {month.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="year">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const years = datepicker?.yearPickerValues as useDatePickerYearOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="year">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const years = Calendar?.yearPickerValues as useCalendarYearOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 5 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`year-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`year-row-${rowIndex}`}>
                                                         {years.slice(rowIndex * 2, (rowIndex + 1) * 2).map((year, colIndex) => {
                                                             const yearIndex = rowIndex * 2 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={yearIndex} year={year}>
+                                                                <Calendar.TableBodyCell key={yearIndex} year={year}>
                                                                     {year.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                            </DatePicker.Table>
-                        </DatePicker.Calendar>
-                    </DatePicker.Container>
-                </DatePicker.Portal>
-            </DatePicker>
+                                </Calendar.TableBody>
+                            </Calendar.Table>
+                        </Calendar.Calendar>
+                    </Calendar.Container>
+                </Calendar.Portal>
+            </Calendar>
         </div>
     );
 }
@@ -14400,252 +14400,252 @@ When `Buttonbar` component is used, today and clear buttons are displayed at the
 'use client';
 
 import {
-    DatePickerButtonbarInstance,
-    DatePickerTableBodyInstance,
-    DatePickerTableHeadRowInstance,
-    DatePickerValueChangeEvent,
-    useDatePickerMonthData,
-    useDatePickerMonthOptions,
-    useDatePickerProps,
-    useDatePickerYearOptions
-} from '@primereact/types/shared/datepicker';
+    CalendarButtonbarInstance,
+    CalendarTableBodyInstance,
+    CalendarTableHeadRowInstance,
+    CalendarValueChangeEvent,
+    useCalendarMonthData,
+    useCalendarMonthOptions,
+    useCalendarProps,
+    useCalendarYearOptions
+} from '@primereact/types/shared/Calendar';
 import { Button } from 'primereact/button';
-import { DatePicker } from 'primereact/datepicker';
+import { Calendar } from 'primereact/Calendar';
 import * as React from 'react';
 
 export default function ButtonbarDemo() {
-    const [date, setDate] = React.useState<useDatePickerProps['value'] | null>(null);
-    const [date2, setDate2] = React.useState<useDatePickerProps['value'] | null>(null);
+    const [date, setDate] = React.useState<useCalendarProps['value'] | null>(null);
+    const [date2, setDate2] = React.useState<useCalendarProps['value'] | null>(null);
 
     return (
         <div className="flex justify-center gap-4 flex-wrap">
-            <DatePicker value={date} placeholder="Basic" onValueChange={(event: DatePickerValueChangeEvent) => setDate(event.value)}>
-                <DatePicker.Input />
-                <DatePicker.Portal>
-                    <DatePicker.Container>
-                        <DatePicker.Calendar>
-                            <DatePicker.Header>
-                                <DatePicker.Prev />
-                                <DatePicker.Title>
-                                    <DatePicker.SelectMonth />
-                                    <DatePicker.SelectYear />
-                                    <DatePicker.Decade />
-                                </DatePicker.Title>
-                                <DatePicker.Next />
-                            </DatePicker.Header>
-                            <DatePicker.Table>
-                                <DatePicker.TableHead>
-                                    <DatePicker.TableHeadRow>
-                                        {(instance: DatePickerTableHeadRowInstance) => {
-                                            const { datepicker } = instance;
-                                            const weekDays = datepicker?.weekDays as string[];
+            <Calendar value={date} placeholder="Basic" onValueChange={(event: CalendarValueChangeEvent) => setDate(event.value)}>
+                <Calendar.Input />
+                <Calendar.Portal>
+                    <Calendar.Container>
+                        <Calendar.Calendar>
+                            <Calendar.Header>
+                                <Calendar.Prev />
+                                <Calendar.Title>
+                                    <Calendar.SelectMonth />
+                                    <Calendar.SelectYear />
+                                    <Calendar.Decade />
+                                </Calendar.Title>
+                                <Calendar.Next />
+                            </Calendar.Header>
+                            <Calendar.Table>
+                                <Calendar.TableHead>
+                                    <Calendar.TableHeadRow>
+                                        {(instance: CalendarTableHeadRowInstance) => {
+                                            const { Calendar } = instance;
+                                            const weekDays = Calendar?.weekDays as string[];
 
                                             return (
                                                 <>
                                                     {weekDays.map((day, index) => (
-                                                        <DatePicker.TableHeadCell key={index} abbr={day}>
+                                                        <Calendar.TableHeadCell key={index} abbr={day}>
                                                             {day}
-                                                        </DatePicker.TableHeadCell>
+                                                        </Calendar.TableHeadCell>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableHeadRow>
-                                </DatePicker.TableHead>
-                                <DatePicker.TableBody>
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const month = datepicker?.getIndexedMonth?.() as useDatePickerMonthData;
+                                    </Calendar.TableHeadRow>
+                                </Calendar.TableHead>
+                                <Calendar.TableBody>
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const month = Calendar?.getIndexedMonth?.() as useCalendarMonthData;
 
                                         return (
                                             <>
                                                 {month.dates?.map((week) => (
-                                                    <DatePicker.TableBodyRow key={week[0].day + '' + week[0].month}>
+                                                    <Calendar.TableBodyRow key={week[0].day + '' + week[0].month}>
                                                         <>
                                                             {week.map((date) => (
-                                                                <DatePicker.TableBodyCell key={date.day + '' + date.month} date={date}>
+                                                                <Calendar.TableBodyCell key={date.day + '' + date.month} date={date}>
                                                                     {date.day}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             ))}
                                                         </>
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="month">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const months = datepicker?.monthPickerValues as useDatePickerMonthOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="month">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const months = Calendar?.monthPickerValues as useCalendarMonthOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 4 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`month-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`month-row-${rowIndex}`}>
                                                         {months.slice(rowIndex * 3, (rowIndex + 1) * 3).map((month, colIndex) => {
                                                             const monthIndex = rowIndex * 3 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
+                                                                <Calendar.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
                                                                     {month.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="year">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const years = datepicker?.yearPickerValues as useDatePickerYearOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="year">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const years = Calendar?.yearPickerValues as useCalendarYearOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 5 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`year-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`year-row-${rowIndex}`}>
                                                         {years.slice(rowIndex * 2, (rowIndex + 1) * 2).map((year, colIndex) => {
                                                             const yearIndex = rowIndex * 2 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={yearIndex} year={year}>
+                                                                <Calendar.TableBodyCell key={yearIndex} year={year}>
                                                                     {year.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                            </DatePicker.Table>
-                        </DatePicker.Calendar>
-                    </DatePicker.Container>
-                    <DatePicker.Buttonbar>
-                        <DatePicker.Today />
-                        <DatePicker.Clear />
-                    </DatePicker.Buttonbar>
-                </DatePicker.Portal>
-            </DatePicker>
-            <DatePicker
+                                </Calendar.TableBody>
+                            </Calendar.Table>
+                        </Calendar.Calendar>
+                    </Calendar.Container>
+                    <Calendar.Buttonbar>
+                        <Calendar.Today />
+                        <Calendar.Clear />
+                    </Calendar.Buttonbar>
+                </Calendar.Portal>
+            </Calendar>
+            <Calendar
                 value={date2}
                 placeholder="Customized"
                 selectionMode="range"
                 manualInput={false}
-                onValueChange={(event: DatePickerValueChangeEvent) => setDate2(event.value)}
+                onValueChange={(event: CalendarValueChangeEvent) => setDate2(event.value)}
             >
-                <DatePicker.Input />
-                <DatePicker.Portal>
-                    <DatePicker.Container>
-                        <DatePicker.Calendar>
-                            <DatePicker.Header>
-                                <DatePicker.Prev />
-                                <DatePicker.Title>
-                                    <DatePicker.SelectMonth />
-                                    <DatePicker.SelectYear />
-                                    <DatePicker.Decade />
-                                </DatePicker.Title>
-                                <DatePicker.Next />
-                            </DatePicker.Header>
-                            <DatePicker.Table>
-                                <DatePicker.TableHead>
-                                    <DatePicker.TableHeadRow>
-                                        {(instance: DatePickerTableHeadRowInstance) => {
-                                            const { datepicker } = instance;
-                                            const weekDays = datepicker?.weekDays as string[];
+                <Calendar.Input />
+                <Calendar.Portal>
+                    <Calendar.Container>
+                        <Calendar.Calendar>
+                            <Calendar.Header>
+                                <Calendar.Prev />
+                                <Calendar.Title>
+                                    <Calendar.SelectMonth />
+                                    <Calendar.SelectYear />
+                                    <Calendar.Decade />
+                                </Calendar.Title>
+                                <Calendar.Next />
+                            </Calendar.Header>
+                            <Calendar.Table>
+                                <Calendar.TableHead>
+                                    <Calendar.TableHeadRow>
+                                        {(instance: CalendarTableHeadRowInstance) => {
+                                            const { Calendar } = instance;
+                                            const weekDays = Calendar?.weekDays as string[];
 
                                             return (
                                                 <>
                                                     {weekDays.map((day, index) => (
-                                                        <DatePicker.TableHeadCell key={index} abbr={day}>
+                                                        <Calendar.TableHeadCell key={index} abbr={day}>
                                                             {day}
-                                                        </DatePicker.TableHeadCell>
+                                                        </Calendar.TableHeadCell>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableHeadRow>
-                                </DatePicker.TableHead>
-                                <DatePicker.TableBody>
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const month = datepicker?.getIndexedMonth?.() as useDatePickerMonthData;
+                                    </Calendar.TableHeadRow>
+                                </Calendar.TableHead>
+                                <Calendar.TableBody>
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const month = Calendar?.getIndexedMonth?.() as useCalendarMonthData;
 
                                         return (
                                             <>
                                                 {month.dates?.map((week) => (
-                                                    <DatePicker.TableBodyRow key={week[0].day + '' + week[0].month}>
+                                                    <Calendar.TableBodyRow key={week[0].day + '' + week[0].month}>
                                                         <>
                                                             {week.map((date) => (
-                                                                <DatePicker.TableBodyCell key={date.day + '' + date.month} date={date}>
+                                                                <Calendar.TableBodyCell key={date.day + '' + date.month} date={date}>
                                                                     {date.day}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             ))}
                                                         </>
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="month">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const months = datepicker?.monthPickerValues as useDatePickerMonthOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="month">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const months = Calendar?.monthPickerValues as useCalendarMonthOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 4 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`month-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`month-row-${rowIndex}`}>
                                                         {months.slice(rowIndex * 3, (rowIndex + 1) * 3).map((month, colIndex) => {
                                                             const monthIndex = rowIndex * 3 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
+                                                                <Calendar.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
                                                                     {month.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="year">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const years = datepicker?.yearPickerValues as useDatePickerYearOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="year">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const years = Calendar?.yearPickerValues as useCalendarYearOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 5 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`year-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`year-row-${rowIndex}`}>
                                                         {years.slice(rowIndex * 2, (rowIndex + 1) * 2).map((year, colIndex) => {
                                                             const yearIndex = rowIndex * 2 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={yearIndex} year={year}>
+                                                                <Calendar.TableBodyCell key={yearIndex} year={year}>
                                                                     {year.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                            </DatePicker.Table>
-                        </DatePicker.Calendar>
-                    </DatePicker.Container>
-                    <DatePicker.Buttonbar>
-                        {(instance: DatePickerButtonbarInstance) => {
-                            const { datepicker } = instance;
+                                </Calendar.TableBody>
+                            </Calendar.Table>
+                        </Calendar.Calendar>
+                    </Calendar.Container>
+                    <Calendar.Buttonbar>
+                        {(instance: CalendarButtonbarInstance) => {
+                            const { Calendar } = instance;
 
                             return (
                                 <div className="flex justify-between w-full">
@@ -14658,19 +14658,19 @@ export default function ButtonbarDemo() {
                                         </Button>
                                     </div>
                                     <div className="flex gap-2">
-                                        <Button size="small" label="Today" onClick={datepicker?.onTodayButtonClick} variant="outlined">
+                                        <Button size="small" label="Today" onClick={Calendar?.onTodayButtonClick} variant="outlined">
                                             Today
                                         </Button>
-                                        <Button size="small" severity="danger" variant="outlined" onClick={datepicker?.onClearButtonClick}>
+                                        <Button size="small" severity="danger" variant="outlined" onClick={Calendar?.onClearButtonClick}>
                                             <i className="pi pi-times" />
                                         </Button>
                                     </div>
                                 </div>
                             );
                         }}
-                    </DatePicker.Buttonbar>
-                </DatePicker.Portal>
-            </DatePicker>
+                    </Calendar.Buttonbar>
+                </Calendar.Portal>
+            </Calendar>
         </div>
     );
 }
@@ -14679,332 +14679,332 @@ export default function ButtonbarDemo() {
 
 ### Time
 
-A time picker is displayed when `DatePicker.Time` component is used where 12/24 hour format is configured with `hourFormat` property. In case, only time needs to be selected, add `timeOnly` to hide the date section.
+A time picker is displayed when `Calendar.Time` component is used where 12/24 hour format is configured with `hourFormat` property. In case, only time needs to be selected, add `timeOnly` to hide the date section.
 
 ```tsx
 'use client';
 
 import {
-    DatePickerTableBodyInstance,
-    DatePickerTableHeadRowInstance,
-    DatePickerValueChangeEvent,
-    useDatePickerMonthData,
-    useDatePickerMonthOptions,
-    useDatePickerProps,
-    useDatePickerYearOptions
-} from '@primereact/types/shared/datepicker';
-import { DatePicker } from 'primereact/datepicker';
+    CalendarTableBodyInstance,
+    CalendarTableHeadRowInstance,
+    CalendarValueChangeEvent,
+    useCalendarMonthData,
+    useCalendarMonthOptions,
+    useCalendarProps,
+    useCalendarYearOptions
+} from '@primereact/types/shared/Calendar';
+import { Calendar } from 'primereact/Calendar';
 import { Label } from 'primereact/label';
 import * as React from 'react';
 
 export default function TimeDemo() {
-    const [date1, setDate1] = React.useState<useDatePickerProps['value'] | null>(null);
-    const [date2, setDate2] = React.useState<useDatePickerProps['value'] | null>(null);
-    const [date3, setDate3] = React.useState<useDatePickerProps['value'] | null>(null);
+    const [date1, setDate1] = React.useState<useCalendarProps['value'] | null>(null);
+    const [date2, setDate2] = React.useState<useCalendarProps['value'] | null>(null);
+    const [date3, setDate3] = React.useState<useCalendarProps['value'] | null>(null);
 
     return (
         <>
             <div className="flex flex-wrap gap-4">
                 <div className="flex-auto">
-                    <Label htmlFor="datepicker-12h" className="font-bold block mb-2">
+                    <Label htmlFor="Calendar-12h" className="font-bold block mb-2">
                         12h Format
                     </Label>
-                    <DatePicker
+                    <Calendar
                         value={date1}
                         showTime
                         hourFormat="12"
                         fluid
-                        onValueChange={(event: DatePickerValueChangeEvent) => setDate1(event.value)}
+                        onValueChange={(event: CalendarValueChangeEvent) => setDate1(event.value)}
                     >
-                        <DatePicker.Input id="datepicker-12h" />
-                        <DatePicker.Portal>
-                            <DatePicker.Container>
-                                <DatePicker.Calendar>
-                                    <DatePicker.Header>
-                                        <DatePicker.Prev />
-                                        <DatePicker.Title>
-                                            <DatePicker.SelectMonth />
-                                            <DatePicker.SelectYear />
-                                            <DatePicker.Decade />
-                                        </DatePicker.Title>
-                                        <DatePicker.Next />
-                                    </DatePicker.Header>
-                                    <DatePicker.Table>
-                                        <DatePicker.TableHead>
-                                            <DatePicker.TableHeadRow>
-                                                {(instance: DatePickerTableHeadRowInstance) => {
-                                                    const { datepicker } = instance;
-                                                    const weekDays = datepicker?.weekDays as string[];
+                        <Calendar.Input id="Calendar-12h" />
+                        <Calendar.Portal>
+                            <Calendar.Container>
+                                <Calendar.Calendar>
+                                    <Calendar.Header>
+                                        <Calendar.Prev />
+                                        <Calendar.Title>
+                                            <Calendar.SelectMonth />
+                                            <Calendar.SelectYear />
+                                            <Calendar.Decade />
+                                        </Calendar.Title>
+                                        <Calendar.Next />
+                                    </Calendar.Header>
+                                    <Calendar.Table>
+                                        <Calendar.TableHead>
+                                            <Calendar.TableHeadRow>
+                                                {(instance: CalendarTableHeadRowInstance) => {
+                                                    const { Calendar } = instance;
+                                                    const weekDays = Calendar?.weekDays as string[];
 
                                                     return (
                                                         <>
                                                             {weekDays.map((day, index) => (
-                                                                <DatePicker.TableHeadCell key={index} abbr={day}>
+                                                                <Calendar.TableHeadCell key={index} abbr={day}>
                                                                     {day}
-                                                                </DatePicker.TableHeadCell>
+                                                                </Calendar.TableHeadCell>
                                                             ))}
                                                         </>
                                                     );
                                                 }}
-                                            </DatePicker.TableHeadRow>
-                                        </DatePicker.TableHead>
-                                        <DatePicker.TableBody>
-                                            {(instance: DatePickerTableBodyInstance) => {
-                                                const { datepicker } = instance;
-                                                const month = datepicker?.getIndexedMonth?.() as useDatePickerMonthData;
+                                            </Calendar.TableHeadRow>
+                                        </Calendar.TableHead>
+                                        <Calendar.TableBody>
+                                            {(instance: CalendarTableBodyInstance) => {
+                                                const { Calendar } = instance;
+                                                const month = Calendar?.getIndexedMonth?.() as useCalendarMonthData;
 
                                                 return (
                                                     <>
                                                         {month.dates?.map((week) => (
-                                                            <DatePicker.TableBodyRow key={week[0].day + '' + week[0].month}>
+                                                            <Calendar.TableBodyRow key={week[0].day + '' + week[0].month}>
                                                                 <>
                                                                     {week.map((date) => (
-                                                                        <DatePicker.TableBodyCell key={date.day + '' + date.month} date={date}>
+                                                                        <Calendar.TableBodyCell key={date.day + '' + date.month} date={date}>
                                                                             {date.day}
-                                                                        </DatePicker.TableBodyCell>
+                                                                        </Calendar.TableBodyCell>
                                                                     ))}
                                                                 </>
-                                                            </DatePicker.TableBodyRow>
+                                                            </Calendar.TableBodyRow>
                                                         ))}
                                                     </>
                                                 );
                                             }}
-                                        </DatePicker.TableBody>
-                                        <DatePicker.TableBody view="month">
-                                            {(instance: DatePickerTableBodyInstance) => {
-                                                const { datepicker } = instance;
-                                                const months = datepicker?.monthPickerValues as useDatePickerMonthOptions[];
+                                        </Calendar.TableBody>
+                                        <Calendar.TableBody view="month">
+                                            {(instance: CalendarTableBodyInstance) => {
+                                                const { Calendar } = instance;
+                                                const months = Calendar?.monthPickerValues as useCalendarMonthOptions[];
 
                                                 return (
                                                     <>
                                                         {Array.from({ length: 4 }).map((_, rowIndex) => (
-                                                            <DatePicker.TableBodyRow key={`month-row-${rowIndex}`}>
+                                                            <Calendar.TableBodyRow key={`month-row-${rowIndex}`}>
                                                                 {months.slice(rowIndex * 3, (rowIndex + 1) * 3).map((month, colIndex) => {
                                                                     const monthIndex = rowIndex * 3 + colIndex;
 
                                                                     return (
-                                                                        <DatePicker.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
+                                                                        <Calendar.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
                                                                             {month.value}
-                                                                        </DatePicker.TableBodyCell>
+                                                                        </Calendar.TableBodyCell>
                                                                     );
                                                                 })}
-                                                            </DatePicker.TableBodyRow>
+                                                            </Calendar.TableBodyRow>
                                                         ))}
                                                     </>
                                                 );
                                             }}
-                                        </DatePicker.TableBody>
-                                        <DatePicker.TableBody view="year">
-                                            {(instance: DatePickerTableBodyInstance) => {
-                                                const { datepicker } = instance;
-                                                const years = datepicker?.yearPickerValues as useDatePickerYearOptions[];
+                                        </Calendar.TableBody>
+                                        <Calendar.TableBody view="year">
+                                            {(instance: CalendarTableBodyInstance) => {
+                                                const { Calendar } = instance;
+                                                const years = Calendar?.yearPickerValues as useCalendarYearOptions[];
 
                                                 return (
                                                     <>
                                                         {Array.from({ length: 5 }).map((_, rowIndex) => (
-                                                            <DatePicker.TableBodyRow key={`year-row-${rowIndex}`}>
+                                                            <Calendar.TableBodyRow key={`year-row-${rowIndex}`}>
                                                                 {years.slice(rowIndex * 2, (rowIndex + 1) * 2).map((year, colIndex) => {
                                                                     const yearIndex = rowIndex * 2 + colIndex;
 
                                                                     return (
-                                                                        <DatePicker.TableBodyCell key={yearIndex} year={year}>
+                                                                        <Calendar.TableBodyCell key={yearIndex} year={year}>
                                                                             {year.value}
-                                                                        </DatePicker.TableBodyCell>
+                                                                        </Calendar.TableBodyCell>
                                                                     );
                                                                 })}
-                                                            </DatePicker.TableBodyRow>
+                                                            </Calendar.TableBodyRow>
                                                         ))}
                                                     </>
                                                 );
                                             }}
-                                        </DatePicker.TableBody>
-                                    </DatePicker.Table>
-                                </DatePicker.Calendar>
-                            </DatePicker.Container>
-                            <DatePicker.Time>
-                                <DatePicker.Picker type="hour">
-                                    <DatePicker.Increment />
-                                    <DatePicker.Hour />
-                                    <DatePicker.Decrement />
-                                </DatePicker.Picker>
-                                <DatePicker.SeparatorContainer>
-                                    <DatePicker.Separator />
-                                </DatePicker.SeparatorContainer>
-                                <DatePicker.Picker type="minute">
-                                    <DatePicker.Increment />
-                                    <DatePicker.Minute />
-                                    <DatePicker.Decrement />
-                                </DatePicker.Picker>
-                                <DatePicker.SeparatorContainer>
-                                    <DatePicker.Separator />
-                                </DatePicker.SeparatorContainer>
-                                <DatePicker.Picker type="ampm">
-                                    <DatePicker.Increment />
-                                    <DatePicker.AmPm />
-                                    <DatePicker.Decrement />
-                                </DatePicker.Picker>
-                            </DatePicker.Time>
-                        </DatePicker.Portal>
-                    </DatePicker>
+                                        </Calendar.TableBody>
+                                    </Calendar.Table>
+                                </Calendar.Calendar>
+                            </Calendar.Container>
+                            <Calendar.Time>
+                                <Calendar.Picker type="hour">
+                                    <Calendar.Increment />
+                                    <Calendar.Hour />
+                                    <Calendar.Decrement />
+                                </Calendar.Picker>
+                                <Calendar.SeparatorContainer>
+                                    <Calendar.Separator />
+                                </Calendar.SeparatorContainer>
+                                <Calendar.Picker type="minute">
+                                    <Calendar.Increment />
+                                    <Calendar.Minute />
+                                    <Calendar.Decrement />
+                                </Calendar.Picker>
+                                <Calendar.SeparatorContainer>
+                                    <Calendar.Separator />
+                                </Calendar.SeparatorContainer>
+                                <Calendar.Picker type="ampm">
+                                    <Calendar.Increment />
+                                    <Calendar.AmPm />
+                                    <Calendar.Decrement />
+                                </Calendar.Picker>
+                            </Calendar.Time>
+                        </Calendar.Portal>
+                    </Calendar>
                 </div>
                 <div className="flex-auto">
-                    <Label htmlFor="datepicker-24h" className="font-bold block mb-2">
+                    <Label htmlFor="Calendar-24h" className="font-bold block mb-2">
                         24h Format
                     </Label>
-                    <DatePicker
+                    <Calendar
                         value={date2}
                         showTime
                         hourFormat="24"
                         fluid
-                        onValueChange={(event: DatePickerValueChangeEvent) => setDate2(event.value)}
+                        onValueChange={(event: CalendarValueChangeEvent) => setDate2(event.value)}
                     >
-                        <DatePicker.Input id="datepicker-24h" />
-                        <DatePicker.Portal>
-                            <DatePicker.Container>
-                                <DatePicker.Calendar>
-                                    <DatePicker.Header>
-                                        <DatePicker.Prev />
-                                        <DatePicker.Title>
-                                            <DatePicker.SelectMonth />
-                                            <DatePicker.SelectYear />
-                                            <DatePicker.Decade />
-                                        </DatePicker.Title>
-                                        <DatePicker.Next />
-                                    </DatePicker.Header>
-                                    <DatePicker.Table>
-                                        <DatePicker.TableHead>
-                                            <DatePicker.TableHeadRow>
-                                                {(instance: DatePickerTableHeadRowInstance) => {
-                                                    const { datepicker } = instance;
-                                                    const weekDays = datepicker?.weekDays as string[];
+                        <Calendar.Input id="Calendar-24h" />
+                        <Calendar.Portal>
+                            <Calendar.Container>
+                                <Calendar.Calendar>
+                                    <Calendar.Header>
+                                        <Calendar.Prev />
+                                        <Calendar.Title>
+                                            <Calendar.SelectMonth />
+                                            <Calendar.SelectYear />
+                                            <Calendar.Decade />
+                                        </Calendar.Title>
+                                        <Calendar.Next />
+                                    </Calendar.Header>
+                                    <Calendar.Table>
+                                        <Calendar.TableHead>
+                                            <Calendar.TableHeadRow>
+                                                {(instance: CalendarTableHeadRowInstance) => {
+                                                    const { Calendar } = instance;
+                                                    const weekDays = Calendar?.weekDays as string[];
 
                                                     return (
                                                         <>
                                                             {weekDays.map((day, index) => (
-                                                                <DatePicker.TableHeadCell key={index} abbr={day}>
+                                                                <Calendar.TableHeadCell key={index} abbr={day}>
                                                                     {day}
-                                                                </DatePicker.TableHeadCell>
+                                                                </Calendar.TableHeadCell>
                                                             ))}
                                                         </>
                                                     );
                                                 }}
-                                            </DatePicker.TableHeadRow>
-                                        </DatePicker.TableHead>
-                                        <DatePicker.TableBody>
-                                            {(instance: DatePickerTableBodyInstance) => {
-                                                const { datepicker } = instance;
-                                                const month = datepicker?.getIndexedMonth?.() as useDatePickerMonthData;
+                                            </Calendar.TableHeadRow>
+                                        </Calendar.TableHead>
+                                        <Calendar.TableBody>
+                                            {(instance: CalendarTableBodyInstance) => {
+                                                const { Calendar } = instance;
+                                                const month = Calendar?.getIndexedMonth?.() as useCalendarMonthData;
 
                                                 return (
                                                     <>
                                                         {month.dates?.map((week) => (
-                                                            <DatePicker.TableBodyRow key={week[0].day + '' + week[0].month}>
+                                                            <Calendar.TableBodyRow key={week[0].day + '' + week[0].month}>
                                                                 <>
                                                                     {week.map((date) => (
-                                                                        <DatePicker.TableBodyCell key={date.day + '' + date.month} date={date}>
+                                                                        <Calendar.TableBodyCell key={date.day + '' + date.month} date={date}>
                                                                             {date.day}
-                                                                        </DatePicker.TableBodyCell>
+                                                                        </Calendar.TableBodyCell>
                                                                     ))}
                                                                 </>
-                                                            </DatePicker.TableBodyRow>
+                                                            </Calendar.TableBodyRow>
                                                         ))}
                                                     </>
                                                 );
                                             }}
-                                        </DatePicker.TableBody>
-                                        <DatePicker.TableBody view="month">
-                                            {(instance: DatePickerTableBodyInstance) => {
-                                                const { datepicker } = instance;
-                                                const months = datepicker?.monthPickerValues as useDatePickerMonthOptions[];
+                                        </Calendar.TableBody>
+                                        <Calendar.TableBody view="month">
+                                            {(instance: CalendarTableBodyInstance) => {
+                                                const { Calendar } = instance;
+                                                const months = Calendar?.monthPickerValues as useCalendarMonthOptions[];
 
                                                 return (
                                                     <>
                                                         {Array.from({ length: 4 }).map((_, rowIndex) => (
-                                                            <DatePicker.TableBodyRow key={`month-row-${rowIndex}`}>
+                                                            <Calendar.TableBodyRow key={`month-row-${rowIndex}`}>
                                                                 {months.slice(rowIndex * 3, (rowIndex + 1) * 3).map((month, colIndex) => {
                                                                     const monthIndex = rowIndex * 3 + colIndex;
 
                                                                     return (
-                                                                        <DatePicker.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
+                                                                        <Calendar.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
                                                                             {month.value}
-                                                                        </DatePicker.TableBodyCell>
+                                                                        </Calendar.TableBodyCell>
                                                                     );
                                                                 })}
-                                                            </DatePicker.TableBodyRow>
+                                                            </Calendar.TableBodyRow>
                                                         ))}
                                                     </>
                                                 );
                                             }}
-                                        </DatePicker.TableBody>
-                                        <DatePicker.TableBody view="year">
-                                            {(instance: DatePickerTableBodyInstance) => {
-                                                const { datepicker } = instance;
-                                                const years = datepicker?.yearPickerValues as useDatePickerYearOptions[];
+                                        </Calendar.TableBody>
+                                        <Calendar.TableBody view="year">
+                                            {(instance: CalendarTableBodyInstance) => {
+                                                const { Calendar } = instance;
+                                                const years = Calendar?.yearPickerValues as useCalendarYearOptions[];
 
                                                 return (
                                                     <>
                                                         {Array.from({ length: 5 }).map((_, rowIndex) => (
-                                                            <DatePicker.TableBodyRow key={`year-row-${rowIndex}`}>
+                                                            <Calendar.TableBodyRow key={`year-row-${rowIndex}`}>
                                                                 {years.slice(rowIndex * 2, (rowIndex + 1) * 2).map((year, colIndex) => {
                                                                     const yearIndex = rowIndex * 2 + colIndex;
 
                                                                     return (
-                                                                        <DatePicker.TableBodyCell key={yearIndex} year={year}>
+                                                                        <Calendar.TableBodyCell key={yearIndex} year={year}>
                                                                             {year.value}
-                                                                        </DatePicker.TableBodyCell>
+                                                                        </Calendar.TableBodyCell>
                                                                     );
                                                                 })}
-                                                            </DatePicker.TableBodyRow>
+                                                            </Calendar.TableBodyRow>
                                                         ))}
                                                     </>
                                                 );
                                             }}
-                                        </DatePicker.TableBody>
-                                    </DatePicker.Table>
-                                </DatePicker.Calendar>
-                            </DatePicker.Container>
-                            <DatePicker.Time>
-                                <DatePicker.Picker type="hour">
-                                    <DatePicker.Increment />
-                                    <DatePicker.Hour />
-                                    <DatePicker.Decrement />
-                                </DatePicker.Picker>
-                                <DatePicker.SeparatorContainer>
-                                    <DatePicker.Separator />
-                                </DatePicker.SeparatorContainer>
-                                <DatePicker.Picker type="minute">
-                                    <DatePicker.Increment />
-                                    <DatePicker.Minute />
-                                    <DatePicker.Decrement />
-                                </DatePicker.Picker>
-                            </DatePicker.Time>
-                        </DatePicker.Portal>
-                    </DatePicker>
+                                        </Calendar.TableBody>
+                                    </Calendar.Table>
+                                </Calendar.Calendar>
+                            </Calendar.Container>
+                            <Calendar.Time>
+                                <Calendar.Picker type="hour">
+                                    <Calendar.Increment />
+                                    <Calendar.Hour />
+                                    <Calendar.Decrement />
+                                </Calendar.Picker>
+                                <Calendar.SeparatorContainer>
+                                    <Calendar.Separator />
+                                </Calendar.SeparatorContainer>
+                                <Calendar.Picker type="minute">
+                                    <Calendar.Increment />
+                                    <Calendar.Minute />
+                                    <Calendar.Decrement />
+                                </Calendar.Picker>
+                            </Calendar.Time>
+                        </Calendar.Portal>
+                    </Calendar>
                 </div>
                 <div className="flex-auto">
-                    <Label htmlFor="datepicker-timeonly" className="font-bold block mb-2">
+                    <Label htmlFor="Calendar-timeonly" className="font-bold block mb-2">
                         Time Only
                     </Label>
-                    <DatePicker value={date3} timeOnly fluid onValueChange={(event: DatePickerValueChangeEvent) => setDate3(event.value)}>
-                        <DatePicker.Input id="datepicker-timeonly" />
-                        <DatePicker.Portal>
-                            <DatePicker.Time>
-                                <DatePicker.Picker type="hour">
-                                    <DatePicker.Increment />
-                                    <DatePicker.Hour />
-                                    <DatePicker.Decrement />
-                                </DatePicker.Picker>
-                                <DatePicker.SeparatorContainer>
-                                    <DatePicker.Separator />
-                                </DatePicker.SeparatorContainer>
-                                <DatePicker.Picker type="minute">
-                                    <DatePicker.Increment />
-                                    <DatePicker.Minute />
-                                    <DatePicker.Decrement />
-                                </DatePicker.Picker>
-                            </DatePicker.Time>
-                        </DatePicker.Portal>
-                    </DatePicker>
+                    <Calendar value={date3} timeOnly fluid onValueChange={(event: CalendarValueChangeEvent) => setDate3(event.value)}>
+                        <Calendar.Input id="Calendar-timeonly" />
+                        <Calendar.Portal>
+                            <Calendar.Time>
+                                <Calendar.Picker type="hour">
+                                    <Calendar.Increment />
+                                    <Calendar.Hour />
+                                    <Calendar.Decrement />
+                                </Calendar.Picker>
+                                <Calendar.SeparatorContainer>
+                                    <Calendar.Separator />
+                                </Calendar.SeparatorContainer>
+                                <Calendar.Picker type="minute">
+                                    <Calendar.Increment />
+                                    <Calendar.Minute />
+                                    <Calendar.Decrement />
+                                </Calendar.Picker>
+                            </Calendar.Time>
+                        </Calendar.Portal>
+                    </Calendar>
                 </div>
             </div>
         </>
@@ -15021,108 +15021,108 @@ Month only picker is enabled by specifying `view` as `month` in addition to a su
 'use client';
 
 import {
-    DatePickerTableBodyInstance,
-    DatePickerTableHeadRowInstance,
-    DatePickerValueChangeEvent,
-    useDatePickerMonthOptions,
-    useDatePickerProps,
-    useDatePickerYearOptions
-} from '@primereact/types/shared/datepicker';
-import { DatePicker } from 'primereact/datepicker';
+    CalendarTableBodyInstance,
+    CalendarTableHeadRowInstance,
+    CalendarValueChangeEvent,
+    useCalendarMonthOptions,
+    useCalendarProps,
+    useCalendarYearOptions
+} from '@primereact/types/shared/Calendar';
+import { Calendar } from 'primereact/Calendar';
 
 import * as React from 'react';
 
 export default function MonthPickerDemo() {
-    const [date, setDate] = React.useState<useDatePickerProps['value'] | null>(null);
+    const [date, setDate] = React.useState<useCalendarProps['value'] | null>(null);
 
     return (
         <div className="flex justify-center">
-            <DatePicker value={date} view="month" dateFormat="mm/yy" onValueChange={(event: DatePickerValueChangeEvent) => setDate(event.value)}>
-                <DatePicker.Input />
-                <DatePicker.Portal>
-                    <DatePicker.Container>
-                        <DatePicker.Calendar>
-                            <DatePicker.Header>
-                                <DatePicker.Prev />
-                                <DatePicker.Title>
-                                    <DatePicker.SelectMonth />
-                                    <DatePicker.SelectYear />
-                                    <DatePicker.Decade />
-                                </DatePicker.Title>
-                                <DatePicker.Next />
-                            </DatePicker.Header>
-                            <DatePicker.Table>
-                                <DatePicker.TableHead>
-                                    <DatePicker.TableHeadRow>
-                                        {(instance: DatePickerTableHeadRowInstance) => {
-                                            const { datepicker } = instance;
-                                            const weekDays = datepicker?.weekDays as string[];
+            <Calendar value={date} view="month" dateFormat="mm/yy" onValueChange={(event: CalendarValueChangeEvent) => setDate(event.value)}>
+                <Calendar.Input />
+                <Calendar.Portal>
+                    <Calendar.Container>
+                        <Calendar.Calendar>
+                            <Calendar.Header>
+                                <Calendar.Prev />
+                                <Calendar.Title>
+                                    <Calendar.SelectMonth />
+                                    <Calendar.SelectYear />
+                                    <Calendar.Decade />
+                                </Calendar.Title>
+                                <Calendar.Next />
+                            </Calendar.Header>
+                            <Calendar.Table>
+                                <Calendar.TableHead>
+                                    <Calendar.TableHeadRow>
+                                        {(instance: CalendarTableHeadRowInstance) => {
+                                            const { Calendar } = instance;
+                                            const weekDays = Calendar?.weekDays as string[];
 
                                             return (
                                                 <>
                                                     {weekDays.map((day, index) => (
-                                                        <DatePicker.TableHeadCell key={index} abbr={day}>
+                                                        <Calendar.TableHeadCell key={index} abbr={day}>
                                                             {day}
-                                                        </DatePicker.TableHeadCell>
+                                                        </Calendar.TableHeadCell>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableHeadRow>
-                                </DatePicker.TableHead>
-                                <DatePicker.TableBody view="month">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const months = datepicker?.monthPickerValues as useDatePickerMonthOptions[];
+                                    </Calendar.TableHeadRow>
+                                </Calendar.TableHead>
+                                <Calendar.TableBody view="month">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const months = Calendar?.monthPickerValues as useCalendarMonthOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 4 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`month-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`month-row-${rowIndex}`}>
                                                         {months.slice(rowIndex * 3, (rowIndex + 1) * 3).map((month, colIndex) => {
                                                             const monthIndex = rowIndex * 3 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
+                                                                <Calendar.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
                                                                     {month.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="year">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const years = datepicker?.yearPickerValues as useDatePickerYearOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="year">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const years = Calendar?.yearPickerValues as useCalendarYearOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 5 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`year-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`year-row-${rowIndex}`}>
                                                         {years.slice(rowIndex * 2, (rowIndex + 1) * 2).map((year, colIndex) => {
                                                             const yearIndex = rowIndex * 2 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={yearIndex} year={year}>
+                                                                <Calendar.TableBodyCell key={yearIndex} year={year}>
                                                                     {year.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                            </DatePicker.Table>
-                        </DatePicker.Calendar>
-                    </DatePicker.Container>
-                </DatePicker.Portal>
-            </DatePicker>
+                                </Calendar.TableBody>
+                            </Calendar.Table>
+                        </Calendar.Calendar>
+                    </Calendar.Container>
+                </Calendar.Portal>
+            </Calendar>
         </div>
     );
 }
@@ -15137,83 +15137,83 @@ Year only picker is enabled by specifying `view` as `year` in addition to a suit
 'use client';
 
 import {
-    DatePickerTableBodyInstance,
-    DatePickerTableHeadRowInstance,
-    DatePickerValueChangeEvent,
-    useDatePickerProps,
-    useDatePickerYearOptions
-} from '@primereact/types/shared/datepicker';
-import { DatePicker } from 'primereact/datepicker';
+    CalendarTableBodyInstance,
+    CalendarTableHeadRowInstance,
+    CalendarValueChangeEvent,
+    useCalendarProps,
+    useCalendarYearOptions
+} from '@primereact/types/shared/Calendar';
+import { Calendar } from 'primereact/Calendar';
 
 import * as React from 'react';
 
 export default function YearPickerDemo() {
-    const [date, setDate] = React.useState<useDatePickerProps['value'] | null>(null);
+    const [date, setDate] = React.useState<useCalendarProps['value'] | null>(null);
 
     return (
         <div className="flex justify-center">
-            <DatePicker value={date} view="year" dateFormat="yy" onValueChange={(event: DatePickerValueChangeEvent) => setDate(event.value)}>
-                <DatePicker.Input />
-                <DatePicker.Portal>
-                    <DatePicker.Container>
-                        <DatePicker.Calendar>
-                            <DatePicker.Header>
-                                <DatePicker.Prev />
-                                <DatePicker.Title>
-                                    <DatePicker.SelectMonth />
-                                    <DatePicker.SelectYear />
-                                    <DatePicker.Decade />
-                                </DatePicker.Title>
-                                <DatePicker.Next />
-                            </DatePicker.Header>
-                            <DatePicker.Table>
-                                <DatePicker.TableHead>
-                                    <DatePicker.TableHeadRow>
-                                        {(instance: DatePickerTableHeadRowInstance) => {
-                                            const { datepicker } = instance;
-                                            const weekDays = datepicker?.weekDays as string[];
+            <Calendar value={date} view="year" dateFormat="yy" onValueChange={(event: CalendarValueChangeEvent) => setDate(event.value)}>
+                <Calendar.Input />
+                <Calendar.Portal>
+                    <Calendar.Container>
+                        <Calendar.Calendar>
+                            <Calendar.Header>
+                                <Calendar.Prev />
+                                <Calendar.Title>
+                                    <Calendar.SelectMonth />
+                                    <Calendar.SelectYear />
+                                    <Calendar.Decade />
+                                </Calendar.Title>
+                                <Calendar.Next />
+                            </Calendar.Header>
+                            <Calendar.Table>
+                                <Calendar.TableHead>
+                                    <Calendar.TableHeadRow>
+                                        {(instance: CalendarTableHeadRowInstance) => {
+                                            const { Calendar } = instance;
+                                            const weekDays = Calendar?.weekDays as string[];
 
                                             return (
                                                 <>
                                                     {weekDays.map((day, index) => (
-                                                        <DatePicker.TableHeadCell key={index} abbr={day}>
+                                                        <Calendar.TableHeadCell key={index} abbr={day}>
                                                             {day}
-                                                        </DatePicker.TableHeadCell>
+                                                        </Calendar.TableHeadCell>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableHeadRow>
-                                </DatePicker.TableHead>
-                                <DatePicker.TableBody view="year">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const years = datepicker?.yearPickerValues as useDatePickerYearOptions[];
+                                    </Calendar.TableHeadRow>
+                                </Calendar.TableHead>
+                                <Calendar.TableBody view="year">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const years = Calendar?.yearPickerValues as useCalendarYearOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 5 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`year-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`year-row-${rowIndex}`}>
                                                         {years.slice(rowIndex * 2, (rowIndex + 1) * 2).map((year, colIndex) => {
                                                             const yearIndex = rowIndex * 2 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={yearIndex} year={year}>
+                                                                <Calendar.TableBodyCell key={yearIndex} year={year}>
                                                                     {year.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                            </DatePicker.Table>
-                        </DatePicker.Calendar>
-                    </DatePicker.Container>
-                </DatePicker.Portal>
-            </DatePicker>
+                                </Calendar.TableBody>
+                            </Calendar.Table>
+                        </Calendar.Calendar>
+                    </Calendar.Container>
+                </Calendar.Portal>
+            </Calendar>
         </div>
     );
 }
@@ -15228,164 +15228,164 @@ Number of months to display is configured with the `numberOfMonths` property.
 'use client';
 
 import type {
-    DatePickerContainerInstance,
-    DatePickerValueChangeEvent,
-    useDatePickerMonthData,
-    useDatePickerMonthOptions,
-    useDatePickerProps,
-    useDatePickerYearOptions
-} from '@primereact/types/shared/datepicker';
-import { DatePicker } from 'primereact/datepicker';
+    CalendarContainerInstance,
+    CalendarValueChangeEvent,
+    useCalendarMonthData,
+    useCalendarMonthOptions,
+    useCalendarProps,
+    useCalendarYearOptions
+} from '@primereact/types/shared/Calendar';
+import { Calendar } from 'primereact/Calendar';
 import * as React from 'react';
 
 export default function MultipleMonthsDemo() {
-    const [date, setDate] = React.useState<useDatePickerProps['value'] | null>(null);
+    const [date, setDate] = React.useState<useCalendarProps['value'] | null>(null);
 
     return (
         <div className="flex justify-center">
-            <DatePicker value={date} numberOfMonths={2} onValueChange={(event: DatePickerValueChangeEvent) => setDate(event.value)}>
-                <DatePicker.Input />
-                <DatePicker.Portal>
-                    <DatePicker.Container>
-                        {(instance: DatePickerContainerInstance) => {
-                            const { datepicker } = instance;
-                            const months = datepicker?.months as useDatePickerMonthData[];
+            <Calendar value={date} numberOfMonths={2} onValueChange={(event: CalendarValueChangeEvent) => setDate(event.value)}>
+                <Calendar.Input />
+                <Calendar.Portal>
+                    <Calendar.Container>
+                        {(instance: CalendarContainerInstance) => {
+                            const { Calendar } = instance;
+                            const months = Calendar?.months as useCalendarMonthData[];
 
                             return (
                                 <>
                                     {months?.map((_, groupIndex) => {
-                                        const month = datepicker?.getIndexedMonth?.(groupIndex) as useDatePickerMonthData;
+                                        const month = Calendar?.getIndexedMonth?.(groupIndex) as useCalendarMonthData;
 
                                         return (
-                                            <DatePicker.Calendar key={groupIndex}>
+                                            <Calendar.Calendar key={groupIndex}>
                                                 {groupIndex === 0 && (
                                                     <>
-                                                        <DatePicker.Header>
-                                                            <DatePicker.Prev />
-                                                            <DatePicker.Title>
-                                                                <DatePicker.SelectMonth>
-                                                                    {datepicker?.getMonthName?.(month.month)}
-                                                                </DatePicker.SelectMonth>
-                                                                <DatePicker.SelectYear>{month.year}</DatePicker.SelectYear>
-                                                                <DatePicker.Decade />
-                                                            </DatePicker.Title>
-                                                        </DatePicker.Header>
+                                                        <Calendar.Header>
+                                                            <Calendar.Prev />
+                                                            <Calendar.Title>
+                                                                <Calendar.SelectMonth>
+                                                                    {Calendar?.getMonthName?.(month.month)}
+                                                                </Calendar.SelectMonth>
+                                                                <Calendar.SelectYear>{month.year}</Calendar.SelectYear>
+                                                                <Calendar.Decade />
+                                                            </Calendar.Title>
+                                                        </Calendar.Header>
                                                     </>
                                                 )}
                                                 {groupIndex === 1 && (
                                                     <>
-                                                        <DatePicker.Header>
-                                                            <DatePicker.Title>
-                                                                <DatePicker.SelectMonth>
-                                                                    {datepicker?.getMonthName?.(month.month)}
-                                                                </DatePicker.SelectMonth>
-                                                                <DatePicker.SelectYear>{month.year}</DatePicker.SelectYear>
-                                                                <DatePicker.Decade />
-                                                            </DatePicker.Title>
-                                                            <DatePicker.Next />
-                                                        </DatePicker.Header>
+                                                        <Calendar.Header>
+                                                            <Calendar.Title>
+                                                                <Calendar.SelectMonth>
+                                                                    {Calendar?.getMonthName?.(month.month)}
+                                                                </Calendar.SelectMonth>
+                                                                <Calendar.SelectYear>{month.year}</Calendar.SelectYear>
+                                                                <Calendar.Decade />
+                                                            </Calendar.Title>
+                                                            <Calendar.Next />
+                                                        </Calendar.Header>
                                                     </>
                                                 )}
-                                                <DatePicker.Table>
-                                                    <DatePicker.TableHead>
-                                                        <DatePicker.TableHeadRow>
+                                                <Calendar.Table>
+                                                    <Calendar.TableHead>
+                                                        <Calendar.TableHeadRow>
                                                             {() => {
-                                                                const weekDays = datepicker?.weekDays as string[];
+                                                                const weekDays = Calendar?.weekDays as string[];
 
                                                                 return (
                                                                     <>
                                                                         {weekDays.map((day, index) => (
-                                                                            <DatePicker.TableHeadCell key={index} abbr={day}>
+                                                                            <Calendar.TableHeadCell key={index} abbr={day}>
                                                                                 {day}
-                                                                            </DatePicker.TableHeadCell>
+                                                                            </Calendar.TableHeadCell>
                                                                         ))}
                                                                     </>
                                                                 );
                                                             }}
-                                                        </DatePicker.TableHeadRow>
-                                                    </DatePicker.TableHead>
-                                                    <DatePicker.TableBody>
+                                                        </Calendar.TableHeadRow>
+                                                    </Calendar.TableHead>
+                                                    <Calendar.TableBody>
                                                         {() => {
                                                             return (
                                                                 <>
                                                                     {month.dates?.map((week) => (
-                                                                        <DatePicker.TableBodyRow key={week[0].day + '' + week[0].month}>
+                                                                        <Calendar.TableBodyRow key={week[0].day + '' + week[0].month}>
                                                                             <>
                                                                                 {week.map((date) => (
-                                                                                    <DatePicker.TableBodyCell
+                                                                                    <Calendar.TableBodyCell
                                                                                         key={date.day + '' + date.month}
                                                                                         date={date}
                                                                                     >
                                                                                         {date.day}
-                                                                                    </DatePicker.TableBodyCell>
+                                                                                    </Calendar.TableBodyCell>
                                                                                 ))}
                                                                             </>
-                                                                        </DatePicker.TableBodyRow>
+                                                                        </Calendar.TableBodyRow>
                                                                     ))}
                                                                 </>
                                                             );
                                                         }}
-                                                    </DatePicker.TableBody>
-                                                    <DatePicker.TableBody view="month">
+                                                    </Calendar.TableBody>
+                                                    <Calendar.TableBody view="month">
                                                         {() => {
-                                                            const months = datepicker?.monthPickerValues as useDatePickerMonthOptions[];
+                                                            const months = Calendar?.monthPickerValues as useCalendarMonthOptions[];
 
                                                             return (
                                                                 <>
                                                                     {Array.from({ length: 4 }).map((_, rowIndex) => (
-                                                                        <DatePicker.TableBodyRow key={`month-row-${rowIndex}`}>
+                                                                        <Calendar.TableBodyRow key={`month-row-${rowIndex}`}>
                                                                             {months.slice(rowIndex * 3, (rowIndex + 1) * 3).map((month, colIndex) => {
                                                                                 const monthIndex = rowIndex * 3 + colIndex;
 
                                                                                 return (
-                                                                                    <DatePicker.TableBodyCell
+                                                                                    <Calendar.TableBodyCell
                                                                                         key={monthIndex}
                                                                                         month={month}
                                                                                         index={monthIndex}
                                                                                     >
                                                                                         {month.value}
-                                                                                    </DatePicker.TableBodyCell>
+                                                                                    </Calendar.TableBodyCell>
                                                                                 );
                                                                             })}
-                                                                        </DatePicker.TableBodyRow>
+                                                                        </Calendar.TableBodyRow>
                                                                     ))}
                                                                 </>
                                                             );
                                                         }}
-                                                    </DatePicker.TableBody>
-                                                    <DatePicker.TableBody view="year">
+                                                    </Calendar.TableBody>
+                                                    <Calendar.TableBody view="year">
                                                         {() => {
-                                                            const years = datepicker?.yearPickerValues as useDatePickerYearOptions[];
+                                                            const years = Calendar?.yearPickerValues as useCalendarYearOptions[];
 
                                                             return (
                                                                 <>
                                                                     {Array.from({ length: 5 }).map((_, rowIndex) => (
-                                                                        <DatePicker.TableBodyRow key={`year-row-${rowIndex}`}>
+                                                                        <Calendar.TableBodyRow key={`year-row-${rowIndex}`}>
                                                                             {years.slice(rowIndex * 2, (rowIndex + 1) * 2).map((year, colIndex) => {
                                                                                 const yearIndex = rowIndex * 2 + colIndex;
 
                                                                                 return (
-                                                                                    <DatePicker.TableBodyCell key={yearIndex} year={year}>
+                                                                                    <Calendar.TableBodyCell key={yearIndex} year={year}>
                                                                                         {year.value}
-                                                                                    </DatePicker.TableBodyCell>
+                                                                                    </Calendar.TableBodyCell>
                                                                                 );
                                                                             })}
-                                                                        </DatePicker.TableBodyRow>
+                                                                        </Calendar.TableBodyRow>
                                                                     ))}
                                                                 </>
                                                             );
                                                         }}
-                                                    </DatePicker.TableBody>
-                                                </DatePicker.Table>
-                                            </DatePicker.Calendar>
+                                                    </Calendar.TableBody>
+                                                </Calendar.Table>
+                                            </Calendar.Calendar>
                                         );
                                     })}
                                 </>
                             );
                         }}
-                    </DatePicker.Container>
-                </DatePicker.Portal>
-            </DatePicker>
+                    </Calendar.Container>
+                </Calendar.Portal>
+            </Calendar>
         </div>
     );
 }
@@ -15400,21 +15400,21 @@ The `updateModelType` property controls the data type of the value. When set to 
 'use client';
 
 import {
-    DatePickerTableBodyInstance,
-    DatePickerTableHeadRowInstance,
-    DatePickerValueChangeEvent,
-    useDatePickerMonthData,
-    useDatePickerMonthOptions,
-    useDatePickerProps,
-    useDatePickerYearOptions
-} from '@primereact/types/shared/datepicker';
-import { DatePicker } from 'primereact/datepicker';
+    CalendarTableBodyInstance,
+    CalendarTableHeadRowInstance,
+    CalendarValueChangeEvent,
+    useCalendarMonthData,
+    useCalendarMonthOptions,
+    useCalendarProps,
+    useCalendarYearOptions
+} from '@primereact/types/shared/Calendar';
+import { Calendar } from 'primereact/Calendar';
 import { Label } from 'primereact/label';
 import * as React from 'react';
 
 export default function ModelTypeDemo() {
-    const [date, setDate] = React.useState<useDatePickerProps['value'] | null>(null);
-    const [date2, setDate2] = React.useState<useDatePickerProps['value'] | null>(null);
+    const [date, setDate] = React.useState<useCalendarProps['value'] | null>(null);
+    const [date2, setDate2] = React.useState<useCalendarProps['value'] | null>(null);
 
     return (
         <div className="flex flex-wrap gap-4">
@@ -15422,227 +15422,227 @@ export default function ModelTypeDemo() {
                 <Label htmlFor="datetype" className="font-bold block mb-2">
                     Date Type Model
                 </Label>
-                <DatePicker value={date} fluid onValueChange={(event: DatePickerValueChangeEvent) => setDate(event.value)}>
-                    <DatePicker.Input id="datetype" />
-                    <DatePicker.Portal>
-                        <DatePicker.Container>
-                            <DatePicker.Calendar>
-                                <DatePicker.Header>
-                                    <DatePicker.Prev />
-                                    <DatePicker.Title>
-                                        <DatePicker.SelectMonth />
-                                        <DatePicker.SelectYear />
-                                        <DatePicker.Decade />
-                                    </DatePicker.Title>
-                                    <DatePicker.Next />
-                                </DatePicker.Header>
-                                <DatePicker.Table>
-                                    <DatePicker.TableHead>
-                                        <DatePicker.TableHeadRow>
-                                            {(instance: DatePickerTableHeadRowInstance) => {
-                                                const { datepicker } = instance;
-                                                const weekDays = datepicker?.weekDays as string[];
+                <Calendar value={date} fluid onValueChange={(event: CalendarValueChangeEvent) => setDate(event.value)}>
+                    <Calendar.Input id="datetype" />
+                    <Calendar.Portal>
+                        <Calendar.Container>
+                            <Calendar.Calendar>
+                                <Calendar.Header>
+                                    <Calendar.Prev />
+                                    <Calendar.Title>
+                                        <Calendar.SelectMonth />
+                                        <Calendar.SelectYear />
+                                        <Calendar.Decade />
+                                    </Calendar.Title>
+                                    <Calendar.Next />
+                                </Calendar.Header>
+                                <Calendar.Table>
+                                    <Calendar.TableHead>
+                                        <Calendar.TableHeadRow>
+                                            {(instance: CalendarTableHeadRowInstance) => {
+                                                const { Calendar } = instance;
+                                                const weekDays = Calendar?.weekDays as string[];
 
                                                 return (
                                                     <>
                                                         {weekDays.map((day, index) => (
-                                                            <DatePicker.TableHeadCell key={index} abbr={day}>
+                                                            <Calendar.TableHeadCell key={index} abbr={day}>
                                                                 {day}
-                                                            </DatePicker.TableHeadCell>
+                                                            </Calendar.TableHeadCell>
                                                         ))}
                                                     </>
                                                 );
                                             }}
-                                        </DatePicker.TableHeadRow>
-                                    </DatePicker.TableHead>
-                                    <DatePicker.TableBody>
-                                        {(instance: DatePickerTableBodyInstance) => {
-                                            const { datepicker } = instance;
-                                            const month = datepicker?.getIndexedMonth?.() as useDatePickerMonthData;
+                                        </Calendar.TableHeadRow>
+                                    </Calendar.TableHead>
+                                    <Calendar.TableBody>
+                                        {(instance: CalendarTableBodyInstance) => {
+                                            const { Calendar } = instance;
+                                            const month = Calendar?.getIndexedMonth?.() as useCalendarMonthData;
 
                                             return (
                                                 <>
                                                     {month.dates?.map((week) => (
-                                                        <DatePicker.TableBodyRow key={week[0].day + '' + week[0].month}>
+                                                        <Calendar.TableBodyRow key={week[0].day + '' + week[0].month}>
                                                             <>
                                                                 {week.map((date) => (
-                                                                    <DatePicker.TableBodyCell key={date.day + '' + date.month} date={date}>
+                                                                    <Calendar.TableBodyCell key={date.day + '' + date.month} date={date}>
                                                                         {date.day}
-                                                                    </DatePicker.TableBodyCell>
+                                                                    </Calendar.TableBodyCell>
                                                                 ))}
                                                             </>
-                                                        </DatePicker.TableBodyRow>
+                                                        </Calendar.TableBodyRow>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableBody>
-                                    <DatePicker.TableBody view="month">
-                                        {(instance: DatePickerTableBodyInstance) => {
-                                            const { datepicker } = instance;
-                                            const months = datepicker?.monthPickerValues as useDatePickerMonthOptions[];
+                                    </Calendar.TableBody>
+                                    <Calendar.TableBody view="month">
+                                        {(instance: CalendarTableBodyInstance) => {
+                                            const { Calendar } = instance;
+                                            const months = Calendar?.monthPickerValues as useCalendarMonthOptions[];
 
                                             return (
                                                 <>
                                                     {Array.from({ length: 4 }).map((_, rowIndex) => (
-                                                        <DatePicker.TableBodyRow key={`month-row-${rowIndex}`}>
+                                                        <Calendar.TableBodyRow key={`month-row-${rowIndex}`}>
                                                             {months.slice(rowIndex * 3, (rowIndex + 1) * 3).map((month, colIndex) => {
                                                                 const monthIndex = rowIndex * 3 + colIndex;
 
                                                                 return (
-                                                                    <DatePicker.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
+                                                                    <Calendar.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
                                                                         {month.value}
-                                                                    </DatePicker.TableBodyCell>
+                                                                    </Calendar.TableBodyCell>
                                                                 );
                                                             })}
-                                                        </DatePicker.TableBodyRow>
+                                                        </Calendar.TableBodyRow>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableBody>
-                                    <DatePicker.TableBody view="year">
-                                        {(instance: DatePickerTableBodyInstance) => {
-                                            const { datepicker } = instance;
-                                            const years = datepicker?.yearPickerValues as useDatePickerYearOptions[];
+                                    </Calendar.TableBody>
+                                    <Calendar.TableBody view="year">
+                                        {(instance: CalendarTableBodyInstance) => {
+                                            const { Calendar } = instance;
+                                            const years = Calendar?.yearPickerValues as useCalendarYearOptions[];
 
                                             return (
                                                 <>
                                                     {Array.from({ length: 5 }).map((_, rowIndex) => (
-                                                        <DatePicker.TableBodyRow key={`year-row-${rowIndex}`}>
+                                                        <Calendar.TableBodyRow key={`year-row-${rowIndex}`}>
                                                             {years.slice(rowIndex * 2, (rowIndex + 1) * 2).map((year, colIndex) => {
                                                                 const yearIndex = rowIndex * 2 + colIndex;
 
                                                                 return (
-                                                                    <DatePicker.TableBodyCell key={yearIndex} year={year}>
+                                                                    <Calendar.TableBodyCell key={yearIndex} year={year}>
                                                                         {year.value}
-                                                                    </DatePicker.TableBodyCell>
+                                                                    </Calendar.TableBodyCell>
                                                                 );
                                                             })}
-                                                        </DatePicker.TableBodyRow>
+                                                        </Calendar.TableBodyRow>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableBody>
-                                </DatePicker.Table>
-                            </DatePicker.Calendar>
-                        </DatePicker.Container>
-                    </DatePicker.Portal>
-                </DatePicker>
+                                    </Calendar.TableBody>
+                                </Calendar.Table>
+                            </Calendar.Calendar>
+                        </Calendar.Container>
+                    </Calendar.Portal>
+                </Calendar>
             </div>
             <div className="flex-auto">
                 <Label htmlFor="stringtype" className="font-bold block mb-2">
                     String Type Model
                 </Label>
-                <DatePicker value={date2} updateModelType="string" fluid onValueChange={(event: DatePickerValueChangeEvent) => setDate2(event.value)}>
-                    <DatePicker.Input id="stringtype" />
-                    <DatePicker.Portal>
-                        <DatePicker.Container>
-                            <DatePicker.Calendar>
-                                <DatePicker.Header>
-                                    <DatePicker.Prev />
-                                    <DatePicker.Title>
-                                        <DatePicker.SelectMonth />
-                                        <DatePicker.SelectYear />
-                                        <DatePicker.Decade />
-                                    </DatePicker.Title>
-                                    <DatePicker.Next />
-                                </DatePicker.Header>
-                                <DatePicker.Table>
-                                    <DatePicker.TableHead>
-                                        <DatePicker.TableHeadRow>
-                                            {(instance: DatePickerTableHeadRowInstance) => {
-                                                const { datepicker } = instance;
-                                                const weekDays = datepicker?.weekDays as string[];
+                <Calendar value={date2} updateModelType="string" fluid onValueChange={(event: CalendarValueChangeEvent) => setDate2(event.value)}>
+                    <Calendar.Input id="stringtype" />
+                    <Calendar.Portal>
+                        <Calendar.Container>
+                            <Calendar.Calendar>
+                                <Calendar.Header>
+                                    <Calendar.Prev />
+                                    <Calendar.Title>
+                                        <Calendar.SelectMonth />
+                                        <Calendar.SelectYear />
+                                        <Calendar.Decade />
+                                    </Calendar.Title>
+                                    <Calendar.Next />
+                                </Calendar.Header>
+                                <Calendar.Table>
+                                    <Calendar.TableHead>
+                                        <Calendar.TableHeadRow>
+                                            {(instance: CalendarTableHeadRowInstance) => {
+                                                const { Calendar } = instance;
+                                                const weekDays = Calendar?.weekDays as string[];
 
                                                 return (
                                                     <>
                                                         {weekDays.map((day, index) => (
-                                                            <DatePicker.TableHeadCell key={index} abbr={day}>
+                                                            <Calendar.TableHeadCell key={index} abbr={day}>
                                                                 {day}
-                                                            </DatePicker.TableHeadCell>
+                                                            </Calendar.TableHeadCell>
                                                         ))}
                                                     </>
                                                 );
                                             }}
-                                        </DatePicker.TableHeadRow>
-                                    </DatePicker.TableHead>
-                                    <DatePicker.TableBody>
-                                        {(instance: DatePickerTableBodyInstance) => {
-                                            const { datepicker } = instance;
-                                            const month = datepicker?.getIndexedMonth?.() as useDatePickerMonthData;
+                                        </Calendar.TableHeadRow>
+                                    </Calendar.TableHead>
+                                    <Calendar.TableBody>
+                                        {(instance: CalendarTableBodyInstance) => {
+                                            const { Calendar } = instance;
+                                            const month = Calendar?.getIndexedMonth?.() as useCalendarMonthData;
 
                                             return (
                                                 <>
                                                     {month.dates?.map((week) => (
-                                                        <DatePicker.TableBodyRow key={week[0].day + '' + week[0].month}>
+                                                        <Calendar.TableBodyRow key={week[0].day + '' + week[0].month}>
                                                             <>
                                                                 {week.map((date) => (
-                                                                    <DatePicker.TableBodyCell key={date.day + '' + date.month} date={date}>
+                                                                    <Calendar.TableBodyCell key={date.day + '' + date.month} date={date}>
                                                                         {date.day}
-                                                                    </DatePicker.TableBodyCell>
+                                                                    </Calendar.TableBodyCell>
                                                                 ))}
                                                             </>
-                                                        </DatePicker.TableBodyRow>
+                                                        </Calendar.TableBodyRow>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableBody>
-                                    <DatePicker.TableBody view="month">
-                                        {(instance: DatePickerTableBodyInstance) => {
-                                            const { datepicker } = instance;
-                                            const months = datepicker?.monthPickerValues as useDatePickerMonthOptions[];
+                                    </Calendar.TableBody>
+                                    <Calendar.TableBody view="month">
+                                        {(instance: CalendarTableBodyInstance) => {
+                                            const { Calendar } = instance;
+                                            const months = Calendar?.monthPickerValues as useCalendarMonthOptions[];
 
                                             return (
                                                 <>
                                                     {Array.from({ length: 4 }).map((_, rowIndex) => (
-                                                        <DatePicker.TableBodyRow key={`month-row-${rowIndex}`}>
+                                                        <Calendar.TableBodyRow key={`month-row-${rowIndex}`}>
                                                             {months.slice(rowIndex * 3, (rowIndex + 1) * 3).map((month, colIndex) => {
                                                                 const monthIndex = rowIndex * 3 + colIndex;
 
                                                                 return (
-                                                                    <DatePicker.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
+                                                                    <Calendar.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
                                                                         {month.value}
-                                                                    </DatePicker.TableBodyCell>
+                                                                    </Calendar.TableBodyCell>
                                                                 );
                                                             })}
-                                                        </DatePicker.TableBodyRow>
+                                                        </Calendar.TableBodyRow>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableBody>
-                                    <DatePicker.TableBody view="year">
-                                        {(instance: DatePickerTableBodyInstance) => {
-                                            const { datepicker } = instance;
-                                            const years = datepicker?.yearPickerValues as useDatePickerYearOptions[];
+                                    </Calendar.TableBody>
+                                    <Calendar.TableBody view="year">
+                                        {(instance: CalendarTableBodyInstance) => {
+                                            const { Calendar } = instance;
+                                            const years = Calendar?.yearPickerValues as useCalendarYearOptions[];
 
                                             return (
                                                 <>
                                                     {Array.from({ length: 5 }).map((_, rowIndex) => (
-                                                        <DatePicker.TableBodyRow key={`year-row-${rowIndex}`}>
+                                                        <Calendar.TableBodyRow key={`year-row-${rowIndex}`}>
                                                             {years.slice(rowIndex * 2, (rowIndex + 1) * 2).map((year, colIndex) => {
                                                                 const yearIndex = rowIndex * 2 + colIndex;
 
                                                                 return (
-                                                                    <DatePicker.TableBodyCell key={yearIndex} year={year}>
+                                                                    <Calendar.TableBodyCell key={yearIndex} year={year}>
                                                                         {year.value}
-                                                                    </DatePicker.TableBodyCell>
+                                                                    </Calendar.TableBodyCell>
                                                                 );
                                                             })}
-                                                        </DatePicker.TableBodyRow>
+                                                        </Calendar.TableBodyRow>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableBody>
-                                </DatePicker.Table>
-                            </DatePicker.Calendar>
-                        </DatePicker.Container>
-                    </DatePicker.Portal>
-                </DatePicker>
+                                    </Calendar.TableBody>
+                                </Calendar.Table>
+                            </Calendar.Calendar>
+                        </Calendar.Container>
+                    </Calendar.Portal>
+                </Calendar>
             </div>
         </div>
     );
@@ -15652,140 +15652,140 @@ export default function ModelTypeDemo() {
 
 ### Date Template
 
-Custom content can be placed inside date cells with the `DatePicker.TableHeadCell` component that takes a Date as a parameter.
+Custom content can be placed inside date cells with the `Calendar.TableHeadCell` component that takes a Date as a parameter.
 
 ```tsx
 'use client';
 
 import {
-    DatePickerTableBodyInstance,
-    DatePickerTableHeadRowInstance,
-    DatePickerValueChangeEvent,
-    useDatePickerMonthData,
-    useDatePickerMonthOptions,
-    useDatePickerProps,
-    useDatePickerYearOptions
-} from '@primereact/types/shared/datepicker';
-import { DatePicker } from 'primereact/datepicker';
+    CalendarTableBodyInstance,
+    CalendarTableHeadRowInstance,
+    CalendarValueChangeEvent,
+    useCalendarMonthData,
+    useCalendarMonthOptions,
+    useCalendarProps,
+    useCalendarYearOptions
+} from '@primereact/types/shared/Calendar';
+import { Calendar } from 'primereact/Calendar';
 import * as React from 'react';
 
 export default function DateTemplateDemo() {
-    const [date, setDate] = React.useState<useDatePickerProps['value'] | null>(null);
+    const [date, setDate] = React.useState<useCalendarProps['value'] | null>(null);
 
     return (
         <div className="flex justify-center">
-            <DatePicker value={date} onValueChange={(event: DatePickerValueChangeEvent) => setDate(event.value)}>
-                <DatePicker.Input />
-                <DatePicker.Portal>
-                    <DatePicker.Container>
-                        <DatePicker.Calendar>
-                            <DatePicker.Header>
-                                <DatePicker.Prev />
-                                <DatePicker.Title>
-                                    <DatePicker.SelectMonth />
-                                    <DatePicker.SelectYear />
-                                    <DatePicker.Decade />
-                                </DatePicker.Title>
-                                <DatePicker.Next />
-                            </DatePicker.Header>
-                            <DatePicker.Table>
-                                <DatePicker.TableHead>
-                                    <DatePicker.TableHeadRow>
-                                        {(instance: DatePickerTableHeadRowInstance) => {
-                                            const { datepicker } = instance;
-                                            const weekDays = datepicker?.weekDays as string[];
+            <Calendar value={date} onValueChange={(event: CalendarValueChangeEvent) => setDate(event.value)}>
+                <Calendar.Input />
+                <Calendar.Portal>
+                    <Calendar.Container>
+                        <Calendar.Calendar>
+                            <Calendar.Header>
+                                <Calendar.Prev />
+                                <Calendar.Title>
+                                    <Calendar.SelectMonth />
+                                    <Calendar.SelectYear />
+                                    <Calendar.Decade />
+                                </Calendar.Title>
+                                <Calendar.Next />
+                            </Calendar.Header>
+                            <Calendar.Table>
+                                <Calendar.TableHead>
+                                    <Calendar.TableHeadRow>
+                                        {(instance: CalendarTableHeadRowInstance) => {
+                                            const { Calendar } = instance;
+                                            const weekDays = Calendar?.weekDays as string[];
 
                                             return (
                                                 <>
                                                     {weekDays.map((day, index) => (
-                                                        <DatePicker.TableHeadCell key={index} abbr={day}>
+                                                        <Calendar.TableHeadCell key={index} abbr={day}>
                                                             {day}
-                                                        </DatePicker.TableHeadCell>
+                                                        </Calendar.TableHeadCell>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableHeadRow>
-                                </DatePicker.TableHead>
-                                <DatePicker.TableBody>
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const month = datepicker?.getIndexedMonth?.() as useDatePickerMonthData;
+                                    </Calendar.TableHeadRow>
+                                </Calendar.TableHead>
+                                <Calendar.TableBody>
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const month = Calendar?.getIndexedMonth?.() as useCalendarMonthData;
 
                                         return (
                                             <>
                                                 {month.dates?.map((week) => (
-                                                    <DatePicker.TableBodyRow key={week[0].day + '' + week[0].month}>
+                                                    <Calendar.TableBodyRow key={week[0].day + '' + week[0].month}>
                                                         <>
                                                             {week.map((date) => (
-                                                                <DatePicker.TableBodyCell key={date.day + '' + date.month} date={date}>
+                                                                <Calendar.TableBodyCell key={date.day + '' + date.month} date={date}>
                                                                     {date.day > 10 && date.day < 15 ? (
                                                                         <strong className="line-through">{date.day}</strong>
                                                                     ) : (
                                                                         date.day
                                                                     )}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             ))}
                                                         </>
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="month">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const months = datepicker?.monthPickerValues as useDatePickerMonthOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="month">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const months = Calendar?.monthPickerValues as useCalendarMonthOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 4 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`month-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`month-row-${rowIndex}`}>
                                                         {months.slice(rowIndex * 3, (rowIndex + 1) * 3).map((month, colIndex) => {
                                                             const monthIndex = rowIndex * 3 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
+                                                                <Calendar.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
                                                                     {month.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="year">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const years = datepicker?.yearPickerValues as useDatePickerYearOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="year">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const years = Calendar?.yearPickerValues as useCalendarYearOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 5 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`year-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`year-row-${rowIndex}`}>
                                                         {years.slice(rowIndex * 2, (rowIndex + 1) * 2).map((year, colIndex) => {
                                                             const yearIndex = rowIndex * 2 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={yearIndex} year={year}>
+                                                                <Calendar.TableBodyCell key={yearIndex} year={year}>
                                                                     {year.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                            </DatePicker.Table>
-                        </DatePicker.Calendar>
-                    </DatePicker.Container>
-                </DatePicker.Portal>
-            </DatePicker>
+                                </Calendar.TableBody>
+                            </Calendar.Table>
+                        </Calendar.Calendar>
+                    </Calendar.Container>
+                </Calendar.Portal>
+            </Calendar>
         </div>
     );
 }
@@ -15798,134 +15798,134 @@ export default function DateTemplateDemo() {
 'use client';
 
 import {
-    DatePickerTableBodyInstance,
-    DatePickerTableHeadRowInstance,
-    DatePickerValueChangeEvent,
-    useDatePickerMonthData,
-    useDatePickerMonthOptions,
-    useDatePickerProps,
-    useDatePickerYearOptions
-} from '@primereact/types/shared/datepicker';
-import { DatePicker } from 'primereact/datepicker';
+    CalendarTableBodyInstance,
+    CalendarTableHeadRowInstance,
+    CalendarValueChangeEvent,
+    useCalendarMonthData,
+    useCalendarMonthOptions,
+    useCalendarProps,
+    useCalendarYearOptions
+} from '@primereact/types/shared/Calendar';
+import { Calendar } from 'primereact/Calendar';
 
 import * as React from 'react';
 
 export default function InlineDemo() {
-    const [date, setDate] = React.useState<useDatePickerProps['value'] | null>(null);
+    const [date, setDate] = React.useState<useCalendarProps['value'] | null>(null);
 
     return (
         <div className="flex justify-center">
-            <DatePicker value={date} className="w-full sm:w-120" onValueChange={(event: DatePickerValueChangeEvent) => setDate(event.value)}>
-                <DatePicker.Panel>
-                    <DatePicker.Container>
-                        <DatePicker.Calendar>
-                            <DatePicker.Header>
-                                <DatePicker.Prev />
-                                <DatePicker.Title>
-                                    <DatePicker.SelectMonth />
-                                    <DatePicker.SelectYear />
-                                    <DatePicker.Decade />
-                                </DatePicker.Title>
-                                <DatePicker.Next />
-                            </DatePicker.Header>
-                            <DatePicker.Table>
-                                <DatePicker.TableHead>
-                                    <DatePicker.TableHeadRow>
-                                        {(instance: DatePickerTableHeadRowInstance) => {
-                                            const { datepicker } = instance;
-                                            const weekDays = datepicker?.weekDays as string[];
+            <Calendar value={date} className="w-full sm:w-120" onValueChange={(event: CalendarValueChangeEvent) => setDate(event.value)}>
+                <Calendar.Panel>
+                    <Calendar.Container>
+                        <Calendar.Calendar>
+                            <Calendar.Header>
+                                <Calendar.Prev />
+                                <Calendar.Title>
+                                    <Calendar.SelectMonth />
+                                    <Calendar.SelectYear />
+                                    <Calendar.Decade />
+                                </Calendar.Title>
+                                <Calendar.Next />
+                            </Calendar.Header>
+                            <Calendar.Table>
+                                <Calendar.TableHead>
+                                    <Calendar.TableHeadRow>
+                                        {(instance: CalendarTableHeadRowInstance) => {
+                                            const { Calendar } = instance;
+                                            const weekDays = Calendar?.weekDays as string[];
 
                                             return (
                                                 <>
-                                                    <DatePicker.TableHeadWeekCell>Wk</DatePicker.TableHeadWeekCell>
+                                                    <Calendar.TableHeadWeekCell>Wk</Calendar.TableHeadWeekCell>
                                                     {weekDays.map((day, index) => (
-                                                        <DatePicker.TableHeadCell key={index} abbr={day}>
+                                                        <Calendar.TableHeadCell key={index} abbr={day}>
                                                             {day}
-                                                        </DatePicker.TableHeadCell>
+                                                        </Calendar.TableHeadCell>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableHeadRow>
-                                </DatePicker.TableHead>
-                                <DatePicker.TableBody>
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const month = datepicker?.getIndexedMonth?.() as useDatePickerMonthData;
+                                    </Calendar.TableHeadRow>
+                                </Calendar.TableHead>
+                                <Calendar.TableBody>
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const month = Calendar?.getIndexedMonth?.() as useCalendarMonthData;
 
                                         return (
                                             <>
                                                 {month.dates?.map((week, weekIndex) => (
-                                                    <DatePicker.TableBodyRow key={week[0].day + '' + week[0].month}>
+                                                    <Calendar.TableBodyRow key={week[0].day + '' + week[0].month}>
                                                         <>
-                                                            <DatePicker.TableBodyWeekCell>
+                                                            <Calendar.TableBodyWeekCell>
                                                                 {month.weekNumbers[weekIndex]}
-                                                            </DatePicker.TableBodyWeekCell>
+                                                            </Calendar.TableBodyWeekCell>
                                                             {week.map((date) => (
-                                                                <DatePicker.TableBodyCell key={date.day + '' + date.month} date={date}>
+                                                                <Calendar.TableBodyCell key={date.day + '' + date.month} date={date}>
                                                                     {date.day}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             ))}
                                                         </>
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="month">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const months = datepicker?.monthPickerValues as useDatePickerMonthOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="month">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const months = Calendar?.monthPickerValues as useCalendarMonthOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 4 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`month-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`month-row-${rowIndex}`}>
                                                         {months.slice(rowIndex * 3, (rowIndex + 1) * 3).map((month, colIndex) => {
                                                             const monthIndex = rowIndex * 3 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
+                                                                <Calendar.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
                                                                     {month.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="year">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const years = datepicker?.yearPickerValues as useDatePickerYearOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="year">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const years = Calendar?.yearPickerValues as useCalendarYearOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 5 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`year-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`year-row-${rowIndex}`}>
                                                         {years.slice(rowIndex * 2, (rowIndex + 1) * 2).map((year, colIndex) => {
                                                             const yearIndex = rowIndex * 2 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={yearIndex} year={year}>
+                                                                <Calendar.TableBodyCell key={yearIndex} year={year}>
                                                                     {year.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                            </DatePicker.Table>
-                        </DatePicker.Calendar>
-                    </DatePicker.Container>
-                </DatePicker.Panel>
-            </DatePicker>
+                                </Calendar.TableBody>
+                            </Calendar.Table>
+                        </Calendar.Calendar>
+                    </Calendar.Container>
+                </Calendar.Panel>
+            </Calendar>
         </div>
     );
 }
@@ -15934,18 +15934,18 @@ export default function InlineDemo() {
 
 ### Inline Template
 
-Custom content can be placed inside date cells in inline mode with the `DatePicker.TableHeadCell` component that takes a Date as a parameter.
+Custom content can be placed inside date cells in inline mode with the `Calendar.TableHeadCell` component that takes a Date as a parameter.
 
 ```tsx
 'use client';
 
 import type {
-    DatePickerContainerInstance,
-    DatePickerTableBodyInstance,
-    DatePickerValueChangeEvent,
-    useDatePickerMonthData
-} from '@primereact/types/shared/datepicker';
-import { DatePicker } from 'primereact/datepicker';
+    CalendarContainerInstance,
+    CalendarTableBodyInstance,
+    CalendarValueChangeEvent,
+    useCalendarMonthData
+} from '@primereact/types/shared/Calendar';
+import { Calendar } from 'primereact/Calendar';
 import * as React from 'react';
 
 const getRandomNumber = (min: number = 30, max: number = 100): number => {
@@ -15968,73 +15968,73 @@ export default function InlineTemplateDemo() {
 
     return (
         <div className="flex justify-center">
-            <DatePicker value={value} numberOfMonths={2} onValueChange={(event: DatePickerValueChangeEvent) => setValue(event.value as Date)}>
-                <DatePicker.Panel>
-                    <DatePicker.Container>
-                        {(instance: DatePickerContainerInstance) => {
-                            const { datepicker } = instance;
-                            const months = datepicker?.months as useDatePickerMonthData[];
+            <Calendar value={value} numberOfMonths={2} onValueChange={(event: CalendarValueChangeEvent) => setValue(event.value as Date)}>
+                <Calendar.Panel>
+                    <Calendar.Container>
+                        {(instance: CalendarContainerInstance) => {
+                            const { Calendar } = instance;
+                            const months = Calendar?.months as useCalendarMonthData[];
 
                             return (
                                 <>
                                     {months?.map((month, groupIndex) => {
                                         return (
-                                            <DatePicker.Calendar key={groupIndex}>
+                                            <Calendar.Calendar key={groupIndex}>
                                                 {groupIndex === 0 && (
                                                     <>
-                                                        <DatePicker.Header>
-                                                            <DatePicker.Prev />
-                                                            <DatePicker.Title>
-                                                                <DatePicker.SelectMonth>
-                                                                    {datepicker?.getMonthName?.(month.month)}
-                                                                </DatePicker.SelectMonth>
-                                                                <DatePicker.SelectYear>{month.year}</DatePicker.SelectYear>
-                                                                <DatePicker.Decade />
-                                                            </DatePicker.Title>
-                                                        </DatePicker.Header>
+                                                        <Calendar.Header>
+                                                            <Calendar.Prev />
+                                                            <Calendar.Title>
+                                                                <Calendar.SelectMonth>
+                                                                    {Calendar?.getMonthName?.(month.month)}
+                                                                </Calendar.SelectMonth>
+                                                                <Calendar.SelectYear>{month.year}</Calendar.SelectYear>
+                                                                <Calendar.Decade />
+                                                            </Calendar.Title>
+                                                        </Calendar.Header>
                                                     </>
                                                 )}
                                                 {groupIndex === 1 && (
                                                     <>
-                                                        <DatePicker.Header>
-                                                            <DatePicker.Title>
-                                                                <DatePicker.SelectMonth>
-                                                                    {datepicker?.getMonthName?.(month.month)}
-                                                                </DatePicker.SelectMonth>
-                                                                <DatePicker.SelectYear>{month.year}</DatePicker.SelectYear>
-                                                                <DatePicker.Decade />
-                                                            </DatePicker.Title>
-                                                            <DatePicker.Next />
-                                                        </DatePicker.Header>
+                                                        <Calendar.Header>
+                                                            <Calendar.Title>
+                                                                <Calendar.SelectMonth>
+                                                                    {Calendar?.getMonthName?.(month.month)}
+                                                                </Calendar.SelectMonth>
+                                                                <Calendar.SelectYear>{month.year}</Calendar.SelectYear>
+                                                                <Calendar.Decade />
+                                                            </Calendar.Title>
+                                                            <Calendar.Next />
+                                                        </Calendar.Header>
                                                     </>
                                                 )}
-                                                <DatePicker.Table>
-                                                    <DatePicker.TableHead>
-                                                        <DatePicker.TableHeadRow>
+                                                <Calendar.Table>
+                                                    <Calendar.TableHead>
+                                                        <Calendar.TableHeadRow>
                                                             {() => {
-                                                                const weekDays = datepicker?.weekDays as string[];
+                                                                const weekDays = Calendar?.weekDays as string[];
 
                                                                 return (
                                                                     <>
                                                                         {weekDays.map((day, index) => (
-                                                                            <DatePicker.TableHeadCell key={index} abbr={day}>
+                                                                            <Calendar.TableHeadCell key={index} abbr={day}>
                                                                                 {day}
-                                                                            </DatePicker.TableHeadCell>
+                                                                            </Calendar.TableHeadCell>
                                                                         ))}
                                                                     </>
                                                                 );
                                                             }}
-                                                        </DatePicker.TableHeadRow>
-                                                    </DatePicker.TableHead>
-                                                    <DatePicker.TableBody>
-                                                        {(instance: DatePickerTableBodyInstance) => {
-                                                            const { datepicker } = instance;
-                                                            const month = datepicker?.getIndexedMonth?.(groupIndex) as useDatePickerMonthData;
+                                                        </Calendar.TableHeadRow>
+                                                    </Calendar.TableHead>
+                                                    <Calendar.TableBody>
+                                                        {(instance: CalendarTableBodyInstance) => {
+                                                            const { Calendar } = instance;
+                                                            const month = Calendar?.getIndexedMonth?.(groupIndex) as useCalendarMonthData;
 
                                                             return (
                                                                 <>
                                                                     {month.dates?.map((week) => (
-                                                                        <DatePicker.TableBodyRow key={week[0].day + '' + week[0].month}>
+                                                                        <Calendar.TableBodyRow key={week[0].day + '' + week[0].month}>
                                                                             <>
                                                                                 {week.map((date) => {
                                                                                     const today = new Date();
@@ -16046,10 +16046,10 @@ export default function InlineTemplateDemo() {
                                                                                             ? getPrice(date.year, date.month, date.day)
                                                                                             : null;
                                                                                     const isLowPrice = price !== null && price < 50;
-                                                                                    const selected = value && datepicker?.isDateEquals(value, date);
+                                                                                    const selected = value && Calendar?.isDateEquals(value, date);
 
                                                                                     return (
-                                                                                        <DatePicker.TableBodyCell
+                                                                                        <Calendar.TableBodyCell
                                                                                             key={date.day + '' + date.month}
                                                                                             date={date}
                                                                                             className={`p-2 ${date.otherMonth ? 'invisible' : ''}`}
@@ -16079,26 +16079,26 @@ export default function InlineTemplateDemo() {
                                                                                                     </span>
                                                                                                 )}
                                                                                             </div>
-                                                                                        </DatePicker.TableBodyCell>
+                                                                                        </Calendar.TableBodyCell>
                                                                                     );
                                                                                 })}
                                                                             </>
-                                                                        </DatePicker.TableBodyRow>
+                                                                        </Calendar.TableBodyRow>
                                                                     ))}
                                                                 </>
                                                             );
                                                         }}
-                                                    </DatePicker.TableBody>
-                                                </DatePicker.Table>
-                                            </DatePicker.Calendar>
+                                                    </Calendar.TableBody>
+                                                </Calendar.Table>
+                                            </Calendar.Calendar>
                                         );
                                     })}
                                 </>
                             );
                         }}
-                    </DatePicker.Container>
-                </DatePicker.Panel>
-            </DatePicker>
+                    </Calendar.Container>
+                </Calendar.Panel>
+            </Calendar>
         </div>
     );
 }
@@ -16113,367 +16113,367 @@ FloatLabel visually integrates a label with its form element. Visit [FloatLabel]
 'use client';
 
 import {
-    DatePickerTableBodyInstance,
-    DatePickerTableHeadRowInstance,
-    DatePickerValueChangeEvent,
-    useDatePickerMonthData,
-    useDatePickerMonthOptions,
-    useDatePickerProps,
-    useDatePickerYearOptions
-} from '@primereact/types/shared/datepicker';
-import { DatePicker } from 'primereact/datepicker';
+    CalendarTableBodyInstance,
+    CalendarTableHeadRowInstance,
+    CalendarValueChangeEvent,
+    useCalendarMonthData,
+    useCalendarMonthOptions,
+    useCalendarProps,
+    useCalendarYearOptions
+} from '@primereact/types/shared/Calendar';
+import { Calendar } from 'primereact/Calendar';
 import { Label } from 'primereact/label';
 import * as React from 'react';
 
 export default function FloatLabelDemo() {
-    const [date, setDate] = React.useState<useDatePickerProps['value'] | null>(null);
-    const [date2, setDate2] = React.useState<useDatePickerProps['value'] | null>(null);
-    const [date3, setDate3] = React.useState<useDatePickerProps['value'] | null>(null);
+    const [date, setDate] = React.useState<useCalendarProps['value'] | null>(null);
+    const [date2, setDate2] = React.useState<useCalendarProps['value'] | null>(null);
+    const [date3, setDate3] = React.useState<useCalendarProps['value'] | null>(null);
 
     return (
         <div className="flex flex-wrap justify-center items-end gap-4">
             <Label.Float>
-                <DatePicker value={date} onValueChange={(event: DatePickerValueChangeEvent) => setDate(event.value)}>
-                    <DatePicker.Input id="over_label" />
-                    <DatePicker.InputIconContainer>
-                        <DatePicker.DropdownIcon />
-                    </DatePicker.InputIconContainer>
-                    <DatePicker.Portal>
-                        <DatePicker.Container>
-                            <DatePicker.Calendar>
-                                <DatePicker.Header>
-                                    <DatePicker.Prev />
-                                    <DatePicker.Title>
-                                        <DatePicker.SelectMonth />
-                                        <DatePicker.SelectYear />
-                                        <DatePicker.Decade />
-                                    </DatePicker.Title>
-                                    <DatePicker.Next />
-                                </DatePicker.Header>
-                                <DatePicker.Table>
-                                    <DatePicker.TableHead>
-                                        <DatePicker.TableHeadRow>
-                                            {(instance: DatePickerTableHeadRowInstance) => {
-                                                const { datepicker } = instance;
-                                                const weekDays = datepicker?.weekDays as string[];
+                <Calendar value={date} onValueChange={(event: CalendarValueChangeEvent) => setDate(event.value)}>
+                    <Calendar.Input id="over_label" />
+                    <Calendar.InputIconContainer>
+                        <Calendar.DropdownIcon />
+                    </Calendar.InputIconContainer>
+                    <Calendar.Portal>
+                        <Calendar.Container>
+                            <Calendar.Calendar>
+                                <Calendar.Header>
+                                    <Calendar.Prev />
+                                    <Calendar.Title>
+                                        <Calendar.SelectMonth />
+                                        <Calendar.SelectYear />
+                                        <Calendar.Decade />
+                                    </Calendar.Title>
+                                    <Calendar.Next />
+                                </Calendar.Header>
+                                <Calendar.Table>
+                                    <Calendar.TableHead>
+                                        <Calendar.TableHeadRow>
+                                            {(instance: CalendarTableHeadRowInstance) => {
+                                                const { Calendar } = instance;
+                                                const weekDays = Calendar?.weekDays as string[];
 
                                                 return (
                                                     <>
                                                         {weekDays.map((day, index) => (
-                                                            <DatePicker.TableHeadCell key={index} abbr={day}>
+                                                            <Calendar.TableHeadCell key={index} abbr={day}>
                                                                 {day}
-                                                            </DatePicker.TableHeadCell>
+                                                            </Calendar.TableHeadCell>
                                                         ))}
                                                     </>
                                                 );
                                             }}
-                                        </DatePicker.TableHeadRow>
-                                    </DatePicker.TableHead>
-                                    <DatePicker.TableBody>
-                                        {(instance: DatePickerTableBodyInstance) => {
-                                            const { datepicker } = instance;
-                                            const month = datepicker?.getIndexedMonth?.() as useDatePickerMonthData;
+                                        </Calendar.TableHeadRow>
+                                    </Calendar.TableHead>
+                                    <Calendar.TableBody>
+                                        {(instance: CalendarTableBodyInstance) => {
+                                            const { Calendar } = instance;
+                                            const month = Calendar?.getIndexedMonth?.() as useCalendarMonthData;
 
                                             return (
                                                 <>
                                                     {month.dates?.map((week) => (
-                                                        <DatePicker.TableBodyRow key={week[0].day + '' + week[0].month}>
+                                                        <Calendar.TableBodyRow key={week[0].day + '' + week[0].month}>
                                                             <>
                                                                 {week.map((date) => (
-                                                                    <DatePicker.TableBodyCell key={date.day + '' + date.month} date={date}>
+                                                                    <Calendar.TableBodyCell key={date.day + '' + date.month} date={date}>
                                                                         {date.day}
-                                                                    </DatePicker.TableBodyCell>
+                                                                    </Calendar.TableBodyCell>
                                                                 ))}
                                                             </>
-                                                        </DatePicker.TableBodyRow>
+                                                        </Calendar.TableBodyRow>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableBody>
-                                    <DatePicker.TableBody view="month">
-                                        {(instance: DatePickerTableBodyInstance) => {
-                                            const { datepicker } = instance;
-                                            const months = datepicker?.monthPickerValues as useDatePickerMonthOptions[];
+                                    </Calendar.TableBody>
+                                    <Calendar.TableBody view="month">
+                                        {(instance: CalendarTableBodyInstance) => {
+                                            const { Calendar } = instance;
+                                            const months = Calendar?.monthPickerValues as useCalendarMonthOptions[];
 
                                             return (
                                                 <>
                                                     {Array.from({ length: 4 }).map((_, rowIndex) => (
-                                                        <DatePicker.TableBodyRow key={`month-row-${rowIndex}`}>
+                                                        <Calendar.TableBodyRow key={`month-row-${rowIndex}`}>
                                                             {months.slice(rowIndex * 3, (rowIndex + 1) * 3).map((month, colIndex) => {
                                                                 const monthIndex = rowIndex * 3 + colIndex;
 
                                                                 return (
-                                                                    <DatePicker.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
+                                                                    <Calendar.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
                                                                         {month.value}
-                                                                    </DatePicker.TableBodyCell>
+                                                                    </Calendar.TableBodyCell>
                                                                 );
                                                             })}
-                                                        </DatePicker.TableBodyRow>
+                                                        </Calendar.TableBodyRow>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableBody>
-                                    <DatePicker.TableBody view="year">
-                                        {(instance: DatePickerTableBodyInstance) => {
-                                            const { datepicker } = instance;
-                                            const years = datepicker?.yearPickerValues as useDatePickerYearOptions[];
+                                    </Calendar.TableBody>
+                                    <Calendar.TableBody view="year">
+                                        {(instance: CalendarTableBodyInstance) => {
+                                            const { Calendar } = instance;
+                                            const years = Calendar?.yearPickerValues as useCalendarYearOptions[];
 
                                             return (
                                                 <>
                                                     {Array.from({ length: 5 }).map((_, rowIndex) => (
-                                                        <DatePicker.TableBodyRow key={`year-row-${rowIndex}`}>
+                                                        <Calendar.TableBodyRow key={`year-row-${rowIndex}`}>
                                                             {years.slice(rowIndex * 2, (rowIndex + 1) * 2).map((year, colIndex) => {
                                                                 const yearIndex = rowIndex * 2 + colIndex;
 
                                                                 return (
-                                                                    <DatePicker.TableBodyCell key={yearIndex} year={year}>
+                                                                    <Calendar.TableBodyCell key={yearIndex} year={year}>
                                                                         {year.value}
-                                                                    </DatePicker.TableBodyCell>
+                                                                    </Calendar.TableBodyCell>
                                                                 );
                                                             })}
-                                                        </DatePicker.TableBodyRow>
+                                                        </Calendar.TableBodyRow>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableBody>
-                                </DatePicker.Table>
-                            </DatePicker.Calendar>
-                        </DatePicker.Container>
-                    </DatePicker.Portal>
-                </DatePicker>
+                                    </Calendar.TableBody>
+                                </Calendar.Table>
+                            </Calendar.Calendar>
+                        </Calendar.Container>
+                    </Calendar.Portal>
+                </Calendar>
                 <Label htmlFor="over_label">Over Label</Label>
             </Label.Float>
 
             <Label.Float variant="in">
-                <DatePicker value={date2} onValueChange={(event: DatePickerValueChangeEvent) => setDate2(event.value)}>
-                    <DatePicker.Input id="in_label" />
-                    <DatePicker.InputIconContainer>
-                        <DatePicker.DropdownIcon />
-                    </DatePicker.InputIconContainer>
-                    <DatePicker.Portal>
-                        <DatePicker.Container>
-                            <DatePicker.Calendar>
-                                <DatePicker.Header>
-                                    <DatePicker.Prev />
-                                    <DatePicker.Title>
-                                        <DatePicker.SelectMonth />
-                                        <DatePicker.SelectYear />
-                                        <DatePicker.Decade />
-                                    </DatePicker.Title>
-                                    <DatePicker.Next />
-                                </DatePicker.Header>
-                                <DatePicker.Table>
-                                    <DatePicker.TableHead>
-                                        <DatePicker.TableHeadRow>
-                                            {(instance: DatePickerTableHeadRowInstance) => {
-                                                const { datepicker } = instance;
-                                                const weekDays = datepicker?.weekDays as string[];
+                <Calendar value={date2} onValueChange={(event: CalendarValueChangeEvent) => setDate2(event.value)}>
+                    <Calendar.Input id="in_label" />
+                    <Calendar.InputIconContainer>
+                        <Calendar.DropdownIcon />
+                    </Calendar.InputIconContainer>
+                    <Calendar.Portal>
+                        <Calendar.Container>
+                            <Calendar.Calendar>
+                                <Calendar.Header>
+                                    <Calendar.Prev />
+                                    <Calendar.Title>
+                                        <Calendar.SelectMonth />
+                                        <Calendar.SelectYear />
+                                        <Calendar.Decade />
+                                    </Calendar.Title>
+                                    <Calendar.Next />
+                                </Calendar.Header>
+                                <Calendar.Table>
+                                    <Calendar.TableHead>
+                                        <Calendar.TableHeadRow>
+                                            {(instance: CalendarTableHeadRowInstance) => {
+                                                const { Calendar } = instance;
+                                                const weekDays = Calendar?.weekDays as string[];
 
                                                 return (
                                                     <>
                                                         {weekDays.map((day, index) => (
-                                                            <DatePicker.TableHeadCell key={index} abbr={day}>
+                                                            <Calendar.TableHeadCell key={index} abbr={day}>
                                                                 {day}
-                                                            </DatePicker.TableHeadCell>
+                                                            </Calendar.TableHeadCell>
                                                         ))}
                                                     </>
                                                 );
                                             }}
-                                        </DatePicker.TableHeadRow>
-                                    </DatePicker.TableHead>
-                                    <DatePicker.TableBody>
-                                        {(instance: DatePickerTableBodyInstance) => {
-                                            const { datepicker } = instance;
-                                            const month = datepicker?.getIndexedMonth?.() as useDatePickerMonthData;
+                                        </Calendar.TableHeadRow>
+                                    </Calendar.TableHead>
+                                    <Calendar.TableBody>
+                                        {(instance: CalendarTableBodyInstance) => {
+                                            const { Calendar } = instance;
+                                            const month = Calendar?.getIndexedMonth?.() as useCalendarMonthData;
 
                                             return (
                                                 <>
                                                     {month.dates?.map((week) => (
-                                                        <DatePicker.TableBodyRow key={week[0].day + '' + week[0].month}>
+                                                        <Calendar.TableBodyRow key={week[0].day + '' + week[0].month}>
                                                             <>
                                                                 {week.map((date) => (
-                                                                    <DatePicker.TableBodyCell key={date.day + '' + date.month} date={date}>
+                                                                    <Calendar.TableBodyCell key={date.day + '' + date.month} date={date}>
                                                                         {date.day}
-                                                                    </DatePicker.TableBodyCell>
+                                                                    </Calendar.TableBodyCell>
                                                                 ))}
                                                             </>
-                                                        </DatePicker.TableBodyRow>
+                                                        </Calendar.TableBodyRow>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableBody>
-                                    <DatePicker.TableBody view="month">
-                                        {(instance: DatePickerTableBodyInstance) => {
-                                            const { datepicker } = instance;
-                                            const months = datepicker?.monthPickerValues as useDatePickerMonthOptions[];
+                                    </Calendar.TableBody>
+                                    <Calendar.TableBody view="month">
+                                        {(instance: CalendarTableBodyInstance) => {
+                                            const { Calendar } = instance;
+                                            const months = Calendar?.monthPickerValues as useCalendarMonthOptions[];
 
                                             return (
                                                 <>
                                                     {Array.from({ length: 4 }).map((_, rowIndex) => (
-                                                        <DatePicker.TableBodyRow key={`month-row-${rowIndex}`}>
+                                                        <Calendar.TableBodyRow key={`month-row-${rowIndex}`}>
                                                             {months.slice(rowIndex * 3, (rowIndex + 1) * 3).map((month, colIndex) => {
                                                                 const monthIndex = rowIndex * 3 + colIndex;
 
                                                                 return (
-                                                                    <DatePicker.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
+                                                                    <Calendar.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
                                                                         {month.value}
-                                                                    </DatePicker.TableBodyCell>
+                                                                    </Calendar.TableBodyCell>
                                                                 );
                                                             })}
-                                                        </DatePicker.TableBodyRow>
+                                                        </Calendar.TableBodyRow>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableBody>
-                                    <DatePicker.TableBody view="year">
-                                        {(instance: DatePickerTableBodyInstance) => {
-                                            const { datepicker } = instance;
-                                            const years = datepicker?.yearPickerValues as useDatePickerYearOptions[];
+                                    </Calendar.TableBody>
+                                    <Calendar.TableBody view="year">
+                                        {(instance: CalendarTableBodyInstance) => {
+                                            const { Calendar } = instance;
+                                            const years = Calendar?.yearPickerValues as useCalendarYearOptions[];
 
                                             return (
                                                 <>
                                                     {Array.from({ length: 5 }).map((_, rowIndex) => (
-                                                        <DatePicker.TableBodyRow key={`year-row-${rowIndex}`}>
+                                                        <Calendar.TableBodyRow key={`year-row-${rowIndex}`}>
                                                             {years.slice(rowIndex * 2, (rowIndex + 1) * 2).map((year, colIndex) => {
                                                                 const yearIndex = rowIndex * 2 + colIndex;
 
                                                                 return (
-                                                                    <DatePicker.TableBodyCell key={yearIndex} year={year}>
+                                                                    <Calendar.TableBodyCell key={yearIndex} year={year}>
                                                                         {year.value}
-                                                                    </DatePicker.TableBodyCell>
+                                                                    </Calendar.TableBodyCell>
                                                                 );
                                                             })}
-                                                        </DatePicker.TableBodyRow>
+                                                        </Calendar.TableBodyRow>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableBody>
-                                </DatePicker.Table>
-                            </DatePicker.Calendar>
-                        </DatePicker.Container>
-                    </DatePicker.Portal>
-                </DatePicker>
+                                    </Calendar.TableBody>
+                                </Calendar.Table>
+                            </Calendar.Calendar>
+                        </Calendar.Container>
+                    </Calendar.Portal>
+                </Calendar>
                 <Label htmlFor="in_label">In Label</Label>
             </Label.Float>
 
             <Label.Float variant="on">
-                <DatePicker value={date3} onValueChange={(event: DatePickerValueChangeEvent) => setDate3(event.value)}>
-                    <DatePicker.Input id="on_label" />
-                    <DatePicker.InputIconContainer>
-                        <DatePicker.DropdownIcon />
-                    </DatePicker.InputIconContainer>
-                    <DatePicker.Portal>
-                        <DatePicker.Container>
-                            <DatePicker.Calendar>
-                                <DatePicker.Header>
-                                    <DatePicker.Prev />
-                                    <DatePicker.Title>
-                                        <DatePicker.SelectMonth />
-                                        <DatePicker.SelectYear />
-                                        <DatePicker.Decade />
-                                    </DatePicker.Title>
-                                    <DatePicker.Next />
-                                </DatePicker.Header>
-                                <DatePicker.Table>
-                                    <DatePicker.TableHead>
-                                        <DatePicker.TableHeadRow>
-                                            {(instance: DatePickerTableHeadRowInstance) => {
-                                                const { datepicker } = instance;
-                                                const weekDays = datepicker?.weekDays as string[];
+                <Calendar value={date3} onValueChange={(event: CalendarValueChangeEvent) => setDate3(event.value)}>
+                    <Calendar.Input id="on_label" />
+                    <Calendar.InputIconContainer>
+                        <Calendar.DropdownIcon />
+                    </Calendar.InputIconContainer>
+                    <Calendar.Portal>
+                        <Calendar.Container>
+                            <Calendar.Calendar>
+                                <Calendar.Header>
+                                    <Calendar.Prev />
+                                    <Calendar.Title>
+                                        <Calendar.SelectMonth />
+                                        <Calendar.SelectYear />
+                                        <Calendar.Decade />
+                                    </Calendar.Title>
+                                    <Calendar.Next />
+                                </Calendar.Header>
+                                <Calendar.Table>
+                                    <Calendar.TableHead>
+                                        <Calendar.TableHeadRow>
+                                            {(instance: CalendarTableHeadRowInstance) => {
+                                                const { Calendar } = instance;
+                                                const weekDays = Calendar?.weekDays as string[];
 
                                                 return (
                                                     <>
                                                         {weekDays.map((day, index) => (
-                                                            <DatePicker.TableHeadCell key={index} abbr={day}>
+                                                            <Calendar.TableHeadCell key={index} abbr={day}>
                                                                 {day}
-                                                            </DatePicker.TableHeadCell>
+                                                            </Calendar.TableHeadCell>
                                                         ))}
                                                     </>
                                                 );
                                             }}
-                                        </DatePicker.TableHeadRow>
-                                    </DatePicker.TableHead>
-                                    <DatePicker.TableBody>
-                                        {(instance: DatePickerTableBodyInstance) => {
-                                            const { datepicker } = instance;
-                                            const month = datepicker?.getIndexedMonth?.() as useDatePickerMonthData;
+                                        </Calendar.TableHeadRow>
+                                    </Calendar.TableHead>
+                                    <Calendar.TableBody>
+                                        {(instance: CalendarTableBodyInstance) => {
+                                            const { Calendar } = instance;
+                                            const month = Calendar?.getIndexedMonth?.() as useCalendarMonthData;
 
                                             return (
                                                 <>
                                                     {month.dates?.map((week) => (
-                                                        <DatePicker.TableBodyRow key={week[0].day + '' + week[0].month}>
+                                                        <Calendar.TableBodyRow key={week[0].day + '' + week[0].month}>
                                                             <>
                                                                 {week.map((date) => (
-                                                                    <DatePicker.TableBodyCell key={date.day + '' + date.month} date={date}>
+                                                                    <Calendar.TableBodyCell key={date.day + '' + date.month} date={date}>
                                                                         {date.day}
-                                                                    </DatePicker.TableBodyCell>
+                                                                    </Calendar.TableBodyCell>
                                                                 ))}
                                                             </>
-                                                        </DatePicker.TableBodyRow>
+                                                        </Calendar.TableBodyRow>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableBody>
-                                    <DatePicker.TableBody view="month">
-                                        {(instance: DatePickerTableBodyInstance) => {
-                                            const { datepicker } = instance;
-                                            const months = datepicker?.monthPickerValues as useDatePickerMonthOptions[];
+                                    </Calendar.TableBody>
+                                    <Calendar.TableBody view="month">
+                                        {(instance: CalendarTableBodyInstance) => {
+                                            const { Calendar } = instance;
+                                            const months = Calendar?.monthPickerValues as useCalendarMonthOptions[];
 
                                             return (
                                                 <>
                                                     {Array.from({ length: 4 }).map((_, rowIndex) => (
-                                                        <DatePicker.TableBodyRow key={`month-row-${rowIndex}`}>
+                                                        <Calendar.TableBodyRow key={`month-row-${rowIndex}`}>
                                                             {months.slice(rowIndex * 3, (rowIndex + 1) * 3).map((month, colIndex) => {
                                                                 const monthIndex = rowIndex * 3 + colIndex;
 
                                                                 return (
-                                                                    <DatePicker.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
+                                                                    <Calendar.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
                                                                         {month.value}
-                                                                    </DatePicker.TableBodyCell>
+                                                                    </Calendar.TableBodyCell>
                                                                 );
                                                             })}
-                                                        </DatePicker.TableBodyRow>
+                                                        </Calendar.TableBodyRow>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableBody>
-                                    <DatePicker.TableBody view="year">
-                                        {(instance: DatePickerTableBodyInstance) => {
-                                            const { datepicker } = instance;
-                                            const years = datepicker?.yearPickerValues as useDatePickerYearOptions[];
+                                    </Calendar.TableBody>
+                                    <Calendar.TableBody view="year">
+                                        {(instance: CalendarTableBodyInstance) => {
+                                            const { Calendar } = instance;
+                                            const years = Calendar?.yearPickerValues as useCalendarYearOptions[];
 
                                             return (
                                                 <>
                                                     {Array.from({ length: 5 }).map((_, rowIndex) => (
-                                                        <DatePicker.TableBodyRow key={`year-row-${rowIndex}`}>
+                                                        <Calendar.TableBodyRow key={`year-row-${rowIndex}`}>
                                                             {years.slice(rowIndex * 2, (rowIndex + 1) * 2).map((year, colIndex) => {
                                                                 const yearIndex = rowIndex * 2 + colIndex;
 
                                                                 return (
-                                                                    <DatePicker.TableBodyCell key={yearIndex} year={year}>
+                                                                    <Calendar.TableBodyCell key={yearIndex} year={year}>
                                                                         {year.value}
-                                                                    </DatePicker.TableBodyCell>
+                                                                    </Calendar.TableBodyCell>
                                                                 );
                                                             })}
-                                                        </DatePicker.TableBodyRow>
+                                                        </Calendar.TableBodyRow>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableBody>
-                                </DatePicker.Table>
-                            </DatePicker.Calendar>
-                        </DatePicker.Container>
-                    </DatePicker.Portal>
-                </DatePicker>
+                                    </Calendar.TableBody>
+                                </Calendar.Table>
+                            </Calendar.Calendar>
+                        </Calendar.Container>
+                    </Calendar.Portal>
+                </Calendar>
                 <Label htmlFor="on_label">On Label</Label>
             </Label.Float>
         </div>
@@ -16490,135 +16490,135 @@ IftaLabel is used to create infield top aligned labels. Visit [IftaLabel](/docs/
 'use client';
 
 import {
-    DatePickerTableBodyInstance,
-    DatePickerTableHeadRowInstance,
-    DatePickerValueChangeEvent,
-    useDatePickerMonthData,
-    useDatePickerMonthOptions,
-    useDatePickerProps,
-    useDatePickerYearOptions
-} from '@primereact/types/shared/datepicker';
-import { DatePicker } from 'primereact/datepicker';
+    CalendarTableBodyInstance,
+    CalendarTableHeadRowInstance,
+    CalendarValueChangeEvent,
+    useCalendarMonthData,
+    useCalendarMonthOptions,
+    useCalendarProps,
+    useCalendarYearOptions
+} from '@primereact/types/shared/Calendar';
+import { Calendar } from 'primereact/Calendar';
 import { Label } from 'primereact/label';
 import * as React from 'react';
 
 export default function IftaLabelDemo() {
-    const [date, setDate] = React.useState<useDatePickerProps['value'] | null>(null);
+    const [date, setDate] = React.useState<useCalendarProps['value'] | null>(null);
 
     return (
         <div className="flex justify-center">
             <Label.Ifta>
-                <DatePicker value={date} variant="filled" onValueChange={(event: DatePickerValueChangeEvent) => setDate(event.value)}>
-                    <DatePicker.Input id="date" />
-                    <DatePicker.InputIconContainer>
-                        <DatePicker.DropdownIcon />
-                    </DatePicker.InputIconContainer>
-                    <DatePicker.Portal>
-                        <DatePicker.Container>
-                            <DatePicker.Calendar>
-                                <DatePicker.Header>
-                                    <DatePicker.Prev />
-                                    <DatePicker.Title>
-                                        <DatePicker.SelectMonth />
-                                        <DatePicker.SelectYear />
-                                        <DatePicker.Decade />
-                                    </DatePicker.Title>
-                                    <DatePicker.Next />
-                                </DatePicker.Header>
-                                <DatePicker.Table>
-                                    <DatePicker.TableHead>
-                                        <DatePicker.TableHeadRow>
-                                            {(instance: DatePickerTableHeadRowInstance) => {
-                                                const { datepicker } = instance;
-                                                const weekDays = datepicker?.weekDays as string[];
+                <Calendar value={date} variant="filled" onValueChange={(event: CalendarValueChangeEvent) => setDate(event.value)}>
+                    <Calendar.Input id="date" />
+                    <Calendar.InputIconContainer>
+                        <Calendar.DropdownIcon />
+                    </Calendar.InputIconContainer>
+                    <Calendar.Portal>
+                        <Calendar.Container>
+                            <Calendar.Calendar>
+                                <Calendar.Header>
+                                    <Calendar.Prev />
+                                    <Calendar.Title>
+                                        <Calendar.SelectMonth />
+                                        <Calendar.SelectYear />
+                                        <Calendar.Decade />
+                                    </Calendar.Title>
+                                    <Calendar.Next />
+                                </Calendar.Header>
+                                <Calendar.Table>
+                                    <Calendar.TableHead>
+                                        <Calendar.TableHeadRow>
+                                            {(instance: CalendarTableHeadRowInstance) => {
+                                                const { Calendar } = instance;
+                                                const weekDays = Calendar?.weekDays as string[];
 
                                                 return (
                                                     <>
                                                         {weekDays.map((day, index) => (
-                                                            <DatePicker.TableHeadCell key={index} abbr={day}>
+                                                            <Calendar.TableHeadCell key={index} abbr={day}>
                                                                 {day}
-                                                            </DatePicker.TableHeadCell>
+                                                            </Calendar.TableHeadCell>
                                                         ))}
                                                     </>
                                                 );
                                             }}
-                                        </DatePicker.TableHeadRow>
-                                    </DatePicker.TableHead>
-                                    <DatePicker.TableBody>
-                                        {(instance: DatePickerTableBodyInstance) => {
-                                            const { datepicker } = instance;
-                                            const month = datepicker?.getIndexedMonth?.() as useDatePickerMonthData;
+                                        </Calendar.TableHeadRow>
+                                    </Calendar.TableHead>
+                                    <Calendar.TableBody>
+                                        {(instance: CalendarTableBodyInstance) => {
+                                            const { Calendar } = instance;
+                                            const month = Calendar?.getIndexedMonth?.() as useCalendarMonthData;
 
                                             return (
                                                 <>
                                                     {month.dates?.map((week) => (
-                                                        <DatePicker.TableBodyRow key={week[0].day + '' + week[0].month}>
+                                                        <Calendar.TableBodyRow key={week[0].day + '' + week[0].month}>
                                                             <>
                                                                 {week.map((date) => (
-                                                                    <DatePicker.TableBodyCell key={date.day + '' + date.month} date={date}>
+                                                                    <Calendar.TableBodyCell key={date.day + '' + date.month} date={date}>
                                                                         {date.day}
-                                                                    </DatePicker.TableBodyCell>
+                                                                    </Calendar.TableBodyCell>
                                                                 ))}
                                                             </>
-                                                        </DatePicker.TableBodyRow>
+                                                        </Calendar.TableBodyRow>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableBody>
-                                    <DatePicker.TableBody view="month">
-                                        {(instance: DatePickerTableBodyInstance) => {
-                                            const { datepicker } = instance;
-                                            const months = datepicker?.monthPickerValues as useDatePickerMonthOptions[];
+                                    </Calendar.TableBody>
+                                    <Calendar.TableBody view="month">
+                                        {(instance: CalendarTableBodyInstance) => {
+                                            const { Calendar } = instance;
+                                            const months = Calendar?.monthPickerValues as useCalendarMonthOptions[];
 
                                             return (
                                                 <>
                                                     {Array.from({ length: 4 }).map((_, rowIndex) => (
-                                                        <DatePicker.TableBodyRow key={`month-row-${rowIndex}`}>
+                                                        <Calendar.TableBodyRow key={`month-row-${rowIndex}`}>
                                                             {months.slice(rowIndex * 3, (rowIndex + 1) * 3).map((month, colIndex) => {
                                                                 const monthIndex = rowIndex * 3 + colIndex;
 
                                                                 return (
-                                                                    <DatePicker.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
+                                                                    <Calendar.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
                                                                         {month.value}
-                                                                    </DatePicker.TableBodyCell>
+                                                                    </Calendar.TableBodyCell>
                                                                 );
                                                             })}
-                                                        </DatePicker.TableBodyRow>
+                                                        </Calendar.TableBodyRow>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableBody>
-                                    <DatePicker.TableBody view="year">
-                                        {(instance: DatePickerTableBodyInstance) => {
-                                            const { datepicker } = instance;
-                                            const years = datepicker?.yearPickerValues as useDatePickerYearOptions[];
+                                    </Calendar.TableBody>
+                                    <Calendar.TableBody view="year">
+                                        {(instance: CalendarTableBodyInstance) => {
+                                            const { Calendar } = instance;
+                                            const years = Calendar?.yearPickerValues as useCalendarYearOptions[];
 
                                             return (
                                                 <>
                                                     {Array.from({ length: 5 }).map((_, rowIndex) => (
-                                                        <DatePicker.TableBodyRow key={`year-row-${rowIndex}`}>
+                                                        <Calendar.TableBodyRow key={`year-row-${rowIndex}`}>
                                                             {years.slice(rowIndex * 2, (rowIndex + 1) * 2).map((year, colIndex) => {
                                                                 const yearIndex = rowIndex * 2 + colIndex;
 
                                                                 return (
-                                                                    <DatePicker.TableBodyCell key={yearIndex} year={year}>
+                                                                    <Calendar.TableBodyCell key={yearIndex} year={year}>
                                                                         {year.value}
-                                                                    </DatePicker.TableBodyCell>
+                                                                    </Calendar.TableBodyCell>
                                                                 );
                                                             })}
-                                                        </DatePicker.TableBodyRow>
+                                                        </Calendar.TableBodyRow>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableBody>
-                                </DatePicker.Table>
-                            </DatePicker.Calendar>
-                        </DatePicker.Container>
-                    </DatePicker.Portal>
-                </DatePicker>
+                                    </Calendar.TableBody>
+                                </Calendar.Table>
+                            </Calendar.Calendar>
+                        </Calendar.Container>
+                    </Calendar.Portal>
+                </Calendar>
                 <Label htmlFor="date" className="mb-2">
                     Date
                 </Label>
@@ -16631,137 +16631,137 @@ export default function IftaLabelDemo() {
 
 ### Clear Icon
 
-When `DatePicker.ClearIcon` component is used, a clear icon is added to reset the DatePicker.
+When `Calendar.ClearIcon` component is used, a clear icon is added to reset the Calendar.
 
 ```tsx
 'use client';
 
 import {
-    DatePickerTableBodyInstance,
-    DatePickerTableHeadRowInstance,
-    DatePickerValueChangeEvent,
-    useDatePickerMonthData,
-    useDatePickerMonthOptions,
-    useDatePickerProps,
-    useDatePickerYearOptions
-} from '@primereact/types/shared/datepicker';
-import { DatePicker } from 'primereact/datepicker';
+    CalendarTableBodyInstance,
+    CalendarTableHeadRowInstance,
+    CalendarValueChangeEvent,
+    useCalendarMonthData,
+    useCalendarMonthOptions,
+    useCalendarProps,
+    useCalendarYearOptions
+} from '@primereact/types/shared/Calendar';
+import { Calendar } from 'primereact/Calendar';
 import * as React from 'react';
 
 export default function ClearIconDemo() {
-    const [date, setDate] = React.useState<useDatePickerProps['value'] | null>(null);
+    const [date, setDate] = React.useState<useCalendarProps['value'] | null>(null);
 
     return (
         <div className="flex justify-center">
-            <DatePicker value={date} onValueChange={(event: DatePickerValueChangeEvent) => setDate(event.value)} inputClass="w-56">
-                <DatePicker.Input />
-                <DatePicker.ClearIcon />
-                <DatePicker.Portal>
-                    <DatePicker.Container>
-                        <DatePicker.Calendar>
-                            <DatePicker.Header>
-                                <DatePicker.Prev />
-                                <DatePicker.Title>
-                                    <DatePicker.SelectMonth />
-                                    <DatePicker.SelectYear />
-                                    <DatePicker.Decade />
-                                </DatePicker.Title>
-                                <DatePicker.Next />
-                            </DatePicker.Header>
-                            <DatePicker.Table>
-                                <DatePicker.TableHead>
-                                    <DatePicker.TableHeadRow>
-                                        {(instance: DatePickerTableHeadRowInstance) => {
-                                            const { datepicker } = instance;
-                                            const weekDays = datepicker?.weekDays as string[];
+            <Calendar value={date} onValueChange={(event: CalendarValueChangeEvent) => setDate(event.value)} inputClass="w-56">
+                <Calendar.Input />
+                <Calendar.ClearIcon />
+                <Calendar.Portal>
+                    <Calendar.Container>
+                        <Calendar.Calendar>
+                            <Calendar.Header>
+                                <Calendar.Prev />
+                                <Calendar.Title>
+                                    <Calendar.SelectMonth />
+                                    <Calendar.SelectYear />
+                                    <Calendar.Decade />
+                                </Calendar.Title>
+                                <Calendar.Next />
+                            </Calendar.Header>
+                            <Calendar.Table>
+                                <Calendar.TableHead>
+                                    <Calendar.TableHeadRow>
+                                        {(instance: CalendarTableHeadRowInstance) => {
+                                            const { Calendar } = instance;
+                                            const weekDays = Calendar?.weekDays as string[];
 
                                             return (
                                                 <>
                                                     {weekDays.map((day, index) => (
-                                                        <DatePicker.TableHeadCell key={index} abbr={day}>
+                                                        <Calendar.TableHeadCell key={index} abbr={day}>
                                                             {day}
-                                                        </DatePicker.TableHeadCell>
+                                                        </Calendar.TableHeadCell>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableHeadRow>
-                                </DatePicker.TableHead>
-                                <DatePicker.TableBody>
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const month = datepicker?.getIndexedMonth?.() as useDatePickerMonthData;
+                                    </Calendar.TableHeadRow>
+                                </Calendar.TableHead>
+                                <Calendar.TableBody>
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const month = Calendar?.getIndexedMonth?.() as useCalendarMonthData;
 
                                         return (
                                             <>
                                                 {month.dates?.map((week) => (
-                                                    <DatePicker.TableBodyRow key={week[0].day + '' + week[0].month}>
+                                                    <Calendar.TableBodyRow key={week[0].day + '' + week[0].month}>
                                                         <>
                                                             {week.map((date) => (
-                                                                <DatePicker.TableBodyCell key={date.day + '' + date.month} date={date}>
+                                                                <Calendar.TableBodyCell key={date.day + '' + date.month} date={date}>
                                                                     {date.day}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             ))}
                                                         </>
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="month">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const months = datepicker?.monthPickerValues as useDatePickerMonthOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="month">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const months = Calendar?.monthPickerValues as useCalendarMonthOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 4 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`month-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`month-row-${rowIndex}`}>
                                                         {months.slice(rowIndex * 3, (rowIndex + 1) * 3).map((month, colIndex) => {
                                                             const monthIndex = rowIndex * 3 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
+                                                                <Calendar.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
                                                                     {month.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="year">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const years = datepicker?.yearPickerValues as useDatePickerYearOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="year">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const years = Calendar?.yearPickerValues as useCalendarYearOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 5 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`year-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`year-row-${rowIndex}`}>
                                                         {years.slice(rowIndex * 2, (rowIndex + 1) * 2).map((year, colIndex) => {
                                                             const yearIndex = rowIndex * 2 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={yearIndex} year={year}>
+                                                                <Calendar.TableBodyCell key={yearIndex} year={year}>
                                                                     {year.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                            </DatePicker.Table>
-                        </DatePicker.Calendar>
-                    </DatePicker.Container>
-                </DatePicker.Portal>
-            </DatePicker>
+                                </Calendar.TableBody>
+                            </Calendar.Table>
+                        </Calendar.Calendar>
+                    </Calendar.Container>
+                </Calendar.Portal>
+            </Calendar>
         </div>
     );
 }
@@ -16770,364 +16770,364 @@ export default function ClearIconDemo() {
 
 ### Sizes
 
-DatePicker provides `small` and `large` sizes as alternatives to the base.
+Calendar provides `small` and `large` sizes as alternatives to the base.
 
 ```tsx
 'use client';
 
 import {
-    DatePickerTableBodyInstance,
-    DatePickerTableHeadRowInstance,
-    DatePickerValueChangeEvent,
-    useDatePickerMonthData,
-    useDatePickerMonthOptions,
-    useDatePickerProps,
-    useDatePickerYearOptions
-} from '@primereact/types/shared/datepicker';
-import { DatePicker } from 'primereact/datepicker';
+    CalendarTableBodyInstance,
+    CalendarTableHeadRowInstance,
+    CalendarValueChangeEvent,
+    useCalendarMonthData,
+    useCalendarMonthOptions,
+    useCalendarProps,
+    useCalendarYearOptions
+} from '@primereact/types/shared/Calendar';
+import { Calendar } from 'primereact/Calendar';
 
 import * as React from 'react';
 
 export default function SizesDemo() {
-    const [date, setDate] = React.useState<useDatePickerProps['value'] | null>(null);
-    const [date2, setDate2] = React.useState<useDatePickerProps['value'] | null>(null);
-    const [date3, setDate3] = React.useState<useDatePickerProps['value'] | null>(null);
+    const [date, setDate] = React.useState<useCalendarProps['value'] | null>(null);
+    const [date2, setDate2] = React.useState<useCalendarProps['value'] | null>(null);
+    const [date3, setDate3] = React.useState<useCalendarProps['value'] | null>(null);
 
     return (
         <div className="flex flex-col items-center gap-4">
-            <DatePicker value={date} size="small" placeholder="Small" onValueChange={(event: DatePickerValueChangeEvent) => setDate(event.value)}>
-                <DatePicker.Input />
-                <DatePicker.InputIconContainer>
-                    <DatePicker.DropdownIcon />
-                </DatePicker.InputIconContainer>
-                <DatePicker.Portal>
-                    <DatePicker.Container>
-                        <DatePicker.Calendar>
-                            <DatePicker.Header>
-                                <DatePicker.Prev />
-                                <DatePicker.Title>
-                                    <DatePicker.SelectMonth />
-                                    <DatePicker.SelectYear />
-                                    <DatePicker.Decade />
-                                </DatePicker.Title>
-                                <DatePicker.Next />
-                            </DatePicker.Header>
-                            <DatePicker.Table>
-                                <DatePicker.TableHead>
-                                    <DatePicker.TableHeadRow>
-                                        {(instance: DatePickerTableHeadRowInstance) => {
-                                            const { datepicker } = instance;
-                                            const weekDays = datepicker?.weekDays as string[];
+            <Calendar value={date} size="small" placeholder="Small" onValueChange={(event: CalendarValueChangeEvent) => setDate(event.value)}>
+                <Calendar.Input />
+                <Calendar.InputIconContainer>
+                    <Calendar.DropdownIcon />
+                </Calendar.InputIconContainer>
+                <Calendar.Portal>
+                    <Calendar.Container>
+                        <Calendar.Calendar>
+                            <Calendar.Header>
+                                <Calendar.Prev />
+                                <Calendar.Title>
+                                    <Calendar.SelectMonth />
+                                    <Calendar.SelectYear />
+                                    <Calendar.Decade />
+                                </Calendar.Title>
+                                <Calendar.Next />
+                            </Calendar.Header>
+                            <Calendar.Table>
+                                <Calendar.TableHead>
+                                    <Calendar.TableHeadRow>
+                                        {(instance: CalendarTableHeadRowInstance) => {
+                                            const { Calendar } = instance;
+                                            const weekDays = Calendar?.weekDays as string[];
 
                                             return (
                                                 <>
                                                     {weekDays.map((day, index) => (
-                                                        <DatePicker.TableHeadCell key={index} abbr={day}>
+                                                        <Calendar.TableHeadCell key={index} abbr={day}>
                                                             {day}
-                                                        </DatePicker.TableHeadCell>
+                                                        </Calendar.TableHeadCell>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableHeadRow>
-                                </DatePicker.TableHead>
-                                <DatePicker.TableBody>
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const month = datepicker?.getIndexedMonth?.() as useDatePickerMonthData;
+                                    </Calendar.TableHeadRow>
+                                </Calendar.TableHead>
+                                <Calendar.TableBody>
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const month = Calendar?.getIndexedMonth?.() as useCalendarMonthData;
 
                                         return (
                                             <>
                                                 {month.dates?.map((week) => (
-                                                    <DatePicker.TableBodyRow key={week[0].day + '' + week[0].month}>
+                                                    <Calendar.TableBodyRow key={week[0].day + '' + week[0].month}>
                                                         <>
                                                             {week.map((date) => (
-                                                                <DatePicker.TableBodyCell key={date.day + '' + date.month} date={date}>
+                                                                <Calendar.TableBodyCell key={date.day + '' + date.month} date={date}>
                                                                     {date.day}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             ))}
                                                         </>
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="month">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const months = datepicker?.monthPickerValues as useDatePickerMonthOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="month">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const months = Calendar?.monthPickerValues as useCalendarMonthOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 4 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`month-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`month-row-${rowIndex}`}>
                                                         {months.slice(rowIndex * 3, (rowIndex + 1) * 3).map((month, colIndex) => {
                                                             const monthIndex = rowIndex * 3 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
+                                                                <Calendar.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
                                                                     {month.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="year">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const years = datepicker?.yearPickerValues as useDatePickerYearOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="year">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const years = Calendar?.yearPickerValues as useCalendarYearOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 5 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`year-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`year-row-${rowIndex}`}>
                                                         {years.slice(rowIndex * 2, (rowIndex + 1) * 2).map((year, colIndex) => {
                                                             const yearIndex = rowIndex * 2 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={yearIndex} year={year}>
+                                                                <Calendar.TableBodyCell key={yearIndex} year={year}>
                                                                     {year.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                            </DatePicker.Table>
-                        </DatePicker.Calendar>
-                    </DatePicker.Container>
-                </DatePicker.Portal>
-            </DatePicker>
-            <DatePicker value={date2} placeholder="Normal" onValueChange={(event: DatePickerValueChangeEvent) => setDate2(event.value)}>
-                <DatePicker.Input />
-                <DatePicker.InputIconContainer>
-                    <DatePicker.DropdownIcon />
-                </DatePicker.InputIconContainer>
-                <DatePicker.Portal>
-                    <DatePicker.Container>
-                        <DatePicker.Calendar>
-                            <DatePicker.Header>
-                                <DatePicker.Prev />
-                                <DatePicker.Title>
-                                    <DatePicker.SelectMonth />
-                                    <DatePicker.SelectYear />
-                                    <DatePicker.Decade />
-                                </DatePicker.Title>
-                                <DatePicker.Next />
-                            </DatePicker.Header>
-                            <DatePicker.Table>
-                                <DatePicker.TableHead>
-                                    <DatePicker.TableHeadRow>
-                                        {(instance: DatePickerTableHeadRowInstance) => {
-                                            const { datepicker } = instance;
-                                            const weekDays = datepicker?.weekDays as string[];
+                                </Calendar.TableBody>
+                            </Calendar.Table>
+                        </Calendar.Calendar>
+                    </Calendar.Container>
+                </Calendar.Portal>
+            </Calendar>
+            <Calendar value={date2} placeholder="Normal" onValueChange={(event: CalendarValueChangeEvent) => setDate2(event.value)}>
+                <Calendar.Input />
+                <Calendar.InputIconContainer>
+                    <Calendar.DropdownIcon />
+                </Calendar.InputIconContainer>
+                <Calendar.Portal>
+                    <Calendar.Container>
+                        <Calendar.Calendar>
+                            <Calendar.Header>
+                                <Calendar.Prev />
+                                <Calendar.Title>
+                                    <Calendar.SelectMonth />
+                                    <Calendar.SelectYear />
+                                    <Calendar.Decade />
+                                </Calendar.Title>
+                                <Calendar.Next />
+                            </Calendar.Header>
+                            <Calendar.Table>
+                                <Calendar.TableHead>
+                                    <Calendar.TableHeadRow>
+                                        {(instance: CalendarTableHeadRowInstance) => {
+                                            const { Calendar } = instance;
+                                            const weekDays = Calendar?.weekDays as string[];
 
                                             return (
                                                 <>
                                                     {weekDays.map((day, index) => (
-                                                        <DatePicker.TableHeadCell key={index} abbr={day}>
+                                                        <Calendar.TableHeadCell key={index} abbr={day}>
                                                             {day}
-                                                        </DatePicker.TableHeadCell>
+                                                        </Calendar.TableHeadCell>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableHeadRow>
-                                </DatePicker.TableHead>
-                                <DatePicker.TableBody>
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const month = datepicker?.getIndexedMonth?.() as useDatePickerMonthData;
+                                    </Calendar.TableHeadRow>
+                                </Calendar.TableHead>
+                                <Calendar.TableBody>
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const month = Calendar?.getIndexedMonth?.() as useCalendarMonthData;
 
                                         return (
                                             <>
                                                 {month.dates?.map((week) => (
-                                                    <DatePicker.TableBodyRow key={week[0].day + '' + week[0].month}>
+                                                    <Calendar.TableBodyRow key={week[0].day + '' + week[0].month}>
                                                         <>
                                                             {week.map((date) => (
-                                                                <DatePicker.TableBodyCell key={date.day + '' + date.month} date={date}>
+                                                                <Calendar.TableBodyCell key={date.day + '' + date.month} date={date}>
                                                                     {date.day}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             ))}
                                                         </>
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="month">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const months = datepicker?.monthPickerValues as useDatePickerMonthOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="month">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const months = Calendar?.monthPickerValues as useCalendarMonthOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 4 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`month-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`month-row-${rowIndex}`}>
                                                         {months.slice(rowIndex * 3, (rowIndex + 1) * 3).map((month, colIndex) => {
                                                             const monthIndex = rowIndex * 3 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
+                                                                <Calendar.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
                                                                     {month.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="year">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const years = datepicker?.yearPickerValues as useDatePickerYearOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="year">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const years = Calendar?.yearPickerValues as useCalendarYearOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 5 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`year-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`year-row-${rowIndex}`}>
                                                         {years.slice(rowIndex * 2, (rowIndex + 1) * 2).map((year, colIndex) => {
                                                             const yearIndex = rowIndex * 2 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={yearIndex} year={year}>
+                                                                <Calendar.TableBodyCell key={yearIndex} year={year}>
                                                                     {year.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                            </DatePicker.Table>
-                        </DatePicker.Calendar>
-                    </DatePicker.Container>
-                </DatePicker.Portal>
-            </DatePicker>
-            <DatePicker value={date3} size="large" placeholder="Large" onValueChange={(event: DatePickerValueChangeEvent) => setDate3(event.value)}>
-                <DatePicker.Input />
-                <DatePicker.InputIconContainer>
-                    <DatePicker.DropdownIcon />
-                </DatePicker.InputIconContainer>
-                <DatePicker.Portal>
-                    <DatePicker.Container>
-                        <DatePicker.Calendar>
-                            <DatePicker.Header>
-                                <DatePicker.Prev />
-                                <DatePicker.Title>
-                                    <DatePicker.SelectMonth />
-                                    <DatePicker.SelectYear />
-                                    <DatePicker.Decade />
-                                </DatePicker.Title>
-                                <DatePicker.Next />
-                            </DatePicker.Header>
-                            <DatePicker.Table>
-                                <DatePicker.TableHead>
-                                    <DatePicker.TableHeadRow>
-                                        {(instance: DatePickerTableHeadRowInstance) => {
-                                            const { datepicker } = instance;
-                                            const weekDays = datepicker?.weekDays as string[];
+                                </Calendar.TableBody>
+                            </Calendar.Table>
+                        </Calendar.Calendar>
+                    </Calendar.Container>
+                </Calendar.Portal>
+            </Calendar>
+            <Calendar value={date3} size="large" placeholder="Large" onValueChange={(event: CalendarValueChangeEvent) => setDate3(event.value)}>
+                <Calendar.Input />
+                <Calendar.InputIconContainer>
+                    <Calendar.DropdownIcon />
+                </Calendar.InputIconContainer>
+                <Calendar.Portal>
+                    <Calendar.Container>
+                        <Calendar.Calendar>
+                            <Calendar.Header>
+                                <Calendar.Prev />
+                                <Calendar.Title>
+                                    <Calendar.SelectMonth />
+                                    <Calendar.SelectYear />
+                                    <Calendar.Decade />
+                                </Calendar.Title>
+                                <Calendar.Next />
+                            </Calendar.Header>
+                            <Calendar.Table>
+                                <Calendar.TableHead>
+                                    <Calendar.TableHeadRow>
+                                        {(instance: CalendarTableHeadRowInstance) => {
+                                            const { Calendar } = instance;
+                                            const weekDays = Calendar?.weekDays as string[];
 
                                             return (
                                                 <>
                                                     {weekDays.map((day, index) => (
-                                                        <DatePicker.TableHeadCell key={index} abbr={day}>
+                                                        <Calendar.TableHeadCell key={index} abbr={day}>
                                                             {day}
-                                                        </DatePicker.TableHeadCell>
+                                                        </Calendar.TableHeadCell>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableHeadRow>
-                                </DatePicker.TableHead>
-                                <DatePicker.TableBody>
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const month = datepicker?.getIndexedMonth?.() as useDatePickerMonthData;
+                                    </Calendar.TableHeadRow>
+                                </Calendar.TableHead>
+                                <Calendar.TableBody>
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const month = Calendar?.getIndexedMonth?.() as useCalendarMonthData;
 
                                         return (
                                             <>
                                                 {month.dates?.map((week) => (
-                                                    <DatePicker.TableBodyRow key={week[0].day + '' + week[0].month}>
+                                                    <Calendar.TableBodyRow key={week[0].day + '' + week[0].month}>
                                                         <>
                                                             {week.map((date) => (
-                                                                <DatePicker.TableBodyCell key={date.day + '' + date.month} date={date}>
+                                                                <Calendar.TableBodyCell key={date.day + '' + date.month} date={date}>
                                                                     {date.day}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             ))}
                                                         </>
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="month">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const months = datepicker?.monthPickerValues as useDatePickerMonthOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="month">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const months = Calendar?.monthPickerValues as useCalendarMonthOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 4 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`month-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`month-row-${rowIndex}`}>
                                                         {months.slice(rowIndex * 3, (rowIndex + 1) * 3).map((month, colIndex) => {
                                                             const monthIndex = rowIndex * 3 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
+                                                                <Calendar.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
                                                                     {month.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="year">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const years = datepicker?.yearPickerValues as useDatePickerYearOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="year">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const years = Calendar?.yearPickerValues as useCalendarYearOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 5 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`year-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`year-row-${rowIndex}`}>
                                                         {years.slice(rowIndex * 2, (rowIndex + 1) * 2).map((year, colIndex) => {
                                                             const yearIndex = rowIndex * 2 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={yearIndex} year={year}>
+                                                                <Calendar.TableBodyCell key={yearIndex} year={year}>
                                                                     {year.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                            </DatePicker.Table>
-                        </DatePicker.Calendar>
-                    </DatePicker.Container>
-                </DatePicker.Portal>
-            </DatePicker>
+                                </Calendar.TableBody>
+                            </Calendar.Table>
+                        </Calendar.Calendar>
+                    </Calendar.Container>
+                </Calendar.Portal>
+            </Calendar>
         </div>
     );
 }
@@ -17142,130 +17142,130 @@ The fluid prop makes the component take up the full width of its container when 
 'use client';
 
 import {
-    DatePickerTableBodyInstance,
-    DatePickerTableHeadRowInstance,
-    DatePickerValueChangeEvent,
-    useDatePickerMonthData,
-    useDatePickerMonthOptions,
-    useDatePickerProps,
-    useDatePickerYearOptions
-} from '@primereact/types/shared/datepicker';
-import { DatePicker } from 'primereact/datepicker';
+    CalendarTableBodyInstance,
+    CalendarTableHeadRowInstance,
+    CalendarValueChangeEvent,
+    useCalendarMonthData,
+    useCalendarMonthOptions,
+    useCalendarProps,
+    useCalendarYearOptions
+} from '@primereact/types/shared/Calendar';
+import { Calendar } from 'primereact/Calendar';
 import * as React from 'react';
 
 export default function FluidDemo() {
-    const [date, setDate] = React.useState<useDatePickerProps['value'] | null>(null);
+    const [date, setDate] = React.useState<useCalendarProps['value'] | null>(null);
 
     return (
         <div>
-            <DatePicker value={date} fluid onValueChange={(event: DatePickerValueChangeEvent) => setDate(event.value)}>
-                <DatePicker.Input />
-                <DatePicker.Portal>
-                    <DatePicker.Container>
-                        <DatePicker.Calendar>
-                            <DatePicker.Header>
-                                <DatePicker.Prev />
-                                <DatePicker.Title>
-                                    <DatePicker.SelectMonth />
-                                    <DatePicker.SelectYear />
-                                    <DatePicker.Decade />
-                                </DatePicker.Title>
-                                <DatePicker.Next />
-                            </DatePicker.Header>
-                            <DatePicker.Table>
-                                <DatePicker.TableHead>
-                                    <DatePicker.TableHeadRow>
-                                        {(instance: DatePickerTableHeadRowInstance) => {
-                                            const { datepicker } = instance;
-                                            const weekDays = datepicker?.weekDays as string[];
+            <Calendar value={date} fluid onValueChange={(event: CalendarValueChangeEvent) => setDate(event.value)}>
+                <Calendar.Input />
+                <Calendar.Portal>
+                    <Calendar.Container>
+                        <Calendar.Calendar>
+                            <Calendar.Header>
+                                <Calendar.Prev />
+                                <Calendar.Title>
+                                    <Calendar.SelectMonth />
+                                    <Calendar.SelectYear />
+                                    <Calendar.Decade />
+                                </Calendar.Title>
+                                <Calendar.Next />
+                            </Calendar.Header>
+                            <Calendar.Table>
+                                <Calendar.TableHead>
+                                    <Calendar.TableHeadRow>
+                                        {(instance: CalendarTableHeadRowInstance) => {
+                                            const { Calendar } = instance;
+                                            const weekDays = Calendar?.weekDays as string[];
 
                                             return (
                                                 <>
                                                     {weekDays.map((day, index) => (
-                                                        <DatePicker.TableHeadCell key={index} abbr={day}>
+                                                        <Calendar.TableHeadCell key={index} abbr={day}>
                                                             {day}
-                                                        </DatePicker.TableHeadCell>
+                                                        </Calendar.TableHeadCell>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableHeadRow>
-                                </DatePicker.TableHead>
-                                <DatePicker.TableBody>
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const month = datepicker?.getIndexedMonth?.() as useDatePickerMonthData;
+                                    </Calendar.TableHeadRow>
+                                </Calendar.TableHead>
+                                <Calendar.TableBody>
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const month = Calendar?.getIndexedMonth?.() as useCalendarMonthData;
 
                                         return (
                                             <>
                                                 {month.dates?.map((week) => (
-                                                    <DatePicker.TableBodyRow key={week[0].day + '' + week[0].month}>
+                                                    <Calendar.TableBodyRow key={week[0].day + '' + week[0].month}>
                                                         <>
                                                             {week.map((date) => (
-                                                                <DatePicker.TableBodyCell key={date.day + '' + date.month} date={date}>
+                                                                <Calendar.TableBodyCell key={date.day + '' + date.month} date={date}>
                                                                     {date.day}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             ))}
                                                         </>
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="month">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const months = datepicker?.monthPickerValues as useDatePickerMonthOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="month">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const months = Calendar?.monthPickerValues as useCalendarMonthOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 4 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`month-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`month-row-${rowIndex}`}>
                                                         {months.slice(rowIndex * 3, (rowIndex + 1) * 3).map((month, colIndex) => {
                                                             const monthIndex = rowIndex * 3 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
+                                                                <Calendar.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
                                                                     {month.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="year">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const years = datepicker?.yearPickerValues as useDatePickerYearOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="year">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const years = Calendar?.yearPickerValues as useCalendarYearOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 5 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`year-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`year-row-${rowIndex}`}>
                                                         {years.slice(rowIndex * 2, (rowIndex + 1) * 2).map((year, colIndex) => {
                                                             const yearIndex = rowIndex * 2 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={yearIndex} year={year}>
+                                                                <Calendar.TableBodyCell key={yearIndex} year={year}>
                                                                     {year.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                            </DatePicker.Table>
-                        </DatePicker.Calendar>
-                    </DatePicker.Container>
-                </DatePicker.Portal>
-            </DatePicker>
+                                </Calendar.TableBody>
+                            </Calendar.Table>
+                        </Calendar.Calendar>
+                    </Calendar.Container>
+                </Calendar.Portal>
+            </Calendar>
         </div>
     );
 }
@@ -17280,130 +17280,130 @@ Specify the `filled` property to display the component with a higher visual emph
 'use client';
 
 import {
-    DatePickerTableBodyInstance,
-    DatePickerTableHeadRowInstance,
-    DatePickerValueChangeEvent,
-    useDatePickerMonthData,
-    useDatePickerMonthOptions,
-    useDatePickerProps,
-    useDatePickerYearOptions
-} from '@primereact/types/shared/datepicker';
-import { DatePicker } from 'primereact/datepicker';
+    CalendarTableBodyInstance,
+    CalendarTableHeadRowInstance,
+    CalendarValueChangeEvent,
+    useCalendarMonthData,
+    useCalendarMonthOptions,
+    useCalendarProps,
+    useCalendarYearOptions
+} from '@primereact/types/shared/Calendar';
+import { Calendar } from 'primereact/Calendar';
 import * as React from 'react';
 
 export default function FilledDemo() {
-    const [date, setDate] = React.useState<useDatePickerProps['value'] | null>(null);
+    const [date, setDate] = React.useState<useCalendarProps['value'] | null>(null);
 
     return (
         <div className="flex justify-center">
-            <DatePicker value={date} variant="filled" onValueChange={(event: DatePickerValueChangeEvent) => setDate(event.value)}>
-                <DatePicker.Input />
-                <DatePicker.Portal>
-                    <DatePicker.Container>
-                        <DatePicker.Calendar>
-                            <DatePicker.Header>
-                                <DatePicker.Prev />
-                                <DatePicker.Title>
-                                    <DatePicker.SelectMonth />
-                                    <DatePicker.SelectYear />
-                                    <DatePicker.Decade />
-                                </DatePicker.Title>
-                                <DatePicker.Next />
-                            </DatePicker.Header>
-                            <DatePicker.Table>
-                                <DatePicker.TableHead>
-                                    <DatePicker.TableHeadRow>
-                                        {(instance: DatePickerTableHeadRowInstance) => {
-                                            const { datepicker } = instance;
-                                            const weekDays = datepicker?.weekDays as string[];
+            <Calendar value={date} variant="filled" onValueChange={(event: CalendarValueChangeEvent) => setDate(event.value)}>
+                <Calendar.Input />
+                <Calendar.Portal>
+                    <Calendar.Container>
+                        <Calendar.Calendar>
+                            <Calendar.Header>
+                                <Calendar.Prev />
+                                <Calendar.Title>
+                                    <Calendar.SelectMonth />
+                                    <Calendar.SelectYear />
+                                    <Calendar.Decade />
+                                </Calendar.Title>
+                                <Calendar.Next />
+                            </Calendar.Header>
+                            <Calendar.Table>
+                                <Calendar.TableHead>
+                                    <Calendar.TableHeadRow>
+                                        {(instance: CalendarTableHeadRowInstance) => {
+                                            const { Calendar } = instance;
+                                            const weekDays = Calendar?.weekDays as string[];
 
                                             return (
                                                 <>
                                                     {weekDays.map((day, index) => (
-                                                        <DatePicker.TableHeadCell key={index} abbr={day}>
+                                                        <Calendar.TableHeadCell key={index} abbr={day}>
                                                             {day}
-                                                        </DatePicker.TableHeadCell>
+                                                        </Calendar.TableHeadCell>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableHeadRow>
-                                </DatePicker.TableHead>
-                                <DatePicker.TableBody>
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const month = datepicker?.getIndexedMonth?.() as useDatePickerMonthData;
+                                    </Calendar.TableHeadRow>
+                                </Calendar.TableHead>
+                                <Calendar.TableBody>
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const month = Calendar?.getIndexedMonth?.() as useCalendarMonthData;
 
                                         return (
                                             <>
                                                 {month.dates?.map((week) => (
-                                                    <DatePicker.TableBodyRow key={week[0].day + '' + week[0].month}>
+                                                    <Calendar.TableBodyRow key={week[0].day + '' + week[0].month}>
                                                         <>
                                                             {week.map((date) => (
-                                                                <DatePicker.TableBodyCell key={date.day + '' + date.month} date={date}>
+                                                                <Calendar.TableBodyCell key={date.day + '' + date.month} date={date}>
                                                                     {date.day}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             ))}
                                                         </>
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="month">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const months = datepicker?.monthPickerValues as useDatePickerMonthOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="month">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const months = Calendar?.monthPickerValues as useCalendarMonthOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 4 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`month-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`month-row-${rowIndex}`}>
                                                         {months.slice(rowIndex * 3, (rowIndex + 1) * 3).map((month, colIndex) => {
                                                             const monthIndex = rowIndex * 3 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
+                                                                <Calendar.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
                                                                     {month.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="year">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const years = datepicker?.yearPickerValues as useDatePickerYearOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="year">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const years = Calendar?.yearPickerValues as useCalendarYearOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 5 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`year-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`year-row-${rowIndex}`}>
                                                         {years.slice(rowIndex * 2, (rowIndex + 1) * 2).map((year, colIndex) => {
                                                             const yearIndex = rowIndex * 2 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={yearIndex} year={year}>
+                                                                <Calendar.TableBodyCell key={yearIndex} year={year}>
                                                                     {year.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                            </DatePicker.Table>
-                        </DatePicker.Calendar>
-                    </DatePicker.Container>
-                </DatePicker.Portal>
-            </DatePicker>
+                                </Calendar.TableBody>
+                            </Calendar.Table>
+                        </Calendar.Calendar>
+                    </Calendar.Container>
+                </Calendar.Portal>
+            </Calendar>
         </div>
     );
 }
@@ -17412,131 +17412,131 @@ export default function FilledDemo() {
 
 ### Disabled
 
-Use the `disabled` property to disable a datepicker.
+Use the `disabled` property to disable a Calendar.
 
 ```tsx
 'use client';
 
 import {
-    DatePickerTableBodyInstance,
-    DatePickerTableHeadRowInstance,
-    useDatePickerMonthData,
-    useDatePickerMonthOptions,
-    useDatePickerYearOptions
-} from '@primereact/types/shared/datepicker';
-import { DatePicker } from 'primereact/datepicker';
+    CalendarTableBodyInstance,
+    CalendarTableHeadRowInstance,
+    useCalendarMonthData,
+    useCalendarMonthOptions,
+    useCalendarYearOptions
+} from '@primereact/types/shared/Calendar';
+import { Calendar } from 'primereact/Calendar';
 
 export default function DisabledDemo() {
     return (
         <div className="flex justify-center">
-            <DatePicker disabled>
-                <DatePicker.Input />
-                <DatePicker.Portal>
-                    <DatePicker.Container>
-                        <DatePicker.Calendar>
-                            <DatePicker.Header>
-                                <DatePicker.Prev />
-                                <DatePicker.Title>
-                                    <DatePicker.SelectMonth />
-                                    <DatePicker.SelectYear />
-                                    <DatePicker.Decade />
-                                </DatePicker.Title>
-                                <DatePicker.Next />
-                            </DatePicker.Header>
-                            <DatePicker.Table>
-                                <DatePicker.TableHead>
-                                    <DatePicker.TableHeadRow>
-                                        {(instance: DatePickerTableHeadRowInstance) => {
-                                            const { datepicker } = instance;
-                                            const weekDays = datepicker?.weekDays as string[];
+            <Calendar disabled>
+                <Calendar.Input />
+                <Calendar.Portal>
+                    <Calendar.Container>
+                        <Calendar.Calendar>
+                            <Calendar.Header>
+                                <Calendar.Prev />
+                                <Calendar.Title>
+                                    <Calendar.SelectMonth />
+                                    <Calendar.SelectYear />
+                                    <Calendar.Decade />
+                                </Calendar.Title>
+                                <Calendar.Next />
+                            </Calendar.Header>
+                            <Calendar.Table>
+                                <Calendar.TableHead>
+                                    <Calendar.TableHeadRow>
+                                        {(instance: CalendarTableHeadRowInstance) => {
+                                            const { Calendar } = instance;
+                                            const weekDays = Calendar?.weekDays as string[];
 
                                             return (
                                                 <>
                                                     {weekDays.map((day, index) => (
-                                                        <DatePicker.TableHeadCell key={index} abbr={day}>
+                                                        <Calendar.TableHeadCell key={index} abbr={day}>
                                                             {day}
-                                                        </DatePicker.TableHeadCell>
+                                                        </Calendar.TableHeadCell>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableHeadRow>
-                                </DatePicker.TableHead>
-                                <DatePicker.TableBody>
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const month = datepicker?.getIndexedMonth?.() as useDatePickerMonthData;
+                                    </Calendar.TableHeadRow>
+                                </Calendar.TableHead>
+                                <Calendar.TableBody>
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const month = Calendar?.getIndexedMonth?.() as useCalendarMonthData;
 
                                         return (
                                             <>
                                                 {month.dates?.map((week) => (
-                                                    <DatePicker.TableBodyRow key={week[0].day + '' + week[0].month}>
+                                                    <Calendar.TableBodyRow key={week[0].day + '' + week[0].month}>
                                                         <>
                                                             {week.map((date) => (
-                                                                <DatePicker.TableBodyCell key={date.day + '' + date.month} date={date}>
+                                                                <Calendar.TableBodyCell key={date.day + '' + date.month} date={date}>
                                                                     {date.day}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             ))}
                                                         </>
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="month">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const months = datepicker?.monthPickerValues as useDatePickerMonthOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="month">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const months = Calendar?.monthPickerValues as useCalendarMonthOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 4 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`month-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`month-row-${rowIndex}`}>
                                                         {months.slice(rowIndex * 3, (rowIndex + 1) * 3).map((month, colIndex) => {
                                                             const monthIndex = rowIndex * 3 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
+                                                                <Calendar.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
                                                                     {month.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="year">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const years = datepicker?.yearPickerValues as useDatePickerYearOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="year">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const years = Calendar?.yearPickerValues as useCalendarYearOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 5 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`year-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`year-row-${rowIndex}`}>
                                                         {years.slice(rowIndex * 2, (rowIndex + 1) * 2).map((year, colIndex) => {
                                                             const yearIndex = rowIndex * 2 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={yearIndex} year={year}>
+                                                                <Calendar.TableBodyCell key={yearIndex} year={year}>
                                                                     {year.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                            </DatePicker.Table>
-                        </DatePicker.Calendar>
-                    </DatePicker.Container>
-                </DatePicker.Portal>
-            </DatePicker>
+                                </Calendar.TableBody>
+                            </Calendar.Table>
+                        </Calendar.Calendar>
+                    </Calendar.Container>
+                </Calendar.Portal>
+            </Calendar>
         </div>
     );
 }
@@ -17551,246 +17551,246 @@ Specify the `invalid` property to display the component with a red border.
 'use client';
 
 import {
-    DatePickerTableBodyInstance,
-    DatePickerTableHeadRowInstance,
-    DatePickerValueChangeEvent,
-    useDatePickerMonthData,
-    useDatePickerMonthOptions,
-    useDatePickerProps,
-    useDatePickerYearOptions
-} from '@primereact/types/shared/datepicker';
-import { DatePicker } from 'primereact/datepicker';
+    CalendarTableBodyInstance,
+    CalendarTableHeadRowInstance,
+    CalendarValueChangeEvent,
+    useCalendarMonthData,
+    useCalendarMonthOptions,
+    useCalendarProps,
+    useCalendarYearOptions
+} from '@primereact/types/shared/Calendar';
+import { Calendar } from 'primereact/Calendar';
 
 import * as React from 'react';
 
 export default function InvalidDemo() {
-    const [date, setDate] = React.useState<useDatePickerProps['value'] | null>(null);
-    const [date2, setDate2] = React.useState<useDatePickerProps['value'] | null>(null);
+    const [date, setDate] = React.useState<useCalendarProps['value'] | null>(null);
+    const [date2, setDate2] = React.useState<useCalendarProps['value'] | null>(null);
 
     return (
         <div className="flex flex-wrap justify-center gap-4">
-            <DatePicker value={date} invalid={!date} placeholder="Date" onValueChange={(event: DatePickerValueChangeEvent) => setDate(event.value)}>
-                <DatePicker.Input />
-                <DatePicker.Portal>
-                    <DatePicker.Container>
-                        <DatePicker.Calendar>
-                            <DatePicker.Header>
-                                <DatePicker.Prev />
-                                <DatePicker.Title>
-                                    <DatePicker.SelectMonth />
-                                    <DatePicker.SelectYear />
-                                    <DatePicker.Decade />
-                                </DatePicker.Title>
-                                <DatePicker.Next />
-                            </DatePicker.Header>
-                            <DatePicker.Table>
-                                <DatePicker.TableHead>
-                                    <DatePicker.TableHeadRow>
-                                        {(instance: DatePickerTableHeadRowInstance) => {
-                                            const { datepicker } = instance;
-                                            const weekDays = datepicker?.weekDays as string[];
+            <Calendar value={date} invalid={!date} placeholder="Date" onValueChange={(event: CalendarValueChangeEvent) => setDate(event.value)}>
+                <Calendar.Input />
+                <Calendar.Portal>
+                    <Calendar.Container>
+                        <Calendar.Calendar>
+                            <Calendar.Header>
+                                <Calendar.Prev />
+                                <Calendar.Title>
+                                    <Calendar.SelectMonth />
+                                    <Calendar.SelectYear />
+                                    <Calendar.Decade />
+                                </Calendar.Title>
+                                <Calendar.Next />
+                            </Calendar.Header>
+                            <Calendar.Table>
+                                <Calendar.TableHead>
+                                    <Calendar.TableHeadRow>
+                                        {(instance: CalendarTableHeadRowInstance) => {
+                                            const { Calendar } = instance;
+                                            const weekDays = Calendar?.weekDays as string[];
 
                                             return (
                                                 <>
                                                     {weekDays.map((day, index) => (
-                                                        <DatePicker.TableHeadCell key={index} abbr={day}>
+                                                        <Calendar.TableHeadCell key={index} abbr={day}>
                                                             {day}
-                                                        </DatePicker.TableHeadCell>
+                                                        </Calendar.TableHeadCell>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableHeadRow>
-                                </DatePicker.TableHead>
-                                <DatePicker.TableBody>
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const month = datepicker?.getIndexedMonth?.() as useDatePickerMonthData;
+                                    </Calendar.TableHeadRow>
+                                </Calendar.TableHead>
+                                <Calendar.TableBody>
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const month = Calendar?.getIndexedMonth?.() as useCalendarMonthData;
 
                                         return (
                                             <>
                                                 {month.dates?.map((week) => (
-                                                    <DatePicker.TableBodyRow key={week[0].day + '' + week[0].month}>
+                                                    <Calendar.TableBodyRow key={week[0].day + '' + week[0].month}>
                                                         <>
                                                             {week.map((date) => (
-                                                                <DatePicker.TableBodyCell key={date.day + '' + date.month} date={date}>
+                                                                <Calendar.TableBodyCell key={date.day + '' + date.month} date={date}>
                                                                     {date.day}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             ))}
                                                         </>
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="month">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const months = datepicker?.monthPickerValues as useDatePickerMonthOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="month">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const months = Calendar?.monthPickerValues as useCalendarMonthOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 4 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`month-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`month-row-${rowIndex}`}>
                                                         {months.slice(rowIndex * 3, (rowIndex + 1) * 3).map((month, colIndex) => {
                                                             const monthIndex = rowIndex * 3 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
+                                                                <Calendar.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
                                                                     {month.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="year">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const years = datepicker?.yearPickerValues as useDatePickerYearOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="year">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const years = Calendar?.yearPickerValues as useCalendarYearOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 5 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`year-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`year-row-${rowIndex}`}>
                                                         {years.slice(rowIndex * 2, (rowIndex + 1) * 2).map((year, colIndex) => {
                                                             const yearIndex = rowIndex * 2 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={yearIndex} year={year}>
+                                                                <Calendar.TableBodyCell key={yearIndex} year={year}>
                                                                     {year.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                            </DatePicker.Table>
-                        </DatePicker.Calendar>
-                    </DatePicker.Container>
-                </DatePicker.Portal>
-            </DatePicker>
-            <DatePicker
+                                </Calendar.TableBody>
+                            </Calendar.Table>
+                        </Calendar.Calendar>
+                    </Calendar.Container>
+                </Calendar.Portal>
+            </Calendar>
+            <Calendar
                 value={date2}
                 invalid={!date2}
                 variant="filled"
                 placeholder="Date"
-                onValueChange={(event: DatePickerValueChangeEvent) => setDate2(event.value)}
+                onValueChange={(event: CalendarValueChangeEvent) => setDate2(event.value)}
             >
-                <DatePicker.Input />
-                <DatePicker.Portal>
-                    <DatePicker.Container>
-                        <DatePicker.Calendar>
-                            <DatePicker.Header>
-                                <DatePicker.Prev />
-                                <DatePicker.Title>
-                                    <DatePicker.SelectMonth />
-                                    <DatePicker.SelectYear />
-                                    <DatePicker.Decade />
-                                </DatePicker.Title>
-                                <DatePicker.Next />
-                            </DatePicker.Header>
-                            <DatePicker.Table>
-                                <DatePicker.TableHead>
-                                    <DatePicker.TableHeadRow>
-                                        {(instance: DatePickerTableHeadRowInstance) => {
-                                            const { datepicker } = instance;
-                                            const weekDays = datepicker?.weekDays as string[];
+                <Calendar.Input />
+                <Calendar.Portal>
+                    <Calendar.Container>
+                        <Calendar.Calendar>
+                            <Calendar.Header>
+                                <Calendar.Prev />
+                                <Calendar.Title>
+                                    <Calendar.SelectMonth />
+                                    <Calendar.SelectYear />
+                                    <Calendar.Decade />
+                                </Calendar.Title>
+                                <Calendar.Next />
+                            </Calendar.Header>
+                            <Calendar.Table>
+                                <Calendar.TableHead>
+                                    <Calendar.TableHeadRow>
+                                        {(instance: CalendarTableHeadRowInstance) => {
+                                            const { Calendar } = instance;
+                                            const weekDays = Calendar?.weekDays as string[];
 
                                             return (
                                                 <>
                                                     {weekDays.map((day, index) => (
-                                                        <DatePicker.TableHeadCell key={index} abbr={day}>
+                                                        <Calendar.TableHeadCell key={index} abbr={day}>
                                                             {day}
-                                                        </DatePicker.TableHeadCell>
+                                                        </Calendar.TableHeadCell>
                                                     ))}
                                                 </>
                                             );
                                         }}
-                                    </DatePicker.TableHeadRow>
-                                </DatePicker.TableHead>
-                                <DatePicker.TableBody>
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const month = datepicker?.getIndexedMonth?.() as useDatePickerMonthData;
+                                    </Calendar.TableHeadRow>
+                                </Calendar.TableHead>
+                                <Calendar.TableBody>
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const month = Calendar?.getIndexedMonth?.() as useCalendarMonthData;
 
                                         return (
                                             <>
                                                 {month.dates?.map((week) => (
-                                                    <DatePicker.TableBodyRow key={week[0].day + '' + week[0].month}>
+                                                    <Calendar.TableBodyRow key={week[0].day + '' + week[0].month}>
                                                         <>
                                                             {week.map((date) => (
-                                                                <DatePicker.TableBodyCell key={date.day + '' + date.month} date={date}>
+                                                                <Calendar.TableBodyCell key={date.day + '' + date.month} date={date}>
                                                                     {date.day}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             ))}
                                                         </>
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="month">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const months = datepicker?.monthPickerValues as useDatePickerMonthOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="month">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const months = Calendar?.monthPickerValues as useCalendarMonthOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 4 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`month-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`month-row-${rowIndex}`}>
                                                         {months.slice(rowIndex * 3, (rowIndex + 1) * 3).map((month, colIndex) => {
                                                             const monthIndex = rowIndex * 3 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
+                                                                <Calendar.TableBodyCell key={monthIndex} month={month} index={monthIndex}>
                                                                     {month.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                                <DatePicker.TableBody view="year">
-                                    {(instance: DatePickerTableBodyInstance) => {
-                                        const { datepicker } = instance;
-                                        const years = datepicker?.yearPickerValues as useDatePickerYearOptions[];
+                                </Calendar.TableBody>
+                                <Calendar.TableBody view="year">
+                                    {(instance: CalendarTableBodyInstance) => {
+                                        const { Calendar } = instance;
+                                        const years = Calendar?.yearPickerValues as useCalendarYearOptions[];
 
                                         return (
                                             <>
                                                 {Array.from({ length: 5 }).map((_, rowIndex) => (
-                                                    <DatePicker.TableBodyRow key={`year-row-${rowIndex}`}>
+                                                    <Calendar.TableBodyRow key={`year-row-${rowIndex}`}>
                                                         {years.slice(rowIndex * 2, (rowIndex + 1) * 2).map((year, colIndex) => {
                                                             const yearIndex = rowIndex * 2 + colIndex;
 
                                                             return (
-                                                                <DatePicker.TableBodyCell key={yearIndex} year={year}>
+                                                                <Calendar.TableBodyCell key={yearIndex} year={year}>
                                                                     {year.value}
-                                                                </DatePicker.TableBodyCell>
+                                                                </Calendar.TableBodyCell>
                                                             );
                                                         })}
-                                                    </DatePicker.TableBodyRow>
+                                                    </Calendar.TableBodyRow>
                                                 ))}
                                             </>
                                         );
                                     }}
-                                </DatePicker.TableBody>
-                            </DatePicker.Table>
-                        </DatePicker.Calendar>
-                    </DatePicker.Container>
-                </DatePicker.Portal>
-            </DatePicker>
+                                </Calendar.TableBody>
+                            </Calendar.Table>
+                        </Calendar.Calendar>
+                    </Calendar.Container>
+                </Calendar.Portal>
+            </Calendar>
         </div>
     );
 }
@@ -17804,7 +17804,7 @@ export default function InvalidDemo() {
 Value to describe the component can either be provided via `label` tag combined with `inputId` prop or using `aria-labelledby`, `aria-label` props. The input element has `combobox` role in addition to
 `aria-autocomplete` as "none", `aria-haspopup` as "dialog" and `aria-expanded` attributes. The relation between the input and the popup is created with `aria-controls` attribute that refers to the id of the popup.
 
-The optional datepicker button requires includes `aria-haspopup`, `aria-expanded` for states along with `aria-controls` to define the relation between the popup and the button. The value to read is retrieved from the
+The optional Calendar button requires includes `aria-haspopup`, `aria-expanded` for states along with `aria-controls` to define the relation between the popup and the button. The value to read is retrieved from the
 `chooseDate` key of the aria property from the <Link href="/configuration/#locale">locale</Link> API. This label is also used for the `aria-label` of the popup as well. When there is a value selected, it is formatted and
 appended to the label to be able to notify users about the current value.
 
@@ -17817,7 +17817,7 @@ Buttons at the footer utilize their readable labels as `aria-label` as well. Sel
 Timepicker spinner buttons get their labels for `aria-label` from the aria locale API using the `prevHour`, `nextHour`, `prevMinute`, `nextMinute`, `prevSecond`, `nextSecond`, `am` and
 `pm` keys.
 
-DatePicker also includes a hidden section that is only available to screen readers with `aria-live` as "polite". This element is updated when the selected date changes to instruct the user about the current date selected.
+Calendar also includes a hidden section that is only available to screen readers with `aria-live` as "polite". This element is updated when the selected date changes to instruct the user about the current date selected.
 
 ### Choose Date Button Keyboard Support
 
@@ -17867,361 +17867,361 @@ DatePicker also includes a hidden section that is only available to screen reade
 | _space_ | Triggers the button action. |
 
 
-# DatePicker Pass Through
+# Calendar Pass Through
 
-Pass Through documentation for DatePicker component
+Pass Through documentation for Calendar component
 
 
 ## Viewer
 
 Some sections may not be visible due to the availability of the particular feature.
 
-<DocPTViewer name="datepicker-pt" components={['DatePicker']} />
+<DocPTViewer name="Calendar-pt" components={['Calendar']} />
 
-## DatePicker PT Options
-
-| Label | Type | Description |
-|:------|:------|:------|
-| root | DatePickerPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
-| input | DatePickerPassThroughType<HTMLAttributes<HTMLInputElement>> | Used to pass attributes to the input's DOM element. |
-| portal | DatePickerPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the portal's DOM element. |
-| panel | DatePickerPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the panel's DOM element. |
-| container | DatePickerPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the container's DOM element. |
-| calendar | DatePickerPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the calendar's DOM element. |
-| header | DatePickerPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the header's DOM element. |
-| prev | DatePickerPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the prev's DOM element. |
-| prevIcon | DatePickerPassThroughType<HTMLAttributes<SVGElement>> | Used to pass attributes to the prevIcon's DOM element. |
-| title | DatePickerPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the title's DOM element. |
-| selectMonth | DatePickerPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the selectMonth's DOM element. |
-| selectYear | DatePickerPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the selectYear's DOM element. |
-| decade | DatePickerPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the decade's DOM element. |
-| next | DatePickerPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the next's DOM element. |
-| nextIcon | DatePickerPassThroughType<HTMLAttributes<SVGElement>> | Used to pass attributes to the nextIcon's DOM element. |
-| dayView | DatePickerPassThroughType<HTMLAttributes<HTMLTableElement>> | Used to pass attributes to the dayView's DOM element. |
-| monthView | DatePickerPassThroughType<HTMLAttributes<HTMLTableElement>> | Used to pass attributes to the monthView's DOM element. |
-| yearView | DatePickerPassThroughType<HTMLAttributes<HTMLTableElement>> | Used to pass attributes to the yearView's DOM element. |
-| tableHeader | DatePickerPassThroughType<HTMLAttributes<HTMLTableSectionElement>> | Used to pass attributes to the tableHeader's DOM element. |
-| tableHeaderRow | DatePickerPassThroughType<HTMLAttributes<HTMLTableRowElement>> | Used to pass attributes to the tableHeaderRow's DOM element. |
-| weekDayCell | DatePickerPassThroughType<HTMLAttributes<HTMLTableCellElement>> | Used to pass attributes to the weekDayCell's DOM element. |
-| weekDay | DatePickerPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the weekDay's DOM element. |
-| weekHeader | DatePickerPassThroughType<HTMLAttributes<HTMLTableSectionElement>> | Used to pass attributes to the weekHeader's DOM element. |
-| weekHeaderLabel | DatePickerPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the weekHeaderLabel's DOM element. |
-| tableBody | DatePickerPassThroughType<HTMLAttributes<HTMLTableSectionElement>> | Used to pass attributes to the tableBody's DOM element. |
-| tableBodyRow | DatePickerPassThroughType<HTMLAttributes<HTMLTableRowElement>> | Used to pass attributes to the tableBodyRow's DOM element. |
-| dayCell | DatePickerPassThroughType<HTMLAttributes<HTMLTableCellElement>> | Used to pass attributes to the dayCell's DOM element. |
-| monthCell | DatePickerPassThroughType<HTMLAttributes<HTMLTableCellElement>> | Used to pass attributes to the monthCell's DOM element. |
-| yearCell | DatePickerPassThroughType<HTMLAttributes<HTMLTableCellElement>> | Used to pass attributes to the yearCell's DOM element. |
-| weekNumber | DatePickerPassThroughType<HTMLAttributes<HTMLTableCellElement>> | Used to pass attributes to the weekNumber's DOM element. |
-| weekLabelContainer | DatePickerPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the weekLabelContainer's DOM element. |
-| buttonbar | DatePickerPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the buttonbar's DOM element. |
-| today | DatePickerPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the today's DOM element. |
-| clear | DatePickerPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the clear's DOM element. |
-| timePicker | DatePickerPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the timePicker's DOM element. |
-| hourPicker | DatePickerPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the hourPicker's DOM element. |
-| minutePicker | DatePickerPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the minutePicker's DOM element. |
-| secondPicker | DatePickerPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the secondPicker's DOM element. |
-| ampmPicker | DatePickerPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the ampmPicker's DOM element. |
-| increment | DatePickerPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the increment's DOM element. |
-| incrementIcon | DatePickerPassThroughType<HTMLAttributes<SVGElement>> | Used to pass attributes to the incrementIcon's DOM element. |
-| decrement | DatePickerPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the decrement's DOM element. |
-| decrementIcon | DatePickerPassThroughType<HTMLAttributes<SVGElement>> | Used to pass attributes to the decrementIcon's DOM element. |
-| hour | DatePickerPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the hour's DOM element. |
-| minute | DatePickerPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the minute's DOM element. |
-| second | DatePickerPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the second's DOM element. |
-| ampm | DatePickerPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the ampm's DOM element. |
-| separatorContainer | DatePickerPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the separatorContainer's DOM element. |
-| separator | DatePickerPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the separator's DOM element. |
-| clearIcon | DatePickerPassThroughType<HTMLAttributes<SVGElement>> | Used to pass attributes to the clearIcon's DOM element. |
-| dropdown | DatePickerPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the dropdown's DOM element. |
-| dropdownIcon | DatePickerPassThroughType<HTMLAttributes<SVGElement>> | Used to pass attributes to the dropdownIcon's DOM element. |
-| inputIconContainer | DatePickerPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the inputIconContainer's DOM element. |
-| footer | DatePickerPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the footer's DOM element. |
-
-
-## DatePickerInput PT Options
+## Calendar PT Options
 
 | Label | Type | Description |
 |:------|:------|:------|
-| root | DatePickerInputPassThroughType<HTMLAttributes<HTMLInputElement>> | Used to pass attributes to the root's DOM element. |
+| root | CalendarPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
+| input | CalendarPassThroughType<HTMLAttributes<HTMLInputElement>> | Used to pass attributes to the input's DOM element. |
+| portal | CalendarPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the portal's DOM element. |
+| panel | CalendarPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the panel's DOM element. |
+| container | CalendarPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the container's DOM element. |
+| calendar | CalendarPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the calendar's DOM element. |
+| header | CalendarPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the header's DOM element. |
+| prev | CalendarPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the prev's DOM element. |
+| prevIcon | CalendarPassThroughType<HTMLAttributes<SVGElement>> | Used to pass attributes to the prevIcon's DOM element. |
+| title | CalendarPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the title's DOM element. |
+| selectMonth | CalendarPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the selectMonth's DOM element. |
+| selectYear | CalendarPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the selectYear's DOM element. |
+| decade | CalendarPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the decade's DOM element. |
+| next | CalendarPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the next's DOM element. |
+| nextIcon | CalendarPassThroughType<HTMLAttributes<SVGElement>> | Used to pass attributes to the nextIcon's DOM element. |
+| dayView | CalendarPassThroughType<HTMLAttributes<HTMLTableElement>> | Used to pass attributes to the dayView's DOM element. |
+| monthView | CalendarPassThroughType<HTMLAttributes<HTMLTableElement>> | Used to pass attributes to the monthView's DOM element. |
+| yearView | CalendarPassThroughType<HTMLAttributes<HTMLTableElement>> | Used to pass attributes to the yearView's DOM element. |
+| tableHeader | CalendarPassThroughType<HTMLAttributes<HTMLTableSectionElement>> | Used to pass attributes to the tableHeader's DOM element. |
+| tableHeaderRow | CalendarPassThroughType<HTMLAttributes<HTMLTableRowElement>> | Used to pass attributes to the tableHeaderRow's DOM element. |
+| weekDayCell | CalendarPassThroughType<HTMLAttributes<HTMLTableCellElement>> | Used to pass attributes to the weekDayCell's DOM element. |
+| weekDay | CalendarPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the weekDay's DOM element. |
+| weekHeader | CalendarPassThroughType<HTMLAttributes<HTMLTableSectionElement>> | Used to pass attributes to the weekHeader's DOM element. |
+| weekHeaderLabel | CalendarPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the weekHeaderLabel's DOM element. |
+| tableBody | CalendarPassThroughType<HTMLAttributes<HTMLTableSectionElement>> | Used to pass attributes to the tableBody's DOM element. |
+| tableBodyRow | CalendarPassThroughType<HTMLAttributes<HTMLTableRowElement>> | Used to pass attributes to the tableBodyRow's DOM element. |
+| dayCell | CalendarPassThroughType<HTMLAttributes<HTMLTableCellElement>> | Used to pass attributes to the dayCell's DOM element. |
+| monthCell | CalendarPassThroughType<HTMLAttributes<HTMLTableCellElement>> | Used to pass attributes to the monthCell's DOM element. |
+| yearCell | CalendarPassThroughType<HTMLAttributes<HTMLTableCellElement>> | Used to pass attributes to the yearCell's DOM element. |
+| weekNumber | CalendarPassThroughType<HTMLAttributes<HTMLTableCellElement>> | Used to pass attributes to the weekNumber's DOM element. |
+| weekLabelContainer | CalendarPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the weekLabelContainer's DOM element. |
+| buttonbar | CalendarPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the buttonbar's DOM element. |
+| today | CalendarPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the today's DOM element. |
+| clear | CalendarPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the clear's DOM element. |
+| timePicker | CalendarPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the timePicker's DOM element. |
+| hourPicker | CalendarPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the hourPicker's DOM element. |
+| minutePicker | CalendarPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the minutePicker's DOM element. |
+| secondPicker | CalendarPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the secondPicker's DOM element. |
+| ampmPicker | CalendarPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the ampmPicker's DOM element. |
+| increment | CalendarPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the increment's DOM element. |
+| incrementIcon | CalendarPassThroughType<HTMLAttributes<SVGElement>> | Used to pass attributes to the incrementIcon's DOM element. |
+| decrement | CalendarPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the decrement's DOM element. |
+| decrementIcon | CalendarPassThroughType<HTMLAttributes<SVGElement>> | Used to pass attributes to the decrementIcon's DOM element. |
+| hour | CalendarPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the hour's DOM element. |
+| minute | CalendarPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the minute's DOM element. |
+| second | CalendarPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the second's DOM element. |
+| ampm | CalendarPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the ampm's DOM element. |
+| separatorContainer | CalendarPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the separatorContainer's DOM element. |
+| separator | CalendarPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the separator's DOM element. |
+| clearIcon | CalendarPassThroughType<HTMLAttributes<SVGElement>> | Used to pass attributes to the clearIcon's DOM element. |
+| dropdown | CalendarPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the dropdown's DOM element. |
+| dropdownIcon | CalendarPassThroughType<HTMLAttributes<SVGElement>> | Used to pass attributes to the dropdownIcon's DOM element. |
+| inputIconContainer | CalendarPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the inputIconContainer's DOM element. |
+| footer | CalendarPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the footer's DOM element. |
 
 
-## DatePickerInputIconContainer PT Options
-
-| Label | Type | Description |
-|:------|:------|:------|
-| root | DatePickerInputIconContainerPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the root's DOM element. |
-
-
-## DatePickerDropdownIcon PT Options
-
-| Label | Type | Description |
-|:------|:------|:------|
-| root | DatePickerDropdownIconPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the root's DOM element. |
-
-
-## DatePickerDropdown PT Options
-
-| Label | Type | Description |
-|:------|:------|:------|
-| root | DatePickerDropdownPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the root's DOM element. |
-
-
-## DatePickerClearIcon PT Options
-
-| Label | Type | Description |
-|:------|:------|:------|
-| root | DatePickerClearIconPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the root's DOM element. |
-
-
-## DatePickerPortal PT Options
-
-| Label | Type | Description |
-|:------|:------|:------|
-| root | DatePickerPortalPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
-
-
-## DatePickerPanel PT Options
-
-| Label | Type | Description |
-|:------|:------|:------|
-| root | DatePickerPanelPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
-
-
-## DatePickerContainer PT Options
-
-| Label | Type | Description |
-|:------|:------|:------|
-| root | DatePickerContainerPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
-
-
-## DatePickerCalendar PT Options
-
-| Label | Type | Description |
-|:------|:------|:------|
-| root | DatePickerCalendarPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
-
-
-## DatePickerHeader PT Options
+## CalendarInput PT Options
 
 | Label | Type | Description |
 |:------|:------|:------|
-| root | DatePickerHeaderPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
+| root | CalendarInputPassThroughType<HTMLAttributes<HTMLInputElement>> | Used to pass attributes to the root's DOM element. |
 
 
-## DatePickerPrev PT Options
-
-| Label | Type | Description |
-|:------|:------|:------|
-| root | DatePickerPrevPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the root's DOM element. |
-| prevIcon | DatePickerPrevPassThroughType<HTMLAttributes<SVGElement>> | Used to pass attributes to the prev icon's DOM element. |
-
-
-## DatePickerTitle PT Options
+## CalendarInputIconContainer PT Options
 
 | Label | Type | Description |
 |:------|:------|:------|
-| root | DatePickerTitlePassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
+| root | CalendarInputIconContainerPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the root's DOM element. |
 
 
-## DatePickerSelectMonth PT Options
-
-| Label | Type | Description |
-|:------|:------|:------|
-| root | DatePickerSelectMonthPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the root's DOM element. |
-
-
-## DatePickerSelectYear PT Options
+## CalendarDropdownIcon PT Options
 
 | Label | Type | Description |
 |:------|:------|:------|
-| root | DatePickerSelectYearPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the root's DOM element. |
+| root | CalendarDropdownIconPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the root's DOM element. |
 
 
-## DatePickerDecade PT Options
-
-| Label | Type | Description |
-|:------|:------|:------|
-| root | DatePickerDecadePassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the root's DOM element. |
-
-
-## DatePickerNext PT Options
+## CalendarDropdown PT Options
 
 | Label | Type | Description |
 |:------|:------|:------|
-| root | DatePickerNextPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the root's DOM element. |
-| nextIcon | DatePickerNextPassThroughType<HTMLAttributes<SVGElement>> | Used to pass attributes to the next icon's DOM element. |
+| root | CalendarDropdownPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the root's DOM element. |
 
 
-## DatePickerTable PT Options
-
-| Label | Type | Description |
-|:------|:------|:------|
-| root | DatePickerTablePassThroughType<HTMLAttributes<HTMLTableElement>> | Used to pass attributes to the root's DOM element. |
-
-
-## DatePickerTableHead PT Options
+## CalendarClearIcon PT Options
 
 | Label | Type | Description |
 |:------|:------|:------|
-| root | DatePickerTableHeadPassThroughType<HTMLAttributes<HTMLTableSectionElement>> | Used to pass attributes to the root's DOM element. |
+| root | CalendarClearIconPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the root's DOM element. |
 
 
-## DatePickerTableHeadRow PT Options
-
-| Label | Type | Description |
-|:------|:------|:------|
-| root | DatePickerTableHeadRowPassThroughType<HTMLAttributes<HTMLTableRowElement>> | Used to pass attributes to the root's DOM element. |
-
-
-## DatePickerTableHeadCell PT Options
+## CalendarPortal PT Options
 
 | Label | Type | Description |
 |:------|:------|:------|
-| root | DatePickerTableHeadCellPassThroughType<HTMLAttributes<HTMLTableCellElement>> | Used to pass attributes to the root's DOM element. |
-| weekDay | DatePickerTableHeadCellPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the week day label's DOM element. |
+| root | CalendarPortalPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
 
 
-## DatePickerTableHeadWeekCell PT Options
-
-| Label | Type | Description |
-|:------|:------|:------|
-| root | DatePickerTableHeadWeekCellPassThroughType<HTMLAttributes<HTMLTableCellElement>> | Used to pass attributes to the root's DOM element. |
-| weekHeaderLabel | DatePickerTableHeadWeekCellPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the week header label's DOM element. |
-
-
-## DatePickerTableBody PT Options
+## CalendarPanel PT Options
 
 | Label | Type | Description |
 |:------|:------|:------|
-| root | DatePickerTableBodyPassThroughType<HTMLAttributes<HTMLTableSectionElement>> | Used to pass attributes to the root's DOM element. |
+| root | CalendarPanelPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
 
 
-## DatePickerTableBodyRow PT Options
-
-| Label | Type | Description |
-|:------|:------|:------|
-| root | DatePickerTableBodyRowPassThroughType<HTMLAttributes<HTMLTableRowElement>> | Used to pass attributes to the root's DOM element. |
-
-
-## DatePickerTableBodyCell PT Options
+## CalendarContainer PT Options
 
 | Label | Type | Description |
 |:------|:------|:------|
-| root | DatePickerTableBodyCellPassThroughType<HTMLAttributes<HTMLTableCellElement>> | Used to pass attributes to the root's DOM element. |
+| root | CalendarContainerPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
 
 
-## DatePickerTableBodyWeekCell PT Options
-
-| Label | Type | Description |
-|:------|:------|:------|
-| root | DatePickerTableBodyWeekCellPassThroughType<HTMLAttributes<HTMLTableCellElement>> | Used to pass attributes to the root's DOM element. |
-| weekLabelContainer | DatePickerTableBodyWeekCellPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the week label container's DOM element. |
-
-
-## DatePickerFooter PT Options
+## CalendarCalendar PT Options
 
 | Label | Type | Description |
 |:------|:------|:------|
-| root | DatePickerFooterPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
+| root | CalendarCalendarPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
 
 
-## DatePickerButtonbar PT Options
-
-| Label | Type | Description |
-|:------|:------|:------|
-| root | DatePickerButtonbarPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
-
-
-## DatePickerToday PT Options
+## CalendarHeader PT Options
 
 | Label | Type | Description |
 |:------|:------|:------|
-| root | DatePickerTodayPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the root's DOM element. |
+| root | CalendarHeaderPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
 
 
-## DatePickerClear PT Options
-
-| Label | Type | Description |
-|:------|:------|:------|
-| root | DatePickerClearPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the root's DOM element. |
-
-
-## DatePickerTime PT Options
+## CalendarPrev PT Options
 
 | Label | Type | Description |
 |:------|:------|:------|
-| root | DatePickerTimePassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
+| root | CalendarPrevPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the root's DOM element. |
+| prevIcon | CalendarPrevPassThroughType<HTMLAttributes<SVGElement>> | Used to pass attributes to the prev icon's DOM element. |
 
 
-## DatePickerPicker PT Options
-
-| Label | Type | Description |
-|:------|:------|:------|
-| root | DatePickerPickerPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
-
-
-## DatePickerIncrement PT Options
+## CalendarTitle PT Options
 
 | Label | Type | Description |
 |:------|:------|:------|
-| root | DatePickerIncrementPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the root's DOM element. |
-| incrementIcon | DatePickerIncrementPassThroughType<HTMLAttributes<SVGElement>> | Used to pass attributes to the increment icon's DOM element. |
+| root | CalendarTitlePassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
 
 
-## DatePickerHour PT Options
-
-| Label | Type | Description |
-|:------|:------|:------|
-| root | DatePickerHourPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the root's DOM element. |
-
-
-## DatePickerDecrement PT Options
+## CalendarSelectMonth PT Options
 
 | Label | Type | Description |
 |:------|:------|:------|
-| root | DatePickerDecrementPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the root's DOM element. |
-| decrementIcon | DatePickerDecrementPassThroughType<HTMLAttributes<SVGElement>> | Used to pass attributes to the decrement icon's DOM element. |
+| root | CalendarSelectMonthPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the root's DOM element. |
 
 
-## DatePickerSeparatorContainer PT Options
-
-| Label | Type | Description |
-|:------|:------|:------|
-| root | DatePickerSeparatorContainerPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
-
-
-## DatePickerSeparator PT Options
+## CalendarSelectYear PT Options
 
 | Label | Type | Description |
 |:------|:------|:------|
-| root | DatePickerSeparatorPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the root's DOM element. |
+| root | CalendarSelectYearPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the root's DOM element. |
 
 
-## DatePickerMinute PT Options
-
-| Label | Type | Description |
-|:------|:------|:------|
-| root | DatePickerMinutePassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the root's DOM element. |
-
-
-## DatePickerSecond PT Options
+## CalendarDecade PT Options
 
 | Label | Type | Description |
 |:------|:------|:------|
-| root | DatePickerSecondPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the root's DOM element. |
+| root | CalendarDecadePassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the root's DOM element. |
 
 
-## DatePickerAmPm PT Options
+## CalendarNext PT Options
 
 | Label | Type | Description |
 |:------|:------|:------|
-| root | DatePickerAmPmPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the root's DOM element. |
+| root | CalendarNextPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the root's DOM element. |
+| nextIcon | CalendarNextPassThroughType<HTMLAttributes<SVGElement>> | Used to pass attributes to the next icon's DOM element. |
+
+
+## CalendarTable PT Options
+
+| Label | Type | Description |
+|:------|:------|:------|
+| root | CalendarTablePassThroughType<HTMLAttributes<HTMLTableElement>> | Used to pass attributes to the root's DOM element. |
+
+
+## CalendarTableHead PT Options
+
+| Label | Type | Description |
+|:------|:------|:------|
+| root | CalendarTableHeadPassThroughType<HTMLAttributes<HTMLTableSectionElement>> | Used to pass attributes to the root's DOM element. |
+
+
+## CalendarTableHeadRow PT Options
+
+| Label | Type | Description |
+|:------|:------|:------|
+| root | CalendarTableHeadRowPassThroughType<HTMLAttributes<HTMLTableRowElement>> | Used to pass attributes to the root's DOM element. |
+
+
+## CalendarTableHeadCell PT Options
+
+| Label | Type | Description |
+|:------|:------|:------|
+| root | CalendarTableHeadCellPassThroughType<HTMLAttributes<HTMLTableCellElement>> | Used to pass attributes to the root's DOM element. |
+| weekDay | CalendarTableHeadCellPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the week day label's DOM element. |
+
+
+## CalendarTableHeadWeekCell PT Options
+
+| Label | Type | Description |
+|:------|:------|:------|
+| root | CalendarTableHeadWeekCellPassThroughType<HTMLAttributes<HTMLTableCellElement>> | Used to pass attributes to the root's DOM element. |
+| weekHeaderLabel | CalendarTableHeadWeekCellPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the week header label's DOM element. |
+
+
+## CalendarTableBody PT Options
+
+| Label | Type | Description |
+|:------|:------|:------|
+| root | CalendarTableBodyPassThroughType<HTMLAttributes<HTMLTableSectionElement>> | Used to pass attributes to the root's DOM element. |
+
+
+## CalendarTableBodyRow PT Options
+
+| Label | Type | Description |
+|:------|:------|:------|
+| root | CalendarTableBodyRowPassThroughType<HTMLAttributes<HTMLTableRowElement>> | Used to pass attributes to the root's DOM element. |
+
+
+## CalendarTableBodyCell PT Options
+
+| Label | Type | Description |
+|:------|:------|:------|
+| root | CalendarTableBodyCellPassThroughType<HTMLAttributes<HTMLTableCellElement>> | Used to pass attributes to the root's DOM element. |
+
+
+## CalendarTableBodyWeekCell PT Options
+
+| Label | Type | Description |
+|:------|:------|:------|
+| root | CalendarTableBodyWeekCellPassThroughType<HTMLAttributes<HTMLTableCellElement>> | Used to pass attributes to the root's DOM element. |
+| weekLabelContainer | CalendarTableBodyWeekCellPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the week label container's DOM element. |
+
+
+## CalendarFooter PT Options
+
+| Label | Type | Description |
+|:------|:------|:------|
+| root | CalendarFooterPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
+
+
+## CalendarButtonbar PT Options
+
+| Label | Type | Description |
+|:------|:------|:------|
+| root | CalendarButtonbarPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
+
+
+## CalendarToday PT Options
+
+| Label | Type | Description |
+|:------|:------|:------|
+| root | CalendarTodayPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the root's DOM element. |
+
+
+## CalendarClear PT Options
+
+| Label | Type | Description |
+|:------|:------|:------|
+| root | CalendarClearPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the root's DOM element. |
+
+
+## CalendarTime PT Options
+
+| Label | Type | Description |
+|:------|:------|:------|
+| root | CalendarTimePassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
+
+
+## CalendarPicker PT Options
+
+| Label | Type | Description |
+|:------|:------|:------|
+| root | CalendarPickerPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
+
+
+## CalendarIncrement PT Options
+
+| Label | Type | Description |
+|:------|:------|:------|
+| root | CalendarIncrementPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the root's DOM element. |
+| incrementIcon | CalendarIncrementPassThroughType<HTMLAttributes<SVGElement>> | Used to pass attributes to the increment icon's DOM element. |
+
+
+## CalendarHour PT Options
+
+| Label | Type | Description |
+|:------|:------|:------|
+| root | CalendarHourPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the root's DOM element. |
+
+
+## CalendarDecrement PT Options
+
+| Label | Type | Description |
+|:------|:------|:------|
+| root | CalendarDecrementPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the root's DOM element. |
+| decrementIcon | CalendarDecrementPassThroughType<HTMLAttributes<SVGElement>> | Used to pass attributes to the decrement icon's DOM element. |
+
+
+## CalendarSeparatorContainer PT Options
+
+| Label | Type | Description |
+|:------|:------|:------|
+| root | CalendarSeparatorContainerPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
+
+
+## CalendarSeparator PT Options
+
+| Label | Type | Description |
+|:------|:------|:------|
+| root | CalendarSeparatorPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the root's DOM element. |
+
+
+## CalendarMinute PT Options
+
+| Label | Type | Description |
+|:------|:------|:------|
+| root | CalendarMinutePassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the root's DOM element. |
+
+
+## CalendarSecond PT Options
+
+| Label | Type | Description |
+|:------|:------|:------|
+| root | CalendarSecondPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the root's DOM element. |
+
+
+## CalendarAmPm PT Options
+
+| Label | Type | Description |
+|:------|:------|:------|
+| root | CalendarAmPmPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the root's DOM element. |
 
 
 
-# DatePicker Theming
+# Calendar Theming
 
-Theming documentation for DatePicker component
+Theming documentation for Calendar component
 
 
 ## Styled
@@ -18232,47 +18232,47 @@ List of class names used in the styled mode.
 
 | ClassName | Description |
 |:------|:------|
-| p-datepicker | Class name of the root element |
-| p-datepicker-input | Class name of the input element |
-| p-datepicker-clear-icon | Class name of the clear icon element |
-| p-datepicker-dropdown | Class name of the dropdown element |
-| p-datepicker-input-icon-container | Class name of the input icon container element |
-| p-datepicker-input-icon | Class name of the input icon element |
-| p-datepicker-panel p-component | Class name of the panel element |
-| p-datepicker-calendar-container | Class name of the container element |
-| p-datepicker-calendar | Class name of the calendar element |
-| p-datepicker-header | Class name of the header element |
-| p-datepicker-prev-button | Class name of the prev element |
-| p-datepicker-title | Class name of the title element |
-| p-datepicker-select-month | Class name of the select month element |
-| p-datepicker-select-year | Class name of the select year element |
-| p-datepicker-decade | Class name of the decade element |
-| p-datepicker-next-button | Class name of the next element |
-| p-datepicker-day-view | Class name of the day view element |
-| p-datepicker-weekheader p-disabled | Class name of the week header element |
-| p-datepicker-weeknumber | Class name of the week number element |
-| p-datepicker-weeklabel-container p-disabled | Class name of the week label container element |
-| p-datepicker-weekday-cell | Class name of the week day cell element |
-| p-datepicker-weekday | Class name of the week day element |
-| p-datepicker-day-cell | Class name of the day cell element |
-| p-datepicker-day | Class name of the day element |
-| p-datepicker-month-view | Class name of the month view element |
-| p-datepicker-month-cell | Class name of the month cell element |
-| p-datepicker-month | Class name of the month element |
-| p-datepicker-year-view | Class name of the year view element |
-| p-datepicker-year-cell | Class name of the year cell element |
-| p-datepicker-year | Class name of the year element |
-| p-datepicker-time-picker | Class name of the time picker element |
-| p-datepicker-hour-picker | Class name of the hour picker element |
-| p-datepicker-increment-button | Class name of the increment button element |
-| p-datepicker-decrement-button | Class name of the decrement button element |
-| p-datepicker-separator | Class name of the separator element |
-| p-datepicker-minute-picker | Class name of the minute picker element |
-| p-datepicker-second-picker | Class name of the second picker element |
-| p-datepicker-ampm-picker | Class name of the ampm picker element |
-| p-datepicker-buttonbar | Class name of the buttonbar element |
-| p-datepicker-today-button | Class name of the today element |
-| p-datepicker-clear-button | Class name of the clear element |
+| p-Calendar | Class name of the root element |
+| p-Calendar-input | Class name of the input element |
+| p-Calendar-clear-icon | Class name of the clear icon element |
+| p-Calendar-dropdown | Class name of the dropdown element |
+| p-Calendar-input-icon-container | Class name of the input icon container element |
+| p-Calendar-input-icon | Class name of the input icon element |
+| p-Calendar-panel p-component | Class name of the panel element |
+| p-Calendar-calendar-container | Class name of the container element |
+| p-Calendar-calendar | Class name of the calendar element |
+| p-Calendar-header | Class name of the header element |
+| p-Calendar-prev-button | Class name of the prev element |
+| p-Calendar-title | Class name of the title element |
+| p-Calendar-select-month | Class name of the select month element |
+| p-Calendar-select-year | Class name of the select year element |
+| p-Calendar-decade | Class name of the decade element |
+| p-Calendar-next-button | Class name of the next element |
+| p-Calendar-day-view | Class name of the day view element |
+| p-Calendar-weekheader p-disabled | Class name of the week header element |
+| p-Calendar-weeknumber | Class name of the week number element |
+| p-Calendar-weeklabel-container p-disabled | Class name of the week label container element |
+| p-Calendar-weekday-cell | Class name of the week day cell element |
+| p-Calendar-weekday | Class name of the week day element |
+| p-Calendar-day-cell | Class name of the day cell element |
+| p-Calendar-day | Class name of the day element |
+| p-Calendar-month-view | Class name of the month view element |
+| p-Calendar-month-cell | Class name of the month cell element |
+| p-Calendar-month | Class name of the month element |
+| p-Calendar-year-view | Class name of the year view element |
+| p-Calendar-year-cell | Class name of the year cell element |
+| p-Calendar-year | Class name of the year element |
+| p-Calendar-time-picker | Class name of the time picker element |
+| p-Calendar-hour-picker | Class name of the hour picker element |
+| p-Calendar-increment-button | Class name of the increment button element |
+| p-Calendar-decrement-button | Class name of the decrement button element |
+| p-Calendar-separator | Class name of the separator element |
+| p-Calendar-minute-picker | Class name of the minute picker element |
+| p-Calendar-second-picker | Class name of the second picker element |
+| p-Calendar-ampm-picker | Class name of the ampm picker element |
+| p-Calendar-buttonbar | Class name of the buttonbar element |
+| p-Calendar-today-button | Class name of the today element |
+| p-Calendar-clear-button | Class name of the clear element |
 
 
 ### Design Tokens
@@ -18281,84 +18281,84 @@ List of design tokens.
 
 | Token | CSS Variable | Description |
 |:------|:------|:------|
-| datepicker.transition.duration | --p-datepicker-transition-duration | Transition duration of root |
-| datepicker.panel.background | --p-datepicker-panel-background | Background of panel |
-| datepicker.panel.border.color | --p-datepicker-panel-border-color | Border color of panel |
-| datepicker.panel.color | --p-datepicker-panel-color | Color of panel |
-| datepicker.panel.border.radius | --p-datepicker-panel-border-radius | Border radius of panel |
-| datepicker.panel.shadow | --p-datepicker-panel-shadow | Shadow of panel |
-| datepicker.panel.padding | --p-datepicker-panel-padding | Padding of panel |
-| datepicker.header.background | --p-datepicker-header-background | Background of header |
-| datepicker.header.border.color | --p-datepicker-header-border-color | Border color of header |
-| datepicker.header.color | --p-datepicker-header-color | Color of header |
-| datepicker.header.padding | --p-datepicker-header-padding | Padding of header |
-| datepicker.title.gap | --p-datepicker-title-gap | Gap of title |
-| datepicker.title.font.weight | --p-datepicker-title-font-weight | Font weight of title |
-| datepicker.dropdown.width | --p-datepicker-dropdown-width | Width of dropdown |
-| datepicker.dropdown.sm.width | --p-datepicker-dropdown-sm-width | Sm width of dropdown |
-| datepicker.dropdown.lg.width | --p-datepicker-dropdown-lg-width | Lg width of dropdown |
-| datepicker.dropdown.border.color | --p-datepicker-dropdown-border-color | Border color of dropdown |
-| datepicker.dropdown.hover.border.color | --p-datepicker-dropdown-hover-border-color | Hover border color of dropdown |
-| datepicker.dropdown.active.border.color | --p-datepicker-dropdown-active-border-color | Active border color of dropdown |
-| datepicker.dropdown.border.radius | --p-datepicker-dropdown-border-radius | Border radius of dropdown |
-| datepicker.dropdown.focus.ring.width | --p-datepicker-dropdown-focus-ring-width | Focus ring width of dropdown |
-| datepicker.dropdown.focus.ring.style | --p-datepicker-dropdown-focus-ring-style | Focus ring style of dropdown |
-| datepicker.dropdown.focus.ring.color | --p-datepicker-dropdown-focus-ring-color | Focus ring color of dropdown |
-| datepicker.dropdown.focus.ring.offset | --p-datepicker-dropdown-focus-ring-offset | Focus ring offset of dropdown |
-| datepicker.dropdown.focus.ring.shadow | --p-datepicker-dropdown-focus-ring-shadow | Focus ring shadow of dropdown |
-| datepicker.dropdown.background | --p-datepicker-dropdown-background | Background of dropdown |
-| datepicker.dropdown.hover.background | --p-datepicker-dropdown-hover-background | Hover background of dropdown |
-| datepicker.dropdown.active.background | --p-datepicker-dropdown-active-background | Active background of dropdown |
-| datepicker.dropdown.color | --p-datepicker-dropdown-color | Color of dropdown |
-| datepicker.dropdown.hover.color | --p-datepicker-dropdown-hover-color | Hover color of dropdown |
-| datepicker.dropdown.active.color | --p-datepicker-dropdown-active-color | Active color of dropdown |
-| datepicker.input.icon.color | --p-datepicker-input-icon-color | Color of input icon |
-| datepicker.select.month.hover.background | --p-datepicker-select-month-hover-background | Hover background of select month |
-| datepicker.select.month.color | --p-datepicker-select-month-color | Color of select month |
-| datepicker.select.month.hover.color | --p-datepicker-select-month-hover-color | Hover color of select month |
-| datepicker.select.month.padding | --p-datepicker-select-month-padding | Padding of select month |
-| datepicker.select.month.border.radius | --p-datepicker-select-month-border-radius | Border radius of select month |
-| datepicker.select.year.hover.background | --p-datepicker-select-year-hover-background | Hover background of select year |
-| datepicker.select.year.color | --p-datepicker-select-year-color | Color of select year |
-| datepicker.select.year.hover.color | --p-datepicker-select-year-hover-color | Hover color of select year |
-| datepicker.select.year.padding | --p-datepicker-select-year-padding | Padding of select year |
-| datepicker.select.year.border.radius | --p-datepicker-select-year-border-radius | Border radius of select year |
-| datepicker.group.border.color | --p-datepicker-group-border-color | Border color of group |
-| datepicker.group.gap | --p-datepicker-group-gap | Gap of group |
-| datepicker.day.view.margin | --p-datepicker-day-view-margin | Margin of day view |
-| datepicker.week.day.padding | --p-datepicker-week-day-padding | Padding of week day |
-| datepicker.week.day.font.weight | --p-datepicker-week-day-font-weight | Font weight of week day |
-| datepicker.week.day.color | --p-datepicker-week-day-color | Color of week day |
-| datepicker.date.hover.background | --p-datepicker-date-hover-background | Hover background of date |
-| datepicker.date.selected.background | --p-datepicker-date-selected-background | Selected background of date |
-| datepicker.date.range.selected.background | --p-datepicker-date-range-selected-background | Range selected background of date |
-| datepicker.date.color | --p-datepicker-date-color | Color of date |
-| datepicker.date.hover.color | --p-datepicker-date-hover-color | Hover color of date |
-| datepicker.date.selected.color | --p-datepicker-date-selected-color | Selected color of date |
-| datepicker.date.range.selected.color | --p-datepicker-date-range-selected-color | Range selected color of date |
-| datepicker.date.width | --p-datepicker-date-width | Width of date |
-| datepicker.date.height | --p-datepicker-date-height | Height of date |
-| datepicker.date.border.radius | --p-datepicker-date-border-radius | Border radius of date |
-| datepicker.date.padding | --p-datepicker-date-padding | Padding of date |
-| datepicker.date.focus.ring.width | --p-datepicker-date-focus-ring-width | Focus ring width of date |
-| datepicker.date.focus.ring.style | --p-datepicker-date-focus-ring-style | Focus ring style of date |
-| datepicker.date.focus.ring.color | --p-datepicker-date-focus-ring-color | Focus ring color of date |
-| datepicker.date.focus.ring.offset | --p-datepicker-date-focus-ring-offset | Focus ring offset of date |
-| datepicker.date.focus.ring.shadow | --p-datepicker-date-focus-ring-shadow | Focus ring shadow of date |
-| datepicker.month.view.margin | --p-datepicker-month-view-margin | Margin of month view |
-| datepicker.month.padding | --p-datepicker-month-padding | Padding of month |
-| datepicker.month.border.radius | --p-datepicker-month-border-radius | Border radius of month |
-| datepicker.year.view.margin | --p-datepicker-year-view-margin | Margin of year view |
-| datepicker.year.padding | --p-datepicker-year-padding | Padding of year |
-| datepicker.year.border.radius | --p-datepicker-year-border-radius | Border radius of year |
-| datepicker.buttonbar.padding | --p-datepicker-buttonbar-padding | Padding of buttonbar |
-| datepicker.buttonbar.border.color | --p-datepicker-buttonbar-border-color | Border color of buttonbar |
-| datepicker.time.picker.padding | --p-datepicker-time-picker-padding | Padding of time picker |
-| datepicker.time.picker.border.color | --p-datepicker-time-picker-border-color | Border color of time picker |
-| datepicker.time.picker.gap | --p-datepicker-time-picker-gap | Gap of time picker |
-| datepicker.time.picker.button.gap | --p-datepicker-time-picker-button-gap | Button gap of time picker |
-| datepicker.today.background | --p-datepicker-today-background | Background of today |
-| datepicker.today.color | --p-datepicker-today-color | Color of today |
+| Calendar.transition.duration | --p-Calendar-transition-duration | Transition duration of root |
+| Calendar.panel.background | --p-Calendar-panel-background | Background of panel |
+| Calendar.panel.border.color | --p-Calendar-panel-border-color | Border color of panel |
+| Calendar.panel.color | --p-Calendar-panel-color | Color of panel |
+| Calendar.panel.border.radius | --p-Calendar-panel-border-radius | Border radius of panel |
+| Calendar.panel.shadow | --p-Calendar-panel-shadow | Shadow of panel |
+| Calendar.panel.padding | --p-Calendar-panel-padding | Padding of panel |
+| Calendar.header.background | --p-Calendar-header-background | Background of header |
+| Calendar.header.border.color | --p-Calendar-header-border-color | Border color of header |
+| Calendar.header.color | --p-Calendar-header-color | Color of header |
+| Calendar.header.padding | --p-Calendar-header-padding | Padding of header |
+| Calendar.title.gap | --p-Calendar-title-gap | Gap of title |
+| Calendar.title.font.weight | --p-Calendar-title-font-weight | Font weight of title |
+| Calendar.dropdown.width | --p-Calendar-dropdown-width | Width of dropdown |
+| Calendar.dropdown.sm.width | --p-Calendar-dropdown-sm-width | Sm width of dropdown |
+| Calendar.dropdown.lg.width | --p-Calendar-dropdown-lg-width | Lg width of dropdown |
+| Calendar.dropdown.border.color | --p-Calendar-dropdown-border-color | Border color of dropdown |
+| Calendar.dropdown.hover.border.color | --p-Calendar-dropdown-hover-border-color | Hover border color of dropdown |
+| Calendar.dropdown.active.border.color | --p-Calendar-dropdown-active-border-color | Active border color of dropdown |
+| Calendar.dropdown.border.radius | --p-Calendar-dropdown-border-radius | Border radius of dropdown |
+| Calendar.dropdown.focus.ring.width | --p-Calendar-dropdown-focus-ring-width | Focus ring width of dropdown |
+| Calendar.dropdown.focus.ring.style | --p-Calendar-dropdown-focus-ring-style | Focus ring style of dropdown |
+| Calendar.dropdown.focus.ring.color | --p-Calendar-dropdown-focus-ring-color | Focus ring color of dropdown |
+| Calendar.dropdown.focus.ring.offset | --p-Calendar-dropdown-focus-ring-offset | Focus ring offset of dropdown |
+| Calendar.dropdown.focus.ring.shadow | --p-Calendar-dropdown-focus-ring-shadow | Focus ring shadow of dropdown |
+| Calendar.dropdown.background | --p-Calendar-dropdown-background | Background of dropdown |
+| Calendar.dropdown.hover.background | --p-Calendar-dropdown-hover-background | Hover background of dropdown |
+| Calendar.dropdown.active.background | --p-Calendar-dropdown-active-background | Active background of dropdown |
+| Calendar.dropdown.color | --p-Calendar-dropdown-color | Color of dropdown |
+| Calendar.dropdown.hover.color | --p-Calendar-dropdown-hover-color | Hover color of dropdown |
+| Calendar.dropdown.active.color | --p-Calendar-dropdown-active-color | Active color of dropdown |
+| Calendar.input.icon.color | --p-Calendar-input-icon-color | Color of input icon |
+| Calendar.select.month.hover.background | --p-Calendar-select-month-hover-background | Hover background of select month |
+| Calendar.select.month.color | --p-Calendar-select-month-color | Color of select month |
+| Calendar.select.month.hover.color | --p-Calendar-select-month-hover-color | Hover color of select month |
+| Calendar.select.month.padding | --p-Calendar-select-month-padding | Padding of select month |
+| Calendar.select.month.border.radius | --p-Calendar-select-month-border-radius | Border radius of select month |
+| Calendar.select.year.hover.background | --p-Calendar-select-year-hover-background | Hover background of select year |
+| Calendar.select.year.color | --p-Calendar-select-year-color | Color of select year |
+| Calendar.select.year.hover.color | --p-Calendar-select-year-hover-color | Hover color of select year |
+| Calendar.select.year.padding | --p-Calendar-select-year-padding | Padding of select year |
+| Calendar.select.year.border.radius | --p-Calendar-select-year-border-radius | Border radius of select year |
+| Calendar.group.border.color | --p-Calendar-group-border-color | Border color of group |
+| Calendar.group.gap | --p-Calendar-group-gap | Gap of group |
+| Calendar.day.view.margin | --p-Calendar-day-view-margin | Margin of day view |
+| Calendar.week.day.padding | --p-Calendar-week-day-padding | Padding of week day |
+| Calendar.week.day.font.weight | --p-Calendar-week-day-font-weight | Font weight of week day |
+| Calendar.week.day.color | --p-Calendar-week-day-color | Color of week day |
+| Calendar.date.hover.background | --p-Calendar-date-hover-background | Hover background of date |
+| Calendar.date.selected.background | --p-Calendar-date-selected-background | Selected background of date |
+| Calendar.date.range.selected.background | --p-Calendar-date-range-selected-background | Range selected background of date |
+| Calendar.date.color | --p-Calendar-date-color | Color of date |
+| Calendar.date.hover.color | --p-Calendar-date-hover-color | Hover color of date |
+| Calendar.date.selected.color | --p-Calendar-date-selected-color | Selected color of date |
+| Calendar.date.range.selected.color | --p-Calendar-date-range-selected-color | Range selected color of date |
+| Calendar.date.width | --p-Calendar-date-width | Width of date |
+| Calendar.date.height | --p-Calendar-date-height | Height of date |
+| Calendar.date.border.radius | --p-Calendar-date-border-radius | Border radius of date |
+| Calendar.date.padding | --p-Calendar-date-padding | Padding of date |
+| Calendar.date.focus.ring.width | --p-Calendar-date-focus-ring-width | Focus ring width of date |
+| Calendar.date.focus.ring.style | --p-Calendar-date-focus-ring-style | Focus ring style of date |
+| Calendar.date.focus.ring.color | --p-Calendar-date-focus-ring-color | Focus ring color of date |
+| Calendar.date.focus.ring.offset | --p-Calendar-date-focus-ring-offset | Focus ring offset of date |
+| Calendar.date.focus.ring.shadow | --p-Calendar-date-focus-ring-shadow | Focus ring shadow of date |
+| Calendar.month.view.margin | --p-Calendar-month-view-margin | Margin of month view |
+| Calendar.month.padding | --p-Calendar-month-padding | Padding of month |
+| Calendar.month.border.radius | --p-Calendar-month-border-radius | Border radius of month |
+| Calendar.year.view.margin | --p-Calendar-year-view-margin | Margin of year view |
+| Calendar.year.padding | --p-Calendar-year-padding | Padding of year |
+| Calendar.year.border.radius | --p-Calendar-year-border-radius | Border radius of year |
+| Calendar.buttonbar.padding | --p-Calendar-buttonbar-padding | Padding of buttonbar |
+| Calendar.buttonbar.border.color | --p-Calendar-buttonbar-border-color | Border color of buttonbar |
+| Calendar.time.picker.padding | --p-Calendar-time-picker-padding | Padding of time picker |
+| Calendar.time.picker.border.color | --p-Calendar-time-picker-border-color | Border color of time picker |
+| Calendar.time.picker.gap | --p-Calendar-time-picker-gap | Gap of time picker |
+| Calendar.time.picker.button.gap | --p-Calendar-time-picker-button-gap | Button gap of time picker |
+| Calendar.today.background | --p-Calendar-today-background | Background of today |
+| Calendar.today.color | --p-Calendar-today-color | Color of today |
 
 
 ## Unstyled
@@ -19839,12 +19839,12 @@ List of design tokens.
 Theming is implemented with the pass through properties in unstyled mode.
 
 
-# Drawer API
+# Sidebar API
 
-API documentation for Drawer component
+API documentation for Sidebar component
 
 
-## Drawer
+## Sidebar
 
 ### Props
 
@@ -19852,23 +19852,23 @@ API documentation for Drawer component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DrawerInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DrawerInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: SidebarInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: SidebarInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DrawerPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<SidebarPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DrawerInstance) => ReactNode) | null | The children to render. |
-| position | "top" \\| "bottom" \\| "left" \\| "right" \\| "full" | left | Position of the drawer. |
-| onOpenChange | (event: DrawerChangeEvent) => void | null | Callback function that is called when the trigger is clicked. |
-| open | boolean | false | Specifies the visibility of the drawer. |
-| defaultOpen | boolean | false | Specifies the default visibility of the drawer. |
-| modal | boolean | undefined | Defines if background should be blocked when drawer is displayed. |
-| dismissable | boolean | true | Whether clicking outside closes the drawer. |
-| blockScroll | boolean | false | Whether background scroll should be blocked when drawer is visible. |
+| children | ReactNode \\| ((instance: SidebarInstance) => ReactNode) | null | The children to render. |
+| position | "top" \\| "bottom" \\| "left" \\| "right" \\| "full" | left | Position of the Sidebar. |
+| onOpenChange | (event: SidebarChangeEvent) => void | null | Callback function that is called when the trigger is clicked. |
+| open | boolean | false | Specifies the visibility of the Sidebar. |
+| defaultOpen | boolean | false | Specifies the default visibility of the Sidebar. |
+| modal | boolean | undefined | Defines if background should be blocked when Sidebar is displayed. |
+| dismissable | boolean | true | Whether clicking outside closes the Sidebar. |
+| blockScroll | boolean | false | Whether background scroll should be blocked when Sidebar is visible. |
 | baseZIndex | number | 0 | Base zIndex value to use in layering. |
 | autoZIndex | boolean | true | Whether to automatically manage layering. |
 | [key: string] | any | null |  |
@@ -19879,7 +19879,7 @@ API documentation for Drawer component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| opened | boolean | null | Whether the drawer is currently opened. |
+| opened | boolean | null | Whether the Sidebar is currently opened. |
 | maskVisible | boolean | null | Whether the mask is currently visible. |
 
 
@@ -19887,12 +19887,12 @@ API documentation for Drawer component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| state | useDrawerState | null | Current state of the drawer. |
+| state | useSidebarState | null | Current state of the Sidebar. |
 | maskRef | RefObject<HTMLDivElement> | null | Reference to the mask element. |
 | motionRef | RefObject<{ elementRef: RefObject<HTMLDivElement> }> | null | Reference to the motion element. |
 | closeButtonRef | RefObject<{ elementRef: RefObject<HTMLButtonElement> }> | null | Reference to the close button element. |
-| onOpenStateChange | () => void | null | Method to change the open state of the drawer. |
-| close | () => void | null | Method to close the drawer. |
+| onOpenStateChange | () => void | null | Method to change the open state of the Sidebar. |
+| close | () => void | null | Method to close the Sidebar. |
 | onMotionEnter | () => void | null | Handler for motion enter events. |
 | onMotionAfterEnter | () => void | null | Handler for motion after enter events. |
 | onMotionBeforeLeave | () => void | null | Handler for motion before leave events. |
@@ -19903,17 +19903,17 @@ API documentation for Drawer component
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of Drawer component. | [object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of Sidebar component. | [object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of Drawer component. | [object Object] |
+| Instance | Instance of Sidebar component. | [object Object] |
 
 
-## DrawerTrigger
+## SidebarTrigger
 
 ### Props
 
@@ -19921,16 +19921,16 @@ API documentation for Drawer component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DrawerTriggerInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DrawerTriggerInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: SidebarTriggerInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: SidebarTriggerInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DrawerTriggerPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<SidebarTriggerPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DrawerTriggerInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: SidebarTriggerInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -19939,24 +19939,24 @@ API documentation for Drawer component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| drawer | DrawerInstance | null | Instance of the Drawer component. |
+| Sidebar | SidebarInstance | null | Instance of the Sidebar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DrawerTrigger component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of SidebarTrigger component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DrawerTrigger component. | [object Object] |
+| Instance | Instance of SidebarTrigger component. | [object Object] |
 
 
-## DrawerPortal
+## SidebarPortal
 
 ### Props
 
@@ -19964,16 +19964,16 @@ API documentation for Drawer component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DrawerPortalInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DrawerPortalInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: SidebarPortalInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: SidebarPortalInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DrawerPortalPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<SidebarPortalPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DrawerPortalInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: SidebarPortalInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -19982,24 +19982,24 @@ API documentation for Drawer component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| drawer | DrawerInstance | null | Instance of the Drawer component. |
+| Sidebar | SidebarInstance | null | Instance of the Sidebar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DrawerPortal component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of SidebarPortal component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DrawerPortal component. | [object Object] |
+| Instance | Instance of SidebarPortal component. | [object Object] |
 
 
-## DrawerHeader
+## SidebarHeader
 
 ### Props
 
@@ -20007,16 +20007,16 @@ API documentation for Drawer component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DrawerHeaderInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DrawerHeaderInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: SidebarHeaderInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: SidebarHeaderInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DrawerHeaderPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<SidebarHeaderPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DrawerHeaderInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: SidebarHeaderInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -20025,24 +20025,24 @@ API documentation for Drawer component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| drawer | DrawerInstance | null | The Drawer component instance. |
+| Sidebar | SidebarInstance | null | The Sidebar component instance. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DrawerHeader component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of SidebarHeader component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DrawerHeader component. | [object Object] |
+| Instance | Instance of SidebarHeader component. | [object Object] |
 
 
-## DrawerTitle
+## SidebarTitle
 
 ### Props
 
@@ -20050,16 +20050,16 @@ API documentation for Drawer component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DrawerTitleInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DrawerTitleInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: SidebarTitleInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: SidebarTitleInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DrawerTitlePassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<SidebarTitlePassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DrawerTitleInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: SidebarTitleInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -20068,24 +20068,24 @@ API documentation for Drawer component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| drawer | DrawerInstance | null | The Drawer component instance. |
+| Sidebar | SidebarInstance | null | The Sidebar component instance. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DrawerTitle component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of SidebarTitle component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DrawerTitle component. | [object Object] |
+| Instance | Instance of SidebarTitle component. | [object Object] |
 
 
-## DrawerClose
+## SidebarClose
 
 ### Props
 
@@ -20093,20 +20093,20 @@ API documentation for Drawer component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DrawerCloseInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DrawerCloseInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: SidebarCloseInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: SidebarCloseInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DrawerClosePassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<SidebarClosePassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DrawerCloseInstance) => ReactNode) | null | The children to render. |
-| iconOnly | boolean | true | Whether to show the DrawerClose with a borderless style. |
-| severity | string & {} \\| "secondary" \\| "info" \\| "success" \\| "warn" \\| "danger" \\| "contrast" \\| "help" | 'secondary' | Severity type of the DrawerClose. |
-| variant | "link" \\| "text" \\| "outlined" | 'text' | Variant of the DrawerClose. |
-| rounded | boolean | true | Whether to show the DrawerClose with a rounded style. |
+| children | ReactNode \\| ((instance: SidebarCloseInstance) => ReactNode) | null | The children to render. |
+| iconOnly | boolean | true | Whether to show the SidebarClose with a borderless style. |
+| severity | string & {} \\| "secondary" \\| "info" \\| "success" \\| "warn" \\| "danger" \\| "contrast" \\| "help" | 'secondary' | Severity type of the SidebarClose. |
+| variant | "link" \\| "text" \\| "outlined" | 'text' | Variant of the SidebarClose. |
+| rounded | boolean | true | Whether to show the SidebarClose with a rounded style. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -20115,24 +20115,24 @@ API documentation for Drawer component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| drawer | DrawerInstance | null | Instance of the Drawer component. |
+| Sidebar | SidebarInstance | null | Instance of the Sidebar component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DrawerClose component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of SidebarClose component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DrawerClose component. | [object Object] |
+| Instance | Instance of SidebarClose component. | [object Object] |
 
 
-## DrawerContent
+## SidebarContent
 
 ### Props
 
@@ -20140,16 +20140,16 @@ API documentation for Drawer component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DrawerContentInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DrawerContentInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: SidebarContentInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: SidebarContentInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DrawerContentPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<SidebarContentPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DrawerContentInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: SidebarContentInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -20158,24 +20158,24 @@ API documentation for Drawer component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| drawer | DrawerInstance | null | The Drawer component instance. |
+| Sidebar | SidebarInstance | null | The Sidebar component instance. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DrawerContent component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of SidebarContent component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DrawerContent component. | [object Object] |
+| Instance | Instance of SidebarContent component. | [object Object] |
 
 
-## DrawerFooter
+## SidebarFooter
 
 ### Props
 
@@ -20183,16 +20183,16 @@ API documentation for Drawer component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: DrawerFooterInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: DrawerFooterInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: SidebarFooterInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: SidebarFooterInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<DrawerFooterPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<SidebarFooterPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: DrawerFooterInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: SidebarFooterInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -20201,44 +20201,44 @@ API documentation for Drawer component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| drawer | DrawerInstance | null | The Drawer component instance. |
+| Sidebar | SidebarInstance | null | The Sidebar component instance. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of DrawerFooter component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of SidebarFooter component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of DrawerFooter component. | [object Object] |
+| Instance | Instance of SidebarFooter component. | [object Object] |
 
 
-## useDrawer
+## useSidebar
 
 ### Props
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| open | boolean | false | Specifies the visibility of the drawer. |
-| defaultOpen | boolean | false | Specifies the default visibility of the drawer. |
-| modal | boolean | undefined | Defines if background should be blocked when drawer is displayed. |
-| dismissable | boolean | true | Whether clicking outside closes the drawer. |
-| blockScroll | boolean | false | Whether background scroll should be blocked when drawer is visible. |
+| open | boolean | false | Specifies the visibility of the Sidebar. |
+| defaultOpen | boolean | false | Specifies the default visibility of the Sidebar. |
+| modal | boolean | undefined | Defines if background should be blocked when Sidebar is displayed. |
+| dismissable | boolean | true | Whether clicking outside closes the Sidebar. |
+| blockScroll | boolean | false | Whether background scroll should be blocked when Sidebar is visible. |
 | baseZIndex | number | 0 | Base zIndex value to use in layering. |
 | autoZIndex | boolean | true | Whether to automatically manage layering. |
-| onOpenChange | (event: useDrawerChangeEvent) => void | null | Callback function that is called when the trigger is clicked. |
+| onOpenChange | (event: useSidebarChangeEvent) => void | null | Callback function that is called when the trigger is clicked. |
 
 
 ### State
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| opened | boolean | null | Whether the drawer is currently opened. |
+| opened | boolean | null | Whether the Sidebar is currently opened. |
 | maskVisible | boolean | null | Whether the mask is currently visible. |
 
 
@@ -20246,12 +20246,12 @@ API documentation for Drawer component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| state | useDrawerState | null | Current state of the drawer. |
+| state | useSidebarState | null | Current state of the Sidebar. |
 | maskRef | RefObject<HTMLDivElement> | null | Reference to the mask element. |
 | motionRef | RefObject<{ elementRef: RefObject<HTMLDivElement> }> | null | Reference to the motion element. |
 | closeButtonRef | RefObject<{ elementRef: RefObject<HTMLButtonElement> }> | null | Reference to the close button element. |
-| onOpenStateChange | () => void | null | Method to change the open state of the drawer. |
-| close | () => void | null | Method to close the drawer. |
+| onOpenStateChange | () => void | null | Method to change the open state of the Sidebar. |
+| close | () => void | null | Method to close the Sidebar. |
 | onMotionEnter | () => void | null | Handler for motion enter events. |
 | onMotionAfterEnter | () => void | null | Handler for motion after enter events. |
 | onMotionBeforeLeave | () => void | null | Handler for motion before leave events. |
@@ -20262,71 +20262,71 @@ API documentation for Drawer component
 
 | Id | Label | Description | RelatedProp | Data |
 |:------|:------|:------|:------|:------|
-| api.usedrawer.events.useDrawerChangeEvent | useDrawerChangeEvent | Event fired when the drawer's open state changes. |  | [object Object] |
+| api.useSidebar.events.useSidebarChangeEvent | useSidebarChangeEvent | Event fired when the Sidebar's open state changes. |  | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of useDrawer headless. | [object Object] |
+| Instance | Instance of useSidebar headless. | [object Object] |
 
 
 
-# Drawer
+# Sidebar
 
-Drawer is a panel component displayed as an overlay at the edges of the screen.
+Sidebar is a panel component displayed as an overlay at the edges of the screen.
 
 
 ## Usage
 
 ```tsx
-import { Drawer } from 'primereact/drawer';
+import { Sidebar } from 'primereact/Sidebar';
 ```
 
 ```tsx
-<Drawer>
-    <Drawer.Trigger />
-    <Drawer.Portal>
-        <Drawer.Header>
-            <Drawer.Title />
-            <Drawer.Close />
-        </Drawer.Header>
-        <Drawer.Content />
-        <Drawer.Footer />
-    </Drawer.Portal>
-</Drawer>
+<Sidebar>
+    <Sidebar.Trigger />
+    <Sidebar.Portal>
+        <Sidebar.Header>
+            <Sidebar.Title />
+            <Sidebar.Close />
+        </Sidebar.Header>
+        <Sidebar.Content />
+        <Sidebar.Footer />
+    </Sidebar.Portal>
+</Sidebar>
 ```
 
 ## Examples
 
 ### Basic
 
-Drawer is defined using `Drawer`, `Drawer.Trigger`, `Drawer.Portal`, `Drawer.Header`, `Drawer.Content`, and `Drawer.Footer` components.
+Sidebar is defined using `Sidebar`, `Sidebar.Trigger`, `Sidebar.Portal`, `Sidebar.Header`, `Sidebar.Content`, and `Sidebar.Footer` components.
 
 ```tsx
 'use client';
 
-import { DrawerContentInstance } from '@primereact/types/shared/drawer';
+import { SidebarContentInstance } from '@primereact/types/shared/Sidebar';
 import { Avatar } from 'primereact/avatar';
 import { Button } from 'primereact/button';
-import { Drawer } from 'primereact/drawer';
+import { Sidebar } from 'primereact/Sidebar';
 
 export default function BasicDemo() {
     return (
         <div className="flex justify-center">
-            <Drawer>
-                <Drawer.Trigger>
+            <Sidebar>
+                <Sidebar.Trigger>
                     <i className="pi pi-arrow-right" />
-                </Drawer.Trigger>
-                <Drawer.Portal>
-                    <Drawer.Content
+                </Sidebar.Trigger>
+                <Sidebar.Portal>
+                    <Sidebar.Content
                         pt={{
                             root: 'p-0'
                         }}
                     >
-                        {(instance: DrawerContentInstance) => {
-                            const { drawer } = instance;
+                        {(instance: SidebarContentInstance) => {
+                            const { Sidebar } = instance;
 
                             return (
                                 <div className="flex flex-col h-full">
@@ -20345,7 +20345,7 @@ export default function BasicDemo() {
                                             <span className="font-semibold text-2xl text-primary">Your Logo</span>
                                         </span>
                                         <span>
-                                            <Button type="button" rounded variant="outlined" iconOnly onClick={drawer?.close}>
+                                            <Button type="button" rounded variant="outlined" iconOnly onClick={Sidebar?.close}>
                                                 <i className="pi pi-times"></i>
                                             </Button>
                                         </span>
@@ -20449,9 +20449,9 @@ export default function BasicDemo() {
                                 </div>
                             );
                         }}
-                    </Drawer.Content>
-                </Drawer.Portal>
-            </Drawer>
+                    </Sidebar.Content>
+                </Sidebar.Portal>
+            </Sidebar>
         </div>
     );
 }
@@ -20460,14 +20460,14 @@ export default function BasicDemo() {
 
 ### Position
 
-The position of the drawer can be customized with the `position` property. The available values are `left`, `right`, `top` and `bottom`.
+The position of the Sidebar can be customized with the `position` property. The available values are `left`, `right`, `top` and `bottom`.
 
 ```tsx
 'use client';
 
-import { DrawerChangeEvent } from '@primereact/types/shared/drawer';
+import { SidebarChangeEvent } from '@primereact/types/shared/Sidebar';
 import { Button } from 'primereact/button';
-import { Drawer } from 'primereact/drawer';
+import { Sidebar } from 'primereact/Sidebar';
 import * as React from 'react';
 
 export default function PositionDemo() {
@@ -20493,75 +20493,75 @@ export default function PositionDemo() {
                 </Button>
             </div>
 
-            <Drawer open={visibleLeft} onOpenChange={(e: DrawerChangeEvent) => setVisibleLeft(e.value as boolean)}>
-                <Drawer.Portal>
-                    <Drawer.Header>
-                        <Drawer.Title>Left Drawer</Drawer.Title>
-                        <Drawer.Close />
-                    </Drawer.Header>
-                    <Drawer.Content>
+            <Sidebar open={visibleLeft} onOpenChange={(e: SidebarChangeEvent) => setVisibleLeft(e.value as boolean)}>
+                <Sidebar.Portal>
+                    <Sidebar.Header>
+                        <Sidebar.Title>Left Sidebar</Sidebar.Title>
+                        <Sidebar.Close />
+                    </Sidebar.Header>
+                    <Sidebar.Content>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                             aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         </p>
-                    </Drawer.Content>
-                </Drawer.Portal>
-            </Drawer>
+                    </Sidebar.Content>
+                </Sidebar.Portal>
+            </Sidebar>
 
-            <Drawer position="right" open={visibleRight} onOpenChange={(e: DrawerChangeEvent) => setVisibleRight(e.value as boolean)}>
-                <Drawer.Portal>
-                    <Drawer.Header>
-                        <Drawer.Title>Right Drawer</Drawer.Title>
-                        <Drawer.Close />
-                    </Drawer.Header>
-                    <Drawer.Content>
+            <Sidebar position="right" open={visibleRight} onOpenChange={(e: SidebarChangeEvent) => setVisibleRight(e.value as boolean)}>
+                <Sidebar.Portal>
+                    <Sidebar.Header>
+                        <Sidebar.Title>Right Sidebar</Sidebar.Title>
+                        <Sidebar.Close />
+                    </Sidebar.Header>
+                    <Sidebar.Content>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                             aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         </p>
-                    </Drawer.Content>
-                </Drawer.Portal>
-            </Drawer>
+                    </Sidebar.Content>
+                </Sidebar.Portal>
+            </Sidebar>
 
-            <Drawer
+            <Sidebar
                 position="top"
                 open={visibleTop}
-                onOpenChange={(e: DrawerChangeEvent) => setVisibleTop(e.value as boolean)}
+                onOpenChange={(e: SidebarChangeEvent) => setVisibleTop(e.value as boolean)}
                 style={{ height: 'auto' }}
             >
-                <Drawer.Portal>
-                    <Drawer.Header>
-                        <Drawer.Title>Top Drawer</Drawer.Title>
-                        <Drawer.Close />
-                    </Drawer.Header>
-                    <Drawer.Content>
+                <Sidebar.Portal>
+                    <Sidebar.Header>
+                        <Sidebar.Title>Top Sidebar</Sidebar.Title>
+                        <Sidebar.Close />
+                    </Sidebar.Header>
+                    <Sidebar.Content>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                             aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         </p>
-                    </Drawer.Content>
-                </Drawer.Portal>
-            </Drawer>
+                    </Sidebar.Content>
+                </Sidebar.Portal>
+            </Sidebar>
 
-            <Drawer
+            <Sidebar
                 position="bottom"
                 open={visibleBottom}
-                onOpenChange={(e: DrawerChangeEvent) => setVisibleBottom(e.value as boolean)}
+                onOpenChange={(e: SidebarChangeEvent) => setVisibleBottom(e.value as boolean)}
                 style={{ height: 'auto' }}
             >
-                <Drawer.Portal>
-                    <Drawer.Header>
-                        <Drawer.Title>Bottom Drawer</Drawer.Title>
-                        <Drawer.Close />
-                    </Drawer.Header>
-                    <Drawer.Content>
+                <Sidebar.Portal>
+                    <Sidebar.Header>
+                        <Sidebar.Title>Bottom Sidebar</Sidebar.Title>
+                        <Sidebar.Close />
+                    </Sidebar.Header>
+                    <Sidebar.Content>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                             aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         </p>
-                    </Drawer.Content>
-                </Drawer.Portal>
-            </Drawer>
+                    </Sidebar.Content>
+                </Sidebar.Portal>
+            </Sidebar>
         </div>
     );
 }
@@ -20575,28 +20575,28 @@ The full screen mode is enabled when position property is set as `full`.
 ```tsx
 'use client';
 
-import { Drawer } from 'primereact/drawer';
+import { Sidebar } from 'primereact/Sidebar';
 
 export default function BasicDemo() {
     return (
         <div className="flex justify-center">
-            <Drawer position="full">
-                <Drawer.Trigger>
+            <Sidebar position="full">
+                <Sidebar.Trigger>
                     <i className="pi pi-window-maximize" />
-                </Drawer.Trigger>
-                <Drawer.Portal>
-                    <Drawer.Header>
-                        <Drawer.Title>Drawer</Drawer.Title>
-                        <Drawer.Close />
-                    </Drawer.Header>
-                    <Drawer.Content>
+                </Sidebar.Trigger>
+                <Sidebar.Portal>
+                    <Sidebar.Header>
+                        <Sidebar.Title>Sidebar</Sidebar.Title>
+                        <Sidebar.Close />
+                    </Sidebar.Header>
+                    <Sidebar.Content>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                             aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         </p>
-                    </Drawer.Content>
-                </Drawer.Portal>
-            </Drawer>
+                    </Sidebar.Content>
+                </Sidebar.Portal>
+            </Sidebar>
         </div>
     );
 }
@@ -20607,7 +20607,7 @@ export default function BasicDemo() {
 
 ### Screen Reader
 
-Drawer component uses `complementary` role by default, since any attribute is passed to the root element aria role can be changed depending on your use case and additional attributes like `aria-labelledby` can be added. In addition `aria-modal` is added since focus is kept within the drawer when opened.
+Sidebar component uses `complementary` role by default, since any attribute is passed to the root element aria role can be changed depending on your use case and additional attributes like `aria-labelledby` can be added. In addition `aria-modal` is added since focus is kept within the Sidebar when opened.
 
 Trigger element also has aria-expanded and aria-controls to be handled explicitly.
 
@@ -20615,99 +20615,99 @@ Trigger element also has aria-expanded and aria-controls to be handled explicitl
 
 | Key           | Function                                                             |
 | ------------- | -------------------------------------------------------------------- |
-| `tab`         | Moves focus to the next the focusable element within the drawer.     |
-| `shift + tab` | Moves focus to the previous the focusable element within the drawer. |
-| `escape`      | Closes the drawer.                                                   |
+| `tab`         | Moves focus to the next the focusable element within the Sidebar.     |
+| `shift + tab` | Moves focus to the previous the focusable element within the Sidebar. |
+| `escape`      | Closes the Sidebar.                                                   |
 
 ### Close Button Keyboard Support
 
 | Key     | Function           |
 | ------- | ------------------ |
-| `enter` | Closes the drawer. |
-| `space` | Closes the drawer. |
+| `enter` | Closes the Sidebar. |
+| `space` | Closes the Sidebar. |
 
 
-# Drawer Pass Through
+# Sidebar Pass Through
 
-Pass Through documentation for Drawer component
+Pass Through documentation for Sidebar component
 
 
 ## Viewer
 
 Some sections may not be visible due to the availability of the particular feature.
 
-<DocPTViewer name="drawer-pt" components={['Drawer']} />
+<DocPTViewer name="Sidebar-pt" components={['Sidebar']} />
 
-## Drawer PT Options
-
-| Label | Type | Description |
-|:------|:------|:------|
-| root | DrawerPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
-| mask | DrawerPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the mask's DOM element. |
-| trigger | DrawerPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the trigger's DOM element. |
-| triggerIcon | DrawerPassThroughType<HTMLAttributes<HTMLElement>> | Used to pass attributes to the trigger icon's DOM element. |
-| portal | DrawerPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the portal's DOM element. |
-| header | DrawerPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the header's DOM element. |
-| title | DrawerPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the title's DOM element. |
-| close | DrawerPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the close's DOM element. |
-| closeIcon | DrawerPassThroughType<HTMLAttributes<HTMLElement>> | Used to pass attributes to the close icon's DOM element. |
-| content | DrawerPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the content's DOM element. |
-| footer | DrawerPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the footer's DOM element. |
-
-
-## DrawerTrigger PT Options
+## Sidebar PT Options
 
 | Label | Type | Description |
 |:------|:------|:------|
-| root | DrawerTriggerPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the root's DOM element. |
+| root | SidebarPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
+| mask | SidebarPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the mask's DOM element. |
+| trigger | SidebarPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the trigger's DOM element. |
+| triggerIcon | SidebarPassThroughType<HTMLAttributes<HTMLElement>> | Used to pass attributes to the trigger icon's DOM element. |
+| portal | SidebarPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the portal's DOM element. |
+| header | SidebarPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the header's DOM element. |
+| title | SidebarPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the title's DOM element. |
+| close | SidebarPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the close's DOM element. |
+| closeIcon | SidebarPassThroughType<HTMLAttributes<HTMLElement>> | Used to pass attributes to the close icon's DOM element. |
+| content | SidebarPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the content's DOM element. |
+| footer | SidebarPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the footer's DOM element. |
 
 
-## DrawerPortal PT Options
-
-| Label | Type | Description |
-|:------|:------|:------|
-| root | DrawerPortalPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the root's DOM element. |
-
-
-## DrawerHeader PT Options
-
-| Label | Type | Description |
-|:------|:------|:------|
-| root | DrawerHeaderPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
-
-
-## DrawerTitle PT Options
+## SidebarTrigger PT Options
 
 | Label | Type | Description |
 |:------|:------|:------|
-| root | DrawerTitlePassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
+| root | SidebarTriggerPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the root's DOM element. |
 
 
-## DrawerClose PT Options
-
-| Label | Type | Description |
-|:------|:------|:------|
-| root | DrawerClosePassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the root's DOM element. |
-
-
-## DrawerContent PT Options
+## SidebarPortal PT Options
 
 | Label | Type | Description |
 |:------|:------|:------|
-| root | DrawerContentPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
+| root | SidebarPortalPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the root's DOM element. |
 
 
-## DrawerFooter PT Options
+## SidebarHeader PT Options
 
 | Label | Type | Description |
 |:------|:------|:------|
-| root | DrawerFooterPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
+| root | SidebarHeaderPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
+
+
+## SidebarTitle PT Options
+
+| Label | Type | Description |
+|:------|:------|:------|
+| root | SidebarTitlePassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
+
+
+## SidebarClose PT Options
+
+| Label | Type | Description |
+|:------|:------|:------|
+| root | SidebarClosePassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the root's DOM element. |
+
+
+## SidebarContent PT Options
+
+| Label | Type | Description |
+|:------|:------|:------|
+| root | SidebarContentPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
+
+
+## SidebarFooter PT Options
+
+| Label | Type | Description |
+|:------|:------|:------|
+| root | SidebarFooterPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
 
 
 
-# Drawer Theming
+# Sidebar Theming
 
-Theming documentation for Drawer component
+Theming documentation for Sidebar component
 
 
 ## Styled
@@ -20718,14 +20718,14 @@ List of class names used in the styled mode.
 
 | ClassName | Description |
 |:------|:------|
-| p-drawer-mask | Class name of the mask element |
-| p-drawer | Class name of the root element |
-| p-drawer-trigger-button | Class name of the trigger button element |
-| p-drawer-header | Class name of the header element |
-| p-drawer-title | Class name of the title element |
-| p-drawer-close-button | Class name of the close button element |
-| p-drawer-content | Class name of the content element |
-| p-drawer-footer | Class name of the footer element |
+| p-Sidebar-mask | Class name of the mask element |
+| p-Sidebar | Class name of the root element |
+| p-Sidebar-trigger-button | Class name of the trigger button element |
+| p-Sidebar-header | Class name of the header element |
+| p-Sidebar-title | Class name of the title element |
+| p-Sidebar-close-button | Class name of the close button element |
+| p-Sidebar-content | Class name of the content element |
+| p-Sidebar-footer | Class name of the footer element |
 
 
 ### Design Tokens
@@ -20734,15 +20734,15 @@ List of design tokens.
 
 | Token | CSS Variable | Description |
 |:------|:------|:------|
-| drawer.background | --p-drawer-background | Background of root |
-| drawer.border.color | --p-drawer-border-color | Border color of root |
-| drawer.color | --p-drawer-color | Color of root |
-| drawer.shadow | --p-drawer-shadow | Shadow of root |
-| drawer.header.padding | --p-drawer-header-padding | Padding of header |
-| drawer.title.font.size | --p-drawer-title-font-size | Font size of title |
-| drawer.title.font.weight | --p-drawer-title-font-weight | Font weight of title |
-| drawer.content.padding | --p-drawer-content-padding | Padding of content |
-| drawer.footer.padding | --p-drawer-footer-padding | Padding of footer |
+| Sidebar.background | --p-Sidebar-background | Background of root |
+| Sidebar.border.color | --p-Sidebar-border-color | Border color of root |
+| Sidebar.color | --p-Sidebar-color | Color of root |
+| Sidebar.shadow | --p-Sidebar-shadow | Shadow of root |
+| Sidebar.header.padding | --p-Sidebar-header-padding | Padding of header |
+| Sidebar.title.font.size | --p-Sidebar-title-font-size | Font size of title |
+| Sidebar.title.font.weight | --p-Sidebar-title-font-weight | Font weight of title |
+| Sidebar.content.padding | --p-Sidebar-content-padding | Padding of content |
+| Sidebar.footer.padding | --p-Sidebar-footer-padding | Padding of footer |
 
 
 ## Unstyled
@@ -22565,12 +22565,12 @@ export default function BasicDemo() {
 ```
 
 
-# Gallery API
+# Galleria API
 
-API documentation for Gallery component
+API documentation for Galleria component
 
 
-## Gallery
+## Galleria
 
 ### Props
 
@@ -22578,18 +22578,18 @@ API documentation for Gallery component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: GalleryInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: GalleryInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: GalleriaInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: GalleriaInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<GalleryPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<GalleriaPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: GalleryInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: GalleriaInstance) => ReactNode) | null | The children to render. |
 | activeIndex | number | 0 | The index of the active item. |
-| onActiveIndexChange | (event: useGalleryChangeEvent) => void | null | Callback fired when the gallery's active index changes. |
+| onActiveIndexChange | (event: useGalleriaChangeEvent) => void | null | Callback fired when the Galleria's active index changes. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -22598,17 +22598,17 @@ API documentation for Gallery component
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of Gallery component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of Galleria component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of Gallery component. | [object Object] |
+| Instance | Instance of Galleria component. | [object Object] |
 
 
-## GalleryBackdrop
+## GalleriaBackdrop
 
 ### Props
 
@@ -22616,16 +22616,16 @@ API documentation for Gallery component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: GalleryBackdropInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: GalleryBackdropInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: GalleriaBackdropInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: GalleriaBackdropInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<GalleryBackdropPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<GalleriaBackdropPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: GalleryBackdropInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: GalleriaBackdropInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -22634,17 +22634,17 @@ API documentation for Gallery component
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of GalleryBackdrop component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of GalleriaBackdrop component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of GalleryBackdrop component. | [object Object] |
+| Instance | Instance of GalleriaBackdrop component. | [object Object] |
 
 
-## GalleryContent
+## GalleriaContent
 
 ### Props
 
@@ -22652,16 +22652,16 @@ API documentation for Gallery component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: GalleryContentInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: GalleryContentInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: GalleriaContentInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: GalleriaContentInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<GalleryContentPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<GalleriaContentPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: GalleryContentInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: GalleriaContentInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -22670,17 +22670,17 @@ API documentation for Gallery component
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of GalleryContent component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of GalleriaContent component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of GalleryContent component. | [object Object] |
+| Instance | Instance of GalleriaContent component. | [object Object] |
 
 
-## GalleryItem
+## GalleriaItem
 
 ### Props
 
@@ -22688,18 +22688,18 @@ API documentation for Gallery component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: GalleryItemInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: GalleryItemInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: GalleriaItemInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: GalleriaItemInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<GalleryItemPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<GalleriaItemPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: GalleryItemInstance) => ReactNode) | null | The children to render. |
-| normalScale | number | 1 | The normal scale of the gallery item. |
-| zoomedScale | number | 3 | The zoomed scale of the gallery item. |
+| children | ReactNode \\| ((instance: GalleriaItemInstance) => ReactNode) | null | The children to render. |
+| normalScale | number | 1 | The normal scale of the Galleria item. |
+| zoomedScale | number | 3 | The zoomed scale of the Galleria item. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -22708,17 +22708,17 @@ API documentation for Gallery component
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of GalleryItem component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of GalleriaItem component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of GalleryItem component. | [object Object] |
+| Instance | Instance of GalleriaItem component. | [object Object] |
 
 
-## GalleryNext
+## GalleriaNext
 
 ### Props
 
@@ -22726,16 +22726,16 @@ API documentation for Gallery component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: GalleryNextInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: GalleryNextInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: GalleriaNextInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: GalleriaNextInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<GalleryNextPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<GalleriaNextPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: GalleryNextInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: GalleriaNextInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -22744,17 +22744,17 @@ API documentation for Gallery component
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of GalleryNext component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of GalleriaNext component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of GalleryNext component. | [object Object] |
+| Instance | Instance of GalleriaNext component. | [object Object] |
 
 
-## GalleryPrev
+## GalleriaPrev
 
 ### Props
 
@@ -22762,16 +22762,16 @@ API documentation for Gallery component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: GalleryPrevInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: GalleryPrevInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: GalleriaPrevInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: GalleriaPrevInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<GalleryPrevPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<GalleriaPrevPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: GalleryPrevInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: GalleriaPrevInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -22780,17 +22780,17 @@ API documentation for Gallery component
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of GalleryPrev component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of GalleriaPrev component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of GalleryPrev component. | [object Object] |
+| Instance | Instance of GalleriaPrev component. | [object Object] |
 
 
-## GalleryToolbar
+## GalleriaToolbar
 
 ### Props
 
@@ -22798,16 +22798,16 @@ API documentation for Gallery component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: GalleryToolbarInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: GalleryToolbarInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: GalleriaToolbarInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: GalleriaToolbarInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<GalleryToolbarPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<GalleriaToolbarPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: GalleryToolbarInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: GalleriaToolbarInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -22816,17 +22816,17 @@ API documentation for Gallery component
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of GalleryToolbar component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of GalleriaToolbar component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of GalleryToolbar component. | [object Object] |
+| Instance | Instance of GalleriaToolbar component. | [object Object] |
 
 
-## GalleryToolbarItem
+## GalleriaToolbarItem
 
 ### Props
 
@@ -22834,16 +22834,16 @@ API documentation for Gallery component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: GalleryToolbarItemInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: GalleryToolbarItemInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: GalleriaToolbarItemInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: GalleriaToolbarItemInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<GalleryToolbarItemPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<GalleriaToolbarItemPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: GalleryToolbarItemInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: GalleriaToolbarItemInstance) => ReactNode) | null | The children to render. |
 | action | "next" \\| "prev" \\| "zoomIn" \\| "zoomOut" \\| "rotateLeft" \\| "rotateRight" \\| "flipX" \\| "flipY" \\| "download" \\| "toggleFullScreen" | null | The action to perform. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
@@ -22853,17 +22853,17 @@ API documentation for Gallery component
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of GalleryToolbarItem component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of GalleriaToolbarItem component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of GalleryToolbarItem component. | [object Object] |
+| Instance | Instance of GalleriaToolbarItem component. | [object Object] |
 
 
-## GalleryThumbnail
+## GalleriaThumbnail
 
 ### Props
 
@@ -22871,16 +22871,16 @@ API documentation for Gallery component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: GalleryThumbnailInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: GalleryThumbnailInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: GalleriaThumbnailInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: GalleriaThumbnailInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<GalleryThumbnailPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<GalleriaThumbnailPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: GalleryThumbnailInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: GalleriaThumbnailInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -22889,17 +22889,17 @@ API documentation for Gallery component
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of GalleryThumbnail component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of GalleriaThumbnail component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of GalleryThumbnail component. | [object Object] |
+| Instance | Instance of GalleriaThumbnail component. | [object Object] |
 
 
-## GalleryThumbnailContent
+## GalleriaThumbnailContent
 
 ### Props
 
@@ -22907,16 +22907,16 @@ API documentation for Gallery component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: GalleryThumbnailContentInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: GalleryThumbnailContentInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: GalleriaThumbnailContentInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: GalleriaThumbnailContentInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<GalleryThumbnailContentPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<GalleriaThumbnailContentPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: GalleryThumbnailContentInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: GalleriaThumbnailContentInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -22925,17 +22925,17 @@ API documentation for Gallery component
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of GalleryThumbnailContent component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of GalleriaThumbnailContent component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of GalleryThumbnailContent component. | [object Object] |
+| Instance | Instance of GalleriaThumbnailContent component. | [object Object] |
 
 
-## GalleryThumbnailItem
+## GalleriaThumbnailItem
 
 ### Props
 
@@ -22943,16 +22943,16 @@ API documentation for Gallery component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: GalleryThumbnailItemInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: GalleryThumbnailItemInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: GalleriaThumbnailItemInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: GalleriaThumbnailItemInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<GalleryThumbnailItemPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<GalleriaThumbnailItemPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: GalleryThumbnailItemInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: GalleriaThumbnailItemInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -22961,56 +22961,56 @@ API documentation for Gallery component
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of GalleryThumbnailItem component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of GalleriaThumbnailItem component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of GalleryThumbnailItem component. | [object Object] |
+| Instance | Instance of GalleriaThumbnailItem component. | [object Object] |
 
 
-## useGallery
+## useGalleria
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of useGallery headless. | [object Object] |
+| Instance | Instance of useGalleria headless. | [object Object] |
 
 
 
-# Gallery
+# Galleria
 
-Gallery is a component to display a collection of images in a gallery.
+Galleria is a component to display a collection of images in a Galleria.
 
 
 ## Usage
 
 ```tsx
-import { Gallery } from 'primereact/gallery';
+import { Galleria } from 'primereact/Galleria';
 ```
 
 ```tsx
-<Gallery>
-    <Gallery.Backdrop />
-    <Gallery.Prev></Gallery.Prev>
-    <Gallery.Next></Gallery.Next>
-    <Gallery.Toolbar>
-        <Gallery.ToolbarItem action=""></Gallery.ToolbarItem>
-    </Gallery.Toolbar>
-    <Gallery.Content>
-        <Gallery.Item>
+<Galleria>
+    <Galleria.Backdrop />
+    <Galleria.Prev></Galleria.Prev>
+    <Galleria.Next></Galleria.Next>
+    <Galleria.Toolbar>
+        <Galleria.ToolbarItem action=""></Galleria.ToolbarItem>
+    </Galleria.Toolbar>
+    <Galleria.Content>
+        <Galleria.Item>
             <img />
-        </Gallery.Item>
-    </Gallery.Content>
-    <Gallery.Thumbnail>
-        <Gallery.ThumbnailContent>
-            <Gallery.ThumbnailItem></Gallery.ThumbnailItem>
-        </Gallery.ThumbnailContent>
-    </Gallery.Thumbnail>
-</Gallery>
+        </Galleria.Item>
+    </Galleria.Content>
+    <Galleria.Thumbnail>
+        <Galleria.ThumbnailContent>
+            <Galleria.ThumbnailItem></Galleria.ThumbnailItem>
+        </Galleria.ThumbnailContent>
+    </Galleria.Thumbnail>
+</Galleria>
 ```
 
 ## Examples
@@ -23020,8 +23020,8 @@ import { Gallery } from 'primereact/gallery';
 ```tsx
 'use client';
 
-import { useGalleryChangeEvent } from '@primereact/types/shared/gallery';
-import { Gallery } from 'primereact/gallery';
+import { useGalleriaChangeEvent } from '@primereact/types/shared/Galleria';
+import { Galleria } from 'primereact/Galleria';
 import * as React from 'react';
 
 const images = [
@@ -23040,52 +23040,52 @@ function BasicDemo() {
 
     return (
         <div className="mb-12">
-            <Gallery
+            <Galleria
                 className="w-full h-[600px] relative overflow-hidden"
                 activeIndex={activeIndex}
-                onActiveIndexChange={(e: useGalleryChangeEvent) => setActiveIndex(e.value ?? 0)}
+                onActiveIndexChange={(e: useGalleriaChangeEvent) => setActiveIndex(e.value ?? 0)}
             >
-                <Gallery.Backdrop />
-                <Gallery.Prev>
+                <Galleria.Backdrop />
+                <Galleria.Prev>
                     <i className="pi pi-arrow-left"></i>
-                </Gallery.Prev>
-                <Gallery.Next>
+                </Galleria.Prev>
+                <Galleria.Next>
                     <i className="pi pi-arrow-right"></i>
-                </Gallery.Next>
-                <Gallery.Toolbar>
-                    <Gallery.ToolbarItem action="rotateLeft">
+                </Galleria.Next>
+                <Galleria.Toolbar>
+                    <Galleria.ToolbarItem action="rotateLeft">
                         <i className="pi pi-replay"></i>
-                    </Gallery.ToolbarItem>
-                    <Gallery.ToolbarItem action="rotateRight">
+                    </Galleria.ToolbarItem>
+                    <Galleria.ToolbarItem action="rotateRight">
                         <i className="pi pi-refresh"></i>
-                    </Gallery.ToolbarItem>
-                    <Gallery.ToolbarItem action="zoomIn">
+                    </Galleria.ToolbarItem>
+                    <Galleria.ToolbarItem action="zoomIn">
                         <i className="pi pi-search-plus"></i>
-                    </Gallery.ToolbarItem>
-                    <Gallery.ToolbarItem action="flipX">
+                    </Galleria.ToolbarItem>
+                    <Galleria.ToolbarItem action="flipX">
                         <i className="pi pi-arrows-h"></i>
-                    </Gallery.ToolbarItem>
-                    <Gallery.ToolbarItem action="flipY">
+                    </Galleria.ToolbarItem>
+                    <Galleria.ToolbarItem action="flipY">
                         <i className="pi pi-arrows-v"></i>
-                    </Gallery.ToolbarItem>
-                    <Gallery.ToolbarItem action="download">
+                    </Galleria.ToolbarItem>
+                    <Galleria.ToolbarItem action="download">
                         <i className="pi pi-download"></i>
-                    </Gallery.ToolbarItem>
-                    <Gallery.ToolbarItem action="toggleFullScreen">
+                    </Galleria.ToolbarItem>
+                    <Galleria.ToolbarItem action="toggleFullScreen">
                         {() => <i className="pi pi-arrow-up-right-and-arrow-down-left-from-center"></i>}
-                    </Gallery.ToolbarItem>
-                </Gallery.Toolbar>
-                <Gallery.Content>
+                    </Galleria.ToolbarItem>
+                </Galleria.Toolbar>
+                <Galleria.Content>
                     {images.map((image) => (
-                        <Gallery.Item key={image}>
+                        <Galleria.Item key={image}>
                             <img src={image} alt="image" />
-                        </Gallery.Item>
+                        </Galleria.Item>
                     ))}
-                </Gallery.Content>
-                <Gallery.Thumbnail align="center" slide={activeIndex} spacing={2} loop>
-                    <Gallery.ThumbnailContent className="h-16">
+                </Galleria.Content>
+                <Galleria.Thumbnail align="center" slide={activeIndex} spacing={2} loop>
+                    <Galleria.ThumbnailContent className="h-16">
                         {images.map((image, index) => (
-                            <Gallery.ThumbnailItem
+                            <Galleria.ThumbnailItem
                                 key={index}
                                 size={20}
                                 onClick={(e: React.MouseEvent) => {
@@ -23102,11 +23102,11 @@ function BasicDemo() {
                                         className="h-full w-full object-cover hover:opacity-75 transition-opacity"
                                     ></img>
                                 </div>
-                            </Gallery.ThumbnailItem>
+                            </Galleria.ThumbnailItem>
                         ))}
-                    </Gallery.ThumbnailContent>
-                </Gallery.Thumbnail>
-            </Gallery>
+                    </Galleria.ThumbnailContent>
+                </Galleria.Thumbnail>
+            </Galleria>
         </div>
     );
 }
@@ -23121,8 +23121,8 @@ export default BasicDemo;
 'use client';
 
 import { usePresence } from '@primereact/hooks';
-import { useGalleryChangeEvent } from '@primereact/types/shared/gallery';
-import { Gallery } from 'primereact/gallery';
+import { useGalleriaChangeEvent } from '@primereact/types/shared/Galleria';
+import { Galleria } from 'primereact/Galleria';
 import { Portal } from 'primereact/portal';
 import * as React from 'react';
 
@@ -23165,56 +23165,56 @@ function BasicDemo() {
                         ref={ref as React.RefObject<HTMLDivElement>}
                         className={`w-full h-[100dvh] top-0 left-0 !fixed z-[100000] ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-200`}
                     >
-                        <Gallery
+                        <Galleria
                             className="w-full h-full"
                             activeIndex={activeIndex}
-                            onActiveIndexChange={(e: useGalleryChangeEvent) => setActiveIndex(e.value ?? 0)}
+                            onActiveIndexChange={(e: useGalleriaChangeEvent) => setActiveIndex(e.value ?? 0)}
                         >
-                            <Gallery.Backdrop />
-                            <Gallery.Prev>
+                            <Galleria.Backdrop />
+                            <Galleria.Prev>
                                 <i className="pi pi-arrow-left"></i>
-                            </Gallery.Prev>
-                            <Gallery.Next>
+                            </Galleria.Prev>
+                            <Galleria.Next>
                                 <i className="pi pi-arrow-right"></i>
-                            </Gallery.Next>
-                            <Gallery.Toolbar>
-                                <Gallery.ToolbarItem action="rotateLeft">
+                            </Galleria.Next>
+                            <Galleria.Toolbar>
+                                <Galleria.ToolbarItem action="rotateLeft">
                                     <i className="pi pi-replay"></i>
-                                </Gallery.ToolbarItem>
-                                <Gallery.ToolbarItem action="rotateRight">
+                                </Galleria.ToolbarItem>
+                                <Galleria.ToolbarItem action="rotateRight">
                                     <i className="pi pi-refresh"></i>
-                                </Gallery.ToolbarItem>
-                                <Gallery.ToolbarItem action="zoomIn">
+                                </Galleria.ToolbarItem>
+                                <Galleria.ToolbarItem action="zoomIn">
                                     <i className="pi pi-search-plus"></i>
-                                </Gallery.ToolbarItem>
-                                <Gallery.ToolbarItem action="flipX">
+                                </Galleria.ToolbarItem>
+                                <Galleria.ToolbarItem action="flipX">
                                     <i className="pi pi-arrows-h"></i>
-                                </Gallery.ToolbarItem>
-                                <Gallery.ToolbarItem action="flipY">
+                                </Galleria.ToolbarItem>
+                                <Galleria.ToolbarItem action="flipY">
                                     <i className="pi pi-arrows-v"></i>
-                                </Gallery.ToolbarItem>
-                                <Gallery.ToolbarItem action="download">
+                                </Galleria.ToolbarItem>
+                                <Galleria.ToolbarItem action="download">
                                     <i className="pi pi-download"></i>
-                                </Gallery.ToolbarItem>
-                                <Gallery.ToolbarItem onClick={() => setOpen(false)}>
+                                </Galleria.ToolbarItem>
+                                <Galleria.ToolbarItem onClick={() => setOpen(false)}>
                                     <i className="pi pi-times"></i>
-                                </Gallery.ToolbarItem>
-                            </Gallery.Toolbar>
-                            <Gallery.Content>
+                                </Galleria.ToolbarItem>
+                            </Galleria.Toolbar>
+                            <Galleria.Content>
                                 {images.map((image) => (
-                                    <Gallery.Item key={image}>
+                                    <Galleria.Item key={image}>
                                         <img
                                             src={image}
                                             alt="image"
                                             className={`${isVisible ? 'scale-100 blur-none' : 'scale-[0.9] blur-2xl'}  transition-[scale,filter] duration-300`}
                                         />
-                                    </Gallery.Item>
+                                    </Galleria.Item>
                                 ))}
-                            </Gallery.Content>
-                            <Gallery.Thumbnail align="center" slide={activeIndex} spacing={2} loop>
-                                <Gallery.ThumbnailContent className="h-16">
+                            </Galleria.Content>
+                            <Galleria.Thumbnail align="center" slide={activeIndex} spacing={2} loop>
+                                <Galleria.ThumbnailContent className="h-16">
                                     {images.map((image, index) => (
-                                        <Gallery.ThumbnailItem
+                                        <Galleria.ThumbnailItem
                                             key={index}
                                             size={20}
                                             onClick={(e: React.MouseEvent) => {
@@ -23231,11 +23231,11 @@ function BasicDemo() {
                                                     className="h-full w-full object-cover hover:opacity-75 transition-opacity"
                                                 ></img>
                                             </div>
-                                        </Gallery.ThumbnailItem>
+                                        </Galleria.ThumbnailItem>
                                     ))}
-                                </Gallery.ThumbnailContent>
-                            </Gallery.Thumbnail>
-                        </Gallery>
+                                </Galleria.ThumbnailContent>
+                            </Galleria.Thumbnail>
+                        </Galleria>
                     </div>
                 )}
             </Portal>
@@ -23248,98 +23248,98 @@ export default BasicDemo;
 ```
 
 
-# Gallery Pass Through
+# Galleria Pass Through
 
-Pass Through documentation for Gallery component
+Pass Through documentation for Galleria component
 
 
 ## Viewer
 
 Some sections may not be visible due to the availability of the particular feature.
 
-<DocPTViewer name="gallery-pt" components={['Gallery', 'GalleryBackdrop', 'GalleryContent', 'GalleryItem', 'GalleryNext', 'GalleryPrev', 'GalleryToolbar', 'GalleryToolbarItem', 'GalleryThumbnail', 'GalleryThumbnailContent', 'GalleryThumbnailItem']} />
+<DocPTViewer name="Galleria-pt" components={['Galleria', 'GalleriaBackdrop', 'GalleriaContent', 'GalleriaItem', 'GalleriaNext', 'GalleriaPrev', 'GalleriaToolbar', 'GalleriaToolbarItem', 'GalleriaThumbnail', 'GalleriaThumbnailContent', 'GalleriaThumbnailItem']} />
 
-## Gallery PT Options
-
-| Label | Type | Description |
-|:------|:------|:------|
-| root | GalleryPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
-
-
-## GalleryBackdrop PT Options
+## Galleria PT Options
 
 | Label | Type | Description |
 |:------|:------|:------|
-| root | GalleryBackdropPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the root's DOM element. |
+| root | GalleriaPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
 
 
-## GalleryContent PT Options
-
-| Label | Type | Description |
-|:------|:------|:------|
-| root | GalleryContentPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the root's DOM element. |
-
-
-## GalleryItem PT Options
+## GalleriaBackdrop PT Options
 
 | Label | Type | Description |
 |:------|:------|:------|
-| root | GalleryItemPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
+| root | GalleriaBackdropPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the root's DOM element. |
 
 
-## GalleryNext PT Options
-
-| Label | Type | Description |
-|:------|:------|:------|
-| root | GalleryNextPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the root's DOM element. |
-
-
-## GalleryPrev PT Options
+## GalleriaContent PT Options
 
 | Label | Type | Description |
 |:------|:------|:------|
-| root | GalleryPrevPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the root's DOM element. |
+| root | GalleriaContentPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the root's DOM element. |
 
 
-## GalleryToolbar PT Options
-
-| Label | Type | Description |
-|:------|:------|:------|
-| root | GalleryToolbarPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the root's DOM element. |
-
-
-## GalleryToolbarItem PT Options
+## GalleriaItem PT Options
 
 | Label | Type | Description |
 |:------|:------|:------|
-| root | GalleryToolbarItemPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the root's DOM element. |
+| root | GalleriaItemPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
 
 
-## GalleryThumbnail PT Options
-
-| Label | Type | Description |
-|:------|:------|:------|
-| root | GalleryThumbnailPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the root's DOM element. |
-
-
-## GalleryThumbnailContent PT Options
+## GalleriaNext PT Options
 
 | Label | Type | Description |
 |:------|:------|:------|
-| root | GalleryThumbnailContentPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the root's DOM element. |
+| root | GalleriaNextPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the root's DOM element. |
 
 
-## GalleryThumbnailItem PT Options
+## GalleriaPrev PT Options
 
 | Label | Type | Description |
 |:------|:------|:------|
-| root | GalleryThumbnailItemPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the root's DOM element. |
+| root | GalleriaPrevPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the root's DOM element. |
+
+
+## GalleriaToolbar PT Options
+
+| Label | Type | Description |
+|:------|:------|:------|
+| root | GalleriaToolbarPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the root's DOM element. |
+
+
+## GalleriaToolbarItem PT Options
+
+| Label | Type | Description |
+|:------|:------|:------|
+| root | GalleriaToolbarItemPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the root's DOM element. |
+
+
+## GalleriaThumbnail PT Options
+
+| Label | Type | Description |
+|:------|:------|:------|
+| root | GalleriaThumbnailPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the root's DOM element. |
+
+
+## GalleriaThumbnailContent PT Options
+
+| Label | Type | Description |
+|:------|:------|:------|
+| root | GalleriaThumbnailContentPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the root's DOM element. |
+
+
+## GalleriaThumbnailItem PT Options
+
+| Label | Type | Description |
+|:------|:------|:------|
+| root | GalleriaThumbnailItemPassThroughType<HTMLAttributes<HTMLSpanElement>> | Used to pass attributes to the root's DOM element. |
 
 
 
-# Gallery Theming
+# Galleria Theming
 
-Theming documentation for Gallery component
+Theming documentation for Galleria component
 
 
 ## Styled
@@ -23350,24 +23350,24 @@ List of class names used in the styled mode.
 
 | ClassName | Description |
 |:------|:------|
-| p-gallery | Class name of the root element |
-| p-gallery-backdrop | Class name of the backdrop element |
-| p-gallery-content | Class name of the content element |
-| p-gallery-item | Class name of the item element |
-| p-gallery-next | Class name of the next element |
-| p-gallery-prev | Class name of the prev element |
-| p-gallery-toolbar | Class name of the toolbar element |
-| p-gallery-toolbar-item | Class name of the toolbar item element |
-| p-gallery-thumbnail | Class name of the thumbnail element |
-| p-gallery-thumbnail-content | Class name of the thumbnail content element |
-| p-gallery-thumbnail-item | Class name of the thumbnail item element |
+| p-Galleria | Class name of the root element |
+| p-Galleria-backdrop | Class name of the backdrop element |
+| p-Galleria-content | Class name of the content element |
+| p-Galleria-item | Class name of the item element |
+| p-Galleria-next | Class name of the next element |
+| p-Galleria-prev | Class name of the prev element |
+| p-Galleria-toolbar | Class name of the toolbar element |
+| p-Galleria-toolbar-item | Class name of the toolbar item element |
+| p-Galleria-thumbnail | Class name of the thumbnail element |
+| p-Galleria-thumbnail-content | Class name of the thumbnail content element |
+| p-Galleria-thumbnail-item | Class name of the thumbnail item element |
 
 
 ### Design Tokens
 
 List of design tokens.
 
-<DocTable name="Gallery" category="token" />
+<DocTable name="Galleria" category="token" />
 
 ## Unstyled
 
@@ -32987,12 +32987,12 @@ List of design tokens.
 Theming is implemented with the pass through properties in unstyled mode.
 
 
-# Popover API
+# OverlayPanel API
 
-API documentation for Popover component
+API documentation for OverlayPanel component
 
 
-## Popover
+## OverlayPanel
 
 ### Props
 
@@ -33000,24 +33000,24 @@ API documentation for Popover component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: PopoverInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: PopoverInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: OverlayPanelInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: OverlayPanelInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<PopoverPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<OverlayPanelPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: PopoverInstance) => ReactNode) | null | The children to render. |
-| defaultOpen | boolean | undefined | Whether the popover is open by default. |
-| open | boolean | undefined | Whether the popover is open. |
-| onOpenChange | (event: usePopoverOpenChangeEvent) => void | undefined | Callback to invoke when the open state changes. |
+| children | ReactNode \\| ((instance: OverlayPanelInstance) => ReactNode) | null | The children to render. |
+| defaultOpen | boolean | undefined | Whether the OverlayPanel is open by default. |
+| open | boolean | undefined | Whether the OverlayPanel is open. |
+| onOpenChange | (event: useOverlayPanelOpenChangeEvent) => void | undefined | Callback to invoke when the open state changes. |
 | dismissable | boolean | true | Enables to hide the overlay when outside is clicked. |
 | appendTo | HTMLElement \\| "body" \\| "self" | body | A valid query selector or an HTMLElement to specify where the overlay gets attached. |
 | baseZIndex | number | 0 | Base zIndex value to use in layering. |
 | autoZIndex | boolean | true | Whether to automatically manage layering. |
-| breakpoints | PopoverBreakpoints | null | Object literal to define widths per screen size. |
+| breakpoints | OverlayPanelBreakpoints | null | Object literal to define widths per screen size. |
 | closeOnEscape | boolean | true | Specifies if pressing escape key should hide the dialog. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
@@ -33034,8 +33034,8 @@ API documentation for Popover component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| hide | () => void | null | Hides the popover. |
-| show | () => void | null | Shows the popover. |
+| hide | () => void | null | Hides the OverlayPanel. |
+| show | () => void | null | Shows the OverlayPanel. |
 | onContentKeydown | (event: KeyboardEvent<HTMLDivElement>) => void | null | The function to handle the content keydown event. |
 | triggerRef | RefObject<{ elementRef: RefObject<HTMLElement> }> | undefined | A valid query selector or an HTMLElement to specify where the trigger gets attached. |
 | containerRef | RefObject<{ elementRef: RefObject<HTMLElement> }> | undefined | A valid query selector or an HTMLElement to specify where the container gets attached. |
@@ -33049,17 +33049,17 @@ API documentation for Popover component
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of Popover component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of OverlayPanel component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of Popover component. | [object Object] |
+| Instance | Instance of OverlayPanel component. | [object Object] |
 
 
-## PopoverTrigger
+## OverlayPanelTrigger
 
 ### Props
 
@@ -33067,16 +33067,16 @@ API documentation for Popover component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | (CSSProperties \\| ((instance?: ButtonInstance) => CSSProperties)) & (CSSProperties \\| ((instance?: PopoverTriggerInstance) => CSSProperties)) | null | The style to apply to the component. |
-| className | (string \\| ((instance?: ButtonInstance) => string)) & (string \\| ((instance?: PopoverTriggerInstance) => string)) | null | The class name to apply to the component. |
+| style | (CSSProperties \\| ((instance?: ButtonInstance) => CSSProperties)) & (CSSProperties \\| ((instance?: OverlayPanelTriggerInstance) => CSSProperties)) | null | The style to apply to the component. |
+| className | (string \\| ((instance?: ButtonInstance) => string)) & (string \\| ((instance?: OverlayPanelTriggerInstance) => string)) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | ButtonPassThrough & Record<PropertyKey, unknown> & PopoverTriggerPassThrough | null | The pass-through props to pass to the component |
+| pt | ButtonPassThrough & Record<PropertyKey, unknown> & OverlayPanelTriggerPassThrough | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | (ReactNode \\| ((instance: ButtonInstance) => ReactNode)) & (ReactNode \\| ((instance: PopoverTriggerInstance) => ReactNode)) | null | The children to render. |
+| children | (ReactNode \\| ((instance: ButtonInstance) => ReactNode)) & (ReactNode \\| ((instance: OverlayPanelTriggerInstance) => ReactNode)) | null | The children to render. |
 | size | "small" \\| "large" \\| "normal" | null | Size of the Button. |
 | severity | string & {} \\| "secondary" \\| "info" \\| "success" \\| "warn" \\| "danger" \\| "contrast" \\| "help" | null | Severity type of the Button. |
 | variant | "link" \\| "text" \\| "outlined" | null | Variant of the Button. |
@@ -33093,24 +33093,24 @@ API documentation for Popover component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| popover | PopoverInstance | null | The Popover component instance. |
+| OverlayPanel | OverlayPanelInstance | null | The OverlayPanel component instance. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of PopoverTrigger component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of OverlayPanelTrigger component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of PopoverTrigger component. | [object Object] |
+| Instance | Instance of OverlayPanelTrigger component. | [object Object] |
 
 
-## PopoverPortal
+## OverlayPanelPortal
 
 ### Props
 
@@ -33118,16 +33118,16 @@ API documentation for Popover component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | (CSSProperties \\| ((instance?: PortalInstance) => CSSProperties)) & (CSSProperties \\| ((instance?: PopoverPortalInstance) => CSSProperties)) | null | The style to apply to the component. |
-| className | (string \\| ((instance?: PortalInstance) => string)) & (string \\| ((instance?: PopoverPortalInstance) => string)) | null | The class name to apply to the component. |
+| style | (CSSProperties \\| ((instance?: PortalInstance) => CSSProperties)) & (CSSProperties \\| ((instance?: OverlayPanelPortalInstance) => CSSProperties)) | null | The style to apply to the component. |
+| className | (string \\| ((instance?: PortalInstance) => string)) & (string \\| ((instance?: OverlayPanelPortalInstance) => string)) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | PortalPassThrough & Record<PropertyKey, unknown> & PopoverPortalPassThrough | null | The pass-through props to pass to the component |
+| pt | PortalPassThrough & Record<PropertyKey, unknown> & OverlayPanelPortalPassThrough | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | (ReactNode \\| ((instance: PortalInstance) => ReactNode)) & (ReactNode \\| ((instance: PopoverPortalInstance) => ReactNode)) | null | The children to render. |
+| children | (ReactNode \\| ((instance: PortalInstance) => ReactNode)) & (ReactNode \\| ((instance: OverlayPanelPortalInstance) => ReactNode)) | null | The children to render. |
 | element | ReactNode | null | The element to be rendered as the portal. |
 | appendTo | HTMLElement \\| "body" \\| "self" | 'body' | The DOM element where the portal should be appended to. |
 | visible | boolean | false | Whether the portal is visible or not. |
@@ -33141,24 +33141,24 @@ API documentation for Popover component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| popover | PopoverInstance | null | The Popover component instance. |
+| OverlayPanel | OverlayPanelInstance | null | The OverlayPanel component instance. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of PopoverPortal component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of OverlayPanelPortal component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of PopoverPortal component. | [object Object] |
+| Instance | Instance of OverlayPanelPortal component. | [object Object] |
 
 
-## PopoverContent
+## OverlayPanelContent
 
 ### Props
 
@@ -33166,17 +33166,17 @@ API documentation for Popover component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: PopoverContentInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: PopoverContentInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: OverlayPanelContentInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: OverlayPanelContentInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<PopoverContentPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<OverlayPanelContentPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: PopoverContentInstance) => ReactNode) | null | The children to render. |
-| autoFocus | boolean | true | Whether to focus the first focusable element when the popover is opened. |
+| children | ReactNode \\| ((instance: OverlayPanelContentInstance) => ReactNode) | null | The children to render. |
+| autoFocus | boolean | true | Whether to focus the first focusable element when the OverlayPanel is opened. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -33185,24 +33185,24 @@ API documentation for Popover component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| popover | PopoverInstance | null | The Popover component instance. |
+| OverlayPanel | OverlayPanelInstance | null | The OverlayPanel component instance. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of PopoverContent component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of OverlayPanelContent component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of PopoverContent component. | [object Object] |
+| Instance | Instance of OverlayPanelContent component. | [object Object] |
 
 
-## PopoverClose
+## OverlayPanelClose
 
 ### Props
 
@@ -33210,16 +33210,16 @@ API documentation for Popover component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | (CSSProperties \\| ((instance?: ButtonInstance) => CSSProperties)) & (CSSProperties \\| ((instance?: PopoverCloseInstance) => CSSProperties)) | null | The style to apply to the component. |
-| className | (string \\| ((instance?: ButtonInstance) => string)) & (string \\| ((instance?: PopoverCloseInstance) => string)) | null | The class name to apply to the component. |
+| style | (CSSProperties \\| ((instance?: ButtonInstance) => CSSProperties)) & (CSSProperties \\| ((instance?: OverlayPanelCloseInstance) => CSSProperties)) | null | The style to apply to the component. |
+| className | (string \\| ((instance?: ButtonInstance) => string)) & (string \\| ((instance?: OverlayPanelCloseInstance) => string)) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | ButtonPassThrough & Record<PropertyKey, unknown> & PopoverClosePassThrough | null | The pass-through props to pass to the component |
+| pt | ButtonPassThrough & Record<PropertyKey, unknown> & OverlayPanelClosePassThrough | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | (ReactNode \\| ((instance: ButtonInstance) => ReactNode)) & (ReactNode \\| ((instance: PopoverCloseInstance) => ReactNode)) | null | The children to render. |
+| children | (ReactNode \\| ((instance: ButtonInstance) => ReactNode)) & (ReactNode \\| ((instance: OverlayPanelCloseInstance) => ReactNode)) | null | The children to render. |
 | size | "small" \\| "large" \\| "normal" | null | Size of the Button. |
 | severity | string & {} \\| "secondary" \\| "info" \\| "success" \\| "warn" \\| "danger" \\| "contrast" \\| "help" | null | Severity type of the Button. |
 | variant | "link" \\| "text" \\| "outlined" | null | Variant of the Button. |
@@ -33236,44 +33236,44 @@ API documentation for Popover component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| popover | PopoverInstance | null | The Popover component instance. |
+| OverlayPanel | OverlayPanelInstance | null | The OverlayPanel component instance. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of PopoverClose component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of OverlayPanelClose component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of PopoverClose component. | [object Object] |
+| Instance | Instance of OverlayPanelClose component. | [object Object] |
 
 
 
-# Popover
+# OverlayPanel
 
-Popover is a container component that can overlay other components on page.
+OverlayPanel is a container component that can overlay other components on page.
 
 
 ## Import
 
 ```tsx
-import { Popover } from 'primereact/popover';
+import { OverlayPanel } from 'primereact/OverlayPanel';
 ```
 
 ```tsx
-<Popover>
-    <Popover.Trigger></Popover.Trigger>
-    <Popover.Portal>
-        <Popover.Content>
-            <Popover.Close />
-        </Popover.Content>
-    </Popover.Portal>
-</Popover>
+<OverlayPanel>
+    <OverlayPanel.Trigger></OverlayPanel.Trigger>
+    <OverlayPanel.Portal>
+        <OverlayPanel.Content>
+            <OverlayPanel.Close />
+        </OverlayPanel.Content>
+    </OverlayPanel.Portal>
+</OverlayPanel>
 ```
 
 ## Basic
@@ -33283,15 +33283,15 @@ import { Popover } from 'primereact/popover';
 
 import { InputText } from 'primereact/inputtext';
 import { Label } from 'primereact/label';
-import { Popover } from 'primereact/popover';
+import { OverlayPanel } from 'primereact/OverlayPanel';
 
 export default function BasicDemo() {
     return (
         <div className="flex items-center justify-center">
-            <Popover>
-                <Popover.Trigger>Show Popover</Popover.Trigger>
-                <Popover.Portal>
-                    <Popover.Content>
+            <OverlayPanel>
+                <OverlayPanel.Trigger>Show OverlayPanel</OverlayPanel.Trigger>
+                <OverlayPanel.Portal>
+                    <OverlayPanel.Content>
                         <div className="flex flex-col gap-2 p-2 max-w-xs">
                             <p className="text-lg font-semibold mb-0.5">Dimensions</p>
                             <div className="grid grid-cols-2 items-center">
@@ -33311,10 +33311,10 @@ export default function BasicDemo() {
                                 <InputText id="maxHeight" fluid />
                             </div>
                         </div>
-                        <Popover.Close className="absolute top-4 right-4" />
-                    </Popover.Content>
-                </Popover.Portal>
-            </Popover>
+                        <OverlayPanel.Close className="absolute top-4 right-4" />
+                    </OverlayPanel.Content>
+                </OverlayPanel.Portal>
+            </OverlayPanel>
         </div>
     );
 }
@@ -33323,16 +33323,16 @@ export default function BasicDemo() {
 
 ## Controlled
 
-Use the `open` and `onOpenChange` props to control the popover state.
+Use the `open` and `onOpenChange` props to control the OverlayPanel state.
 
 ```tsx
 'use client';
 
-import { usePopoverOpenChangeEvent } from '@primereact/types/shared/popover';
+import { useOverlayPanelOpenChangeEvent } from '@primereact/types/shared/OverlayPanel';
 import { Button } from 'primereact/button';
 import { InputText } from 'primereact/inputtext';
 import { Label } from 'primereact/label';
-import { Popover } from 'primereact/popover';
+import { OverlayPanel } from 'primereact/OverlayPanel';
 import React from 'react';
 
 function ControlledDemo() {
@@ -33340,12 +33340,12 @@ function ControlledDemo() {
 
     return (
         <div className="flex gap-4 justify-center items-center">
-            <Button onClick={() => setOpen(!open)}>Show Popover</Button>
+            <Button onClick={() => setOpen(!open)}>Show OverlayPanel</Button>
 
-            <Popover open={open} onOpenChange={(e: usePopoverOpenChangeEvent) => setOpen(e.value)}>
-                <Popover.Trigger>Popover Trigger</Popover.Trigger>
-                <Popover.Portal>
-                    <Popover.Content>
+            <OverlayPanel open={open} onOpenChange={(e: useOverlayPanelOpenChangeEvent) => setOpen(e.value)}>
+                <OverlayPanel.Trigger>OverlayPanel Trigger</OverlayPanel.Trigger>
+                <OverlayPanel.Portal>
+                    <OverlayPanel.Content>
                         <div className="flex flex-col gap-2 p-2 max-w-xs">
                             <p className="text-lg font-semibold mb-0.5">Dimensions</p>
                             <div className="grid grid-cols-2 items-center">
@@ -33365,10 +33365,10 @@ function ControlledDemo() {
                                 <InputText id="maxHeight" fluid />
                             </div>
                         </div>
-                        <Popover.Close className="absolute top-4 right-4" />
-                    </Popover.Content>
-                </Popover.Portal>
-            </Popover>
+                        <OverlayPanel.Close className="absolute top-4 right-4" />
+                    </OverlayPanel.Content>
+                </OverlayPanel.Portal>
+            </OverlayPanel>
         </div>
     );
 }
@@ -33382,8 +33382,8 @@ export default ControlledDemo;
 ```tsx
 'use client';
 
-import { usePopoverOpenChangeEvent } from '@primereact/types/shared/popover';
-import { Popover } from 'primereact/popover';
+import { useOverlayPanelOpenChangeEvent } from '@primereact/types/shared/OverlayPanel';
+import { OverlayPanel } from 'primereact/OverlayPanel';
 import React from 'react';
 
 const members = [
@@ -33398,10 +33398,10 @@ function SelectDataDemo() {
 
     return (
         <div className="flex justify-center">
-            <Popover open={open} onOpenChange={(e: usePopoverOpenChangeEvent) => setOpen(e.value)}>
-                <Popover.Trigger className="min-w-48">{selectedMember?.name}</Popover.Trigger>
-                <Popover.Portal>
-                    <Popover.Content>
+            <OverlayPanel open={open} onOpenChange={(e: useOverlayPanelOpenChangeEvent) => setOpen(e.value)}>
+                <OverlayPanel.Trigger className="min-w-48">{selectedMember?.name}</OverlayPanel.Trigger>
+                <OverlayPanel.Portal>
+                    <OverlayPanel.Content>
                         <div className="flex flex-col gap-4">
                             <div>
                                 <span className="font-medium block mb-2">Team Members</span>
@@ -33428,9 +33428,9 @@ function SelectDataDemo() {
                                 </ul>
                             </div>
                         </div>
-                    </Popover.Content>
-                </Popover.Portal>
-            </Popover>
+                    </OverlayPanel.Content>
+                </OverlayPanel.Portal>
+            </OverlayPanel>
         </div>
     );
 }
@@ -33443,11 +33443,11 @@ export default SelectDataDemo;
 
 ### Screen Reader
 
-Popover component uses dialog role and since any attribute is passed to the root element you may define attributes like aria-label or aria-labelledby to describe the popup contents. In addition aria-modal is added since focus is kept within the popup.
+OverlayPanel component uses dialog role and since any attribute is passed to the root element you may define attributes like aria-label or aria-labelledby to describe the popup contents. In addition aria-modal is added since focus is kept within the popup.
 
-Popover adds aria-expanded state attribute and aria-controls to the trigger so that the relation between the trigger and the popup is defined.
+OverlayPanel adds aria-expanded state attribute and aria-controls to the trigger so that the relation between the trigger and the popup is defined.
 
-### Popover Keyboard Support
+### OverlayPanel Keyboard Support
 
 When the popup gets opened, the first focusable element receives the focus and this can be customized by adding autofocus to an element within the popup.
 
@@ -33458,56 +33458,56 @@ When the popup gets opened, the first focusable element receives the focus and t
 | `escape`      | Closes the popup and moves focus to the trigger.                    |
 
 
-# Popover Pass Through
+# OverlayPanel Pass Through
 
-Pass Through documentation for Popover component
+Pass Through documentation for OverlayPanel component
 
 
 ## Viewer
 
 Some sections may not be visible due to the availability of the particular feature.
 
-<DocPTViewer name="popover-pt" components={['Popover']} />
+<DocPTViewer name="OverlayPanel-pt" components={['OverlayPanel']} />
 
-## Popover PT Options
-
-| Label | Type | Description |
-|:------|:------|:------|
-| root | PopoverPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
-
-
-## PopoverTrigger PT Options
+## OverlayPanel PT Options
 
 | Label | Type | Description |
 |:------|:------|:------|
-| root | PopoverTriggerPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the root's DOM element. |
+| root | OverlayPanelPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
 
 
-## PopoverPortal PT Options
-
-| Label | Type | Description |
-|:------|:------|:------|
-| root | PopoverPortalPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
-
-
-## PopoverContent PT Options
+## OverlayPanelTrigger PT Options
 
 | Label | Type | Description |
 |:------|:------|:------|
-| root | PopoverContentPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
+| root | OverlayPanelTriggerPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the root's DOM element. |
 
 
-## PopoverClose PT Options
+## OverlayPanelPortal PT Options
 
 | Label | Type | Description |
 |:------|:------|:------|
-| root | PopoverClosePassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the root's DOM element. |
+| root | OverlayPanelPortalPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
+
+
+## OverlayPanelContent PT Options
+
+| Label | Type | Description |
+|:------|:------|:------|
+| root | OverlayPanelContentPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
+
+
+## OverlayPanelClose PT Options
+
+| Label | Type | Description |
+|:------|:------|:------|
+| root | OverlayPanelClosePassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the root's DOM element. |
 
 
 
-# Popover Theming
+# OverlayPanel Theming
 
-Theming documentation for Popover component
+Theming documentation for OverlayPanel component
 
 
 ## Styled
@@ -33518,8 +33518,8 @@ List of class names used in the styled mode.
 
 | ClassName | Description |
 |:------|:------|
-| p-popover | Class name of the root element |
-| p-popover-content | Class name of the content element |
+| p-OverlayPanel | Class name of the root element |
+| p-OverlayPanel-content | Class name of the content element |
 
 
 ### Design Tokens
@@ -33528,14 +33528,14 @@ List of design tokens.
 
 | Token | CSS Variable | Description |
 |:------|:------|:------|
-| popover.background | --p-popover-background | Background of root |
-| popover.border.color | --p-popover-border-color | Border color of root |
-| popover.color | --p-popover-color | Color of root |
-| popover.border.radius | --p-popover-border-radius | Border radius of root |
-| popover.shadow | --p-popover-shadow | Shadow of root |
-| popover.gutter | --p-popover-gutter | Gutter of root |
-| popover.arrow.offset | --p-popover-arrow-offset | Arrow offset of root |
-| popover.content.padding | --p-popover-content-padding | Padding of content |
+| OverlayPanel.background | --p-OverlayPanel-background | Background of root |
+| OverlayPanel.border.color | --p-OverlayPanel-border-color | Border color of root |
+| OverlayPanel.color | --p-OverlayPanel-color | Color of root |
+| OverlayPanel.border.radius | --p-OverlayPanel-border-radius | Border radius of root |
+| OverlayPanel.shadow | --p-OverlayPanel-shadow | Shadow of root |
+| OverlayPanel.gutter | --p-OverlayPanel-gutter | Gutter of root |
+| OverlayPanel.arrow.offset | --p-OverlayPanel-arrow-offset | Arrow offset of root |
+| OverlayPanel.content.padding | --p-OverlayPanel-content-padding | Padding of content |
 
 
 ## Unstyled
@@ -35189,12 +35189,12 @@ List of design tokens.
 Theming is implemented with the pass through properties in unstyled mode.
 
 
-# ScrollArea API
+# ScrollPanel API
 
-API documentation for ScrollArea component
+API documentation for ScrollPanel component
 
 
-## ScrollArea
+## ScrollPanel
 
 ### Props
 
@@ -35202,16 +35202,16 @@ API documentation for ScrollArea component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: ScrollAreaInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: ScrollAreaInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: ScrollPanelInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: ScrollPanelInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<ScrollAreaPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<ScrollPanelPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: ScrollAreaInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: ScrollPanelInstance) => ReactNode) | null | The children to render. |
 | step | number | 5 | Step factor to scroll the content while pressing the arrow keys. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
@@ -35228,7 +35228,7 @@ API documentation for ScrollArea component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| state | useScrollAreaState | null | The state of the useScrollArea. |
+| state | useScrollPanelState | null | The state of the useScrollPanel. |
 | contentRef | RefObject<HTMLDivElement> | null | Reference to the scroll content element. |
 | thumbXRef | RefObject<HTMLDivElement> | null | Reference to the horizontal scrollbar thumb element. |
 | thumbYRef | RefObject<HTMLDivElement> | null | Reference to the vertical scrollbar thumb element. |
@@ -35247,17 +35247,17 @@ API documentation for ScrollArea component
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of ScrollArea component. | [object Object],[object Object],[object Object],[object Object],[object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of ScrollPanel component. | [object Object],[object Object],[object Object],[object Object],[object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of ScrollArea component. | [object Object] |
+| Instance | Instance of ScrollPanel component. | [object Object] |
 
 
-## ScrollAreaViewport
+## ScrollPanelViewport
 
 ### Props
 
@@ -35265,16 +35265,16 @@ API documentation for ScrollArea component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: ScrollAreaViewportInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: ScrollAreaViewportInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: ScrollPanelViewportInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: ScrollPanelViewportInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<ScrollAreaViewportPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<ScrollPanelViewportPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: ScrollAreaViewportInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: ScrollPanelViewportInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -35283,24 +35283,24 @@ API documentation for ScrollArea component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| scrollarea | ScrollAreaInstance | null | Instance of the ScrollArea component. |
+| ScrollPanel | ScrollPanelInstance | null | Instance of the ScrollPanel component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of ScrollAreaViewport component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of ScrollPanelViewport component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of ScrollAreaViewport component. | [object Object] |
+| Instance | Instance of ScrollPanelViewport component. | [object Object] |
 
 
-## ScrollAreaContent
+## ScrollPanelContent
 
 ### Props
 
@@ -35308,16 +35308,16 @@ API documentation for ScrollArea component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: ScrollAreaContentInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: ScrollAreaContentInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: ScrollPanelContentInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: ScrollPanelContentInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<ScrollAreaContentPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<ScrollPanelContentPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: ScrollAreaContentInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: ScrollPanelContentInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -35326,24 +35326,24 @@ API documentation for ScrollArea component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| scrollarea | ScrollAreaInstance | null | Instance of the ScrollArea component. |
+| ScrollPanel | ScrollPanelInstance | null | Instance of the ScrollPanel component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of ScrollAreaContent component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of ScrollPanelContent component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of ScrollAreaContent component. | [object Object] |
+| Instance | Instance of ScrollPanelContent component. | [object Object] |
 
 
-## ScrollAreaThumbY
+## ScrollPanelThumbY
 
 ### Props
 
@@ -35351,16 +35351,16 @@ API documentation for ScrollArea component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: ScrollAreaThumbYInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: ScrollAreaThumbYInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: ScrollPanelThumbYInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: ScrollPanelThumbYInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<ScrollAreaThumbYPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<ScrollPanelThumbYPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: ScrollAreaThumbYInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: ScrollPanelThumbYInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -35369,24 +35369,24 @@ API documentation for ScrollArea component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| scrollarea | ScrollAreaInstance | null | Instance of the ScrollArea component. |
+| ScrollPanel | ScrollPanelInstance | null | Instance of the ScrollPanel component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of ScrollAreaThumbY component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of ScrollPanelThumbY component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of ScrollAreaThumbY component. | [object Object] |
+| Instance | Instance of ScrollPanelThumbY component. | [object Object] |
 
 
-## ScrollAreaThumbX
+## ScrollPanelThumbX
 
 ### Props
 
@@ -35394,16 +35394,16 @@ API documentation for ScrollArea component
 |:------|:------|:------|:------|
 | ref | Ref<unknown> | null | The reference to the component instance. |
 | pIf | boolean | true | Whether the component should be rendered. |
-| style | CSSProperties \\| ((instance?: ScrollAreaThumbXInstance) => CSSProperties) | null | The style to apply to the component. |
-| className | string \\| ((instance?: ScrollAreaThumbXInstance) => string) | null | The class name to apply to the component. |
+| style | CSSProperties \\| ((instance?: ScrollPanelThumbXInstance) => CSSProperties) | null | The style to apply to the component. |
+| className | string \\| ((instance?: ScrollPanelThumbXInstance) => string) | null | The class name to apply to the component. |
 | as | string \\| number \\| bigint \\| boolean \\| ComponentClass<any, any> \\| FunctionComponent<any> \\| ReactElement<unknown, string \\| JSXElementConstructor<any>> \\| Iterable<ReactNode, any, any> \\| ReactPortal \\| Promise<AwaitedReactNode> | null | The component type to render. |
 | asChild | boolean | false | Whether the component should be rendered as a child component. |
-| pt | SafeRecord<ScrollAreaThumbXPassThrough> | null | The pass-through props to pass to the component |
+| pt | SafeRecord<ScrollPanelThumbXPassThrough> | null | The pass-through props to pass to the component |
 | ptOptions | PassThroughOptions | null | The pass-through options to pass to the component |
 | unstyled | boolean | null | Whether the component should be rendered without classes. |
 | dt | unknown | null | The design token to use for the component. |
 | styles | StylesOptions<ComponentInstance> | null | The styles to use for the component. |
-| children | ReactNode \\| ((instance: ScrollAreaThumbXInstance) => ReactNode) | null | The children to render. |
+| children | ReactNode \\| ((instance: ScrollPanelThumbXInstance) => ReactNode) | null | The children to render. |
 | [key: string] | any | null |  |
 | pt-{optionName}-* | - | null | Pass through attributes for customizing component. For more info, see Pass Through tab. |
 
@@ -35412,24 +35412,24 @@ API documentation for ScrollArea component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| scrollarea | ScrollAreaInstance | null | Instance of the ScrollArea component. |
+| ScrollPanel | ScrollPanelInstance | null | Instance of the ScrollPanel component. |
 
 
 ### Interfaces
 
 | Label | Description | Data |
 |:------|:------|:------|
-| PassThroughOptions | Defines passthrough(pt) options of ScrollAreaThumbX component. | [object Object] |
+| PassThroughOptions | Defines passthrough(pt) options of ScrollPanelThumbX component. | [object Object] |
 
 
 ### Types
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of ScrollAreaThumbX component. | [object Object] |
+| Instance | Instance of ScrollPanelThumbX component. | [object Object] |
 
 
-## useScrollArea
+## useScrollPanel
 
 ### Props
 
@@ -35449,7 +35449,7 @@ API documentation for ScrollArea component
 
 | Name | Type | Default | Description |
 |:------|:------|:------|:------|
-| state | useScrollAreaState | null | The state of the useScrollArea. |
+| state | useScrollPanelState | null | The state of the useScrollPanel. |
 | contentRef | RefObject<HTMLDivElement> | null | Reference to the scroll content element. |
 | thumbXRef | RefObject<HTMLDivElement> | null | Reference to the horizontal scrollbar thumb element. |
 | thumbYRef | RefObject<HTMLDivElement> | null | Reference to the vertical scrollbar thumb element. |
@@ -35468,29 +35468,29 @@ API documentation for ScrollArea component
 
 | Label | Description | Data |
 |:------|:------|:------|
-| Instance | Instance of useScrollArea headless. | [object Object] |
+| Instance | Instance of useScrollPanel headless. | [object Object] |
 
 
 
-# ScrollArea
+# ScrollPanel
 
-ScrollArea is a cross browser, lightweight and themable alternative to native browser scrollbar.
+ScrollPanel is a cross browser, lightweight and themable alternative to native browser scrollbar.
 
 
 ## Usage
 
 ```tsx
-import { ScrollArea } from 'primereact/scrollarea';
+import { ScrollPanel } from 'primereact/ScrollPanel';
 ```
 
 ```tsx
-<ScrollArea>
-    <ScrollArea.Viewport>
-        <ScrollArea.Content />
-    </ScrollArea.Viewport>
-    <ScrollArea.ThumbX />
-    <ScrollArea.ThumbY />
-</ScrollArea>
+<ScrollPanel>
+    <ScrollPanel.Viewport>
+        <ScrollPanel.Content />
+    </ScrollPanel.Viewport>
+    <ScrollPanel.ThumbX />
+    <ScrollPanel.ThumbY />
+</ScrollPanel>
 ```
 
 ## Examples
@@ -35502,14 +35502,14 @@ ScrollPanel is defined using dimensions for the scrollable viewport.
 ```tsx
 'use client';
 
-import { ScrollArea } from 'primereact/scrollarea';
+import { ScrollPanel } from 'primereact/ScrollPanel';
 
 export default function BasicDemo() {
     return (
         <div className="flex justify-center">
-            <ScrollArea style={{ width: '600px', height: '200px' }}>
-                <ScrollArea.Viewport>
-                    <ScrollArea.Content>
+            <ScrollPanel style={{ width: '600px', height: '200px' }}>
+                <ScrollPanel.Viewport>
+                    <ScrollPanel.Content>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                             aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
@@ -35534,10 +35534,10 @@ export default function BasicDemo() {
                             Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut
                             perferendis doloribus asperiores repellat
                         </p>
-                    </ScrollArea.Content>
-                </ScrollArea.Viewport>
-                <ScrollArea.ThumbY />
-            </ScrollArea>
+                    </ScrollPanel.Content>
+                </ScrollPanel.Viewport>
+                <ScrollPanel.ThumbY />
+            </ScrollPanel>
         </div>
     );
 }
@@ -35546,14 +35546,14 @@ export default function BasicDemo() {
 
 ### Horizontal
 
-ScrollArea supports horizontal scrolling for content that extends beyond the horizontal viewport.
+ScrollPanel supports horizontal scrolling for content that extends beyond the horizontal viewport.
 
 ```tsx
 'use client';
 
 import { PhotoService } from '@/services/photo.service';
 import Image from 'next/image';
-import { ScrollArea } from 'primereact/scrollarea';
+import { ScrollPanel } from 'primereact/ScrollPanel';
 import * as React from 'react';
 
 interface ImageData {
@@ -35572,9 +35572,9 @@ export default function HorizontalDemo() {
 
     return (
         <div className="flex justify-center">
-            <ScrollArea className="border border-surface-200 dark:border-surface-700 rounded-md" style={{ width: '632px', height: '200px' }}>
-                <ScrollArea.Viewport className="p-4">
-                    <ScrollArea.Content>
+            <ScrollPanel className="border border-surface-200 dark:border-surface-700 rounded-md" style={{ width: '632px', height: '200px' }}>
+                <ScrollPanel.Viewport className="p-4">
+                    <ScrollPanel.Content>
                         <div className="flex w-max gap-4" style={{ minWidth: '3000px' }}>
                             {images &&
                                 images.map((image, index) => (
@@ -35592,10 +35592,10 @@ export default function HorizontalDemo() {
                                     </figure>
                                 ))}
                         </div>
-                    </ScrollArea.Content>
-                </ScrollArea.Viewport>
-                <ScrollArea.ThumbX />
-            </ScrollArea>
+                    </ScrollPanel.Content>
+                </ScrollPanel.Viewport>
+                <ScrollPanel.ThumbX />
+            </ScrollPanel>
         </div>
     );
 }
@@ -35609,14 +35609,14 @@ Scrollbar visuals can be styled for a unified look across different platforms.
 ```tsx
 'use client';
 
-import { ScrollArea } from 'primereact/scrollarea';
+import { ScrollPanel } from 'primereact/ScrollPanel';
 
 export default function CustomDemo() {
     return (
         <div className="flex justify-center">
-            <ScrollArea style={{ width: '600px', height: '200px' }}>
-                <ScrollArea.Viewport>
-                    <ScrollArea.Content>
+            <ScrollPanel style={{ width: '600px', height: '200px' }}>
+                <ScrollPanel.Viewport>
+                    <ScrollPanel.Content>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                             aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
@@ -35641,10 +35641,10 @@ export default function CustomDemo() {
                             Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut
                             perferendis doloribus asperiores repellat
                         </p>
-                    </ScrollArea.Content>
-                </ScrollArea.Viewport>
-                <ScrollArea.ThumbY className="bg-primary" />
-            </ScrollArea>
+                    </ScrollPanel.Content>
+                </ScrollPanel.Viewport>
+                <ScrollPanel.ThumbY className="bg-primary" />
+            </ScrollPanel>
         </div>
     );
 }
@@ -35655,7 +35655,7 @@ export default function CustomDemo() {
 
 ### Screen Reader
 
-Scrollbars of the ScrollArea has a `scrollbar` role along with the `aria-controls` attribute that refers to the `id` of the scrollable content container and the `aria-orientation` to indicate the orientation of scrolling.
+Scrollbars of the ScrollPanel has a `scrollbar` role along with the `aria-controls` attribute that refers to the `id` of the scrollable content container and the `aria-orientation` to indicate the orientation of scrolling.
 
 ### Keyboard Support
 
@@ -35668,71 +35668,71 @@ Scrollbars of the ScrollArea has a `scrollbar` role along with the `aria-control
 | `right`      | Scrolls content right when horizontal scrolling is available. |
 
 
-# ScrollArea Pass Through
+# ScrollPanel Pass Through
 
-Pass Through documentation for ScrollArea component
+Pass Through documentation for ScrollPanel component
 
 
 ## Viewer
 
 Some sections may not be visible due to the availability of the particular feature.
 
-<DocPTViewer name="scrollarea-pt" components={['ScrollArea']} />
+<DocPTViewer name="ScrollPanel-pt" components={['ScrollPanel']} />
 
-## ScrollArea PT Options
-
-| Label | Type | Description |
-|:------|:------|:------|
-| root | ScrollAreaPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
-| viewport | ScrollAreaPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the viewport's DOM element. |
-| content | ScrollAreaPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the content's DOM element. |
-| thumbY | ScrollAreaPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the thumbY's DOM element. |
-| thumbX | ScrollAreaPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the thumbX's DOM element. |
-
-
-## ScrollAreaViewport PT Options
+## ScrollPanel PT Options
 
 | Label | Type | Description |
 |:------|:------|:------|
-| root | ScrollAreaViewportPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the root's DOM element. |
+| root | ScrollPanelPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the root's DOM element. |
+| viewport | ScrollPanelPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the viewport's DOM element. |
+| content | ScrollPanelPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the content's DOM element. |
+| thumbY | ScrollPanelPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the thumbY's DOM element. |
+| thumbX | ScrollPanelPassThroughType<HTMLAttributes<HTMLDivElement>> | Used to pass attributes to the thumbX's DOM element. |
 
 
-## ScrollAreaContent PT Options
-
-| Label | Type | Description |
-|:------|:------|:------|
-| root | ScrollAreaContentPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the root's DOM element. |
-
-
-## ScrollAreaThumbY PT Options
+## ScrollPanelViewport PT Options
 
 | Label | Type | Description |
 |:------|:------|:------|
-| root | ScrollAreaThumbYPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the root's DOM element. |
+| root | ScrollPanelViewportPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the root's DOM element. |
 
 
-## ScrollAreaThumbX PT Options
+## ScrollPanelContent PT Options
 
 | Label | Type | Description |
 |:------|:------|:------|
-| root | ScrollAreaThumbXPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the root's DOM element. |
+| root | ScrollPanelContentPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the root's DOM element. |
+
+
+## ScrollPanelThumbY PT Options
+
+| Label | Type | Description |
+|:------|:------|:------|
+| root | ScrollPanelThumbYPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the root's DOM element. |
+
+
+## ScrollPanelThumbX PT Options
+
+| Label | Type | Description |
+|:------|:------|:------|
+| root | ScrollPanelThumbXPassThroughType<HTMLAttributes<HTMLButtonElement>> | Used to pass attributes to the root's DOM element. |
 
 
 
-# ScrollArea Theming
+# ScrollPanel Theming
 
-Theming documentation for ScrollArea component
+Theming documentation for ScrollPanel component
 
 
 ## Styled
 
-### ScrollArea CSS Classes
+### ScrollPanel CSS Classes
 
 List of class names used in the styled mode.
 
 | ClassName | Description |
 |:------|:------|
-| p-scrollarea | Class name of the root element |
+| p-ScrollPanel | Class name of the root element |
 | p-scrollpanel-content-container | Class name of the viewport element |
 | p-scrollpanel-content | Class name of the content element |
 | p-scrollpanel-bar-x | Class name of the thumb x element |
@@ -39646,26 +39646,26 @@ List of design tokens.
 Theming is implemented with the pass through properties in unstyled mode.
 
 
-# Tabs
+# TabView
 
-Tabs is a component that displays a list of tabs and allows the user to select one.
+TabView is a component that displays a list of TabView and allows the user to select one.
 
 
 ## Usage
 
 ```tsx
-import { Tabs } from 'primereact/tabs';
+import { TabView } from 'primereact/TabView';
 ```
 
 ```tsx
-<Tabs>
-    <Tabs.List>
-        <Tabs.Tab value="tab1">Tab 1</Tabs.Tab>
-    </Tabs.List>
-    <Tabs.Panels>
-        <Tabs.Panel value="tab1">Tab 1 Content</Tabs.Panel>
-    </Tabs.Panels>
-</Tabs>
+<TabView>
+    <TabView.List>
+        <TabView.Tab value="tab1">Tab 1</TabView.Tab>
+    </TabView.List>
+    <TabView.Panels>
+        <TabView.Panel value="tab1">Tab 1 Content</TabView.Panel>
+    </TabView.Panels>
+</TabView>
 ```
 
 ## Examples
@@ -39675,30 +39675,30 @@ import { Tabs } from 'primereact/tabs';
 ```tsx
 'use client';
 
-import { Tabs } from 'primereact/tabs';
+import { TabView } from 'primereact/TabView';
 
 export default function BasicDemo() {
     return (
         <div>
-            <Tabs value="tab1">
-                <Tabs.List>
-                    <Tabs.Tab value="tab1">Account Info</Tabs.Tab>
-                    <Tabs.Tab value="tab2">Payment</Tabs.Tab>
-                    <Tabs.Tab value="tab3">Preferences</Tabs.Tab>
-                    <Tabs.Indicator />
-                </Tabs.List>
-                <Tabs.Panels>
-                    <Tabs.Panel value="tab1">
+            <TabView value="tab1">
+                <TabView.List>
+                    <TabView.Tab value="tab1">Account Info</TabView.Tab>
+                    <TabView.Tab value="tab2">Payment</TabView.Tab>
+                    <TabView.Tab value="tab3">Preferences</TabView.Tab>
+                    <TabView.Indicator />
+                </TabView.List>
+                <TabView.Panels>
+                    <TabView.Panel value="tab1">
                         <p>Update your personal information such as name, email address, and profile picture.</p>
-                    </Tabs.Panel>
-                    <Tabs.Panel value="tab2">
+                    </TabView.Panel>
+                    <TabView.Panel value="tab2">
                         <p>Manage your subscription plan, view invoices, and update your payment method.</p>
-                    </Tabs.Panel>
-                    <Tabs.Panel value="tab3">
+                    </TabView.Panel>
+                    <TabView.Panel value="tab3">
                         <p>Customize how the application looks and behaves to match your personal preferences.</p>
-                    </Tabs.Panel>
-                </Tabs.Panels>
-            </Tabs>
+                    </TabView.Panel>
+                </TabView.Panels>
+            </TabView>
         </div>
     );
 }
@@ -39710,9 +39710,9 @@ export default function BasicDemo() {
 ```tsx
 'use client';
 
-import { Tabs } from 'primereact/tabs';
+import { TabView } from 'primereact/TabView';
 
-const tabs = [
+const TabView = [
     { id: 'tab1', title: 'Account Info', content: 'Update your personal information such as name, email address, and profile picture.' },
     { id: 'tab2', title: 'Payment', content: 'Manage your subscription plan, view invoices, and update your payment method.' },
     { id: 'tab3', title: 'Preferences', content: 'Customize how the application looks and behaves to match your personal preferences.' }
@@ -39721,23 +39721,23 @@ const tabs = [
 export default function DynamicDemo() {
     return (
         <div>
-            <Tabs value="tab1">
-                <Tabs.List>
-                    {tabs.map((tab) => (
-                        <Tabs.Tab key={tab.id} value={tab.id}>
+            <TabView value="tab1">
+                <TabView.List>
+                    {TabView.map((tab) => (
+                        <TabView.Tab key={tab.id} value={tab.id}>
                             {tab.title}
-                        </Tabs.Tab>
+                        </TabView.Tab>
                     ))}
-                    <Tabs.Indicator />
-                </Tabs.List>
-                <Tabs.Panels>
-                    {tabs.map((tab) => (
-                        <Tabs.Panel key={tab.id} value={tab.id}>
+                    <TabView.Indicator />
+                </TabView.List>
+                <TabView.Panels>
+                    {TabView.map((tab) => (
+                        <TabView.Panel key={tab.id} value={tab.id}>
                             <p>{tab.content}</p>
-                        </Tabs.Panel>
+                        </TabView.Panel>
                     ))}
-                </Tabs.Panels>
-            </Tabs>
+                </TabView.Panels>
+            </TabView>
         </div>
     );
 }
@@ -39749,40 +39749,40 @@ export default function DynamicDemo() {
 ```tsx
 'use client';
 
-import { TabsProps, useTabsChangeEvent } from '@primereact/types/shared/tabs';
+import { TabViewProps, useTabViewChangeEvent } from '@primereact/types/shared/TabView';
 import { Button } from 'primereact/button';
-import { Tabs } from 'primereact/tabs';
+import { TabView } from 'primereact/TabView';
 import * as React from 'react';
 
-const tabs = [
+const TabView = [
     { id: 'tab1', title: 'Account Info', content: 'Update your personal information such as name, email address, and profile picture.' },
     { id: 'tab2', title: 'Payment', content: 'Manage your subscription plan, view invoices, and update your payment method.' },
     { id: 'tab3', title: 'Preferences', content: 'Customize how the application looks and behaves to match your personal preferences.' }
 ];
 
 export default function ControlledDemo() {
-    const [activeTab, setActiveTab] = React.useState<TabsProps['value']>('tab1');
+    const [activeTab, setActiveTab] = React.useState<TabViewProps['value']>('tab1');
 
     return (
         <div className="space-y-4">
             <Button onClick={() => setActiveTab('tab2')}>Go to Payment</Button>
-            <Tabs value={activeTab} onValueChange={(e: useTabsChangeEvent) => setActiveTab(e.value)}>
-                <Tabs.List>
-                    {tabs.map((tab) => (
-                        <Tabs.Tab key={tab.id} value={tab.id}>
+            <TabView value={activeTab} onValueChange={(e: useTabViewChangeEvent) => setActiveTab(e.value)}>
+                <TabView.List>
+                    {TabView.map((tab) => (
+                        <TabView.Tab key={tab.id} value={tab.id}>
                             {tab.title}
-                        </Tabs.Tab>
+                        </TabView.Tab>
                     ))}
-                    <Tabs.Indicator />
-                </Tabs.List>
-                <Tabs.Panels>
-                    {tabs.map((tab) => (
-                        <Tabs.Panel key={tab.id} value={tab.id}>
+                    <TabView.Indicator />
+                </TabView.List>
+                <TabView.Panels>
+                    {TabView.map((tab) => (
+                        <TabView.Panel key={tab.id} value={tab.id}>
                             <p>{tab.content}</p>
-                        </Tabs.Panel>
+                        </TabView.Panel>
                     ))}
-                </Tabs.Panels>
-            </Tabs>
+                </TabView.Panels>
+            </TabView>
         </div>
     );
 }
@@ -39794,30 +39794,30 @@ export default function ControlledDemo() {
 ```tsx
 'use client';
 
-import { Tabs } from 'primereact/tabs';
+import { TabView } from 'primereact/TabView';
 
-const scrollableTabs = Array.from({ length: 50 }, (_, i) => ({ title: `Tab ${i + 1}`, content: `Tab ${i + 1} Content`, value: `${i}` }));
+const scrollableTabView = Array.from({ length: 50 }, (_, i) => ({ title: `Tab ${i + 1}`, content: `Tab ${i + 1} Content`, value: `${i}` }));
 
 export default function ScrollableDemo() {
     return (
         <div>
-            <Tabs value="0" scrollable>
-                <Tabs.List>
-                    {scrollableTabs.map((tab) => (
-                        <Tabs.Tab key={tab.value} value={tab.value}>
+            <TabView value="0" scrollable>
+                <TabView.List>
+                    {scrollableTabView.map((tab) => (
+                        <TabView.Tab key={tab.value} value={tab.value}>
                             {tab.title}
-                        </Tabs.Tab>
+                        </TabView.Tab>
                     ))}
-                    <Tabs.Indicator />
-                </Tabs.List>
-                <Tabs.Panels>
-                    {scrollableTabs.map((tab) => (
-                        <Tabs.Panel key={tab.value} value={tab.value}>
+                    <TabView.Indicator />
+                </TabView.List>
+                <TabView.Panels>
+                    {scrollableTabView.map((tab) => (
+                        <TabView.Panel key={tab.value} value={tab.value}>
                             {tab.content}
-                        </Tabs.Panel>
+                        </TabView.Panel>
                     ))}
-                </Tabs.Panels>
-            </Tabs>
+                </TabView.Panels>
+            </TabView>
         </div>
     );
 }
@@ -39829,32 +39829,32 @@ export default function ScrollableDemo() {
 ```tsx
 'use client';
 
-import { Tabs } from 'primereact/tabs';
+import { TabView } from 'primereact/TabView';
 
 export default function DisabledDemo() {
     return (
         <div>
-            <Tabs value="tab1">
-                <Tabs.List>
-                    <Tabs.Tab value="tab1">Account Info</Tabs.Tab>
-                    <Tabs.Tab value="tab2" disabled>
+            <TabView value="tab1">
+                <TabView.List>
+                    <TabView.Tab value="tab1">Account Info</TabView.Tab>
+                    <TabView.Tab value="tab2" disabled>
                         Payment
-                    </Tabs.Tab>
-                    <Tabs.Tab value="tab3">Preferences</Tabs.Tab>
-                    <Tabs.Indicator />
-                </Tabs.List>
-                <Tabs.Panels>
-                    <Tabs.Panel value="tab1">
+                    </TabView.Tab>
+                    <TabView.Tab value="tab3">Preferences</TabView.Tab>
+                    <TabView.Indicator />
+                </TabView.List>
+                <TabView.Panels>
+                    <TabView.Panel value="tab1">
                         <p>Update your personal information such as name, email address, and profile picture.</p>
-                    </Tabs.Panel>
-                    <Tabs.Panel value="tab2">
+                    </TabView.Panel>
+                    <TabView.Panel value="tab2">
                         <p>Manage your subscription plan, view invoices, and update your payment method.</p>
-                    </Tabs.Panel>
-                    <Tabs.Panel value="tab3">
+                    </TabView.Panel>
+                    <TabView.Panel value="tab3">
                         <p>Customize how the application looks and behaves to match your personal preferences.</p>
-                    </Tabs.Panel>
-                </Tabs.Panels>
-            </Tabs>
+                    </TabView.Panel>
+                </TabView.Panels>
+            </TabView>
         </div>
     );
 }
@@ -39866,9 +39866,9 @@ export default function DisabledDemo() {
 ```tsx
 'use client';
 
-import { Tabs } from 'primereact/tabs';
+import { TabView } from 'primereact/TabView';
 
-const tabs = [
+const TabView = [
     { id: 'tab1', title: 'Account Info', content: 'Update your personal information such as name, email address, and profile picture.' },
     { id: 'tab2', title: 'Payment', content: 'Manage your subscription plan, view invoices, and update your payment method.' },
     { id: 'tab3', title: 'Preferences', content: 'Customize how the application looks and behaves to match your personal preferences.' }
@@ -39877,23 +39877,23 @@ const tabs = [
 export default function CustomIndicatorDemo() {
     return (
         <div>
-            <Tabs value="tab1">
-                <Tabs.List>
-                    {tabs.map((tab) => (
-                        <Tabs.Tab key={tab.id} value={tab.id} className="border-none z-10">
+            <TabView value="tab1">
+                <TabView.List>
+                    {TabView.map((tab) => (
+                        <TabView.Tab key={tab.id} value={tab.id} className="border-none z-10">
                             {tab.title}
-                        </Tabs.Tab>
+                        </TabView.Tab>
                     ))}
-                    <Tabs.Indicator className="w-[var(--width)] h-[calc(var(--height)-12px)] bottom-none top-1/2 -translate-y-1/2 bg-surface-100 dark:bg-surface-800 rounded-md" />
-                </Tabs.List>
-                <Tabs.Panels>
-                    {tabs.map((tab) => (
-                        <Tabs.Panel key={tab.id} value={tab.id}>
+                    <TabView.Indicator className="w-[var(--width)] h-[calc(var(--height)-12px)] bottom-none top-1/2 -translate-y-1/2 bg-surface-100 dark:bg-surface-800 rounded-md" />
+                </TabView.List>
+                <TabView.Panels>
+                    {TabView.map((tab) => (
+                        <TabView.Panel key={tab.id} value={tab.id}>
                             <p>{tab.content}</p>
-                        </Tabs.Panel>
+                        </TabView.Panel>
                     ))}
-                </Tabs.Panels>
-            </Tabs>
+                </TabView.Panels>
+            </TabView>
         </div>
     );
 }
@@ -39910,9 +39910,9 @@ import { Button } from 'primereact/button';
 import { InputText } from 'primereact/inputtext';
 import { Label } from 'primereact/label';
 import { Switch } from 'primereact/switch';
-import { Tabs } from 'primereact/tabs';
+import { TabView } from 'primereact/TabView';
 
-const tabs = [
+const TabView = [
     {
         id: 'tab1',
         title: 'Account Info',
@@ -39937,19 +39937,19 @@ const tabs = [
 export default function TemplateDemo() {
     return (
         <div>
-            <Tabs value="tab1" className="max-w-md mx-auto">
-                <Tabs.List>
-                    {tabs.map((tab) => (
-                        <Tabs.Tab key={tab.id} value={tab.id} className="flex items-center gap-2">
+            <TabView value="tab1" className="max-w-md mx-auto">
+                <TabView.List>
+                    {TabView.map((tab) => (
+                        <TabView.Tab key={tab.id} value={tab.id} className="flex items-center gap-2">
                             <i className={tab.icon}></i>
                             {tab.title}
                             {tab.badge && <Badge size="small">{tab.badge}</Badge>}
-                        </Tabs.Tab>
+                        </TabView.Tab>
                     ))}
-                    <Tabs.Indicator />
-                </Tabs.List>
-                <Tabs.Panels>
-                    <Tabs.Panel value="tab1">
+                    <TabView.Indicator />
+                </TabView.List>
+                <TabView.Panels>
+                    <TabView.Panel value="tab1">
                         <div>
                             <p className="mt-2 mb-8 text-surface-500">
                                 Update your personal information such as name, email address, and profile picture.
@@ -39968,8 +39968,8 @@ export default function TemplateDemo() {
                                 <Button className="mt-8 w-fit">Save Changes</Button>
                             </form>
                         </div>
-                    </Tabs.Panel>
-                    <Tabs.Panel value="tab2">
+                    </TabView.Panel>
+                    <TabView.Panel value="tab2">
                         <div>
                             <p className="mt-2 mb-8 text-surface-500">
                                 Manage your subscription plan, view invoices, and update your payment method.
@@ -39992,8 +39992,8 @@ export default function TemplateDemo() {
                                 <Button className="mt-8 w-fit">Update Payment</Button>
                             </form>
                         </div>
-                    </Tabs.Panel>
-                    <Tabs.Panel value="tab3">
+                    </TabView.Panel>
+                    <TabView.Panel value="tab3">
                         <div>
                             <p className="mt-2 mb-8 text-surface-500">
                                 Customize how the application looks and behaves to match your personal preferences.
@@ -40028,9 +40028,9 @@ export default function TemplateDemo() {
                                 <Button className="w-fit mt-8 ml-auto mr-0">Save Preferences</Button>
                             </form>
                         </div>
-                    </Tabs.Panel>
-                </Tabs.Panels>
-            </Tabs>
+                    </TabView.Panel>
+                </TabView.Panels>
+            </TabView>
         </div>
     );
 }
@@ -40041,7 +40041,7 @@ export default function TemplateDemo() {
 
 ### Screen Reader
 
-The tabs container in TabList is defined with the tablist role, as any attribute is passed to the container element aria-labelledby can be optionally used to specify an element to describe the Tabs. Each Tab has a tab role along with aria-selected state attribute and aria-controls to refer to the corresponding TabPanel. TabPanel has tabpanel role, an id to match the aria-controls of Tab and aria-labelledby reference to Tab as the accessible name.
+The TabView container in TabList is defined with the tablist role, as any attribute is passed to the container element aria-labelledby can be optionally used to specify an element to describe the TabView. Each Tab has a tab role along with aria-selected state attribute and aria-controls to refer to the corresponding TabPanel. TabPanel has tabpanel role, an id to match the aria-controls of Tab and aria-labelledby reference to Tab as the accessible name.
 
 ### Tab Keyboard Support
 
