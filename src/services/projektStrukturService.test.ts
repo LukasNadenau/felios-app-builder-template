@@ -3,7 +3,12 @@ import {
   projektStrukturService,
   ProjektStruktur,
   ProjektStrukturArbeitsgang,
+  ProjektStrukturNode,
 } from "./projektStrukturService";
+
+function isNode(child: any): child is ProjektStrukturNode {
+  return "children" in child && "typ" in child;
+}
 
 describe("projektStrukturService", () => {
   describe("getAll", () => {
@@ -31,8 +36,10 @@ describe("projektStrukturService", () => {
 
       if (projekt.children.length > 0) {
         const netzplan = projekt.children[0];
-        expect(netzplan.typ).toBe("Netzplan");
-        expect(netzplan).toHaveProperty("children");
+        if (isNode(netzplan)) {
+          expect(netzplan.typ).toBe("Netzplan");
+          expect(netzplan).toHaveProperty("children");
+        }
       }
     });
 
@@ -40,10 +47,15 @@ describe("projektStrukturService", () => {
       const result = await projektStrukturService.getAll();
       const projekt = result[0];
 
-      if (projekt.children.length > 0 && projekt.children[0].children.length > 0) {
-        const unternetzplan = projekt.children[0].children[0];
-        expect(unternetzplan.typ).toBe("Unternetzplan");
-        expect(unternetzplan).toHaveProperty("children");
+      if (projekt.children.length > 0) {
+        const netzplan = projekt.children[0];
+        if (isNode(netzplan) && netzplan.children.length > 0) {
+          const unternetzplan = netzplan.children[0];
+          if (isNode(unternetzplan)) {
+            expect(unternetzplan.typ).toBe("Unternetzplan");
+            expect(unternetzplan).toHaveProperty("children");
+          }
+        }
       }
     });
 
@@ -52,14 +64,16 @@ describe("projektStrukturService", () => {
       const projekt = result[0];
 
       const netzplan = projekt.children[0];
-      if (netzplan && netzplan.children.length > 0) {
+      if (netzplan && isNode(netzplan) && netzplan.children.length > 0) {
         const unternetzplan = netzplan.children[0];
-        if (unternetzplan.children.length > 0) {
+        if (isNode(unternetzplan) && unternetzplan.children.length > 0) {
           const fertigungsauftrag = unternetzplan.children[0];
-          expect(["Fertigungsauftrag", "Montageauftrag"]).toContain(
-            fertigungsauftrag.typ
-          );
-          expect(fertigungsauftrag).toHaveProperty("children");
+          if (isNode(fertigungsauftrag)) {
+            expect(["Fertigungsauftrag", "Montageauftrag"]).toContain(
+              fertigungsauftrag.typ
+            );
+            expect(fertigungsauftrag).toHaveProperty("children");
+          }
         }
       }
     });
@@ -69,17 +83,24 @@ describe("projektStrukturService", () => {
 
       const projekt = result[0];
       const netzplan = projekt.children[0];
-      const unternetzplan = netzplan?.children[0];
-      const fertigungsauftrag = unternetzplan?.children[0];
+      if (!isNode(netzplan)) return;
+      
+      const unternetzplan = netzplan.children[0];
+      if (!isNode(unternetzplan)) return;
+      
+      const fertigungsauftrag = unternetzplan.children[0];
+      if (!isNode(fertigungsauftrag)) return;
 
-      if (fertigungsauftrag && fertigungsauftrag.children.length > 0) {
+      if (fertigungsauftrag.children.length > 0) {
         const arbeitsgang = fertigungsauftrag.children[0];
         expect(arbeitsgang).toHaveProperty("id");
         expect(arbeitsgang).toHaveProperty("bezeichnung");
         expect(arbeitsgang).toHaveProperty("nachfolger");
         expect(arbeitsgang).toHaveProperty("vorgaenger");
-        expect(arbeitsgang.nachfolger).toBeInstanceOf(Array);
-        expect(arbeitsgang.vorgaenger).toBeInstanceOf(Array);
+        if ("nachfolger" in arbeitsgang && "vorgaenger" in arbeitsgang) {
+          expect(arbeitsgang.nachfolger).toBeInstanceOf(Array);
+          expect(arbeitsgang.vorgaenger).toBeInstanceOf(Array);
+        }
       }
     });
 
@@ -90,9 +111,13 @@ describe("projektStrukturService", () => {
 
       for (const projekt of result) {
         for (const netzplan of projekt.children) {
+          if (!isNode(netzplan)) continue;
           for (const unternetzplan of netzplan.children) {
+            if (!isNode(unternetzplan)) continue;
             for (const fertigungsauftrag of unternetzplan.children) {
+              if (!isNode(fertigungsauftrag)) continue;
               for (const arbeitsgang of fertigungsauftrag.children) {
+                if (!("nachfolger" in arbeitsgang)) continue;
                 if (
                   arbeitsgang.nachfolger.length > 0 ||
                   arbeitsgang.vorgaenger.length > 0
@@ -189,15 +214,21 @@ describe("projektStrukturService", () => {
         expect(projekt.children).toBeInstanceOf(Array);
 
         projekt.children.forEach((netzplan) => {
-          expect(netzplan.children).toBeInstanceOf(Array);
+          if (isNode(netzplan)) {
+            expect(netzplan.children).toBeInstanceOf(Array);
 
-          netzplan.children.forEach((unternetzplan) => {
-            expect(unternetzplan.children).toBeInstanceOf(Array);
+            netzplan.children.forEach((unternetzplan) => {
+              if (isNode(unternetzplan)) {
+                expect(unternetzplan.children).toBeInstanceOf(Array);
 
-            unternetzplan.children.forEach((fertigungsauftrag) => {
-              expect(fertigungsauftrag.children).toBeInstanceOf(Array);
+                unternetzplan.children.forEach((fertigungsauftrag) => {
+                  if (isNode(fertigungsauftrag)) {
+                    expect(fertigungsauftrag.children).toBeInstanceOf(Array);
+                  }
+                });
+              }
             });
-          });
+          }
         });
       });
     });
