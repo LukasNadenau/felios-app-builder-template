@@ -1,181 +1,181 @@
 [
   {
     "id": 1,
-    "bezeichnung": "Dichtung Dunkles Olivgrün 214",
-    "einheit": "Stk",
+    "bezeichnung": "Quadanium Steel Hull Plating",
+    "einheit": "m²",
     "wiederbeschaffungszeit": 24
   },
   {
     "id": 2,
-    "bezeichnung": "Platte Biskuit 350",
+    "bezeichnung": "Tibanna Gas Cartridges",
     "einheit": "kg",
     "wiederbeschaffungszeit": 5
   },
   {
     "id": 3,
-    "bezeichnung": "Lager Helles Seegrün 204",
-    "einheit": "Pkg",
+    "bezeichnung": "Hypermatter Reactor Cores",
+    "einheit": "Stk",
     "wiederbeschaffungszeit": 24
   },
   {
     "id": 4,
-    "bezeichnung": "Kabel Chiffongelb 189",
-    "einheit": "Liter",
+    "bezeichnung": "Power Coupling Arrays",
+    "einheit": "Stk",
     "wiederbeschaffungszeit": 14
   },
   {
     "id": 5,
-    "bezeichnung": "Blech Elfenbein 130",
-    "einheit": "Stk",
+    "bezeichnung": "Durasteel Support Beams",
+    "einheit": "m",
     "wiederbeschaffungszeit": 7
   },
   {
     "id": 6,
-    "bezeichnung": "Mutter Dunkles Schiefergrau 617",
-    "einheit": "Liter",
+    "bezeichnung": "Turbolaser Focusing Crystals",
+    "einheit": "Stk",
     "wiederbeschaffungszeit": 1
   },
   {
     "id": 7,
-    "bezeichnung": "Kabel Dunkelkhaki 303",
+    "bezeichnung": "Shield Generator Components",
     "einheit": "Pkg",
     "wiederbeschaffungszeit": 21
   },
   {
     "id": 8,
-    "bezeichnung": "Lager Dunkelcyan 658",
-    "einheit": "m²",
+    "bezeichnung": "Kyber Crystal Fragments",
+    "einheit": "kg",
     "wiederbeschaffungszeit": 8
   },
   {
     "id": 9,
-    "bezeichnung": "Platine Rosa 703",
-    "einheit": "m",
+    "bezeichnung": "Sensor Array Circuit Boards",
+    "einheit": "Stk",
     "wiederbeschaffungszeit": 26
   },
   {
     "id": 10,
-    "bezeichnung": "Zahnrad Mandelweiß 106",
-    "einheit": "kg",
+    "bezeichnung": "Tractor Beam Projector Assemblies",
+    "einheit": "Stk",
     "wiederbeschaffungszeit": 23
   },
   {
     "id": 11,
-    "bezeichnung": "Gehäuse Schwarz 448",
-    "einheit": "m",
+    "bezeichnung": "Thermal Exhaust Port Housings",
+    "einheit": "Stk",
     "wiederbeschaffungszeit": 5
   },
   {
     "id": 12,
-    "bezeichnung": "Mutter Dunkle Goldrutenfarbe 881",
-    "einheit": "m",
+    "bezeichnung": "Life Support System Filters",
+    "einheit": "Pkg",
     "wiederbeschaffungszeit": 4
   },
   {
     "id": 13,
-    "bezeichnung": "Profil Indischrot 489",
-    "einheit": "Stk",
+    "bezeichnung": "Transparisteel Viewport Panels",
+    "einheit": "m²",
     "wiederbeschaffungszeit": 12
   },
   {
     "id": 14,
-    "bezeichnung": "Zahnrad Lavendel 452",
-    "einheit": "Liter",
+    "bezeichnung": "Repulsorlift Engine Coils",
+    "einheit": "Stk",
     "wiederbeschaffungszeit": 9
   },
   {
     "id": 15,
-    "bezeichnung": "Welle Petrol 144",
-    "einheit": "Pkg",
+    "bezeichnung": "Ion Cannon Accelerator Rings",
+    "einheit": "Stk",
     "wiederbeschaffungszeit": 15
   },
   {
     "id": 16,
-    "bezeichnung": "Kabel Biskuit 227",
-    "einheit": "m²",
+    "bezeichnung": "Deflector Shield Emitters",
+    "einheit": "Stk",
     "wiederbeschaffungszeit": 3
   },
   {
     "id": 17,
-    "bezeichnung": "Kabel Grau 400",
-    "einheit": "Pkg",
+    "bezeichnung": "Hyperdrive Motivator Units",
+    "einheit": "Stk",
     "wiederbeschaffungszeit": 20
   },
   {
     "id": 18,
-    "bezeichnung": "Zahnrad Peru 470",
-    "einheit": "Liter",
+    "bezeichnung": "TIE Fighter Docking Clamps",
+    "einheit": "Pkg",
     "wiederbeschaffungszeit": 7
   },
   {
     "id": 19,
-    "bezeichnung": "Lager Indigo 171",
+    "bezeichnung": "Superlaser Focusing Lenses",
     "einheit": "Stk",
     "wiederbeschaffungszeit": 22
   },
   {
     "id": 20,
-    "bezeichnung": "Mutter Königsblau 891",
-    "einheit": "m",
+    "bezeichnung": "Pressurized Coolant Fluid",
+    "einheit": "Liter",
     "wiederbeschaffungszeit": 3
   },
   {
     "id": 21,
-    "bezeichnung": "Zahnrad Helles Himmelblau 338",
+    "bezeichnung": "Navigation Computer Processors",
     "einheit": "Stk",
     "wiederbeschaffungszeit": 13
   },
   {
     "id": 22,
-    "bezeichnung": "Platte Antikweiß 564",
-    "einheit": "Pkg",
+    "bezeichnung": "Plasma Conduit Sections",
+    "einheit": "m",
     "wiederbeschaffungszeit": 27
   },
   {
     "id": 23,
-    "bezeichnung": "Rohr Trübes Grau 266",
-    "einheit": "m",
+    "bezeichnung": "Gravity Well Projector Cores",
+    "einheit": "Stk",
     "wiederbeschaffungszeit": 12
   },
   {
     "id": 24,
-    "bezeichnung": "Mutter Rosa 786",
-    "einheit": "m",
+    "bezeichnung": "Communications Relay Modules",
+    "einheit": "Pkg",
     "wiederbeschaffungszeit": 23
   },
   {
     "id": 25,
-    "bezeichnung": "Dichtung Mittleres Türkis 763",
+    "bezeichnung": "Blast Door Control Mechanisms",
     "einheit": "Stk",
     "wiederbeschaffungszeit": 20
   },
   {
     "id": 26,
-    "bezeichnung": "Dichtung Helles Himmelblau 275",
-    "einheit": "Liter",
+    "bezeichnung": "Atmospheric Processor Units",
+    "einheit": "Stk",
     "wiederbeschaffungszeit": 24
   },
   {
     "id": 27,
-    "bezeichnung": "Mutter Tiefes Himmelblau 267",
-    "einheit": "m²",
+    "bezeichnung": "Targeting Computer Linkages",
+    "einheit": "Pkg",
     "wiederbeschaffungszeit": 13
   },
   {
     "id": 28,
-    "bezeichnung": "Platte Indischrot 755",
-    "einheit": "Pkg",
+    "bezeichnung": "Detention Block Restraint Systems",
+    "einheit": "Stk",
     "wiederbeschaffungszeit": 18
   },
   {
     "id": 29,
-    "bezeichnung": "Mutter Mittleres Frühlingsgrün 801",
-    "einheit": "m",
+    "bezeichnung": "Reactor Core Stabilizers",
+    "einheit": "Stk",
     "wiederbeschaffungszeit": 27
   },
   {
     "id": 30,
-    "bezeichnung": "Welle Dunkelkhaki 894",
+    "bezeichnung": "Command Bridge Console Arrays",
     "einheit": "Stk",
     "wiederbeschaffungszeit": 8
   }

@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Hans-Hermann Dietz",
+    "name": "Chief Engineer Bevel Lemelisk",
     "stundenprofil": {
       "Monday": 8,
       "Tuesday": 8,
@@ -23,7 +23,7 @@
   },
   {
     "id": 2,
-    "name": "Siegried Kaul",
+    "name": "Commander Jerjerrod",
     "stundenprofil": {
       "Monday": 8,
       "Tuesday": 8,
@@ -45,7 +45,7 @@
   },
   {
     "id": 3,
-    "name": "Rosalia Beyer",
+    "name": "Lieutenant Tanbris",
     "stundenprofil": {
       "Monday": 8,
       "Tuesday": 8,
@@ -67,7 +67,7 @@
   },
   {
     "id": 4,
-    "name": "Kathrin Ebert MBA.",
+    "name": "Gunnery Chief Tenn Graneet",
     "stundenprofil": {
       "Monday": 8,
       "Tuesday": 8,
@@ -89,7 +89,7 @@
   },
   {
     "id": 5,
-    "name": "Karl-Dieter Hornig",
+    "name": "Senior Technician Kren Blista-Vanee",
     "stundenprofil": {
       "Monday": 8,
       "Tuesday": 8,
@@ -111,7 +111,7 @@
   },
   {
     "id": 6,
-    "name": "Leonie Gröttner",
+    "name": "Ensign Laurita Tohm",
     "stundenprofil": {
       "Monday": 8,
       "Tuesday": 8,
@@ -133,7 +133,7 @@
   },
   {
     "id": 7,
-    "name": "Anatoli Speer",
+    "name": "Officer Jhared Montferrat",
     "stundenprofil": {
       "Monday": 8,
       "Tuesday": 8,
@@ -155,7 +155,7 @@
   },
   {
     "id": 8,
-    "name": "Ing. Arnulf Heintze B.Sc.",
+    "name": "Master Technician Pol Treidum",
     "stundenprofil": {
       "Monday": 8,
       "Tuesday": 8,
@@ -177,7 +177,7 @@
   },
   {
     "id": 9,
-    "name": "Erika Metz-Schuster",
+    "name": "Specialist Ames Uravan",
     "stundenprofil": {
       "Monday": 8,
       "Tuesday": 8,
@@ -199,7 +199,7 @@
   },
   {
     "id": 10,
-    "name": "Cathrin Koch II",
+    "name": "Chief Inspector Voca Sentril",
     "stundenprofil": {
       "Monday": 8,
       "Tuesday": 8,
@@ -221,7 +221,7 @@
   },
   {
     "id": 11,
-    "name": "Delia Steckel",
+    "name": "Sergeant Tarc Drenall",
     "stundenprofil": {
       "Monday": 8,
       "Tuesday": 8,
@@ -243,7 +243,7 @@
   },
   {
     "id": 12,
-    "name": "Mechtild Stoll",
+    "name": "Reactor Specialist Enina Telaan",
     "stundenprofil": {
       "Monday": 8,
       "Tuesday": 8,
@@ -265,7 +265,7 @@
   },
   {
     "id": 13,
-    "name": "Leif Schuster",
+    "name": "Corporal Harburik",
     "stundenprofil": {
       "Monday": 8,
       "Tuesday": 8,
@@ -287,7 +287,7 @@
   },
   {
     "id": 14,
-    "name": "Prof. Ottokar Henschel",
+    "name": "Admiral Motti",
     "stundenprofil": {
       "Monday": 8,
       "Tuesday": 8,
@@ -309,7 +309,7 @@
   },
   {
     "id": 15,
-    "name": "Dipl.-Ing. Hans-Herbert Hiller",
+    "name": "Wing Commander Villian Dance",
     "stundenprofil": {
       "Monday": 8,
       "Tuesday": 8,

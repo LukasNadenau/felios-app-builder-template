@@ -11,12 +11,12 @@
   },
   {
     "arbeitsgangId": 3,
-    "materialId": 28,
+    "materialId": 22,
     "menge": 19
   },
   {
     "arbeitsgangId": 4,
-    "materialId": 9,
+    "materialId": 19,
     "menge": 16
   },
   {
@@ -36,37 +36,37 @@
   },
   {
     "arbeitsgangId": 6,
-    "materialId": 4,
+    "materialId": 19,
     "menge": 7
   },
   {
     "arbeitsgangId": 6,
-    "materialId": 23,
+    "materialId": 13,
     "menge": 11
   },
   {
     "arbeitsgangId": 7,
-    "materialId": 11,
+    "materialId": 13,
     "menge": 10
   },
   {
     "arbeitsgangId": 7,
-    "materialId": 6,
+    "materialId": 19,
     "menge": 12
   },
   {
     "arbeitsgangId": 7,
-    "materialId": 20,
+    "materialId": 8,
     "menge": 14
   },
   {
     "arbeitsgangId": 8,
-    "materialId": 28,
+    "materialId": 4,
     "menge": 18
   },
   {
     "arbeitsgangId": 8,
-    "materialId": 26,
+    "materialId": 22,
     "menge": 7
   },
   {
@@ -181,7 +181,7 @@
   },
   {
     "arbeitsgangId": 26,
-    "materialId": 21,
+    "materialId": 2,
     "menge": 9
   },
   {
@@ -196,27 +196,27 @@
   },
   {
     "arbeitsgangId": 28,
-    "materialId": 26,
+    "materialId": 27,
     "menge": 10
   },
   {
     "arbeitsgangId": 29,
-    "materialId": 14,
+    "materialId": 6,
     "menge": 2
   },
   {
     "arbeitsgangId": 29,
-    "materialId": 21,
+    "materialId": 27,
     "menge": 7
   },
   {
     "arbeitsgangId": 29,
-    "materialId": 29,
+    "materialId": 9,
     "menge": 6
   },
   {
     "arbeitsgangId": 30,
-    "materialId": 9,
+    "materialId": 4,
     "menge": 9
   },
   {
@@ -841,37 +841,37 @@
   },
   {
     "arbeitsgangId": 135,
-    "materialId": 21,
+    "materialId": 26,
     "menge": 3
   },
   {
     "arbeitsgangId": 135,
-    "materialId": 14,
+    "materialId": 12,
     "menge": 2
   },
   {
     "arbeitsgangId": 136,
-    "materialId": 22,
+    "materialId": 12,
     "menge": 5
   },
   {
     "arbeitsgangId": 136,
-    "materialId": 8,
+    "materialId": 5,
     "menge": 16
   },
   {
     "arbeitsgangId": 137,
-    "materialId": 17,
+    "materialId": 12,
     "menge": 15
   },
   {
     "arbeitsgangId": 137,
-    "materialId": 3,
+    "materialId": 26,
     "menge": 14
   },
   {
     "arbeitsgangId": 137,
-    "materialId": 10,
+    "materialId": 5,
     "menge": 3
   },
   {

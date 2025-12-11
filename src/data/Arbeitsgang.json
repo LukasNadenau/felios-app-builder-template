@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "bezeichnung": "Fräsen 1",
+    "bezeichnung": "Crystal Alignment Calibration",
     "ressourceId": 2,
     "ressourceBedarf": 196,
     "parentFertObjId": 4,
@@ -15,7 +15,7 @@
   },
   {
     "id": 2,
-    "bezeichnung": "Zuschneiden 2",
+    "bezeichnung": "Kyber Matrix Assembly",
     "ressourceId": 4,
     "ressourceBedarf": 407,
     "parentFertObjId": 4,
@@ -29,7 +29,7 @@
   },
   {
     "id": 3,
-    "bezeichnung": "Fräsen 3",
+    "bezeichnung": "Energy Conduit Fabrication",
     "ressourceId": 7,
     "ressourceBedarf": 142,
     "parentFertObjId": 4,
@@ -43,7 +43,7 @@
   },
   {
     "id": 4,
-    "bezeichnung": "Montieren 4",
+    "bezeichnung": "Focusing Array Integration",
     "ressourceId": 8,
     "ressourceBedarf": 57,
     "parentFertObjId": 4,
@@ -57,7 +57,7 @@
   },
   {
     "id": 5,
-    "bezeichnung": "Bohren 5",
+    "bezeichnung": "Precision Beam Targeting Test",
     "ressourceId": 4,
     "ressourceBedarf": 342,
     "parentFertObjId": 4,
@@ -71,7 +71,7 @@
   },
   {
     "id": 6,
-    "bezeichnung": "Lackieren 1",
+    "bezeichnung": "Lens Polishing & Coating",
     "ressourceId": 6,
     "ressourceBedarf": 99,
     "parentFertObjId": 5,
@@ -85,7 +85,7 @@
   },
   {
     "id": 7,
-    "bezeichnung": "Fräsen 2",
+    "bezeichnung": "Optical Array Machining",
     "ressourceId": 6,
     "ressourceBedarf": 168,
     "parentFertObjId": 5,
@@ -99,7 +99,7 @@
   },
   {
     "id": 8,
-    "bezeichnung": "Schweißen 3",
+    "bezeichnung": "Durasteel Frame Welding",
     "ressourceId": 3,
     "ressourceBedarf": 46,
     "parentFertObjId": 5,
@@ -113,7 +113,7 @@
   },
   {
     "id": 9,
-    "bezeichnung": "Vorbereiten 4",
+    "bezeichnung": "Surface Treatment Preparation",
     "ressourceId": 5,
     "ressourceBedarf": 99,
     "parentFertObjId": 5,
@@ -127,7 +127,7 @@
   },
   {
     "id": 10,
-    "bezeichnung": "Montieren 1",
+    "bezeichnung": "Convergence Chamber Assembly",
     "ressourceId": 7,
     "ressourceBedarf": 117,
     "parentFertObjId": 6,
@@ -141,7 +141,7 @@
   },
   {
     "id": 11,
-    "bezeichnung": "Fräsen 2",
+    "bezeichnung": "Beam Director Fabrication",
     "ressourceId": 5,
     "ressourceBedarf": 339,
     "parentFertObjId": 6,
@@ -155,7 +155,7 @@
   },
   {
     "id": 12,
-    "bezeichnung": "Verpacken 3",
+    "bezeichnung": "Thermal Shielding Installation",
     "ressourceId": 3,
     "ressourceBedarf": 325,
     "parentFertObjId": 6,
@@ -169,7 +169,7 @@
   },
   {
     "id": 13,
-    "bezeichnung": "Fräsen 4",
+    "bezeichnung": "Energy Coupling Machining",
     "ressourceId": 2,
     "ressourceBedarf": 240,
     "parentFertObjId": 6,
@@ -183,7 +183,7 @@
   },
   {
     "id": 14,
-    "bezeichnung": "Montieren 5",
+    "bezeichnung": "Power Relay Integration",
     "ressourceId": 4,
     "ressourceBedarf": 332,
     "parentFertObjId": 6,
@@ -197,7 +197,7 @@
   },
   {
     "id": 15,
-    "bezeichnung": "Montieren 6",
+    "bezeichnung": "Control Module Assembly",
     "ressourceId": 5,
     "ressourceBedarf": 37,
     "parentFertObjId": 6,
@@ -211,7 +211,7 @@
   },
   {
     "id": 16,
-    "bezeichnung": "Fräsen 1",
+    "bezeichnung": "Reactor Core Mounting",
     "ressourceId": 6,
     "ressourceBedarf": 252,
     "parentFertObjId": 8,
@@ -225,7 +225,7 @@
   },
   {
     "id": 17,
-    "bezeichnung": "Fräsen 2",
+    "bezeichnung": "Hypermatter Containment Setup",
     "ressourceId": 3,
     "ressourceBedarf": 323,
     "parentFertObjId": 8,
@@ -239,7 +239,7 @@
   },
   {
     "id": 18,
-    "bezeichnung": "Lackieren 3",
+    "bezeichnung": "Radiation Shielding Application",
     "ressourceId": 1,
     "ressourceBedarf": 50,
     "parentFertObjId": 8,
@@ -253,7 +253,7 @@
   },
   {
     "id": 19,
-    "bezeichnung": "Prüfen 4",
+    "bezeichnung": "Safety Systems Testing",
     "ressourceId": 1,
     "ressourceBedarf": 247,
     "parentFertObjId": 8,
@@ -267,7 +267,7 @@
   },
   {
     "id": 20,
-    "bezeichnung": "Montieren 1",
+    "bezeichnung": "Power Coupling Array Assembly",
     "ressourceId": 2,
     "ressourceBedarf": 261,
     "parentFertObjId": 9,
@@ -281,7 +281,7 @@
   },
   {
     "id": 21,
-    "bezeichnung": "Fräsen 2",
+    "bezeichnung": "Energy Transfer Node Fabrication",
     "ressourceId": 2,
     "ressourceBedarf": 315,
     "parentFertObjId": 9,
@@ -295,7 +295,7 @@
   },
   {
     "id": 22,
-    "bezeichnung": "Lackieren 3",
+    "bezeichnung": "Plasma Conduit Coating",
     "ressourceId": 4,
     "ressourceBedarf": 97,
     "parentFertObjId": 9,
@@ -309,7 +309,7 @@
   },
   {
     "id": 23,
-    "bezeichnung": "Drehen 4",
+    "bezeichnung": "Junction Box Manufacturing",
     "ressourceId": 4,
     "ressourceBedarf": 361,
     "parentFertObjId": 9,
@@ -323,7 +323,7 @@
   },
   {
     "id": 24,
-    "bezeichnung": "Vorbereiten 5",
+    "bezeichnung": "Cable Routing Installation",
     "ressourceId": 8,
     "ressourceBedarf": 372,
     "parentFertObjId": 9,
@@ -337,7 +337,7 @@
   },
   {
     "id": 25,
-    "bezeichnung": "Bohren 6",
+    "bezeichnung": "Circuit Integration Testing",
     "ressourceId": 8,
     "ressourceBedarf": 469,
     "parentFertObjId": 9,
@@ -351,7 +351,7 @@
   },
   {
     "id": 26,
-    "bezeichnung": "Vorbereiten 1",
+    "bezeichnung": "Turbolaser Mounting Prep",
     "ressourceId": 8,
     "ressourceBedarf": 267,
     "parentFertObjId": 12,
@@ -365,7 +365,7 @@
   },
   {
     "id": 27,
-    "bezeichnung": "Lackieren 2",
+    "bezeichnung": "Barrel Assembly Coating",
     "ressourceId": 3,
     "ressourceBedarf": 434,
     "parentFertObjId": 12,
@@ -379,7 +379,7 @@
   },
   {
     "id": 28,
-    "bezeichnung": "Montieren 3",
+    "bezeichnung": "Fire Control System Integration",
     "ressourceId": 1,
     "ressourceBedarf": 470,
     "parentFertObjId": 12,
@@ -393,7 +393,7 @@
   },
   {
     "id": 29,
-    "bezeichnung": "Lackieren 4",
+    "bezeichnung": "Targeting Matrix Calibration",
     "ressourceId": 6,
     "ressourceBedarf": 301,
     "parentFertObjId": 12,
@@ -407,7 +407,7 @@
   },
   {
     "id": 30,
-    "bezeichnung": "Drehen 5",
+    "bezeichnung": "Power Feed Installation",
     "ressourceId": 7,
     "ressourceBedarf": 415,
     "parentFertObjId": 12,
@@ -421,7 +421,7 @@
   },
   {
     "id": 31,
-    "bezeichnung": "Verpacken 6",
+    "bezeichnung": "Coolant System Integration",
     "ressourceId": 4,
     "ressourceBedarf": 433,
     "parentFertObjId": 12,
@@ -435,7 +435,7 @@
   },
   {
     "id": 32,
-    "bezeichnung": "Verpacken 7",
+    "bezeichnung": "Ammunition Feed Testing",
     "ressourceId": 6,
     "ressourceBedarf": 406,
     "parentFertObjId": 12,
@@ -449,7 +449,7 @@
   },
   {
     "id": 33,
-    "bezeichnung": "Schweißen 1",
+    "bezeichnung": "Equatorial Mount Welding",
     "ressourceId": 1,
     "ressourceBedarf": 86,
     "parentFertObjId": 13,
@@ -463,7 +463,7 @@
   },
   {
     "id": 34,
-    "bezeichnung": "Schweißen 2",
+    "bezeichnung": "Defense Grid Junction Welding",
     "ressourceId": 8,
     "ressourceBedarf": 346,
     "parentFertObjId": 13,
@@ -477,7 +477,7 @@
   },
   {
     "id": 35,
-    "bezeichnung": "Schweißen 3",
+    "bezeichnung": "Structural Reinforcement Welding",
     "ressourceId": 6,
     "ressourceBedarf": 119,
     "parentFertObjId": 13,
@@ -491,7 +491,7 @@
   },
   {
     "id": 36,
-    "bezeichnung": "Zuschneiden 4",
+    "bezeichnung": "Hull Plating Cutting",
     "ressourceId": 4,
     "ressourceBedarf": 100,
     "parentFertObjId": 13,
@@ -505,7 +505,7 @@
   },
   {
     "id": 37,
-    "bezeichnung": "Fräsen 5",
+    "bezeichnung": "Quadanium Plating Fabrication",
     "ressourceId": 2,
     "ressourceBedarf": 362,
     "parentFertObjId": 13,
@@ -519,7 +519,7 @@
   },
   {
     "id": 38,
-    "bezeichnung": "Verpacken 6",
+    "bezeichnung": "Armor Plating Packing",
     "ressourceId": 4,
     "ressourceBedarf": 415,
     "parentFertObjId": 13,
@@ -533,7 +533,7 @@
   },
   {
     "id": 39,
-    "bezeichnung": "Schweißen 7",
+    "bezeichnung": "Blast Panel Welding",
     "ressourceId": 6,
     "ressourceBedarf": 166,
     "parentFertObjId": 13,
@@ -547,7 +547,7 @@
   },
   {
     "id": 40,
-    "bezeichnung": "Drehen 1",
+    "bezeichnung": "Ion Cannon Barrel Machining",
     "ressourceId": 1,
     "ressourceBedarf": 62,
     "parentFertObjId": 14,
@@ -561,7 +561,7 @@
   },
   {
     "id": 41,
-    "bezeichnung": "Schweißen 2",
+    "bezeichnung": "Accelerator Ring Welding",
     "ressourceId": 8,
     "ressourceBedarf": 278,
     "parentFertObjId": 14,
@@ -575,7 +575,7 @@
   },
   {
     "id": 42,
-    "bezeichnung": "Prüfen 3",
+    "bezeichnung": "Ion Chamber Testing",
     "ressourceId": 2,
     "ressourceBedarf": 270,
     "parentFertObjId": 14,
@@ -589,7 +589,7 @@
   },
   {
     "id": 43,
-    "bezeichnung": "Prüfen 4",
+    "bezeichnung": "Capacitor Bank Testing",
     "ressourceId": 5,
     "ressourceBedarf": 261,
     "parentFertObjId": 14,
@@ -603,7 +603,7 @@
   },
   {
     "id": 44,
-    "bezeichnung": "Schweißen 5",
+    "bezeichnung": "Cooling System Welding",
     "ressourceId": 2,
     "ressourceBedarf": 126,
     "parentFertObjId": 14,
@@ -617,7 +617,7 @@
   },
   {
     "id": 45,
-    "bezeichnung": "Zuschneiden 6",
+    "bezeichnung": "Targeting Computer Installation",
     "ressourceId": 2,
     "ressourceBedarf": 230,
     "parentFertObjId": 14,
@@ -631,7 +631,7 @@
   },
   {
     "id": 46,
-    "bezeichnung": "Zuschneiden 1",
+    "bezeichnung": "Tractor Beam Housing Cutting",
     "ressourceId": 2,
     "ressourceBedarf": 114,
     "parentFertObjId": 15,
@@ -645,7 +645,7 @@
   },
   {
     "id": 47,
-    "bezeichnung": "Zuschneiden 2",
+    "bezeichnung": "Projector Array Housing Cut",
     "ressourceId": 3,
     "ressourceBedarf": 284,
     "parentFertObjId": 15,
@@ -659,7 +659,7 @@
   },
   {
     "id": 48,
-    "bezeichnung": "Fräsen 3",
+    "bezeichnung": "Gravity Well Generator Machining",
     "ressourceId": 1,
     "ressourceBedarf": 180,
     "parentFertObjId": 15,
@@ -673,7 +673,7 @@
   },
   {
     "id": 49,
-    "bezeichnung": "Prüfen 4",
+    "bezeichnung": "Field Emitter Testing",
     "ressourceId": 3,
     "ressourceBedarf": 272,
     "parentFertObjId": 15,
@@ -687,7 +687,7 @@
   },
   {
     "id": 50,
-    "bezeichnung": "Lackieren 5",
+    "bezeichnung": "Power Amplifier Installation",
     "ressourceId": 8,
     "ressourceBedarf": 407,
     "parentFertObjId": 15,
@@ -701,7 +701,7 @@
   },
   {
     "id": 51,
-    "bezeichnung": "Fräsen 1",
+    "bezeichnung": "Deflector Shield Emitter Machining",
     "ressourceId": 2,
     "ressourceBedarf": 41,
     "parentFertObjId": 17,
@@ -715,7 +715,7 @@
   },
   {
     "id": 52,
-    "bezeichnung": "Prüfen 2",
+    "bezeichnung": "Shield Generator Testing",
     "ressourceId": 6,
     "ressourceBedarf": 240,
     "parentFertObjId": 17,
@@ -729,7 +729,7 @@
   },
   {
     "id": 53,
-    "bezeichnung": "Schweißen 3",
+    "bezeichnung": "Energy Projector Welding",
     "ressourceId": 6,
     "ressourceBedarf": 278,
     "parentFertObjId": 17,
@@ -743,7 +743,7 @@
   },
   {
     "id": 54,
-    "bezeichnung": "Prüfen 4",
+    "bezeichnung": "Field Alignment Testing",
     "ressourceId": 8,
     "ressourceBedarf": 264,
     "parentFertObjId": 17,
@@ -757,7 +757,7 @@
   },
   {
     "id": 55,
-    "bezeichnung": "Verpacken 5",
+    "bezeichnung": "Component Crating & Shipping",
     "ressourceId": 3,
     "ressourceBedarf": 434,
     "parentFertObjId": 17,
@@ -771,7 +771,7 @@
   },
   {
     "id": 56,
-    "bezeichnung": "Drehen 1",
+    "bezeichnung": "Ray Shield Node Machining",
     "ressourceId": 4,
     "ressourceBedarf": 277,
     "parentFertObjId": 18,
@@ -785,7 +785,7 @@
   },
   {
     "id": 57,
-    "bezeichnung": "Drehen 2",
+    "bezeichnung": "Particle Deflector Machining",
     "ressourceId": 1,
     "ressourceBedarf": 105,
     "parentFertObjId": 18,
@@ -799,7 +799,7 @@
   },
   {
     "id": 58,
-    "bezeichnung": "Drehen 3",
+    "bezeichnung": "Shield Modulator Machining",
     "ressourceId": 8,
     "ressourceBedarf": 115,
     "parentFertObjId": 18,
@@ -813,7 +813,7 @@
   },
   {
     "id": 59,
-    "bezeichnung": "Bohren 4",
+    "bezeichnung": "Power Distributor Installation",
     "ressourceId": 5,
     "ressourceBedarf": 123,
     "parentFertObjId": 18,
@@ -827,7 +827,7 @@
   },
   {
     "id": 60,
-    "bezeichnung": "Bohren 1",
+    "bezeichnung": "Shield Node Drilling",
     "ressourceId": 4,
     "ressourceBedarf": 89,
     "parentFertObjId": 20,
@@ -841,7 +841,7 @@
   },
   {
     "id": 61,
-    "bezeichnung": "Schweißen 2",
+    "bezeichnung": "Primary Shield Hub Welding",
     "ressourceId": 3,
     "ressourceBedarf": 255,
     "parentFertObjId": 20,
@@ -855,7 +855,7 @@
   },
   {
     "id": 62,
-    "bezeichnung": "Schweißen 3",
+    "bezeichnung": "Backup Generator Welding",
     "ressourceId": 3,
     "ressourceBedarf": 135,
     "parentFertObjId": 20,
@@ -869,7 +869,7 @@
   },
   {
     "id": 63,
-    "bezeichnung": "Vorbereiten 4",
+    "bezeichnung": "Field Stabilizer Preparation",
     "ressourceId": 6,
     "ressourceBedarf": 206,
     "parentFertObjId": 20,
@@ -883,7 +883,7 @@
   },
   {
     "id": 64,
-    "bezeichnung": "Montieren 1",
+    "bezeichnung": "Redundant System Integration",
     "ressourceId": 3,
     "ressourceBedarf": 303,
     "parentFertObjId": 21,
@@ -897,7 +897,7 @@
   },
   {
     "id": 65,
-    "bezeichnung": "Zuschneiden 2",
+    "bezeichnung": "Emergency Power Routing",
     "ressourceId": 1,
     "ressourceBedarf": 237,
     "parentFertObjId": 21,
@@ -911,7 +911,7 @@
   },
   {
     "id": 66,
-    "bezeichnung": "Bohren 3",
+    "bezeichnung": "Failsafe Circuit Installation",
     "ressourceId": 8,
     "ressourceBedarf": 193,
     "parentFertObjId": 21,
@@ -925,7 +925,7 @@
   },
   {
     "id": 67,
-    "bezeichnung": "Vorbereiten 4",
+    "bezeichnung": "Backup System Preparation",
     "ressourceId": 6,
     "ressourceBedarf": 361,
     "parentFertObjId": 21,
@@ -939,7 +939,7 @@
   },
   {
     "id": 68,
-    "bezeichnung": "Montieren 5",
+    "bezeichnung": "Diagnostic Module Assembly",
     "ressourceId": 5,
     "ressourceBedarf": 416,
     "parentFertObjId": 21,
@@ -953,7 +953,7 @@
   },
   {
     "id": 69,
-    "bezeichnung": "Verpacken 1",
+    "bezeichnung": "Command Console Packaging",
     "ressourceId": 8,
     "ressourceBedarf": 203,
     "parentFertObjId": 25,
@@ -967,7 +967,7 @@
   },
   {
     "id": 70,
-    "bezeichnung": "Montieren 2",
+    "bezeichnung": "Bridge Station Assembly",
     "ressourceId": 1,
     "ressourceBedarf": 101,
     "parentFertObjId": 25,
@@ -981,7 +981,7 @@
   },
   {
     "id": 71,
-    "bezeichnung": "Zuschneiden 3",
+    "bezeichnung": "Control Panel Fabrication",
     "ressourceId": 5,
     "ressourceBedarf": 42,
     "parentFertObjId": 25,
@@ -995,7 +995,7 @@
   },
   {
     "id": 72,
-    "bezeichnung": "Verpacken 4",
+    "bezeichnung": "Display Screen Installation",
     "ressourceId": 4,
     "ressourceBedarf": 258,
     "parentFertObjId": 25,
@@ -1009,7 +1009,7 @@
   },
   {
     "id": 73,
-    "bezeichnung": "Schweißen 1",
+    "bezeichnung": "Overbridge Deck Welding",
     "ressourceId": 1,
     "ressourceBedarf": 341,
     "parentFertObjId": 26,
@@ -1023,7 +1023,7 @@
   },
   {
     "id": 74,
-    "bezeichnung": "Verpacken 2",
+    "bezeichnung": "Tactical Display Packaging",
     "ressourceId": 4,
     "ressourceBedarf": 430,
     "parentFertObjId": 26,
@@ -1037,7 +1037,7 @@
   },
   {
     "id": 75,
-    "bezeichnung": "Fräsen 3",
+    "bezeichnung": "Holographic Projector Machining",
     "ressourceId": 1,
     "ressourceBedarf": 72,
     "parentFertObjId": 26,
@@ -1051,7 +1051,7 @@
   },
   {
     "id": 76,
-    "bezeichnung": "Zuschneiden 1",
+    "bezeichnung": "Sensor Array Cutting",
     "ressourceId": 7,
     "ressourceBedarf": 129,
     "parentFertObjId": 28,
@@ -1065,7 +1065,7 @@
   },
   {
     "id": 77,
-    "bezeichnung": "Schweißen 2",
+    "bezeichnung": "Scanning Module Welding",
     "ressourceId": 1,
     "ressourceBedarf": 371,
     "parentFertObjId": 28,
@@ -1079,7 +1079,7 @@
   },
   {
     "id": 78,
-    "bezeichnung": "Lackieren 3",
+    "bezeichnung": "Antenna Array Coating",
     "ressourceId": 3,
     "ressourceBedarf": 396,
     "parentFertObjId": 28,
@@ -1093,7 +1093,7 @@
   },
   {
     "id": 79,
-    "bezeichnung": "Schweißen 4",
+    "bezeichnung": "Signal Processor Welding",
     "ressourceId": 7,
     "ressourceBedarf": 220,
     "parentFertObjId": 28,
@@ -1107,7 +1107,7 @@
   },
   {
     "id": 80,
-    "bezeichnung": "Drehen 5",
+    "bezeichnung": "Detection Grid Machining",
     "ressourceId": 6,
     "ressourceBedarf": 209,
     "parentFertObjId": 28,
@@ -1121,7 +1121,7 @@
   },
   {
     "id": 81,
-    "bezeichnung": "Montieren 6",
+    "bezeichnung": "Receiver Dish Assembly",
     "ressourceId": 2,
     "ressourceBedarf": 140,
     "parentFertObjId": 28,
@@ -1135,7 +1135,7 @@
   },
   {
     "id": 82,
-    "bezeichnung": "Montieren 1",
+    "bezeichnung": "Communications Hub Assembly",
     "ressourceId": 5,
     "ressourceBedarf": 113,
     "parentFertObjId": 29,
@@ -1149,7 +1149,7 @@
   },
   {
     "id": 83,
-    "bezeichnung": "Lackieren 2",
+    "bezeichnung": "Transmission Array Coating",
     "ressourceId": 3,
     "ressourceBedarf": 457,
     "parentFertObjId": 29,
@@ -1163,7 +1163,7 @@
   },
   {
     "id": 84,
-    "bezeichnung": "Verpacken 3",
+    "bezeichnung": "Relay Module Packaging",
     "ressourceId": 2,
     "ressourceBedarf": 103,
     "parentFertObjId": 29,
@@ -1177,7 +1177,7 @@
   },
   {
     "id": 85,
-    "bezeichnung": "Drehen 4",
+    "bezeichnung": "Encryption Module Machining",
     "ressourceId": 8,
     "ressourceBedarf": 474,
     "parentFertObjId": 29,
@@ -1191,7 +1191,7 @@
   },
   {
     "id": 86,
-    "bezeichnung": "Schweißen 5",
+    "bezeichnung": "Signal Amplifier Welding",
     "ressourceId": 2,
     "ressourceBedarf": 332,
     "parentFertObjId": 29,
@@ -1205,7 +1205,7 @@
   },
   {
     "id": 87,
-    "bezeichnung": "Zuschneiden 6",
+    "bezeichnung": "Subspace Transceiver Cutting",
     "ressourceId": 1,
     "ressourceBedarf": 239,
     "parentFertObjId": 29,
@@ -1219,7 +1219,7 @@
   },
   {
     "id": 88,
-    "bezeichnung": "Bohren 1",
+    "bezeichnung": "Targeting Computer Drilling",
     "ressourceId": 8,
     "ressourceBedarf": 393,
     "parentFertObjId": 30,
@@ -1233,7 +1233,7 @@
   },
   {
     "id": 89,
-    "bezeichnung": "Bohren 2",
+    "bezeichnung": "Fire Solution Processor Drilling",
     "ressourceId": 4,
     "ressourceBedarf": 125,
     "parentFertObjId": 30,
@@ -1247,7 +1247,7 @@
   },
   {
     "id": 90,
-    "bezeichnung": "Drehen 3",
+    "bezeichnung": "Tracking Algorithm Installation",
     "ressourceId": 8,
     "ressourceBedarf": 51,
     "parentFertObjId": 30,
@@ -1261,7 +1261,7 @@
   },
   {
     "id": 91,
-    "bezeichnung": "Verpacken 4",
+    "bezeichnung": "Weapons Link Packaging",
     "ressourceId": 5,
     "ressourceBedarf": 282,
     "parentFertObjId": 30,
@@ -1275,7 +1275,7 @@
   },
   {
     "id": 92,
-    "bezeichnung": "Montieren 5",
+    "bezeichnung": "Battle Computer Assembly",
     "ressourceId": 4,
     "ressourceBedarf": 43,
     "parentFertObjId": 30,
@@ -1289,7 +1289,7 @@
   },
   {
     "id": 93,
-    "bezeichnung": "Bohren 6",
+    "bezeichnung": "Calibration System Installation",
     "ressourceId": 5,
     "ressourceBedarf": 183,
     "parentFertObjId": 30,
@@ -1303,7 +1303,7 @@
   },
   {
     "id": 94,
-    "bezeichnung": "Drehen 1",
+    "bezeichnung": "Repulsorlift Core Machining",
     "ressourceId": 7,
     "ressourceBedarf": 121,
     "parentFertObjId": 32,
@@ -1317,7 +1317,7 @@
   },
   {
     "id": 95,
-    "bezeichnung": "Fräsen 2",
+    "bezeichnung": "Engine Manifold Fabrication",
     "ressourceId": 1,
     "ressourceBedarf": 91,
     "parentFertObjId": 32,
@@ -1331,7 +1331,7 @@
   },
   {
     "id": 96,
-    "bezeichnung": "Montieren 3",
+    "bezeichnung": "Thrust Vector Assembly",
     "ressourceId": 2,
     "ressourceBedarf": 336,
     "parentFertObjId": 32,
@@ -1345,7 +1345,7 @@
   },
   {
     "id": 97,
-    "bezeichnung": "Montieren 1",
+    "bezeichnung": "Hyperdrive Motivator Assembly",
     "ressourceId": 7,
     "ressourceBedarf": 474,
     "parentFertObjId": 33,
@@ -1359,7 +1359,7 @@
   },
   {
     "id": 98,
-    "bezeichnung": "Montieren 2",
+    "bezeichnung": "Hyperspace Field Generator Assembly",
     "ressourceId": 2,
     "ressourceBedarf": 221,
     "parentFertObjId": 33,
@@ -1373,7 +1373,7 @@
   },
   {
     "id": 99,
-    "bezeichnung": "Verpacken 3",
+    "bezeichnung": "Navicomputer Packaging",
     "ressourceId": 1,
     "ressourceBedarf": 462,
     "parentFertObjId": 33,
@@ -1387,7 +1387,7 @@
   },
   {
     "id": 100,
-    "bezeichnung": "Bohren 4",
+    "bezeichnung": "Jump Calculation Module Installation",
     "ressourceId": 1,
     "ressourceBedarf": 104,
     "parentFertObjId": 33,
@@ -1401,7 +1401,7 @@
   },
   {
     "id": 101,
-    "bezeichnung": "Montieren 5",
+    "bezeichnung": "Backup Drive Assembly",
     "ressourceId": 3,
     "ressourceBedarf": 212,
     "parentFertObjId": 33,
@@ -1415,7 +1415,7 @@
   },
   {
     "id": 102,
-    "bezeichnung": "Vorbereiten 6",
+    "bezeichnung": "Star Chart Database Prep",
     "ressourceId": 5,
     "ressourceBedarf": 214,
     "parentFertObjId": 33,
@@ -1429,7 +1429,7 @@
   },
   {
     "id": 103,
-    "bezeichnung": "Schweißen 7",
+    "bezeichnung": "FTL Sensor Suite Welding",
     "ressourceId": 1,
     "ressourceBedarf": 178,
     "parentFertObjId": 33,
@@ -1443,7 +1443,7 @@
   },
   {
     "id": 104,
-    "bezeichnung": "Zuschneiden 1",
+    "bezeichnung": "Navigation Processor Cutting",
     "ressourceId": 4,
     "ressourceBedarf": 422,
     "parentFertObjId": 34,
@@ -1457,7 +1457,7 @@
   },
   {
     "id": 105,
-    "bezeichnung": "Zuschneiden 2",
+    "bezeichnung": "Course Plotter Cutting",
     "ressourceId": 3,
     "ressourceBedarf": 308,
     "parentFertObjId": 34,
@@ -1471,7 +1471,7 @@
   },
   {
     "id": 106,
-    "bezeichnung": "Schweißen 3",
+    "bezeichnung": "Attitude Control Welding",
     "ressourceId": 5,
     "ressourceBedarf": 168,
     "parentFertObjId": 34,
@@ -1485,7 +1485,7 @@
   },
   {
     "id": 107,
-    "bezeichnung": "Zuschneiden 4",
+    "bezeichnung": "Inertial Dampener Cutting",
     "ressourceId": 6,
     "ressourceBedarf": 451,
     "parentFertObjId": 34,
@@ -1499,7 +1499,7 @@
   },
   {
     "id": 108,
-    "bezeichnung": "Vorbereiten 5",
+    "bezeichnung": "Gyroscope Calibration Prep",
     "ressourceId": 3,
     "ressourceBedarf": 295,
     "parentFertObjId": 34,
@@ -1513,7 +1513,7 @@
   },
   {
     "id": 109,
-    "bezeichnung": "Schweißen 6",
+    "bezeichnung": "Accelerometer Array Welding",
     "ressourceId": 8,
     "ressourceBedarf": 240,
     "parentFertObjId": 34,
@@ -1527,7 +1527,7 @@
   },
   {
     "id": 110,
-    "bezeichnung": "Bohren 7",
+    "bezeichnung": "Position Tracking Installation",
     "ressourceId": 2,
     "ressourceBedarf": 141,
     "parentFertObjId": 34,
@@ -1541,7 +1541,7 @@
   },
   {
     "id": 111,
-    "bezeichnung": "Fräsen 1",
+    "bezeichnung": "Docking Clamp Fabrication",
     "ressourceId": 4,
     "ressourceBedarf": 437,
     "parentFertObjId": 38,
@@ -1555,7 +1555,7 @@
   },
   {
     "id": 112,
-    "bezeichnung": "Verpacken 2",
+    "bezeichnung": "TIE Fighter Rack Packaging",
     "ressourceId": 2,
     "ressourceBedarf": 243,
     "parentFertObjId": 38,
@@ -1569,7 +1569,7 @@
   },
   {
     "id": 113,
-    "bezeichnung": "Zuschneiden 3",
+    "bezeichnung": "Magnetic Lock Cutting",
     "ressourceId": 2,
     "ressourceBedarf": 449,
     "parentFertObjId": 38,
@@ -1583,7 +1583,7 @@
   },
   {
     "id": 114,
-    "bezeichnung": "Vorbereiten 4",
+    "bezeichnung": "Launch Rail Preparation",
     "ressourceId": 8,
     "ressourceBedarf": 208,
     "parentFertObjId": 38,
@@ -1597,7 +1597,7 @@
   },
   {
     "id": 115,
-    "bezeichnung": "Schweißen 5",
+    "bezeichnung": "Catapult Mechanism Welding",
     "ressourceId": 3,
     "ressourceBedarf": 448,
     "parentFertObjId": 38,
@@ -1611,7 +1611,7 @@
   },
   {
     "id": 116,
-    "bezeichnung": "Verpacken 6",
+    "bezeichnung": "Recovery System Packaging",
     "ressourceId": 6,
     "ressourceBedarf": 118,
     "parentFertObjId": 38,
@@ -1625,7 +1625,7 @@
   },
   {
     "id": 117,
-    "bezeichnung": "Vorbereiten 7",
+    "bezeichnung": "Refueling Port Preparation",
     "ressourceId": 2,
     "ressourceBedarf": 143,
     "parentFertObjId": 38,
@@ -1639,7 +1639,7 @@
   },
   {
     "id": 118,
-    "bezeichnung": "Fräsen 1",
+    "bezeichnung": "Pressurization System Fabrication",
     "ressourceId": 5,
     "ressourceBedarf": 94,
     "parentFertObjId": 39,
@@ -1653,7 +1653,7 @@
   },
   {
     "id": 119,
-    "bezeichnung": "Bohren 2",
+    "bezeichnung": "Atmospheric Containment Drilling",
     "ressourceId": 2,
     "ressourceBedarf": 247,
     "parentFertObjId": 39,
@@ -1667,7 +1667,7 @@
   },
   {
     "id": 120,
-    "bezeichnung": "Zuschneiden 3",
+    "bezeichnung": "Force Field Generator Cutting",
     "ressourceId": 1,
     "ressourceBedarf": 426,
     "parentFertObjId": 39,
@@ -1681,7 +1681,7 @@
   },
   {
     "id": 121,
-    "bezeichnung": "Lackieren 4",
+    "bezeichnung": "Bay Door Mechanism Installation",
     "ressourceId": 1,
     "ressourceBedarf": 130,
     "parentFertObjId": 39,
@@ -1695,7 +1695,7 @@
   },
   {
     "id": 122,
-    "bezeichnung": "Prüfen 1",
+    "bezeichnung": "Maintenance Bay Testing",
     "ressourceId": 1,
     "ressourceBedarf": 270,
     "parentFertObjId": 41,
@@ -1709,7 +1709,7 @@
   },
   {
     "id": 123,
-    "bezeichnung": "Drehen 2",
+    "bezeichnung": "Repair Droid Station Machining",
     "ressourceId": 1,
     "ressourceBedarf": 63,
     "parentFertObjId": 41,
@@ -1723,7 +1723,7 @@
   },
   {
     "id": 124,
-    "bezeichnung": "Vorbereiten 3",
+    "bezeichnung": "Tool Storage Preparation",
     "ressourceId": 2,
     "ressourceBedarf": 430,
     "parentFertObjId": 41,
@@ -1737,7 +1737,7 @@
   },
   {
     "id": 125,
-    "bezeichnung": "Fräsen 1",
+    "bezeichnung": "Fuel Tank Fabrication",
     "ressourceId": 4,
     "ressourceBedarf": 124,
     "parentFertObjId": 42,
@@ -1751,7 +1751,7 @@
   },
   {
     "id": 126,
-    "bezeichnung": "Vorbereiten 2",
+    "bezeichnung": "Tibanna Gas Pump Preparation",
     "ressourceId": 2,
     "ressourceBedarf": 104,
     "parentFertObjId": 42,
@@ -1765,7 +1765,7 @@
   },
   {
     "id": 127,
-    "bezeichnung": "Verpacken 3",
+    "bezeichnung": "Refueling Line Packaging",
     "ressourceId": 6,
     "ressourceBedarf": 210,
     "parentFertObjId": 42,
@@ -1779,7 +1779,7 @@
   },
   {
     "id": 128,
-    "bezeichnung": "Prüfen 4",
+    "bezeichnung": "Supply Distribution Testing",
     "ressourceId": 4,
     "ressourceBedarf": 288,
     "parentFertObjId": 42,
@@ -1793,7 +1793,7 @@
   },
   {
     "id": 129,
-    "bezeichnung": "Zuschneiden 5",
+    "bezeichnung": "Automated Pump Cutting",
     "ressourceId": 2,
     "ressourceBedarf": 449,
     "parentFertObjId": 42,
@@ -1807,7 +1807,7 @@
   },
   {
     "id": 130,
-    "bezeichnung": "Vorbereiten 6",
+    "bezeichnung": "Flow Control Prep",
     "ressourceId": 4,
     "ressourceBedarf": 396,
     "parentFertObjId": 42,
@@ -1821,7 +1821,7 @@
   },
   {
     "id": 131,
-    "bezeichnung": "Drehen 7",
+    "bezeichnung": "Safety Interlock Machining",
     "ressourceId": 3,
     "ressourceBedarf": 416,
     "parentFertObjId": 42,
@@ -1835,7 +1835,7 @@
   },
   {
     "id": 132,
-    "bezeichnung": "Zuschneiden 1",
+    "bezeichnung": "Ordnance Rack Cutting",
     "ressourceId": 4,
     "ressourceBedarf": 288,
     "parentFertObjId": 43,
@@ -1849,7 +1849,7 @@
   },
   {
     "id": 133,
-    "bezeichnung": "Schweißen 2",
+    "bezeichnung": "Magazine Loader Welding",
     "ressourceId": 3,
     "ressourceBedarf": 255,
     "parentFertObjId": 43,
@@ -1863,7 +1863,7 @@
   },
   {
     "id": 134,
-    "bezeichnung": "Bohren 3",
+    "bezeichnung": "Blast Door Installation",
     "ressourceId": 6,
     "ressourceBedarf": 224,
     "parentFertObjId": 43,
@@ -1877,7 +1877,7 @@
   },
   {
     "id": 135,
-    "bezeichnung": "Prüfen 1",
+    "bezeichnung": "Atmospheric Processor Testing",
     "ressourceId": 4,
     "ressourceBedarf": 238,
     "parentFertObjId": 45,
@@ -1891,7 +1891,7 @@
   },
   {
     "id": 136,
-    "bezeichnung": "Schweißen 2",
+    "bezeichnung": "Oxygen Generator Welding",
     "ressourceId": 2,
     "ressourceBedarf": 268,
     "parentFertObjId": 45,
@@ -1905,7 +1905,7 @@
   },
   {
     "id": 137,
-    "bezeichnung": "Prüfen 3",
+    "bezeichnung": "Air Filtration Testing",
     "ressourceId": 3,
     "ressourceBedarf": 283,
     "parentFertObjId": 45,
@@ -1919,7 +1919,7 @@
   },
   {
     "id": 138,
-    "bezeichnung": "Drehen 4",
+    "bezeichnung": "Temperature Control Machining",
     "ressourceId": 1,
     "ressourceBedarf": 72,
     "parentFertObjId": 45,
@@ -1933,7 +1933,7 @@
   },
   {
     "id": 139,
-    "bezeichnung": "Zuschneiden 1",
+    "bezeichnung": "Crew Bunk Fabrication",
     "ressourceId": 7,
     "ressourceBedarf": 175,
     "parentFertObjId": 46,
@@ -1947,7 +1947,7 @@
   },
   {
     "id": 140,
-    "bezeichnung": "Verpacken 2",
+    "bezeichnung": "Living Module Packaging",
     "ressourceId": 5,
     "ressourceBedarf": 381,
     "parentFertObjId": 46,
@@ -1961,7 +1961,7 @@
   },
   {
     "id": 141,
-    "bezeichnung": "Fräsen 3",
+    "bezeichnung": "Recreation Facility Fabrication",
     "ressourceId": 7,
     "ressourceBedarf": 178,
     "parentFertObjId": 46,
@@ -1975,7 +1975,7 @@
   },
   {
     "id": 142,
-    "bezeichnung": "Fräsen 4",
+    "bezeichnung": "Galley Equipment Fabrication",
     "ressourceId": 2,
     "ressourceBedarf": 460,
     "parentFertObjId": 46,
@@ -1989,7 +1989,7 @@
   },
   {
     "id": 143,
-    "bezeichnung": "Schweißen 5",
+    "bezeichnung": "Sanitation System Welding",
     "ressourceId": 3,
     "ressourceBedarf": 36,
     "parentFertObjId": 46,
@@ -2003,7 +2003,7 @@
   },
   {
     "id": 144,
-    "bezeichnung": "Zuschneiden 6",
+    "bezeichnung": "Environmental Control Cutting",
     "ressourceId": 7,
     "ressourceBedarf": 254,
     "parentFertObjId": 46,
@@ -2017,7 +2017,7 @@
   },
   {
     "id": 145,
-    "bezeichnung": "Zuschneiden 1",
+    "bezeichnung": "Officer Suite Fabrication",
     "ressourceId": 3,
     "ressourceBedarf": 232,
     "parentFertObjId": 47,
@@ -2031,7 +2031,7 @@
   },
   {
     "id": 146,
-    "bezeichnung": "Verpacken 2",
+    "bezeichnung": "Private Quarters Packaging",
     "ressourceId": 2,
     "ressourceBedarf": 409,
     "parentFertObjId": 47,
@@ -2045,7 +2045,7 @@
   },
   {
     "id": 147,
-    "bezeichnung": "Zuschneiden 3",
+    "bezeichnung": "Conference Room Cutting",
     "ressourceId": 6,
     "ressourceBedarf": 131,
     "parentFertObjId": 47,
@@ -2059,7 +2059,7 @@
   },
   {
     "id": 148,
-    "bezeichnung": "Verpacken 1",
+    "bezeichnung": "Detention Cell Packaging",
     "ressourceId": 7,
     "ressourceBedarf": 92,
     "parentFertObjId": 48,
@@ -2073,7 +2073,7 @@
   },
   {
     "id": 149,
-    "bezeichnung": "Lackieren 2",
+    "bezeichnung": "Restraint System Installation",
     "ressourceId": 8,
     "ressourceBedarf": 172,
     "parentFertObjId": 48,
@@ -2087,7 +2087,7 @@
   },
   {
     "id": 150,
-    "bezeichnung": "Verpacken 3",
+    "bezeichnung": "Security System Packaging",
     "ressourceId": 5,
     "ressourceBedarf": 417,
     "parentFertObjId": 48,
@@ -2101,7 +2101,7 @@
   },
   {
     "id": 151,
-    "bezeichnung": "Schweißen 4",
+    "bezeichnung": "Interrogation Droid Bay Welding",
     "ressourceId": 8,
     "ressourceBedarf": 371,
     "parentFertObjId": 48,

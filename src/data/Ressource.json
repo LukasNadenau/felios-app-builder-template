@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "bezeichnung": "Drehmaschine 1",
+    "bezeichnung": "Superlaser Assembly Bay Alpha",
     "anzahlPlaetze": 3,
     "parallelitaetsfaktor": 2,
     "usesGemeinsameBearbeitung": false,
@@ -26,7 +26,7 @@
   },
   {
     "id": 2,
-    "bezeichnung": "Fräsmaschine 2",
+    "bezeichnung": "Hull Plating Fabrication Facility",
     "anzahlPlaetze": 2,
     "parallelitaetsfaktor": 3,
     "usesGemeinsameBearbeitung": false,
@@ -51,7 +51,7 @@
   },
   {
     "id": 3,
-    "bezeichnung": "Montagestation 3",
+    "bezeichnung": "Reactor Core Integration Station",
     "anzahlPlaetze": 4,
     "parallelitaetsfaktor": 2,
     "usesGemeinsameBearbeitung": false,
@@ -76,7 +76,7 @@
   },
   {
     "id": 4,
-    "bezeichnung": "Schweißroboter 4",
+    "bezeichnung": "Automated Welding Bay Gamma",
     "anzahlPlaetze": 3,
     "parallelitaetsfaktor": 1,
     "usesGemeinsameBearbeitung": true,
@@ -101,7 +101,7 @@
   },
   {
     "id": 5,
-    "bezeichnung": "Lackieranlage 5",
+    "bezeichnung": "Shield Generator Assembly Line",
     "anzahlPlaetze": 4,
     "parallelitaetsfaktor": 3,
     "usesGemeinsameBearbeitung": false,
@@ -126,7 +126,7 @@
   },
   {
     "id": 6,
-    "bezeichnung": "Prüfstand 6",
+    "bezeichnung": "Weapons Systems Testing Range",
     "anzahlPlaetze": 2,
     "parallelitaetsfaktor": 1,
     "usesGemeinsameBearbeitung": false,
@@ -151,7 +151,7 @@
   },
   {
     "id": 7,
-    "bezeichnung": "Fräsmaschine 7",
+    "bezeichnung": "Precision Machining Workshop Beta",
     "anzahlPlaetze": 1,
     "parallelitaetsfaktor": 1,
     "usesGemeinsameBearbeitung": true,
@@ -176,7 +176,7 @@
   },
   {
     "id": 8,
-    "bezeichnung": "Schweißroboter 8",
+    "bezeichnung": "TIE Fighter Hangar Assembly Deck",
     "anzahlPlaetze": 4,
     "parallelitaetsfaktor": 3,
     "usesGemeinsameBearbeitung": true,

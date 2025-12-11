@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "bezeichnung": "Projekt Maschinenbau 1",
+    "bezeichnung": "Death Star I - Primary Construction",
     "typ": "Projekt",
     "parentFertObjektId": -1,
     "zieltermin": 130,
@@ -11,7 +11,7 @@
   },
   {
     "id": 2,
-    "bezeichnung": "Netzplan A",
+    "bezeichnung": "Superlaser System Integration",
     "typ": "Netzplan",
     "parentFertObjektId": 1,
     "zieltermin": -1,
@@ -21,7 +21,7 @@
   },
   {
     "id": 3,
-    "bezeichnung": "Unternetzplan A",
+    "bezeichnung": "Primary Focusing Array Assembly",
     "typ": "Unternetzplan",
     "parentFertObjektId": 2,
     "zieltermin": -1,
@@ -31,7 +31,7 @@
   },
   {
     "id": 4,
-    "bezeichnung": "Fertigungsauftrag 1",
+    "bezeichnung": "Kyber Crystal Alignment System",
     "typ": "Fertigungsauftrag",
     "parentFertObjektId": 3,
     "zieltermin": -1,
@@ -41,7 +41,7 @@
   },
   {
     "id": 5,
-    "bezeichnung": "Fertigungsauftrag 2",
+    "bezeichnung": "Focusing Lens Array Manufacturing",
     "typ": "Fertigungsauftrag",
     "parentFertObjektId": 3,
     "zieltermin": -1,
@@ -51,7 +51,7 @@
   },
   {
     "id": 6,
-    "bezeichnung": "Fertigungsauftrag 3",
+    "bezeichnung": "Energy Beam Convergence Module",
     "typ": "Fertigungsauftrag",
     "parentFertObjektId": 3,
     "zieltermin": -1,
@@ -61,7 +61,7 @@
   },
   {
     "id": 7,
-    "bezeichnung": "Unternetzplan B",
+    "bezeichnung": "Power Distribution Network",
     "typ": "Unternetzplan",
     "parentFertObjektId": 2,
     "zieltermin": -1,
@@ -71,7 +71,7 @@
   },
   {
     "id": 8,
-    "bezeichnung": "Fertigungsauftrag 1",
+    "bezeichnung": "Hypermatter Reactor Core Installation",
     "typ": "Fertigungsauftrag",
     "parentFertObjektId": 7,
     "zieltermin": -1,
@@ -81,7 +81,7 @@
   },
   {
     "id": 9,
-    "bezeichnung": "Montageauftrag 2",
+    "bezeichnung": "Power Coupling Array Assembly",
     "typ": "Montageauftrag",
     "parentFertObjektId": 7,
     "zieltermin": -1,
@@ -91,7 +91,7 @@
   },
   {
     "id": 10,
-    "bezeichnung": "Netzplan B",
+    "bezeichnung": "Defensive Systems Installation",
     "typ": "Netzplan",
     "parentFertObjektId": 1,
     "zieltermin": -1,
@@ -101,7 +101,7 @@
   },
   {
     "id": 11,
-    "bezeichnung": "Unternetzplan A",
+    "bezeichnung": "Turbolaser Battery Complexes",
     "typ": "Unternetzplan",
     "parentFertObjektId": 10,
     "zieltermin": -1,
@@ -111,7 +111,7 @@
   },
   {
     "id": 12,
-    "bezeichnung": "Fertigungsauftrag 1",
+    "bezeichnung": "North Hemisphere Battery Installation",
     "typ": "Fertigungsauftrag",
     "parentFertObjektId": 11,
     "zieltermin": -1,
@@ -121,7 +121,7 @@
   },
   {
     "id": 13,
-    "bezeichnung": "Montageauftrag 2",
+    "bezeichnung": "Equatorial Defense Grid Assembly",
     "typ": "Montageauftrag",
     "parentFertObjektId": 11,
     "zieltermin": -1,
@@ -131,7 +131,7 @@
   },
   {
     "id": 14,
-    "bezeichnung": "Fertigungsauftrag 3",
+    "bezeichnung": "Ion Cannon Emplacement",
     "typ": "Fertigungsauftrag",
     "parentFertObjektId": 11,
     "zieltermin": -1,
@@ -141,7 +141,7 @@
   },
   {
     "id": 15,
-    "bezeichnung": "Montageauftrag 4",
+    "bezeichnung": "Tractor Beam Projector Array",
     "typ": "Montageauftrag",
     "parentFertObjektId": 11,
     "zieltermin": -1,
@@ -151,7 +151,7 @@
   },
   {
     "id": 16,
-    "bezeichnung": "Unternetzplan B",
+    "bezeichnung": "Shield Generator Systems",
     "typ": "Unternetzplan",
     "parentFertObjektId": 10,
     "zieltermin": -1,
@@ -161,7 +161,7 @@
   },
   {
     "id": 17,
-    "bezeichnung": "Fertigungsauftrag 1",
+    "bezeichnung": "Deflector Shield Emitter Installation",
     "typ": "Fertigungsauftrag",
     "parentFertObjektId": 16,
     "zieltermin": -1,
@@ -171,7 +171,7 @@
   },
   {
     "id": 18,
-    "bezeichnung": "Fertigungsauftrag 2",
+    "bezeichnung": "Ray Shield Generator Assembly",
     "typ": "Fertigungsauftrag",
     "parentFertObjektId": 16,
     "zieltermin": -1,
@@ -181,7 +181,7 @@
   },
   {
     "id": 19,
-    "bezeichnung": "Unternetzplan C",
+    "bezeichnung": "Particle Shield Network",
     "typ": "Unternetzplan",
     "parentFertObjektId": 10,
     "zieltermin": -1,
@@ -191,7 +191,7 @@
   },
   {
     "id": 20,
-    "bezeichnung": "Montageauftrag 1",
+    "bezeichnung": "Primary Shield Node Integration",
     "typ": "Montageauftrag",
     "parentFertObjektId": 19,
     "zieltermin": -1,
@@ -201,7 +201,7 @@
   },
   {
     "id": 21,
-    "bezeichnung": "Montageauftrag 2",
+    "bezeichnung": "Backup Shield System Assembly",
     "typ": "Montageauftrag",
     "parentFertObjektId": 19,
     "zieltermin": -1,
@@ -211,7 +211,7 @@
   },
   {
     "id": 22,
-    "bezeichnung": "Projekt Elektrotechnik 2",
+    "bezeichnung": "Death Star II - Advanced Construction",
     "typ": "Projekt",
     "parentFertObjektId": -1,
     "zieltermin": 101,
@@ -221,7 +221,7 @@
   },
   {
     "id": 23,
-    "bezeichnung": "Netzplan A",
+    "bezeichnung": "Command & Control Infrastructure",
     "typ": "Netzplan",
     "parentFertObjektId": 22,
     "zieltermin": -1,
@@ -231,7 +231,7 @@
   },
   {
     "id": 24,
-    "bezeichnung": "Unternetzplan A",
+    "bezeichnung": "Bridge Tower Construction",
     "typ": "Unternetzplan",
     "parentFertObjektId": 23,
     "zieltermin": -1,
@@ -241,7 +241,7 @@
   },
   {
     "id": 25,
-    "bezeichnung": "Fertigungsauftrag 1",
+    "bezeichnung": "Command Bridge Console Installation",
     "typ": "Fertigungsauftrag",
     "parentFertObjektId": 24,
     "zieltermin": -1,
@@ -251,7 +251,7 @@
   },
   {
     "id": 26,
-    "bezeichnung": "Montageauftrag 2",
+    "bezeichnung": "Overbridge Tactical Systems",
     "typ": "Montageauftrag",
     "parentFertObjektId": 24,
     "zieltermin": -1,
@@ -261,7 +261,7 @@
   },
   {
     "id": 27,
-    "bezeichnung": "Unternetzplan B",
+    "bezeichnung": "Communications & Sensors Suite",
     "typ": "Unternetzplan",
     "parentFertObjektId": 23,
     "zieltermin": -1,
@@ -271,7 +271,7 @@
   },
   {
     "id": 28,
-    "bezeichnung": "Fertigungsauftrag 1",
+    "bezeichnung": "Long-Range Sensor Array Deployment",
     "typ": "Fertigungsauftrag",
     "parentFertObjektId": 27,
     "zieltermin": -1,
@@ -281,7 +281,7 @@
   },
   {
     "id": 29,
-    "bezeichnung": "Montageauftrag 2",
+    "bezeichnung": "Communications Relay Hub Assembly",
     "typ": "Montageauftrag",
     "parentFertObjektId": 27,
     "zieltermin": -1,
@@ -291,7 +291,7 @@
   },
   {
     "id": 30,
-    "bezeichnung": "Montageauftrag 3",
+    "bezeichnung": "Targeting Computer Network",
     "typ": "Montageauftrag",
     "parentFertObjektId": 27,
     "zieltermin": -1,
@@ -301,7 +301,7 @@
   },
   {
     "id": 31,
-    "bezeichnung": "Unternetzplan C",
+    "bezeichnung": "Navigation & Propulsion Systems",
     "typ": "Unternetzplan",
     "parentFertObjektId": 23,
     "zieltermin": -1,
@@ -311,7 +311,7 @@
   },
   {
     "id": 32,
-    "bezeichnung": "Montageauftrag 1",
+    "bezeichnung": "Repulsorlift Engine Array Assembly",
     "typ": "Montageauftrag",
     "parentFertObjektId": 31,
     "zieltermin": -1,
@@ -321,7 +321,7 @@
   },
   {
     "id": 33,
-    "bezeichnung": "Fertigungsauftrag 2",
+    "bezeichnung": "Hyperdrive Motivator Installation",
     "typ": "Fertigungsauftrag",
     "parentFertObjektId": 31,
     "zieltermin": -1,
@@ -331,7 +331,7 @@
   },
   {
     "id": 34,
-    "bezeichnung": "Fertigungsauftrag 3",
+    "bezeichnung": "Navigation Computer Integration",
     "typ": "Fertigungsauftrag",
     "parentFertObjektId": 31,
     "zieltermin": -1,
@@ -341,7 +341,7 @@
   },
   {
     "id": 35,
-    "bezeichnung": "Projekt Automobilkomponente 3",
+    "bezeichnung": "Operational Sectors Construction",
     "typ": "Projekt",
     "parentFertObjektId": -1,
     "zieltermin": 137,
@@ -351,7 +351,7 @@
   },
   {
     "id": 36,
-    "bezeichnung": "Netzplan A",
+    "bezeichnung": "Hangar Bay Complexes",
     "typ": "Netzplan",
     "parentFertObjektId": 35,
     "zieltermin": -1,
@@ -361,7 +361,7 @@
   },
   {
     "id": 37,
-    "bezeichnung": "Unternetzplan A",
+    "bezeichnung": "North Hangar Bay Construction",
     "typ": "Unternetzplan",
     "parentFertObjektId": 36,
     "zieltermin": -1,
@@ -371,7 +371,7 @@
   },
   {
     "id": 38,
-    "bezeichnung": "Fertigungsauftrag 1",
+    "bezeichnung": "TIE Fighter Docking Infrastructure",
     "typ": "Fertigungsauftrag",
     "parentFertObjektId": 37,
     "zieltermin": -1,
@@ -381,7 +381,7 @@
   },
   {
     "id": 39,
-    "bezeichnung": "Fertigungsauftrag 2",
+    "bezeichnung": "Launch Bay Pressurization Systems",
     "typ": "Fertigungsauftrag",
     "parentFertObjektId": 37,
     "zieltermin": -1,
@@ -391,7 +391,7 @@
   },
   {
     "id": 40,
-    "bezeichnung": "Unternetzplan B",
+    "bezeichnung": "Support Facilities & Services",
     "typ": "Unternetzplan",
     "parentFertObjektId": 36,
     "zieltermin": -1,
@@ -401,7 +401,7 @@
   },
   {
     "id": 41,
-    "bezeichnung": "Fertigungsauftrag 1",
+    "bezeichnung": "Maintenance Bay Equipment",
     "typ": "Fertigungsauftrag",
     "parentFertObjektId": 40,
     "zieltermin": -1,
@@ -411,7 +411,7 @@
   },
   {
     "id": 42,
-    "bezeichnung": "Fertigungsauftrag 2",
+    "bezeichnung": "Fuel Depot & Supply Systems",
     "typ": "Fertigungsauftrag",
     "parentFertObjektId": 40,
     "zieltermin": -1,
@@ -421,7 +421,7 @@
   },
   {
     "id": 43,
-    "bezeichnung": "Fertigungsauftrag 3",
+    "bezeichnung": "Ordnance Storage Facilities",
     "typ": "Fertigungsauftrag",
     "parentFertObjektId": 40,
     "zieltermin": -1,
@@ -431,7 +431,7 @@
   },
   {
     "id": 44,
-    "bezeichnung": "Unternetzplan C",
+    "bezeichnung": "Life Support & Habitation",
     "typ": "Unternetzplan",
     "parentFertObjektId": 36,
     "zieltermin": -1,
@@ -441,7 +441,7 @@
   },
   {
     "id": 45,
-    "bezeichnung": "Montageauftrag 1",
+    "bezeichnung": "Atmospheric Processor Installation",
     "typ": "Montageauftrag",
     "parentFertObjektId": 44,
     "zieltermin": -1,
@@ -451,7 +451,7 @@
   },
   {
     "id": 46,
-    "bezeichnung": "Montageauftrag 2",
+    "bezeichnung": "Crew Quarters Level Alpha",
     "typ": "Montageauftrag",
     "parentFertObjektId": 44,
     "zieltermin": -1,
@@ -461,7 +461,7 @@
   },
   {
     "id": 47,
-    "bezeichnung": "Montageauftrag 3",
+    "bezeichnung": "Officer Housing Level Beta",
     "typ": "Montageauftrag",
     "parentFertObjektId": 44,
     "zieltermin": -1,
@@ -471,7 +471,7 @@
   },
   {
     "id": 48,
-    "bezeichnung": "Fertigungsauftrag 4",
+    "bezeichnung": "Detention Block AA-23",
     "typ": "Fertigungsauftrag",
     "parentFertObjektId": 44,
     "zieltermin": -1,
